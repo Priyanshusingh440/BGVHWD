@@ -25,7 +25,7 @@ class createorder
 
    public function order_create()
    {
-      // var_dump($_POST);
+       var_dump($_POST);
      //  var_dump($_FILES);
 if(isset($_POST))
 {
