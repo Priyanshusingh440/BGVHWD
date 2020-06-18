@@ -1,5 +1,6 @@
 <?php
-
+echo "Hii";
+/*
 $json_data = file_get_contents("php://input");
 
 $data = json_decode($json_data, true);
@@ -77,3 +78,6 @@ else
 
             $basic_details=new login($db);
             $basic_details->update_details();
+
+            */
+            ?>
