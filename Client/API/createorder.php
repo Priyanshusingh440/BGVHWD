@@ -85,14 +85,7 @@ else
     `client_id`='".$_POST['user_id']."'";
 
     $result=$this->conn->query($query);
-    if($result)
-    {
-        echo "Inserted";
-    }
-    else
-    {
-        echo "Not inserted";
-    }
+    
     if ($result === TRUE) {
         $last_id = $this->conn->insert_id;
         if(isset($_FILES["myfiles"]))
