@@ -18,20 +18,27 @@ class country
    public function update_details()
    {
  
-            $check='SELECT * FROM countries';
+            $check='SELECT * FROM countries ORDER BY name ASC';
+            $this->conn->query("SET CHARACTER SET utf8"); 
             $result=$this->conn->query($check);
+
             if($result->num_rows>0)
             {
                 $i=0;
                 while($row = $result->fetch_assoc())
                 {
+                   // var_dump($row);
                     $country[$i]['id']=$row['id'];
-                    $country[$i]['country_code']=$row['sortname'];
                     $country[$i]['country_name']=$row['name'];
+                    $country[$i]['country_code']=$row['iso3'];
                     $country[$i]['phonecode']=$row['phonecode'];
+                    $country[$i]['capital']=$row['capital'];
+                    $country[$i]['currency']=$row['currency'];
                     $i++;
                 }
                 echo json_encode($country);
+                
+                
             }
             else {
                 echo "0 results";
