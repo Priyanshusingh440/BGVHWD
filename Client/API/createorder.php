@@ -25,7 +25,7 @@ class createorder
 
    public function order_create()
    {
-       var_dump($_POST);
+    //   var_dump($_POST);
      //  var_dump($_FILES);
 if(isset($_POST))
 {
@@ -93,7 +93,7 @@ else
     {
         echo "Not inserted";
     }
-   /* if ($result === TRUE) {
+    if ($result === TRUE) {
         $last_id = $this->conn->insert_id;
         if(isset($_FILES["myfiles"]))
         {
@@ -107,7 +107,7 @@ else
             {
                 $qwe="INSERT INTO `document_list` SET
                 `document_name`='".$arr[$i]."',
-                `user_id`='".$_POST['user_id']."',
+                `client_id`='".$_POST['user_id']."',
                 `order_id`='".$last_id."'";
                 
                 $this->conn->query($qwe);
@@ -123,7 +123,7 @@ else
 
         echo "0";
       }
-   */   
+     
 
 }
        
