@@ -9,7 +9,7 @@ const getModifyClientData = (d) => {
   // debouncing
   let timer
   return e => {
-    clearTimeout(timer)
+    clearTimeout(timer) 
     timer = setTimeout(() => {
       let lowerCaseClientCode = clientCode.value.toLowerCase()
       let lowerCaseClientName = inputState.value.toLowerCase()
