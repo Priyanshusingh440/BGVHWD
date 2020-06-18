@@ -109,12 +109,5 @@ require_once "../config/config.php";
 //             echo "<td>" . $row['Reports']. "</td>";   
 //             echo "</tr>";
 //             echo "</tbody>";
-<<<<<<< HEAD
   
-=======
-
-  //  echo '</table>'+$userid;
-   
-
->>>>>>> d0f9459624c49d56816999129c20f6a9fe8e3820
 ?>
