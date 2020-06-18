@@ -110,7 +110,7 @@ require_once "../config/config.php";
 //             echo "</tr>";
 //             echo "</tbody>";
 
-   echo '</table>'+$userid;
+  //  echo '</table>'+$userid;
    
 
 ?>

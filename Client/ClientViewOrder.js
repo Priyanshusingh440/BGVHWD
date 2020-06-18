@@ -16,7 +16,7 @@ const getModifyClientData = (d) => {
         let clientNameMatch = v['Client_Name'].toLowerCase().search(lowerCaseClientName) == 0
         return clientNameMatch
       })
-      
+
       updateModifyClientData(newData)
     }, d)
   }
@@ -38,6 +38,8 @@ getAllClientData()
 
 // getModifyClientData(0)
 inputState && inputState.addEventListener('keyup', getModifyClientData(0))
+
+const tbody = document.querySelector("#table")
 
 const updateModifyClientData = (d) => {
   console.log(d)
