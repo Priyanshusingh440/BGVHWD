@@ -30,11 +30,11 @@ class login
 $json_data = file_get_contents("php://input");
 var_dump($json_data);
 
-// Checks if it's empty or not
+/*
 if( !empty($json_data) )
 {
   
-  // Decodes the JSON object to an Array
+  
   $data = json_decode($json_data, true);
   var_dump($data);
   $uname=$data['name'];
@@ -70,13 +70,13 @@ else
 {
   echo "Empty JSON object, something's wrong!";
 }
-
+*/
                 }
 
             }
-
+ 
             $basic_details=new login($db);
             $basic_details->update_details();
 
-            
+           
             ?>
