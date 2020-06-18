@@ -8,14 +8,15 @@ require_once "../config/config.php";
    if (mysqli_connect_errno($db)){
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
-  
+   session_start();
    $Ser=$_POST["Service"];
    $option=$_POST["option"];
    $dob=$_POST["dob"];
    $opt=$_POST["opt"];
    
 // $userid =$_SESSION['uid'];
-   $userid="1";
+   //$userid=$_POST["unsa"];
+   $userid=$_SESSION['uid'];
    $Sr=0;
    // echo"case:".$Ser;
    switch ($Ser) {
@@ -47,38 +48,69 @@ require_once "../config/config.php";
     $sql = "SELECT * FROM `order` WHERE Order_Status='$opt'";
     break;
   default:
-   $sql = "SELECT * FROM `order` WHERE id='$userid'";
+   $sql = "SELECT * FROM `order` WHERE client_id='$userid'";
    
 }
 //echo $sql;
    
    $result = mysqli_query($db,$sql);
-   echo ' <table class="table table-bordered table-dark"style="background-color:#1A2035;margin-bottom:9%;">';
-   echo"<thead><tr style='color:white;'>";
-          echo"<th scope='col' style='color:white;'>Sr.no</th>
-               <th scope='col' style='color:white;'>Case Reference No</th>
-              <th scope='col' style='color:white;'>First Name/Last Name</th>
-              <th scope='col' style='color:white;'>Order Creation Date</th>
-              <th scope='col' style='color:white;'>Order Status</th>
-              <th scope='col' style='color:white;'>Order Completion Date</th>
-              <th scope='col' style='color:white;'>Reports</th>
-           </tr></thead>";
-while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-  echo "<tbody>";
-        echo"<tr scope='row'>";
-        $Sr++;
-            echo "<td>" . $Sr. "</td>";
-            echo "<td>" . $row['generated_reference_id'] . "</td>";
-            echo "<td>" . $row['first_Name'] ." ". $row['last_Name'] . "</td>";
-            echo "<td>" . $row['order_creation_date_time'] . "</td>";
-            echo "<td>" . $row['Order_Status'] . "</td>";
-            echo "<td>" . $row['Order_Completion_Date']. "</td>";    
-            echo "<td>" . $row['Reports']. "</td>";   
-            echo "</tr>";
-            echo "</tbody>";
+   if($result->num_rows>0)
+   {
+       $i=0;
+       while($row = $result->fetch_assoc())
+       {
+           $country[$i]['id']=$row['id'];
+           $country[$i]['first_Name']=$row['first_Name'];
+           $country[$i]['middle_Name']=$row['middle_Name'];
+           $country[$i]['last_Name']=$row['last_Name'];
+           $country[$i]['alias_first_name']=$row['alias_first_name'];
+           $country[$i]['alias_middle_name']=$row['alias_middle_name'];
+           $country[$i]['alias_last_name']=$row['alias_last_name'];
+           $country[$i]['email_id']=$row['email_id'];
+           $country[$i]['internal_reference_id']=$row['internal_reference_id'];
+           $country[$i]['joining_location']=$row['joining_location'];
+           $country[$i]['Joining_date']=$row['Joining_date'];
+           $country[$i]['LOB']=$row['LOB'];
+           $country[$i]['Additional_Comment']=$row['Additional_Comment'];
+           $country[$i]['package_country_id']=$row['package_country_id'];
+           $country[$i]['Package_id']=$row['Package_id'];
+           $country[$i]['service_country_id']=$row['service_country_id'];
+           $country[$i]['Service_type_id']=$row['Service_type_id'];
+           $country[$i]['service_id']=$row['service_id'];
+           $country[$i]['Source_name']=$row['Source_name'];
+           $country[$i]['no_of_documents_uploaded']=$row['no_of_documents_uploaded'];
+           $country[$i]['Order_Completion_Date']=$row['Order_Completion_Date'];
+           $country[$i]['Order_Status']=$row['Order_Status'];
+           $country[$i]['Reports']=$row['Reports'];
+           $country[$i]['generated_reference_id']=$row['generated_reference_id'];
+           $country[$i]['is_rush']=$row['is_rush'];
+           $country[$i]['contactable_person']=$row['contactable_person'];
+           $country[$i]['order_creation_date_time']=$row['order_creation_date_time'];
+           $i++;
+       }
+       echo json_encode($country);
+   }
+   else {
+       $country['Status']="0";
+       $country['message']="No result found";
+       echo json_encode($country);
+   }
 
-}
-   echo '</table>';
+// while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+//   echo "<tbody>";
+//         echo"<tr scope='row'>";
+//         $Sr++;
+//             echo "<td>" . $Sr. "</td>";
+//             echo "<td>" . $row['generated_reference_id'] . "</td>";
+//             echo "<td>" . $row['first_Name'] ." ". $row['last_Name'] . "</td>";
+//             echo "<td>" . $row['order_creation_date_time'] . "</td>";
+//             echo "<td>" . $row['Order_Status'] . "</td>";
+//             echo "<td>" . $row['Order_Completion_Date']. "</td>";    
+//             echo "<td>" . $row['Reports']. "</td>";   
+//             echo "</tr>";
+//             echo "</tbody>";
+
+   echo '</table>'+$userid;
    
 
 ?>
