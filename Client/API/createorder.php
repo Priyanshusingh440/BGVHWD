@@ -82,7 +82,7 @@ else
     `is_rush`='".$rushorder."',
     `generated_reference_id`='".$random_string."',
     `contactable_person`='".$contactable."',
-    `user_id`='".$_POST['user_id']."'";
+    `client_id`='".$_POST['user_id']."'";
 
     $result=$this->conn->query($query);
 

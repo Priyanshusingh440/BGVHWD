@@ -24,7 +24,7 @@ class States
 
 if(isset($data['country_id']))
 {
-    $check='SELECT * FROM service_type where country_id="'.$data['country_id'].'" ';
+    $check='SELECT * FROM `service_type` ORDER BY id ASC';
     $result=$this->conn->query($check);
     if($result->num_rows>0)
     {
@@ -33,13 +33,14 @@ if(isset($data['country_id']))
         {
             $states[$i]['id']=$row['id'];
             $states[$i]['service_type']=$row['name'];
-            $states[$i]['country_id']=$row['country_id'];
+            
            
             $i++;
         }
         echo json_encode($states);
     }
     else {
+        
             $states['status']="0";
             $states['message']="0 result";
             echo json_encode($states);
@@ -48,7 +49,26 @@ if(isset($data['country_id']))
 }
 else
 {
-    echo "Country ID not found";
+    $check='SELECT * FROM service_type';
+    $result=$this->conn->query($check);
+    if($result->num_rows>0)
+    {
+        $i=0;
+        while($row = $result->fetch_assoc())
+        {
+            $states[$i]['id']=$row['id'];
+            $states[$i]['service_type']=$row['name'];
+           
+            $i++;
+        }
+        echo json_encode($states);
+    }
+    else {
+        
+            $states['status']="0";
+            $states['message']="0 result";
+            echo json_encode($states);
+    }
 }
            
             
