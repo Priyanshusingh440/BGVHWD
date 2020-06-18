@@ -28,7 +28,7 @@ class login
  
     
 $json_data = file_get_contents("php://input");
-
+var_dump($json_data);
 
 // Checks if it's empty or not
 if( !empty($json_data) )
