@@ -11,7 +11,7 @@ $data = json_decode($json_data, true);
 require_once "../config/config.php";
 
 #---------------------<---Code Written and Designed By Priyanshu Raghuvanshi--->-----------------------#
-/*
+
 $get_connection=new connectdb;
 $db=$get_connection->connect();
 
@@ -77,4 +77,4 @@ else
             $basic_details=new login($db);
             $basic_details->update_details();
 
-            */
+            
