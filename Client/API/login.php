@@ -1,13 +1,4 @@
 <?php
-$json_data = file_get_contents("php://input");
-
-$data = json_decode($json_data, true);
-var_dump($data);
-/*
-
-
-
-
 
 
 require_once "../config/config.php";
@@ -30,9 +21,9 @@ class login
  
     
 $json_data = file_get_contents("php://input");
-var_dump($json_data);
 
-/*
+
+
 if( !empty($json_data) )
 {
   
@@ -80,5 +71,5 @@ else
             $basic_details=new login($db);
             $basic_details->update_details();
 
-       */    
+        
             ?>
