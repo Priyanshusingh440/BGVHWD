@@ -48,7 +48,8 @@ if( !empty($json_data) )
   $State=$data['select_state'];
   $City=$data['select_city'];
   $currency=$data['currency'];
-  
+  $password = $data['Password'];
+
         // Random Internal Reference ID
         $reference_name= $data['Client Name'];
         $reference_number=$data['dateofbirth'];
@@ -88,7 +89,8 @@ if( !empty($json_data) )
     `State`='".$State."',
     `city`='".$City."',
     `internal_reference_id`='".$random_string."',
-    `Currency`='".$currency."'";
+    `Currency`='".$currency."',
+    `password`='".$password."'";
 
          //    echo"<script>console.log(\"SQL Query:\"+$check)</script>";
              $result=$this->conn->query($check);
