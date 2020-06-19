@@ -77,6 +77,7 @@ else
     `service_country_id`='".$_POST['select-country-service']."',
     `Service_type_id`='".$_POST['select_service_type']."',
     `service_id`='".$_POST['select_service_name']."',
+    `Order_Status`='0',
     `Source_name`='".$_POST['Source_Name']."',
     `no_of_documents_uploaded`='1',
     `is_rush`='".$rushorder."',
