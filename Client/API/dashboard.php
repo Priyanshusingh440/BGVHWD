@@ -22,7 +22,7 @@ class States
     $totaltime="SELECT MAX(order_creation_date_time) FROM `order`";
     $rowtime=$this->conn->query($totaltime);
     $timecompleted=$rowtime->fetch_assoc();
-    var_dump($timecompleted);
+  //  var_dump($timecompleted);
     $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1'";
     $completed="SELECT * FROM `order` Where Order_Status='2'";
     $totalresult=$this->conn->query($total);
@@ -33,7 +33,7 @@ class States
     $completedrows=$completedresult->num_rows;
 
     $dashboard['totalcases']=$totalrows;
-    $dashboard['totalcasestime']="Updated on".$timecompleted;
+    $dashboard['totalcasestime']="Updated on".$timecompleted["MAX(order_creation_date_time)"];
     $dashboard['pendingcases']=$pendingrows;
     $dashboard['completedcases']=$completedrows;
 
