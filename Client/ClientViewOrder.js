@@ -5,6 +5,8 @@ let modifyClientData
 let orderStatus
 let dateOne
 
+let data = {}
+
 // live search
 let clientCriteria
 const service = document.querySelector("#Service")
@@ -120,34 +122,19 @@ const updateModifyClientData = (d) => {
             aria-expanded="false"
           >
             <i  class="material-icons icon">person</i>
-            <p class="d-lg-none d-md-block">
-              Account
-            </p>
             <div class="ripple-container"></div
           ></a>
           <div
             class="dropdown-menu dropdown-menu-left"
             aria-labelledby="navbarDropdownProfile" 
           >
-            <a class="dropdown-item" href="#">View</a>
-            <a class="dropdown-item block" href="#" id="${value.Id}">${value.is_block == 1 ? "Unblock" : "Block"}</a>
-            <!-- <div class="dropdown-divider"></div> -->
             <a
-              id="${value.Id}"
-              data-internal-reference-id="${value.Internal_Reference_ID}"
-              class="dropdown-item add-bank-details"
-              href="./bankDetails.html"
-              >Add bank details</a
-            >
-            <div class="dropdown-divider"></div>
-            <a
-              id="${value.Id}"
+              id="${value.id}"
               class="dropdown-item edit"
               href="./addClient.html"
               >Edit</a
             >
-            <a class="dropdown-item soft-delete" href="#" id="${value.Id}">Soft Delete</a>
-            <a class="dropdown-item hard-delete" href="#" id="${value.Id}">Hard Delete</a>
+            <a class="dropdown-item delete" href="#" id="${value.id}">Delete</a>
           </div>
         </li>
       </ul>
@@ -178,5 +165,29 @@ const sendHiddenId = (url) => {
 sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")
 sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
 
+
+const sendRequest = (url) => {
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
+tbody ? tbody.onclick = (e) => {
+  if (e.target.classList.contains('delete')) {
+    e.preventDefault()
+    data["id"] = e.target.id
+    data["action"] = "delete"
+    sendRequest("https://www.bgvhwd.xyz/client/API/editOrder.php")
+  }
+  data = {}
+} : false
 
 console.log("working all")
