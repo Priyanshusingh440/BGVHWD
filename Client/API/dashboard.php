@@ -37,7 +37,7 @@ class States
     $dashboard['pendingcases']=$pendingrows;
     $dashboard['completedcases']=$completedrows;
 
-  //  echo json_encode($dashboard);
+  echo json_encode($dashboard);
     
            
             
