@@ -644,6 +644,12 @@
                             />
                           </div>
                         </div>
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="Password" class="bmd-label-floating">Password</label>
+                          <input name="Password" type="text" class="form-control" />
+                        </div>
+                      </div>
                       </div>
                       <div class="row justify-content-end">
                         <button
