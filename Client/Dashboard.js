@@ -54,9 +54,9 @@ const updateDashboard = () => {
   console.log(dashboardData.totalcasestime)
   totalCasesUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> updated ${timeSince(new Date(dashboardData.totalcasestime))} ago`
   totalResolved.innerHTML = dashboardData.completedcases
-  totalResolvedUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> updated ${timeSince(new Date(dashboardData.pendingcasestime))} ago`
+  totalResolvedUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> updated ${timeSince(new Date(dashboardData.completedcasestime))} ago`
   totalInProgress.innerHTML = dashboardData.pendingcases
-  totalInProgressUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent ${timeSince(new Date(dashboardData.completedcasestime))} ago`
+  totalInProgressUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent ${timeSince(new Date(dashboardData.pendingcasestime))} ago`
 
 
   console.log(new Date())
