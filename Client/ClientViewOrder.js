@@ -33,11 +33,6 @@ const getModifyClientData = () => {
   
 }
 
-const orderStatusData = () => {
-  console.log("myfunc")
-  
-}
-
 service.addEventListener("change", (e) => {
   clientCriteria = e.target.value
   console.log(clientCriteria)
