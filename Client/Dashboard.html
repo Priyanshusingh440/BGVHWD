@@ -280,39 +280,39 @@ body {font-family: Verdana, sans-serif;}
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart" style="background-color:green;">
+              <div class="card card-chart" style="background-color:green;" id="total-cases">
                 
                 <div class="card-body">
                   <h4 class="card-title"style="color:#1A2035;">Total Cases</h4>
-                    <p class="card-category"style="color:#1A2035;">205</p>
+                    <p class="card-category"style="color:#1A2035;">Loading</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats"style="color:#1A2035;">
-                    <i class="material-icons"style="color:#1A2035;">access_time</i> updated 4 minutes ago
+                    <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart"style="background-color:orange;">
+              <div class="card card-chart"style="background-color:orange;" id="total-resolved" >
                 
-                <div class="card-body">
+                <div class="card-body" >
                   <h4 class="card-title"style="color:#1A2035;">Total Resolved</h4>
-                  <p class="card-category"style="color:#1A2035;">110</p>
+                  <p class="card-category"style="color:#1A2035;">Loading</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats"style="color:#1A2035;">
-                    <i class="material-icons"style="color:#1A2035;">access_time</i> updated 4 min ago
+                    <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart"style="background-color:yellow;">
+              <div class="card card-chart"style="background-color:yellow;" id="total-in-progress">
                 
-                <div class="card-body">
+                <div class="card-body" >
                   <h4 class="card-title"style="color:#1A2035;">Total In Progress</h4>
-                  <p class="card-category"style="color:#1A2035;">95</p>
+                  <p class="card-category"style="color:#1A2035;">Loading</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats"style="color:#1A2035;">
@@ -412,6 +412,8 @@ body {font-family: Verdana, sans-serif;}
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
+  <script src="moment.js"></script>
+  <script src="Dashboard.js "></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
