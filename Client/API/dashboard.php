@@ -21,7 +21,7 @@ class States
     $total="SELECT * FROM `order`";
     $totaltime="SELECT MAX(order_creation_date_time) FROM `order`";
     $rowtime=$this->conn->query($totaltime);
-    $timecompleted=$rowtime->fetch_assoc($rowtime);
+    $timecompleted=$rowtime->fetch_assoc();
     var_dump($timecompleted);
     $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1'";
     $completed="SELECT * FROM `order` Where Order_Status='2'";
