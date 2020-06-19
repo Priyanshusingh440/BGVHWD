@@ -228,12 +228,12 @@ else
                       <select name="Service" id="Service" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
                         <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
                         <option value="First_Name_Last_Name" class=" bg-secondary text-light">First Name Last Name</option>
-                        <option value="Internal_Reference_Id"  class=" bg-secondary text-light">Internal Reference Id</option>
+                        <option value="internal_reference_id"  class=" bg-secondary text-light">Internal Reference Id</option>
                         <option value="Joing_Location"  class=" bg-secondary text-light">Joing Location</option>
                         <option value="Case_Ref_ID"  class=" bg-secondary text-light">Case Ref ID</option>
-                        <option value="Order_Creation_Date"  class=" bg-secondary text-light">Order Creation Date</option>
+                        <option value="order_creation_date_time"  class=" bg-secondary text-light">Order Creation Date</option>
                         <option value="Order_Completion_Date"  class=" bg-secondary text-light">Order Completion Date</option>
-                        <option value="Email_ID"  class=" bg-secondary text-light">Email ID</option>
+                        <option value="email_id"  class=" bg-secondary text-light">Email ID</option>
                         <option value="Order_Status"  class=" bg-secondary text-light">Order Status</option>
                       </select>
                     </div>
@@ -340,11 +340,17 @@ else
                           First Name & last Name
                         </th>
                         <th>
-                          Joining location
+                          Internal Reference Id
                         </th>
                         <th>
                           Email id
                         </th>
+                        <th>
+                          Order Creation Date Time
+                        </th> 
+                        <th>
+                          Order Completion Date
+                        </th> 
                         <th>
                           Order status
                         </th>
@@ -352,7 +358,7 @@ else
                           Actions
                         </th>
                       </thead>
-                      <tbody id="table">
+                      <tbody id="table-body">
                        
                       </tbody>
                     </table>

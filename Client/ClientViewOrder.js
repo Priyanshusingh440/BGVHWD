@@ -1,34 +1,81 @@
 console.log('working')
-const inputState = document.querySelector('#inputState')
+let searchCriteria
 
 let modifyClientData
+let orderStatus
+let dateOne
 
 // live search
-const getModifyClientData = (d) => {
-  // debouncing
-  let timer
-  return e => {
-    clearTimeout(timer)
-    timer = setTimeout(() => {
-      let lowerCaseClientName = inputState.value.toLowerCase()
-      let newData
-      newData = modifyClientData.filter(v => {
-        let clientNameMatch = v['Client_Name'].toLowerCase().search(lowerCaseClientName) == 0
-        return clientNameMatch
-      })
-
-      updateModifyClientData(newData)
-    }, d)
+let clientCriteria
+const service = document.querySelector("#Service")
+const getModifyClientData = () => {
+  let lowerCaseClientCriteria = searchCriteria.value.toLowerCase()
+  let newData
+  if (clientCriteria == "First_Name_Last_Name") {
+    newData = modifyClientData.filter(v => {
+      console.log(v)
+      let firstName = v["first_Name"].toLowerCase().search(lowerCaseClientCriteria) == 0
+      let lastName = v["last_Name"].toLowerCase().search(lowerCaseClientCriteria) == 0
+      return firstName || lastName
+    })
+  } else {
+    console.log('key up 2')
+    console.log(clientCriteria)
+    console.log(modifyClientData[0][clientCriteria])
+    newData = modifyClientData.filter(v => {
+      let clientCriteriaMatch
+      v[clientCriteria] != null ? clientCriteriaMatch = v[clientCriteria].toLowerCase().search(lowerCaseClientCriteria) == 0 : null
+      return clientCriteriaMatch
+    })
   }
+
+  updateModifyClientData(newData)
+  
 }
 
+const orderStatusData = () => {
+  console.log("myfunc")
+  
+}
+
+service.addEventListener("change", (e) => {
+  clientCriteria = e.target.value
+  console.log(clientCriteria)
+
+  if (clientCriteria == "order_creation_date_time" || clientCriteria == "Order_Completion_Date") {
+    dateOne = document.querySelector('input#dateofbirth')
+    console.log(dateOne)
+    return dateOne.addEventListener("change", () => {
+      searchCriteria = dateOne 
+      return getModifyClientData()
+    })
+  }
+
+  if (clientCriteria == "Order_Status") {
+    orderStatus = document.querySelector('#OrderStatus')
+    console.log('order Status')
+    return orderStatus.addEventListener("change", () => {
+      searchCriteria = orderStatus
+      console.log(searchCriteria)
+      return getModifyClientData()
+    })
+  }
+
+  searchCriteria = document.querySelector('#SearchCriteria')
+  searchCriteria && searchCriteria.addEventListener('keyup', getModifyClientData)
+})
+
 const getAllClientData = () => {
-  fetch('https://www.bgvhwd.xyz/Client/API/ClientViewtable.php')
+  fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
+    method: 'POST',
+    body: JSON.stringify({"client_id": 1}),
+  })
   .then(response => response.json())
   .then(data => {
     console.log(data)
     modifyClientData = data
     updateModifyClientData(modifyClientData)
+    console.log('Success:', data);
   })
   .catch((error) => {
     console.error('Error:', error);
@@ -37,12 +84,11 @@ const getAllClientData = () => {
 getAllClientData()
 
 // getModifyClientData(0)
-inputState && inputState.addEventListener('keyup', getModifyClientData(0))
 
-const tbody = document.querySelector("#table")
+const tbody = document.querySelector("#table-body")
 
 const updateModifyClientData = (d) => {
-  console.log(d)
+  console.log('update', d)
   tbody ? tbody.innerHTML = '' : false
   d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
@@ -50,16 +96,22 @@ const updateModifyClientData = (d) => {
       ${i + 1}
     </td>
     <td class="tablehead1">
-      ${value["Client_Name"]}
+      ${value["first_Name"]} ${value["last_Name"]} 
     </td>
     <td class="tablehead1">
-      ${value["Client_Code"]}
+      ${value["internal_reference_id"]}
     </td>
     <td class="tablehead1">
-      ${value["Client_SPOC"]}
+      ${value["email_id"]}
     </td>
     <td class="tablehead1">
-      ${value["Live_DateDate"]}
+      ${value["order_creation_date_time"]}
+    </td>
+    <td class="tablehead1">
+      ${value["order_completion_date"]}
+    </td>
+    <td class="tablehead1">
+      ${value["Order_Status"] == 0 ? "pending" : value["Order_Status"] == 1 ? "Started" : value["Order_Status"] == 2 ? "Completed" : null}
     </td>
     <td class="text-primary tablehead1">
       <ul style="list-style: none;">
