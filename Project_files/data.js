@@ -245,7 +245,7 @@ console.log('working 2');
 console.log('working 3');
 
 // when add user go to addClient through edit
-if (window.location.pathname === "Project_files/addClient.php") {
+if (window.location.pathname === "/Project_files/addClient.php") {
   var url = new URL(window.location.href);
   let id = url.searchParams.get('id')
   if (id) {

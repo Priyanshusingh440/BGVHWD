@@ -432,16 +432,17 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/servicetype.php", {
 
 tbody ? tbody.ondblclick = (e) => {
   
-  // setAllAssignService(allAssignService)
+  let target = e.target.parentElement.getAttribute("data-sr")
+  // console.log(e.target)
+  setAllAssignService(allAssignService)
+
   let currentEdit = allAssignService.filter(v => v.id === e.target.parentElement.id)
-
-
 
   let countrySelect2 = countrySelect
   let serviceTypeSelect2 = serviceType2
   let clientNameSelect = clientName
 
-  console.log(serviceTypeSelect2)
+  // console.log(serviceTypeSelect2)
   let editTableClientName
   let editTableLocalityDropdown
   let editTableServiceTypeName
@@ -450,7 +451,7 @@ tbody ? tbody.ondblclick = (e) => {
   let editTableSLA
 
   currentEdit.map(value => {
-    e.target.parentElement.innerHTML = `
+    document.querySelector(`[data-sr='${target}']`).innerHTML = `
       <tr class="edit-table" id=${value.id}>
         <td class="tablehead1">
           ${e.target.parentElement.getAttribute("data-Sr")}
@@ -507,7 +508,6 @@ tbody ? tbody.ondblclick = (e) => {
       selectArray = [...select]
 
 
-    console.log(editTableClientName)
     editTableClientName.value = value.client_id
     editTableLocalityDropdown.value = "101"
     editTableServiceTypeName.value = value.Service_type_id
@@ -519,6 +519,7 @@ tbody ? tbody.ondblclick = (e) => {
 
 
   })
+
 
   const inputFields2 = document.querySelectorAll('.edit-table input:not([type="radio"] )'),
     inputFieldsArray2 = [...inputFields2],
