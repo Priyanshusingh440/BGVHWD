@@ -19,7 +19,7 @@ class States
    {
 
     $total="SELECT * FROM `order`";
-    $pending="SELECT * FROM `order` Where Order_Status='1'";
+    $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1'";
     $completed="SELECT * FROM `order` Where Order_Status='2'";
     $totalresult=$this->conn->query($total);
     $totalrows=$totalresult->num_rows;
