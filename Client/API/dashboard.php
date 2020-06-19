@@ -19,8 +19,19 @@ class States
    {
 
     $total="SELECT * FROM `order`";
+    $totaltime="SELECT MAX(order_creation_date_time) FROM `order`";
+    $rowtime=$this->conn->query($totaltime);
+    $timecompleted=$rowtime->fetch_assoc();
+
     $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1'";
+    $pendingtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='0' or Order_Status='1'";
+    $rowpendingtime=$this->conn->query($pendingtime);
+    $timepending=$rowpendingtime->fetch_assoc();
+
     $completed="SELECT * FROM `order` Where Order_Status='2'";
+    $completedtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='2'";
+    $rowcompletedtime=$this->conn->query($completedtime);
+    $timecomplete=$rowcompletedtime->fetch_assoc();
     $totalresult=$this->conn->query($total);
     $totalrows=$totalresult->num_rows;
     $pendingresult=$this->conn->query($pending);
@@ -29,10 +40,13 @@ class States
     $completedrows=$completedresult->num_rows;
 
     $dashboard['totalcases']=$totalrows;
+    $dashboard['totalcasestime']="Updated on ".$timecompleted["MAX(order_creation_date_time)"];
     $dashboard['pendingcases']=$pendingrows;
+    $dashboard['pendingcasestime']="Updated on ".$timepending["MAX(order_creation_date_time)"];
     $dashboard['completedcases']=$completedrows;
+    $dashboard['completedcasestime']="Updated on ".$timecomplete["MAX(order_creation_date_time)"];
 
-    echo json_encode($dashboard);
+  echo json_encode($dashboard);
     
            
             
