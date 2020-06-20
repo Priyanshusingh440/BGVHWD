@@ -65,21 +65,23 @@ service.addEventListener("change", (e) => {
 const getAllClientData = () => {
   const pageUrl = new URL(window.location.href);
   let id = pageUrl.searchParams.get('id')
-
-  fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
-    method: 'POST',
-    body: JSON.stringify({"client_id": id}),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    modifyClientData = data
-    updateModifyClientData(modifyClientData)
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+  const hiddenInput = document.querySelector("#user_id")
+  if (id || hiddenInput) {
+    fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
+      method: 'POST',
+      body: JSON.stringify({"client_id": (id || hiddenInput.value)}),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      modifyClientData = data
+      updateModifyClientData(modifyClientData)
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
 }
 getAllClientData()
 

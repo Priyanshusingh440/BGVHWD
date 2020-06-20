@@ -520,7 +520,7 @@ else
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="ClientViewOrder.js"></script>
+  <script src="vieworder.js"></script>
   <script>
   function test(){
 var dob = document.getElementById("dateofbirth");
