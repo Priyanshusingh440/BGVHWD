@@ -166,7 +166,7 @@ tbody ? tbody.onclick = (e) => {
   if (e.target.classList.contains('view-order')) {
     e.preventDefault()
     console.log('view-order')
-    window.location.href = `vieworder.html?id=${e.target.id}`
+    window.location.href = `vieworder.php?id=${e.target.id}`
   }
   if (e.target.classList.contains('add-bank-details')) {
     e.preventDefault()
