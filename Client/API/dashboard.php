@@ -28,13 +28,13 @@ class States
     $rowtime=$this->conn->query($totaltime);
     $timecompleted=$rowtime->fetch_assoc();
 
-    $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1' and client_id='".$data['client_id']."'";
-    $pendingtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='0' or Order_Status='1' and client_id='".$data['client_id']."'";
+    $pending="SELECT * FROM `order` Where client_id='".$data['client_id']."' and Order_Status='0' or '1' or Order_Status='1'";
+    $pendingtime="SELECT MAX(order_creation_date_time) FROM `order` Where client_id='".$data['client_id']."' and Order_Status='0' or Order_Status='1' ";
     $rowpendingtime=$this->conn->query($pendingtime);
     $timepending=$rowpendingtime->fetch_assoc();
 
     $completed="SELECT * FROM `order` Where Order_Status='2' and client_id='".$data['client_id']."'";
-    $completedtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='2' and client_id='".$data['client_id']."'";
+    $completedtime="SELECT MAX(order_creation_date_time) FROM `order` Where  client_id='".$data['client_id']."' and Order_Status='2'";
     $rowcompletedtime=$this->conn->query($completedtime);
     $timecomplete=$rowcompletedtime->fetch_assoc();
     $totalresult=$this->conn->query($total);
