@@ -62,10 +62,13 @@ service.addEventListener("change", (e) => {
   searchCriteria && searchCriteria.addEventListener('keyup', getModifyClientData)
 })
 
+const hiddenInput = document.querySelector("#user_id")
+
+
 const getAllClientData = () => {
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
     method: 'POST',
-    body: JSON.stringify({"client_id": 1}),
+    body: JSON.stringify({"client_id": hiddenInput.value}),
   })
   .then(response => response.json())
   .then(data => {
@@ -87,7 +90,7 @@ const tbody = document.querySelector("#table-body")
 const updateModifyClientData = (d) => {
   console.log('update', d)
   tbody ? tbody.innerHTML = '' : false
-  d.map((value, i) => {
+  Array.isArray(d) ? d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
     <td class="tablehead1">
       ${i + 1}
@@ -141,11 +144,10 @@ const updateModifyClientData = (d) => {
     </td>
   </tr>` : false
 
-  })
+  }) : false
 }
 
 
-const hiddenInput = document.querySelector("#user_id")
 
 console.log(hiddenInput.value)
 
@@ -163,7 +165,7 @@ const sendHiddenId = (url) => {
   });
 }
 sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")
-sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
+// sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
 
 
 const sendRequest = (url) => {
