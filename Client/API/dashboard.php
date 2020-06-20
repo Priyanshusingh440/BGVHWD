@@ -18,18 +18,23 @@ class States
    public function get_package()
    {
 
-    $total="SELECT * FROM `order`";
-    $totaltime="SELECT MAX(order_creation_date_time) FROM `order`";
+    $json_data=file_get_contents("php://input");
+    $data=json_decode($json_data,true);
+    if(isset($data))
+    {
+        
+    $total="SELECT * FROM `order` WHERE client_id='".$data['client_id']."'";
+    $totaltime="SELECT MAX(order_creation_date_time) FROM `order` WHERE client_id='".$data['client_id']."'";
     $rowtime=$this->conn->query($totaltime);
     $timecompleted=$rowtime->fetch_assoc();
 
-    $pending="SELECT * FROM `order` Where Order_Status='0' or Order_Status='1'";
-    $pendingtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='0' or Order_Status='1'";
+    $pending="SELECT * FROM `order` Where (client_id='".$data['client_id']."') AND (Order_Status='0' OR Order_Status='1')";
+    $pendingtime="SELECT MAX(order_creation_date_time) FROM `order` Where (client_id='".$data['client_id']."') and (Order_Status='0' or Order_Status='1')";
     $rowpendingtime=$this->conn->query($pendingtime);
     $timepending=$rowpendingtime->fetch_assoc();
 
-    $completed="SELECT * FROM `order` Where Order_Status='2'";
-    $completedtime="SELECT MAX(order_creation_date_time) FROM `order` Where Order_Status='2'";
+    $completed="SELECT * FROM `order` Where Order_Status='2' and client_id='".$data['client_id']."'";
+    $completedtime="SELECT MAX(order_creation_date_time) FROM `order` Where  client_id='".$data['client_id']."' and Order_Status='2'";
     $rowcompletedtime=$this->conn->query($completedtime);
     $timecomplete=$rowcompletedtime->fetch_assoc();
     $totalresult=$this->conn->query($total);
@@ -47,9 +52,12 @@ class States
     $dashboard['completedcasestime']="Updated on ".$timecomplete["MAX(order_creation_date_time)"];
 
   echo json_encode($dashboard);
-    
-           
-            
+    }
+    else
+    {
+      echo "Client ID not found";
+    }
+                  
 
     }
 }

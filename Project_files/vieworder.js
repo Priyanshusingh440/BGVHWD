@@ -62,13 +62,13 @@ service.addEventListener("change", (e) => {
   searchCriteria && searchCriteria.addEventListener('keyup', getModifyClientData)
 })
 
-const hiddenInput = document.querySelector("#user_id")
-
-
 const getAllClientData = () => {
+  const pageUrl = new URL(window.location.href);
+  let id = pageUrl.searchParams.get('id')
+
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
     method: 'POST',
-    body: JSON.stringify({"client_id": hiddenInput.value}),
+    body: JSON.stringify({"client_id": id}),
   })
   .then(response => response.json())
   .then(data => {
@@ -90,7 +90,7 @@ const tbody = document.querySelector("#table-body")
 const updateModifyClientData = (d) => {
   console.log('update', d)
   tbody ? tbody.innerHTML = '' : false
-  Array.isArray(d) ? d.map((value, i) => {
+  d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
     <td class="tablehead1">
       ${i + 1}
@@ -144,8 +144,29 @@ const updateModifyClientData = (d) => {
     </td>
   </tr>` : false
 
-  }) : false
+  })
 }
+
+
+// const hiddenInput = document.querySelector("#user_id")
+
+// console.log(hiddenInput.value)
+
+// const sendHiddenId = (url) => {
+//   fetch(url, {
+//     method: 'POST',
+//     body: JSON.stringify({"user": hiddenInput.value}),
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log('Success:', data);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+// }
+// sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")
+// sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
 
 
 const sendRequest = (url) => {

@@ -26,6 +26,7 @@ if(isset($_SESSION['uname']) && isset($_SESSION['password']))
 {
    
   // echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
+  $unsa=$_SESSION['uid'];
 }
 else
 {
@@ -320,6 +321,7 @@ body {font-family: Verdana, sans-serif;}
                   </div>
                 </div>
               </div>
+              <input id="client_id" name="client_id" type="hidden" value="<?php echo $unsa;?>">
             </div>
 <!--Calender Content-->
               <!--<div class="col-xl-3">

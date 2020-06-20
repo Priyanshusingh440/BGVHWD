@@ -475,31 +475,31 @@ console.log(dob.value+"value");
 
 // thilm is 
 
-function showCustomer(){
-var e = document.getElementById("Service");
-var strUser = e.options[e.selectedIndex].value;
-var val2 = document.getElementById("SearchCriteria");
-var val = val2.value;
-try{
-var dob2 = document.getElementById("dateofbirth");var dob = dob2.value;
-}catch(err) {var dob="";}
-try{
-var opt2 = document.getElementById("OrderStatus");var opt = opt2.options[opt2.selectedIndex].value;
-}catch(err) {var opt="";}
-      $.post("API/ClientViewtable.php",
-    {
-      Service: strUser,
-      option: val,
-      dob: dob,
-      opt: opt
-    },
-    function(data,status){
-        $("#table").html(data);
-    document.getElementById("table").innerHTML = data;
-    console.log("r"+data);
-    //  alert("Data: " + data + "\nStatus: " + status);
-    });
-}
+// function showCustomer(){
+// var e = document.getElementById("Service");
+// var strUser = e.options[e.selectedIndex].value;
+// var val2 = document.getElementById("SearchCriteria");
+// var val = val2.value;
+// try{
+// var dob2 = document.getElementById("dateofbirth");var dob = dob2.value;
+// }catch(err) {var dob="";}
+// try{
+// var opt2 = document.getElementById("OrderStatus");var opt = opt2.options[opt2.selectedIndex].value;
+// }catch(err) {var opt="";}
+//       $.post("API/ClientViewtable.php",
+//     {
+//       Service: strUser,
+//       option: val,
+//       dob: dob,
+//       opt: opt
+//     },
+//     function(data,status){
+//         $("#table").html(data);
+//     document.getElementById("table").innerHTML = data;
+//     console.log("r"+data);
+//     //  alert("Data: " + data + "\nStatus: " + status);
+//     });
+// }
     
 </script>
   <script>
