@@ -22,7 +22,7 @@ class States
     
     if(isset($data))
     {
-        $query="SELECT * FROM `order` WHERE client_id='".$data['user']."'";
+        $query="SELECT * FROM `order` WHERE client_id='".$data['client_id']."'";
     $result=$this->conn->query($query);
     if($result->num_rows>0)
     {
