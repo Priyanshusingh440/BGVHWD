@@ -19,16 +19,18 @@ class login
    {
  
     
-
+    $json_data = file_get_contents("php://input");
 // Checks if it's empty or not
-if( isset($_POST))
+if( !empty($json_data))
 {
-  $email=$_POST['email'];
-  $password=$_POST['password'];
-
-  if(isset($_POST['user-type']))
+  $data = json_decode($json_data, true);
+  //echo print_r($_POST);
+  $email=$data['email'];
+  $password=$data['password'];
+  //echo $data['user-type'];
+  if($data['user-type']!="")
   {
-    if($_POST['user-type']=='Admin')
+    if($data['user-type']=="Admin")
     {
       
       if ($email != "" && $password != "")
@@ -54,11 +56,15 @@ if( isset($_POST))
               }
       }
     } 
-    else if($_POST['user-type']=='Employee')
+    else if($data['user-type']=='Employee')
     {
-      $check='SELECT * FROM employee  WHERE email_id="'.$email.'" and password="'.$password.'"';
-      
+      $check='SELECT * FROM employee_qc WHERE email_id="'.$email.'" and password="'.$password.'"';
+      $check1='SELECT * FROM employee_of WHERE email_id="'.$email.'" and password="'.$password.'"';
+      $check2='SELECT * FROM employee_vendor WHERE email_id="'.$email.'" and password="'.$password.'"';
+
       $result=$this->conn->query($check);
+      $result1=$this->conn->query($check1);
+      $result2=$this->conn->query($check2);
       
       if($result->num_rows==1)
           {
@@ -68,7 +74,29 @@ if( isset($_POST))
               $_SESSION['password']=$password;
               $_SESSION['uid']=$row['id'];
               
-              echo "Employee Logged In";
+              echo "Employee Logged QC In";
+              
+          }
+          else if($result1->num_rows==1)
+          {
+              $row = $result->fetch_assoc();
+              session_start();
+              $_SESSION['email'] = $email;
+              $_SESSION['password']=$password;
+              $_SESSION['uid']=$row['id'];
+              
+              echo "Employee Logged OF In";
+              
+          }
+          else if($result2->num_rows==1)
+          {
+              $row = $result->fetch_assoc();
+              session_start();
+              $_SESSION['email'] = $email;
+              $_SESSION['password']=$password;
+              $_SESSION['uid']=$row['id'];
+              
+              echo "Employee Logged vendor In";
               
           }
           else
@@ -79,7 +107,7 @@ if( isset($_POST))
   }
   else
   {
-    echo "Please Select User-type";
+    echo "Please Select User-type".$data['user-type']."abc";
   }
  
 }
