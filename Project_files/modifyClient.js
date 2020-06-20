@@ -86,6 +86,7 @@ const updateModifyClientData = (d) => {
             class="dropdown-menu dropdown-menu-left"
             aria-labelledby="navbarDropdownProfile" 
           >
+            <a class="dropdown-item" href="#" id="${value.Id}" class="view-order">View Order</a>
             <a class="dropdown-item" href="#">View</a>
             <a class="dropdown-item block" href="#" id="${value.Id}">${value.is_block == 1 ? "Unblock" : "Block"}</a>
             <!-- <div class="dropdown-divider"></div> -->
@@ -161,6 +162,10 @@ const sendRequestBlock = (e, url) => {
 }
 
 tbody ? tbody.onclick = (e) => {
+  if (e.target.classList.contains('view-order')) {
+    e.preventDefault()
+    window.location.href = `vieworder.php?id=${e.target.id}`
+  }
   if (e.target.classList.contains('add-bank-details')) {
     e.preventDefault()
     clientEditInfo = modifyClientData.find(client => client.Id == e.target.id)

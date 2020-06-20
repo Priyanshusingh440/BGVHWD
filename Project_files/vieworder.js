@@ -63,9 +63,12 @@ service.addEventListener("change", (e) => {
 })
 
 const getAllClientData = () => {
+  const pageUrl = new URL(window.location.href);
+  let id = pageUrl.searchParams.get('id')
+
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
     method: 'POST',
-    body: JSON.stringify({"client_id": 1}),
+    body: JSON.stringify({"client_id": id}),
   })
   .then(response => response.json())
   .then(data => {
