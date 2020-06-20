@@ -7,6 +7,8 @@ const totalInProgressUpdated = document.querySelector("#total-in-progress .stats
 
 let dashboardData 
 
+const hiddenInput = document.querySelector("#client_id")
+
 function timeSince(date) {
 
   var seconds = Math.floor((new Date() - date) / 1000);
@@ -38,16 +40,34 @@ var aDay = "Updated on 2020-06-19 17:09:00";
 console.log(timeSince(new Date(aDay)))
 // console.log(timeSince(new Date(Date.now()-aDay*2)));
 
-fetch("https://www.bgvhwd.xyz/Client/API/dashboard.php")
-  .then(response => response.json())
-  .then(data => {
-    dashboardData = data
-    updateDashboard()
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+fetch("https://www.bgvhwd.xyz/Client/API/dashboard.php", {
+  method: 'POST',
+  body: JSON.stringify({"client_id": hiddenInput.value}),
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data)
+  dashboardData = data
+  updateDashboard()
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+
+
+// fetch("https://www.bgvhwd.xyz/Client/API/dashboard.php")
+//   .then(response => response.json())
+//   .then(data => {
+//     dashboardData = data
+//     // updateDashboard()
+//     console.log('Success:', data);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+
+console.log('working all')
 
 const updateDashboard = () => {
   totalCases.innerHTML = dashboardData.totalcases
@@ -59,7 +79,7 @@ const updateDashboard = () => {
   totalInProgressUpdated.innerHTML = `<i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent ${timeSince(new Date(dashboardData.pendingcasestime))} ago`
 
 
-  console.log(new Date())
+  // console.log(new Date())
   // console.log(Math.floor(new Date() - new Date("Updated on 2020-06-18 17:36:48")) / 1000 )
   // console.log(moment(("19-06-2020").fromNow()))
   
@@ -70,3 +90,21 @@ const updateDashboard = () => {
 // pendingcasestime: "Updated on 2020-06-18 17:30:39"
 // totalcases: 18
 // totalcasestime: "Updated on 2020-06-18 17:36:48"
+
+
+// console.log(hiddenInput.value)
+
+// const sendHiddenId = (url) => {
+//   fetch(url, {
+//     method: 'POST',
+//     body: JSON.stringify({"user": hiddenInput.value}),
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log('Success:', data);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+// }
+// sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")

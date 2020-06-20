@@ -148,26 +148,6 @@ const updateModifyClientData = (d) => {
 }
 
 
-
-console.log(hiddenInput.value)
-
-const sendHiddenId = (url) => {
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify({"user": hiddenInput.value}),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-}
-sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")
-// sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
-
-
 const sendRequest = (url) => {
   fetch(url, {
     method: 'POST',
