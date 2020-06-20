@@ -12,8 +12,9 @@ session_start();
    $userid=$_SESSION['uname'];
   
    $sql = "SELECT * FROM `client` WHERE email_id='$userid'";
+   echo "SELECT * FROM `client` WHERE email_id='$userid'";
    $result = mysqli_query($db,$sql);
-    
+    /*
    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 	   
    echo '<div class="row">
