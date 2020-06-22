@@ -70,7 +70,7 @@ const hiddenInput = document.querySelector("#user_id")
 const getAllClientData = () => {
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
     method: 'POST',
-    body: JSON.stringify({"client_id": hiddenInput}),
+    body: JSON.stringify({"client_id": hiddenInput.value}),
   })
   .then(response => response.json())
   .then(data => {
