@@ -89,49 +89,108 @@ else
       </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="Dashboard.php">
+          <li class="nav-item">
+            <a class="nav-link" href="./adminDashboard_sidebar.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="ClientViewOrder.php">
-              <i class="material-icons">content_paste</i>
-              <p>View Orders</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="CreateOrder.php">
-              <i class="material-icons">content_paste</i>
-              <p>Create Order</p>
-            </a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="ClientBulkOrder.php">
+            <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
+              <p>Client</p>
+            </a>
+            <div class="collapse" id="client">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addClient.php">Add Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./assignService.php">Assign Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LOB.php">LOB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">supervisor_account</i>
+              <p>Services</p>
+            </a>
+            <div class="collapse" id="services">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createService.php">Add Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.php
+                    ">Modify Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./#">Auto SLA </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+          <!-- <i class="material-icons">bubble_chart</i> -->
+          <li class="navbar-item">
+            <a href="#master" class="nav-link" data-toggle="collapse">
               <i class="material-icons">library_books</i>
-              <p>Bulk Orders</p>
+              <p>Master</p>
             </a>
+
+            <div class="collapse" id="master">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Auto SLA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="reports.php">
-              <i class="material-icons">bubble_chart</i>
-              <p>Reports</p>
+          <li class="navbar-item">
+            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
+              <p>User</p>
             </a>
+            <div class="collapse" id="user">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="MyProfile.php">
-              <i class="material-icons">person</i>
-              <p>My Profile</p>
-            </a>
-          </li>
-         
-          <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="upgrade.php">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
         </ul>
       </div>
     </div>
@@ -236,9 +295,14 @@ else
                         <option value="email_id"  class=" bg-secondary text-light">Email ID</option>
                         <option value="Order_Status"  class=" bg-secondary text-light">Order Status</option>
                       </select>
-
                     </div>
-                    
+
+                    <div class="form-group" style="margin-top:9%;">
+                      <label for="clientName">Client Name</label>
+                      <select name="clientName" id="clientName" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                        <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
+                      </select>
+                    </div>
 
                     </div>
 
@@ -336,6 +400,9 @@ else
                       <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                       <th>
                           Sr. No
+                        </th>
+                        <th>
+                          Client Name
                         </th>
                         <th>
                           First Name & last Name
@@ -462,7 +529,7 @@ else
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="ClientViewOrder.js"></script>
+  <script src="vieworder2.js"></script>
   <script>
   function test(){
 var dob = document.getElementById("dateofbirth");
