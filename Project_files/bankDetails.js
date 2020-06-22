@@ -56,7 +56,7 @@ const submit = (url) => {
   }
 }
 
-addBankDetails && addBankDetails.addEventListener('click', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
+addBankDetails && addBankDetails.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
 
 console.log("working 2")
 
@@ -157,7 +157,6 @@ tbody ? tbody.onclick = (e) => {
 
 console.log("working 2")
 let jsonData = {}
-// const tbody = document.querySelector("#table-body")
   const edit = (e) => {
   console.log('dblclick')
   let target = e.target.parentElement.getAttribute("data-sr")
@@ -165,20 +164,6 @@ let jsonData = {}
   setAllBankDetails(allBankDetails)
 
   let currentEdit = allBankDetails.filter(v => v.id === e.target.parentElement.id)
-
-  // let countrySelect2 = countrySelect
-  // let serviceTypeSelect2 = serviceType2
-  // let clientNameSelect = clientName
-
-  // // console.log(serviceTypeSelect2)
-  let editTableBankName
-  let editTableAccountNo
-  let editTableAddLine1
-  let editTableAddLine2
-  let editTableIFSCcode
-  let editTableFavourOf
-  let editTablesw
-  // let editTableFavourOf
 
   console.log(currentEdit)
   currentEdit.map((value, i) => {
@@ -227,38 +212,11 @@ let jsonData = {}
         </td>
       </tr>
   `
-
-    editTableClientName = document.querySelector(".edit-table #ClientName")
-    editTableLocalityDropdown = document.querySelector(".edit-table #locality-dropdown")
-    editTableServiceTypeName = document.querySelector(".edit-table #select_service_type")
-    editTableServiceName = document.querySelector(".edit-table #service-name")
-    editTablePrice = document.querySelector(".edit-table #price")
-    editTableSLA = document.querySelector(".edit-table #SLA")
-
-
-    const inputFields = document.querySelectorAll('#edit-table input:not([type="radio"] )'),
-      inputFieldsArray = [...inputFields],
-      select = document.querySelectorAll('#edit-table select'),
-      selectArray = [...select]
-
-
-    // editTableClientName.value = value.client_id
-    // editTableLocalityDropdown.value = "101"
-    // editTableServiceTypeName.value = value.Service_type_id
-    // editTableServiceName.value = value.service_name
-    // editTablePrice.value = value.price
-    // editTableSLA.value = value.SLA
-
-    console.log(e.target.parentElement)
-
-
   })
 
 
   const inputFields2 = document.querySelectorAll('.edit-table input:not([type="radio"] )'),
-    inputFieldsArray2 = [...inputFields2],
-    select2 = document.querySelectorAll('.edit-table select'),
-    selectArray2 = [...select2]
+    inputFieldsArray2 = [...inputFields2]
 
 
   const editOnchange = (url) => {
@@ -283,27 +241,9 @@ let jsonData = {}
     }
   }
 
-  // editTableClientName.addEventListener('change', editOnchange("API/editAssignService.php"))
-  // editTableLocalityDropdown.addEventListener('change', editOnchange("API/editAssignService.php"))
-  // editTableServiceTypeName.addEventListener('change', editOnchange("API/editAssignService.php"))
   let saveButton = document.querySelector(".edit-table button[type='submit']")
   console.log(saveButton)
   saveButton && saveButton.addEventListener('click', editOnchange("API/editBankDetails.php"))
-
-  const editOneEnter = (url) => {
-    return e => {
-      e.preventDefault();
-      console.log(e.keyCode)
-      if (e.keyCode === 13) {
-        console.log('enter')
-        editOnchange(url)
-      }
-    }
-  }
-  
-  // editTableServiceName.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
-  // editTablePrice.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
-  // editTableSLA.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
 
   data = {}
 } 
