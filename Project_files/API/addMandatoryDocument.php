@@ -26,12 +26,10 @@ class service
 
             // Decodes the JSON object to an Array
             $data = json_decode($json_data, true);
-            $name = $data['document_name'];
-
-
-
+            $name1 = $data['document_name'];
+            $name = mysqli_real_escape_string($this->conn, $name1);
             if ($name != "") {
-                $check = "INSERT INTO `documentlist` SET `document_name`='" . $name . "'";
+                $check = "INSERT INTO documentlist(document_name) values('$name')";
 
 
                 $result = $this->conn->query($check);
