@@ -107,6 +107,10 @@ class States
             $country[$i]['Reports']=$row['Reports'];
             $country[$i]['generated_reference_id']=$row['generated_reference_id'];
             $country[$i]['client_id']=$row['client_id'];
+            $name="SELECT Client_Name FROM client where id='".$row['client_id']."'";
+            $getname=$this->conn->query($name);
+            $nameresult=$getname->fetch_assoc();
+            $country[$i]['client_name']=$nameresult['Client_Name'];
             $country[$i]['is_rush']=$row['is_rush'];
             $country[$i]['contactable_person']=$row['contactable_person'];
             $country[$i]['order_creation_date_time']=$row['order_creation_date_time'];
