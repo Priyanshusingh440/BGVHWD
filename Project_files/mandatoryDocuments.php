@@ -277,7 +277,7 @@
                     </div>
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
-                        Update
+                        Add
                       </button>
 
                       <button type="button" onclick="formReset()" class="btn btn-primary">
