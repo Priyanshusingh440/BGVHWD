@@ -32,7 +32,7 @@ const getModifyClientData = () => {
   }
 
   updateModifyClientData(newData)
-  
+
 }
 
 service.addEventListener("change", (e) => {
@@ -43,7 +43,7 @@ service.addEventListener("change", (e) => {
     dateOne = document.querySelector('input#dateofbirth')
     console.log(dateOne)
     return dateOne.addEventListener("change", () => {
-      searchCriteria = dateOne 
+      searchCriteria = dateOne
       return getModifyClientData()
     })
   }
@@ -65,21 +65,37 @@ service.addEventListener("change", (e) => {
 const getAllClientData = () => {
   const pageUrl = new URL(window.location.href);
   let id = pageUrl.searchParams.get('id')
-
-  fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
-    method: 'POST',
-    body: JSON.stringify({"client_id": id}),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    modifyClientData = data
-    updateModifyClientData(modifyClientData)
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+  // const hiddenInput = document.querySelector("#user_id")
+  if (id) {
+    fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
+        method: 'POST',
+        body: JSON.stringify({
+          "client_id": id
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        modifyClientData = data
+        updateModifyClientData(modifyClientData)
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  } else {
+    fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        modifyClientData = data
+        updateModifyClientData(modifyClientData)
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
 }
 getAllClientData()
 
@@ -171,16 +187,16 @@ const updateModifyClientData = (d) => {
 
 const sendRequest = (url) => {
   fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 }
 
 tbody ? tbody.onclick = (e) => {

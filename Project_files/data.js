@@ -1,6 +1,6 @@
 console.log('working')
 
-const addClientSubmit = document.querySelector('#ajax button#add-client'),
+const addClientSubmit = document.querySelector('#ajax'),
   inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
   inputFieldsArray = [...inputFields],
   inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
@@ -197,16 +197,13 @@ const sendRequest = (url) => {
 const submit = (url) => {
   return e => {
     e.preventDefault()
-    let run = true
     inputFieldsArray ? inputFieldsArray.map((value) => {
-      if (run === true) {
         if (value.value.trim().length == 0) {
           console.log(value)
-          alert('all fields are required')
-          run = false
+          // alert('all fields are required')
         }
         data[value.name] = value.value
-      }
+      
     }) : false
     inputRadiosArray ? inputRadiosArray.map((value) => {
       let checked = 0
@@ -228,16 +225,15 @@ const submit = (url) => {
       data[value.name] = value.value
     }) : false
     inputCurrency ? data["currency"] = inputCurrency.value : false
-    if (run === true) {
       sendRequest(url)
-    }
+    
     data = {}
   }
 }
 
 
 // addClientSubmit && addClientSubmit.addEventListener('click', submit('API/addClient.php'))
-addClientSubmit && addClientSubmit.addEventListener('click', submit('https://www.bgvhwd.xyz/Project_files/API/addClient.php'))
+addClientSubmit && addClientSubmit.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/addClient.php'))
 console.log('working 2');
 
 
@@ -265,8 +261,8 @@ if (window.location.pathname === "/Project_files/addClient.php") {
 }
 
 
-const addBankDetails = document.querySelector('#ajax button#add-bank-details')
-addBankDetails && addBankDetails.addEventListener('click', submit("API/addBankDetails.php"))
+const addBankDetails = document.querySelector('#ajax')
+addBankDetails && addBankDetails.addEventListener('submit', submit("API/addBankDetails.php"))
 
 console.log("working 4");
 

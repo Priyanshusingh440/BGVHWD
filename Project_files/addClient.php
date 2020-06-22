@@ -78,7 +78,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -267,13 +267,13 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Client Name</label>
-                          <input name="Client Name" type="text" class="form-control" />
+                          <input name="Client Name" type="text" class="form-control" required />
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Client Code</label>
-                          <input name="Client Code" type="text" class="form-control" />
+                          <input name="Client Code" type="text" class="form-control" required />
                         </div>
                       </div>
                       <div class="col-md-4">

@@ -236,8 +236,9 @@ else
                         <option value="email_id"  class=" bg-secondary text-light">Email ID</option>
                         <option value="Order_Status"  class=" bg-secondary text-light">Order Status</option>
                       </select>
-                    </div>
 
+                    </div>
+                    
 
                     </div>
 

@@ -13,6 +13,27 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 
+<?php
+ 
+
+
+
+session_start();
+
+
+
+if(isset($_SESSION['uname']) && isset($_SESSION['password']))
+{
+   
+  // echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
+  $unsa=$_SESSION['uid'];
+}
+else
+{
+   
+  header("location:index.php?msg=invalid");
+}
+?>
 
 
 
@@ -276,6 +297,12 @@
                       </select>
                     </div>
 
+                    <div class="form-group" style="margin-top:9%;">
+                      <label for="clientName">Client Name</label>
+                      <select name="clientName" id="clientName" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                        <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
+                      </select>
+                    </div>
 
                     </div>
 
@@ -294,7 +321,7 @@
                    
                     <div class="form-group">
                     <label class="bmd-label-static"></label>
-                    <!--<input id="user_id" name="user_id" type="hidden" value="<?php // echo $unsa;?>">-->
+                    <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
                     <input  onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
                     </div>
                   </div>
@@ -373,6 +400,9 @@
                       <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                       <th>
                           Sr. No
+                        </th>
+                        <th>
+                          Client Name
                         </th>
                         <th>
                           First Name & last Name
@@ -499,7 +529,7 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="vieworder.js"></script>
+  <script src="vieworder2.js"></script>
   <script>
   function test(){
 var dob = document.getElementById("dateofbirth");
