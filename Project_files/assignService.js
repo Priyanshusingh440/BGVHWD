@@ -107,6 +107,21 @@ console.log('working')
 
 let data = {}
 
+const currency = document.querySelector('#currency')
+
+fetch('https://www.bgvhwd.xyz/Project_files/API/country.php')
+  .then(response => response.json())
+  .then(data => {
+    // clients = data
+    // console.log('clients', clients)
+    console.log(data)
+    data.map(v => {
+      // code change
+      currency.innerHTML += `<option value="${v.Id}" class="bg-secondary text-light" >${v.currency}</option>`
+    })
+  });
+
+
 let clients
 const clientName = document.querySelector('#ClientName')
 
