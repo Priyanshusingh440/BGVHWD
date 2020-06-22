@@ -70,7 +70,7 @@ const hiddenInput = document.querySelector("#user_id")
 const getAllClientData = () => {
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
     method: 'POST',
-    body: JSON.stringify({"client_id": (hiddenInput.value >= 0  ? hiddenInput.value : 9 )}),
+    body: JSON.stringify({"client_id": hiddenInput}),
   })
   .then(response => response.json())
   .then(data => {
@@ -176,27 +176,5 @@ tbody ? tbody.onclick = (e) => {
 
 console.log("working 2")
 
-const clientName = document.querySelector("#clientName")
 
-fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php")
-  .then(res => res.json()
-  )
-  .then(data => {
-    console.log(data)
-    data.map(v => {
-      clientName.innerHTML += `<option value="${v.Client_Name}" selected="" class=" bg-secondary text-light">${v.Client_Name}</option>`
-    })
-  })
-  .catch(err => console.log(err))
-
-const clientNameDD = () => {
-  change = true
-  newData2 = modifyClientData.filter(v => {
-    // console.log(`${v.first_Name} ${v.middle_Name} ${v.last_Name}`)
-    clientName.value == `${v.first_Name} ${v.middle_Name} ${v.last_Name}`
-  })
-  updateModifyClientData(newData2)
-}
-
-clientName.addEventListener("change", clientNameDD)
 console.log("working all")
