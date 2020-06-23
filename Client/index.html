@@ -44,6 +44,38 @@
 
     <!--Custom styles-->
     <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <style>
+   /* .cb-slideshow{ 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+
+
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+     */
+     .lol{
+       transition:10s ease-in;
+     }
+    
+    </style>
   </head>
 
   <body>
@@ -56,7 +88,7 @@
           <strong>SPECIALIZED IN BACKGROUND VERIFICATION</strong>
         </p>
       </div>
-
+        <!-- login card-->
       <div class="d-flex justify-content-end h-100">
         <div class="card">
           <div class="card-header">
@@ -145,6 +177,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
+        $("body").addClass("lol")
         var urls = [
           "./assets/img/login.jpg",
           "./assets/img/loginc2.jpg",
