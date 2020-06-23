@@ -29,7 +29,7 @@ const getAllClientData = () => {
   fetch('https://www.bgvhwd.xyz/Project_files/API/viewclient.php')
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+    console.log(data) 
     modifyClientData = data
     updateModifyClientData(modifyClientData)
   })
@@ -161,7 +161,7 @@ const sendRequestBlock = (e, url) => {
   });
 }
 
-tbody ? tbody.onclick = (e) => {
+tbody ? tbody.onclick = (e) => { 
   console.log(e.target.classList)
   if (e.target.classList.contains('view-order')) {
     e.preventDefault()
