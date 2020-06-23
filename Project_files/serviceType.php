@@ -71,7 +71,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -109,7 +109,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
               </ul>
             </div>

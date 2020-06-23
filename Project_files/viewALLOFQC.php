@@ -83,133 +83,113 @@
       </a></div>
         <!--Side Bar-->
         <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./adminDashboard_sidebar.php">
-                <i class="material-icons">dashboard</i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#client" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">person</i>
-                <p>Client</p></a
-              >
-              <div class="collapse" id="client">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addClient.php"
-                      >Add Client</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./modifyClient.php"
-                    >Modify Client</a >
-                    <li class="nav-item">                     
-                        <a class="nav-link" href="./assignService.php">Assign Services</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./LOB.php">LOB</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./createPackage.php">Assign Package</a>
-                     </li> 
-                </ul>
-              </div>
-            </li>
-            <li class="navbar-item">
-              <a href="#services" class="nav-link" data-toggle="collapse" >
-                <i class="material-icons">supervisor_account</i>
-                <p>Services</p></a>
-              <div class="collapse" id="services">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./serviceType.php"
-                      >Add Service Type</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./createService.php">Add Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./service.php
-                    "
-                      >Modify Service</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./package.php"
-                      >Create/Modilfy Package </a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./#"
-                      >Auto SLA </a
-                    >
-                  </li>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./adminDashboard_sidebar.php">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
+              <p>Client</p>
+            </a>
+            <div class="collapse" id="client">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addClient.php">Add Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./assignService.php">Assign Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LOB.php">LOB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">supervisor_account</i>
+              <p>Services</p>
+            </a>
+            <div class="collapse" id="services">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createService.php">Add Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.php
+                    ">Modify Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./#">Auto SLA </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <i class="material-icons">bubble_chart</i> -->
+          <li class="navbar-item">
+            <a href="#master" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">library_books</i>
+              <p>Master</p>
+            </a>
 
-                </ul>
-              </div>
-            </li>
-            <!-- <i class="material-icons">bubble_chart</i> -->
-             <li class="navbar-item">
-              <a href="#master" class="nav-link" data-toggle="collapse">
-                <i class="material-icons">library_books</i>
-                <p>Master</p></a > 
-
-                <div class="collapse" id="master">
-                  <ul class="list-unstyled nav">
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./mandatoryDocuments.php"
-                        >Mandatory Documents</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./standardMacro.php"
-                        >Standard Macro</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Auto SLA</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportColor.php"
-                        >Report Color Code</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportConfig.php"
-                        >Report Configuration Master</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Insufficient Emial Triggers</a
-                      >
-                    </li>
-                  </ul>
-                </div>             
-            </li>
-            <li class="navbar-item">
-              <a href="#user" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">account_circle</i>
-                <p>User</p></a >
-              <div class="collapse" id="user">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addModifyUser.php"
-                      >Add Modify User</a
-                    >
-                  </li> 
-                </ul>
-              </div>     
-            </li>
-          </ul>
-        </div>
+            <div class="collapse" id="master">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Auto SLA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
+              <p>User</p>
+            </a>
+            <div class="collapse" id="user">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
       <!--Side Bar End-->
     </div>
 

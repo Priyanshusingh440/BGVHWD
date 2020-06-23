@@ -23,16 +23,18 @@
   <title>
     Create Service
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-   <!--Switching modes-->
-   <link rel="stylesheet" href="assets/css/style.css">
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
 
@@ -49,151 +51,133 @@
       <div class="logo"> <a class="navbar-brand" href="#">
           <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
-    <!--Side Bar-->
-    <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./adminDashboard_sidebar.php">
-                <i class="material-icons">dashboard</i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#client" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">person</i>
-                <p>Client</p></a
-              >
-              <div class="collapse" id="client">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addClient.php"
-                      >Add Client</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./modifyClient.php"
-                    >Modify Client</a >
-                    <li class="nav-item">                     
-                        <a class="nav-link" href="./assignService.php">Assign Services</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./LOB.php">LOB</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./createPackage.php">Assign Package</a>
-                     </li> 
-                </ul>
-              </div>
-            </li>
-            <li class="navbar-item">
-              <a href="#services" class="nav-link" data-toggle="collapse" >
-                <i class="material-icons">supervisor_account</i>
-                <p>Services</p></a>
-              <div class="collapse" id="services">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./serviceType.php"
-                      >Add Service Type</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./createService.php">Add Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./service.php
-                    "
-                      >Modify Service</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./package.php"
-                      >Create/Modilfy Package </a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./#"
-                      >Auto SLA </a
-                    >
-                  </li>
+      <!--Side Bar-->
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./adminDashboard_sidebar.php">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
+              <p>Client</p>
+            </a>
+            <div class="collapse" id="client">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addClient.php">Add Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./assignService.php">Assign Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LOB.php">LOB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">supervisor_account</i>
+              <p>Services</p>
+            </a>
+            <div class="collapse" id="services">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createService.php">Add Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.php
+                    ">Modify Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./#">Auto SLA </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <i class="material-icons">bubble_chart</i> -->
+          <li class="navbar-item">
+            <a href="#master" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">library_books</i>
+              <p>Master</p>
+            </a>
 
-                </ul>
-              </div>
-            </li>
-            <!-- <i class="material-icons">bubble_chart</i> -->
-             <li class="navbar-item">
-              <a href="#master" class="nav-link" data-toggle="collapse">
-                <i class="material-icons">library_books</i>
-                <p>Master</p></a > 
-
-                <div class="collapse" id="master">
-                  <ul class="list-unstyled nav">
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./mandatoryDocuments.php"
-                        >Mandatory Documents</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./standardMacro.php"
-                        >Standard Macro</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Auto SLA</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportColor.php"
-                        >Report Color Code</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportConfig.php"
-                        >Report Configuration Master</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Insufficient Emial Triggers</a
-                      >
-                    </li>
-                  </ul>
-                </div>             
-            </li>
-            <li class="navbar-item">
-              <a href="#user" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">account_circle</i>
-                <p>User</p></a >
-              <div class="collapse" id="user">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addModifyUser.php"
-                      >Add Modify User</a
-                    >
-                  </li> 
-                </ul>
-              </div>     
-            </li>
-          </ul>
-        </div>
+            <div class="collapse" id="master">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Auto SLA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
+              <p>User</p>
+            </a>
+            <div class="collapse" id="user">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
       <!--Side Bar End-->
     </div>
     <div class="main-panel mainP">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
 
       <!-- Navbar -->
-      <nav  style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+      <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
+        id="navigation-example">
         <div class="container-fluid">
-          <div class="navbar-wrapper" style="height: 70px;" >
+          <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Create Services</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -219,7 +203,8 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -235,7 +220,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -274,15 +260,19 @@
                   <form id="ajax" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service Type</label>
-                        <select id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
+                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service
+                          Type</label>
+                        <select id="select_service_type" name="service_type_id"
+                          onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
                         </select>
                       </div>
                     </div>
                     <div class="row justify-content-start" style="margin-top: 2%;">
                       <div class="form-group col-md-4">
-                        <label for="service_name" class="bmd-label-floating" style="margin-left: 4%;">Service Name</label>
-                        <input id="Service Name" name="service_name" type="text" onchange="T3();" class="form-control" placeholder="" />
+                        <label for="service_name" class="bmd-label-floating" style="margin-left: 4%;">Service
+                          Name</label>
+                        <input id="Service Name" name="service_name" type="text" onchange="T3();" class="form-control"
+                          placeholder="" />
                       </div>
                       <button class="btn btn-primary" onclick=" TestIT2();">Add</button>
                     </div>
@@ -341,8 +331,10 @@
                   <form id="ajax2" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;">Service Type</label>
-                        <select id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
+                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;">Service
+                          Type</label>
+                        <select id="select_service_type1" onchange="T33();" name="select_service_type"
+                          class="browser-default custom-select" required>
                         </select>
                       </div>
                       <div class="form-group col-md-6">
@@ -359,8 +351,10 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service Name</label>
-                        <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control" required>
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
+                          Name</label>
+                        <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control"
+                          required>
                           <option selected>Choose...</option>
                           <option>fgg</option>
                         </select>
@@ -368,8 +362,10 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Select Country</label>
-                        <select id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Select
+                          Country</label>
+                        <select id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();"
+                          class="browser-default custom-select" required>
                         </select>
                       </div>
 
@@ -442,48 +438,48 @@
 
     </div>
   </div>
-  
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+  <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
+
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -511,7 +507,7 @@
 
     var button1 = document.getElementById("createNew");
     var button2 = document.getElementById("updateService");
-    button1.onclick = function() {
+    button1.onclick = function () {
       var div1 = document.getElementById("ajax");
       var div2 = document.getElementById("ajax2");
       if (div1.style.display !== "none") {
@@ -538,7 +534,7 @@
 
         fetch(service)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -547,7 +543,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -559,7 +555,7 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         if (button2.classList.contains("btn-success")) {
@@ -568,7 +564,7 @@
         }
       }
     };
-    button2.onclick = function() {
+    button2.onclick = function () {
       var div1 = document.getElementById("ajax");
       var div2 = document.getElementById("ajax2");
       if (div2.style.display !== "none") {
@@ -603,7 +599,7 @@
 
         fetch(service)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -612,7 +608,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -624,12 +620,12 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         fetch(locality)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -638,7 +634,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -650,7 +646,7 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         if (button1.classList.contains("btn-success")) {
@@ -660,8 +656,8 @@
       }
     };
 
-    $(document).ready(function() {
-      $().ready(function() {
+    $(document).ready(function () {
+      $().ready(function () {
         $sidebar = $(".sidebar");
 
         $sidebar_img_container = $sidebar.find(".sidebar-background");
@@ -672,7 +668,7 @@
 
         window_width = $(window).width();
 
-        $(".fixed-plugin a").click(function(event) {
+        $(".fixed-plugin a").click(function (event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
           if ($(this).hasClass("switch-trigger")) {
             if (event.stopPropagation) {
@@ -683,7 +679,7 @@
           }
         });
 
-        $(".fixed-plugin .active-color span").click(function() {
+        $(".fixed-plugin .active-color span").click(function () {
           $full_page_background = $(".full-page-background");
 
           $(this).siblings().removeClass("active");
@@ -704,7 +700,7 @@
           }
         });
 
-        $(".fixed-plugin .background-color .badge").click(function() {
+        $(".fixed-plugin .background-color .badge").click(function () {
           $(this).siblings().removeClass("active");
           $(this).addClass("active");
 
@@ -715,7 +711,7 @@
           }
         });
 
-        $(".fixed-plugin .img-holder").click(function() {
+        $(".fixed-plugin .img-holder").click(function () {
           $full_page_background = $(".full-page-background");
 
           $(this).parent("li").siblings().removeClass("active");
@@ -727,7 +723,7 @@
             $sidebar_img_container.length != 0 &&
             $(".switch-sidebar-image input:checked").length != 0
           ) {
-            $sidebar_img_container.fadeOut("fast", function() {
+            $sidebar_img_container.fadeOut("fast", function () {
               $sidebar_img_container.css(
                 "background-image",
                 'url("' + new_image + '")'
@@ -744,7 +740,7 @@
               .find("img")
               .data("src");
 
-            $full_page_background.fadeOut("fast", function() {
+            $full_page_background.fadeOut("fast", function () {
               $full_page_background.css(
                 "background-image",
                 'url("' + new_image_full_page + '")'
@@ -779,7 +775,7 @@
           }
         });
 
-        $(".switch-sidebar-image input").change(function() {
+        $(".switch-sidebar-image input").change(function () {
           $full_page_background = $(".full-page-background");
 
           $input = $(this);
@@ -811,7 +807,7 @@
           }
         });
 
-        $(".switch-sidebar-mini input").change(function() {
+        $(".switch-sidebar-mini input").change(function () {
           $body = $("body");
 
           $input = $(this);
@@ -826,7 +822,7 @@
               "destroy"
             );
 
-            setTimeout(function() {
+            setTimeout(function () {
               $("body").addClass("sidebar-mini");
 
               md.misc.sidebar_mini_active = true;
@@ -834,12 +830,12 @@
           }
 
           // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
+          var simulateWindowResize = setInterval(function () {
             window.dispatchEvent(new Event("resize"));
           }, 180);
 
           // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
+          setTimeout(function () {
             clearInterval(simulateWindowResize);
           }, 1000);
         });
@@ -847,11 +843,11 @@
     });
 
     let form = document.getElementById("ajax");
-    $(form).submit(function(event) {
+    $(form).submit(function (event) {
       var formdata = $("form").serializeArray();
       //console.log(formdata);
       var data = {};
-      $(formdata).each(function(index, obj) {
+      $(formdata).each(function (index, obj) {
         if (obj.name !== "Service Name") {
           data[obj.name] = obj.value;
         }
@@ -862,7 +858,7 @@
       fetch('./API/createService.php', {
         method: 'post',
         body: JSON.stringify(data)
-      }).then(function(res) {
+      }).then(function (res) {
         console.log(res.text());
         formReset();
       }).catch(err => {
@@ -873,11 +869,11 @@
     });
     $.ajax;
     let form2 = document.getElementById("ajax2");
-    $(form2).submit(function(event) {
+    $(form2).submit(function (event) {
       var formdata = $("form").serializeArray();
       //console.log(formdata);
       var data = {};
-      $(formdata).each(function(index, obj) {
+      $(formdata).each(function (index, obj) {
         data[obj.name] = obj.value;
 
       });
@@ -886,7 +882,7 @@
       fetch('./API/createService.php', {
         method: 'post',
         body: JSON.stringify(data)
-      }).then(function(res) {
+      }).then(function (res) {
         console.log(res.text());
         formReset();
       }).catch(err => {
