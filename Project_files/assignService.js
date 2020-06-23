@@ -209,7 +209,7 @@ const setServiceType = () => {
   serviceType.map(v => {
     serviceTypeSelect.innerHTML += `<option value="${v.id}" class="bg-secondary text-light" >${v.service_type}</option>`
   })
-}
+} 
 
 const setServiceName = () => {
   serviceNameSelect.innerHTML = `<option selected="" class="bg-secondary text-light">Choose...</option>`

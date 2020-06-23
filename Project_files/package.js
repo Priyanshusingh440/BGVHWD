@@ -115,13 +115,14 @@ fetch(lob)
   });
 
 
-const serviceNameWrapper = document.querySelector(".service-name-DD-wrapper")
+const serviceType = document.querySelector("#select_service_type")
 const setServiceName = () => {
-  let options = ""
+  let options = ``
   serviceName.map(v => {
     options += `<option value="${v.id}"  class="bg-secondary text-light" >${v.service_name}</option>`
   })
-  serviceNameWrapper.innerHTML += `<select class="browser-default custom-select service-name-dd" id="framework" name="framework[]" multiple >${options}</select>`
+  serviceType.innerHTML += options
+  // document.querySelector("body").innerHTML += `<script src="assets/js/material-dashboard.js?v=2.1.0"></script>`
   // const serviceNameDD = document.querySelector("select.service-name-dd")
   // serviceNameDD.innerHTML = ``
 }
@@ -130,8 +131,8 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/servicename.php")
   .then(response => response.json())
   .then(data => {
     serviceName = data
-    console.log('service names', serviceName)
-    // setServiceName()
+    console.log('service names', serviceName) 
+    setServiceName()
   })
   .catch((error) => {
     console.error('Error:', error);
