@@ -471,14 +471,17 @@ else
 
                     <div class="row">
 
-                    <p style="margin-left:4.5%;margin-top:1%;" class="selection">In Case Of Insufficiency Contact?</p>
+                    <p style="margin-left:4.5%;margin-right:2%;" class="selection">In Case Of Insufficiency Contact?</p>
 
-                    <div class="checkbox checkbox-circle checkbox-red selection"style="margin-left:5%;margin-top:0.7%;">
-                     <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadiosnew" id="exampleRadios1" value="option1" unchecked >
-            
-                     Rush Order
-                    </label>
-                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                          <input class="form-check-input" name="rush-order" type="checkbox" value="">
+                          Rush Order
+                          <span class="form-check-sign">
+                              <span class="check"></span>
+                          </span>
+                      </label>
+                  </div>
 
                     </div>
 

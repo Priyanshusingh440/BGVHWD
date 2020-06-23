@@ -9,7 +9,7 @@
 * Coded by www.creative-tim.com
 
 =========================================================
- 
+
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Package
+    Mandatory Documents
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -33,12 +33,8 @@
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- <script src="package.js"></script> -->
-
 </head>
 
 <body class="dark-edition">
@@ -162,6 +158,7 @@
         </ul>
       </div>
       <!--Side Bar End-->
+
     </div>
     <div class="main-panel mainP">
       <!--toggle button-->
@@ -169,12 +166,13 @@
         <input type="checkbox" id="switch" name="theme">
         <label id="toggleButton" for="switch">Toggle</label>
       </div>
+
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example"
-        style="padding: 0; margin: 0;">
-        <div class="container-fluid" style="height: 70px;">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Package</a>
+      <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
+        id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Assign Documents</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
             aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -185,22 +183,14 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end">
             <!-- <form class="navbar-form">
-                <div class="input-group no-border">
-                  <input
-                    type="text"
-                    value=""
-                    class="form-control"
-                    placeholder="Search..."
-                  />
-                  <button
-                    type="submit"
-                    class="btn btn-default btn-round btn-just-icon"
-                  >
-                    <i class="material-icons">search</i>
-                    <div class="ripple-container"></div>
-                  </button>
-                </div>
-              </form> -->
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search..." />
+                <button type="submit" class="btn btn-default btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form> -->
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
@@ -254,84 +244,76 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Package</h4>
+                  <h4 class="card-title">Assign Documents</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-around">
-                      <div class="form-group col-md-4">
-                        <label for="ClientName" class="bmd-label-floating" style="margin-left: 4%;">Client Name</label>
-                        <select style="margin-top: 1%;" class="browser-default custom-select" type="select"
-                          id="Client Name" name="Id" style="color:#202940;" required>
-                        </select>
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <label for="Country" class="bmd-label-floating" style="margin-left: 4%;">Country</label>
-                        <select style="margin-top: 1%;" class="browser-default custom-select" type="select"
-                          id="locality-dropdown" name="country_id" style="color:#202940;" required>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row justify-content-around">
-                      <!-- <label for="Package Nmae" style="margin-left: 4%;"
-                            >Package Name</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder=""
-                          /> -->
-                      <div class="form-group col-md-4">
-                        <label class="bmd-label-floating" style="margin-left:0%;">Package Name</label>
-                        <input name="Package_Name" type="text" class="form-control" />
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <label class="bmd-label-floating" style="margin-left: 4%;">Price</label>
-                        <input name="Price" type="number" class="form-control" placeholder="" min="0" />
-                      </div>
-                    </div>
-
                     <div class="row justify-content-start">
-                      <div class="form-group col-md-4" style="margin-left: 13%;">
-                        <label for="LOB" class="bmd-label-floating" style="margin-left: 4%;">LOB</label>
-                        <select style="margin-top: 1%;" id="LOB" class="browser-default custom-select" name="LOB"
-                          style="color:#202940;" required>
-                        </select>
-                      </div>
-
-                      <div class="form-group col-md-4 service-name-DD-wrapper" style="margin-left: 8%;">
-                        
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
-                          Name</label>
-                          <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select"
-                            name="select_service_type" class="form-control" required multiple>
+                      <div class="form-group col-md-4">
+                        <label for="Service Type" style="margin-left: 4%;">Document name</label>
+                        <select style="margin-top:5%" id="document-name" class="browser-default custom-select"
+                            name="document-name" class="form-control" required multiple>
                             <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
                           </select>
-                        <!-- <select class="browser-default custom-select service-name-dd" id="framework" name="framework[]" -->
-                          <!-- multiple> -->
-                          <!-- <option value="Codeigniter">Codeigniter</option>
-                          <option value="CakePHP">CakePHP</option>
-                          <option value="Laravel">Laravel</option>
-                          <option value="YII">YII</option>
-                          <option value="Zend">Zend</option>
-                          <option value="Symfony">Symfony</option>
-                          <option value="Phalcon">Phalcon</option>
-                          <option value="Slim">Slim</option> -->
-                        <!-- </select> -->
-                        <!-- <div class="service-name-DD-wrapper"></div> -->
+                        <!-- <input type="text" list="cars" multiple/>
+                        <datalist id="cars" >
+                          <option>Volvo</option>
+                          <option>Saab</option>
+                          <option>Mercedes</option>
+                          <option>Audi</option>
+                        </datalist> -->
                       </div>
-                      
+                      <div class="form-group col-md-4">
+                        <label for="Service Type" style="margin-left: 4%;">Service Type</label>
+                        <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select"
+                          name="select_service_type" class="form-control" required>
+                          <option class='bg-secondary text-light' default not selected>Choose...</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="Service Name" style="margin-left: 4%;">Service Name</label>
+                        <select style="margin-top:5%" id="select_service_name" class="browser-default custom-select"
+                          name="select_service_name" class="form-control"
+                          required>
+                          <option class='bg-secondary text-light' default not selected>Choose...</option>
+
+                        </select>
+                      </div>
                     </div>
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
-                        Submit
+                        Add
                       </button>
 
-                      <button type="button" class="btn btn-primary">
+                      <button type="button" onclick="formReset()" class="btn btn-primary">
                         Reset
                       </button>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card">
+                          <div class="card-header card-header-primary">
+                            <h4 style="color: white;" class="card-title">Assign Documents</h4>
+                          </div>
+                          <table class="table table-hover" style="margin-top: 4%;">
+                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                              <th>
+                                Document Name
+                              </th>
+                              <th>
+                                Edit
+                              </th>
+                              <th>
+                                Delete
+                              </th>
+                            </thead>
+                            <tbody id="table">
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -348,6 +330,7 @@
       </script>
     </div>
   </div>
+  <!--   Core JS Files   -->
   <!--mode changing-->
   <script>
     let darkmode = localStorage.getItem("darkmode");
@@ -389,8 +372,6 @@
     }
   </script>
   <!--mode change end-->
-  <!--   Core JS Files   -->
-  <script src="package.js"></script>
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
@@ -408,23 +389,14 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js">
-  </script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+  <script src="assignDocument.js"></script>
   <script>
-    $(document).ready(function () {
-      $('#framework').multiselect({
-        nonSelectedText: 'Select Service Name',
-        enableFiltering: true,
-        enableCaseInsensitiveFiltering: true,
-        buttonWidth: '400px'
-      });
-    });
+    popuTable();
+  </script>
+  <script>
+    function formReset() {
+      document.getElementById("ajax").reset();
+    }
     $(document).ready(function () {
       $().ready(function () {
         $sidebar = $(".sidebar");
@@ -611,20 +583,25 @@
       });
     });
 
-    $("form").submit(function (event) {
+    let form = document.getElementById("ajax");
+    $(form).submit(function (event) {
       var formdata = $("form").serializeArray();
-      console.log(formdata);
+      //console.log(formdata);
       var data = {};
       $(formdata).each(function (index, obj) {
+
+
         data[obj.name] = obj.value;
       });
 
-      console.log(data);
-      fetch('./API/package.php', {
+      //console.log(data);
+      fetch('./API/addMandatoryDocument.php', {
         method: 'post',
         body: JSON.stringify(data)
       }).then(function (res) {
-        console.log(res.text());
+        //console.log(res);
+        alert('Mandatory Document saved Successfully');
+        popuTable();
         formReset();
       }).catch(err => {
         //console.log(err);
@@ -637,26 +614,3 @@
 </body>
 
 </html>
-
-<!-- <div class="btn-group show open" style="width: 400px;"><button type="button"
-    class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="Select Service Name"
-    style="width: 400px; overflow: hidden; text-overflow: ellipsis;" aria-expanded="true"><span
-      class="multiselect-selected-text">Select Service Name</span> <b class="caret"></b></button>
-  <ul class="multiselect-container dropdown-menu show" x-placement="top-start"
-    style="position: absolute; top: -215px; left: 0px; will-change: top, left;">
-    <li class="multiselect-item filter" value="0">
-      <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input
-          class="form-control multiselect-search" type="text" placeholder="Search"><span class="input-group-btn"><button
-            class="btn btn-default multiselect-clear-filter" type="button"><i
-              class="glyphicon glyphicon-remove-circle"></i></button></span></div>
-    </li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Codeigniter"> Codeigniter</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="CakePHP"> CakePHP</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Laravel"> Laravel</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="YII"> YII</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Zend"> Zend</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Symfony"> Symfony</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Phalcon"> Phalcon</label></a></li>
-    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Slim"> Slim</label></a></li>
-  </ul>
-</div> --> 
