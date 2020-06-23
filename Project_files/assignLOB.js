@@ -88,6 +88,7 @@ const submit = (url) => {
       let run = true
 
         var selected = [];
+        var selected2 = []
         for (var option of document.getElementById('clientName').options) {
           if (option.selected) {
             selected.push(option.value);
@@ -97,10 +98,10 @@ const submit = (url) => {
 
         for (var option of document.getElementById('lob').options) {
           if (option.selected) {
-            selected.push(option.value);
+            selected2.push(option.value);
           }
         }
-        jsonData["lob"] = selected
+        jsonData["lob"] = selected2
 
         console.log(selected);
 
