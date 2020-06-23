@@ -56,7 +56,7 @@ const submit = (url) => {
   }
 }
 
-addBankDetails && addBankDetails.addEventListener('click', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
+addBankDetails && addBankDetails.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
 
 console.log("working 2")
 
@@ -86,15 +86,15 @@ const setAllBankDetails = (d) => {
   tbody ? tbody.innerHTML = '' : false
   d.map((value, i) => {
     tbody ? tbody.innerHTML += `
-    <tr>
+    <tr class="edit-table" id=${value.id} data-Sr="${i + 1}">
       <td class="tablehead1">
-        ${i}
+        ${i + 1}
       </td>
       <td class="tablehead1">
         ${value.address_line_1}
       </td>
       <td class="tablehead1">
-        ${value.address_line_1}
+        ${value.address_line_2}
       </td>
       <td class="tablehead1">
         ${value.account_number}
@@ -111,15 +111,16 @@ const setAllBankDetails = (d) => {
       <td class="tablehead1">
         ${value.favour_of}
       </td>
-      <td class="text-primary tablehead1">
+      <td class="text-primary tablehead1" id=${value.id} data-Sr="${i + 1}">
         <button
           type="button"
-          class="btn btn-primary btn-sm"
+          class="btn btn-primary btn-sm edit"  
+          
         >
           Edit
         </button>
       </td>
-      <td class="text-primary tablehead1">
+      <td class="text-primary tablehead1" >
         <button
           id=${value.id}
           type="button"
@@ -137,6 +138,10 @@ const setAllBankDetails = (d) => {
 let r
 
 tbody ? tbody.onclick = (e) => {
+  if (e.target.classList.contains('edit')) {
+    // e.preventDefault()
+    edit(e)
+  }
   if (e.target.classList.contains('delete')) {
     e.preventDefault()
     console.log('delete')
@@ -149,5 +154,99 @@ tbody ? tbody.onclick = (e) => {
   }
   data = {}
 } : false
+
+console.log("working 2")
+let jsonData = {}
+  const edit = (e) => {
+  console.log('dblclick')
+  let target = e.target.parentElement.getAttribute("data-sr")
+  console.log(target)
+  setAllBankDetails(allBankDetails)
+
+  let currentEdit = allBankDetails.filter(v => v.id === e.target.parentElement.id)
+
+  console.log(currentEdit)
+  currentEdit.map((value, i) => {
+    document.querySelector(`[data-sr='${target}']`).innerHTML = `
+      <tr class="edit-table" id=${value.id}>
+        <td class="tablehead1">
+          ${e.target.parentElement.getAttribute("data-Sr")}
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="address-line-1" value="${value.address_line_1}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="address-line-2" value="${value.address_line_2}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="account-no" value="${value.account_number}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="ifsc-code" value="${value.ifsc_code}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="swift-code" value="${value.swift_code}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="routing-code" value="${value.routing_code}" class="form-control" id="" >
+        </td>
+        <td class="tablehead1">
+          <input type="text" name="favour-of" value="${value.favour_of}" class="form-control" id="" >
+        </td>
+        <td class="text-primary tablehead1">
+          <button
+            type="submit"
+            class="btn btn-primary btn-sm edit"
+          >
+            Save
+          </button>
+        </td>
+        <td class="text-primary tablehead1">
+          <button
+            id=${value.id}
+            type="button"
+            class="btn btn-primary btn-sm delete"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+  `
+  })
+
+
+  const inputFields2 = document.querySelectorAll('.edit-table input:not([type="radio"] )'),
+    inputFieldsArray2 = [...inputFields2]
+
+
+  const editOnchange = (url) => {
+    return e => {
+      e.preventDefault()
+      let run = true
+      inputFieldsArray2 ? inputFieldsArray2.map((value) => {
+        console.log(value.name)
+        if (run === true) {          
+          if (value.value.trim().length == 0) {
+            console.log(value)
+            alert('all fields are required')
+            run = false
+          }
+          data[value.name] = value.value
+        }
+      }) : false
+      if (run === true) {
+        sendRequest(url)
+      }
+      data = {}
+    }
+  }
+
+  let saveButton = document.querySelector(".edit-table button[type='submit']")
+  console.log(saveButton)
+  saveButton && saveButton.addEventListener('click', editOnchange("API/editBankDetails.php"))
+
+  data = {}
+} 
+tbody ? tbody.addEventListener("dblclick", edit) : null
 
 console.log("working all")

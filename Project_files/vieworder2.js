@@ -6,15 +6,13 @@ let orderStatus
 let dateOne
 
 let data = {}
-let newData2
-let change = false
+
 // live search
 let clientCriteria
 const service = document.querySelector("#Service")
 const getModifyClientData = () => {
   let lowerCaseClientCriteria = searchCriteria.value.toLowerCase()
   let newData
-  // change ? null : newData2 = modifyClientData 
   if (clientCriteria == "First_Name_Last_Name") {
     newData = modifyClientData.filter(v => {
       console.log(v)
@@ -34,7 +32,7 @@ const getModifyClientData = () => {
   }
 
   updateModifyClientData(newData)
-  
+
 }
 
 service.addEventListener("change", (e) => {
@@ -45,7 +43,7 @@ service.addEventListener("change", (e) => {
     dateOne = document.querySelector('input#dateofbirth')
     console.log(dateOne)
     return dateOne.addEventListener("change", () => {
-      searchCriteria = dateOne 
+      searchCriteria = dateOne
       return getModifyClientData()
     })
   }
@@ -64,14 +62,26 @@ service.addEventListener("change", (e) => {
   searchCriteria && searchCriteria.addEventListener('keyup', getModifyClientData)
 })
 
-const hiddenInput = document.querySelector("#user_id")
-
-
-const getAllClientData = () => {
+const getClientData = (id) => {
   fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php", {
-    method: 'POST',
-    body: JSON.stringify({"client_id": hiddenInput.value}),
-  })
+      method: 'POST',
+      body: JSON.stringify({
+        "client_id": id
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      modifyClientData = data
+      updateModifyClientData(modifyClientData)
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+fetch("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
   .then(response => response.json())
   .then(data => {
     console.log(data)
@@ -82,8 +92,7 @@ const getAllClientData = () => {
   .catch((error) => {
     console.error('Error:', error);
   });
-}
-getAllClientData()
+// getAllClientData()
 
 // getModifyClientData(0)
 
@@ -92,10 +101,13 @@ const tbody = document.querySelector("#table-body")
 const updateModifyClientData = (d) => {
   console.log('update', d)
   tbody ? tbody.innerHTML = '' : false
-  Array.isArray(d) ? d.map((value, i) => {
+  d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
     <td class="tablehead1">
       ${i + 1}
+    </td>
+    <td class="tablehead1">
+      ${value["client_name"]} 
     </td>
     <td class="tablehead1">
       ${value["first_Name"]} ${value["last_Name"]} 
@@ -146,22 +158,22 @@ const updateModifyClientData = (d) => {
     </td>
   </tr>` : false
 
-  }) : false
+  })
 }
 
 
 const sendRequest = (url) => {
   fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 }
 
 tbody ? tbody.onclick = (e) => {
@@ -174,7 +186,26 @@ tbody ? tbody.onclick = (e) => {
   data = {}
 } : false
 
-console.log("working 2")
 
+const clientName = document.querySelector("#clientName")
+
+fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    data.map(v => {
+      clientName.innerHTML += `<option value="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</option>`
+    })
+  })
+  .catch(err => console.log(err))
+
+const clientNameDD = (e) => {
+  // change = true
+  // updateModifyClientData(newData2)
+  console.log(e.target.value)
+  getClientData(e.target.value)
+}
+
+clientName.addEventListener("change", clientNameDD)
 
 console.log("working all")

@@ -32,7 +32,8 @@ class States
                 break;
             case "edit":
                 $value = $data['value'];
-                $query = "UPDATE documentlist SET document_name='" . $value . "' WHERE id='" . $data['id'] . "'";
+                $name = mysqli_real_escape_string($this->conn, $value);
+                $query = "UPDATE documentlist SET document_name='" . $name . "' WHERE id='" . $data['id'] . "'";
                 $result = $this->conn->query($query);
                 if ($result) {
                     echo "Edit Successfully";

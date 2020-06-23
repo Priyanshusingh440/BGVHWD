@@ -56,8 +56,6 @@ else
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-  <!--Switching modes-->
-  <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
 
@@ -71,15 +69,6 @@ else
   opacity: 100;
 }
 
-.table{
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.bg-secondary{
-  background-color: white  !important;
-  color: black !important;
-}
 
 
 </style>
@@ -100,64 +89,118 @@ else
       </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="Dashboard.php">
+          <li class="nav-item">
+            <a class="nav-link" href="./adminDashboard_sidebar.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="ClientViewOrder.php">
-              <i class="material-icons">content_paste</i>
-              <p>View Orders</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="CreateOrder.php">
-              <i class="material-icons">content_paste</i>
-              <p>Create Order</p>
-            </a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="ClientBulkOrder.php">
+            <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
+              <p>Client</p>
+            </a>
+            <div class="collapse" id="client">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addClient.php">Add Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./assignService.php">Assign Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LOB.php">LOB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">supervisor_account</i>
+              <p>Services</p>
+            </a>
+            <div class="collapse" id="services">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createService.php">Add Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.php
+                    ">Modify Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./#">Auto SLA </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+          <!-- <i class="material-icons">bubble_chart</i> -->
+          <li class="navbar-item">
+            <a href="#master" class="nav-link" data-toggle="collapse">
               <i class="material-icons">library_books</i>
-              <p>Bulk Orders</p>
+              <p>Master</p>
             </a>
+
+            <div class="collapse" id="master">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Auto SLA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="reports.php">
-              <i class="material-icons">bubble_chart</i>
-              <p>Reports</p>
+          <li class="navbar-item">
+            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
+              <p>User</p>
             </a>
+            <div class="collapse" id="user">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="MyProfile.php">
-              <i class="material-icons">person</i>
-              <p>My Profile</p>
-            </a>
-          </li>
-         
-          <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="upgrade.php">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
         </ul>
       </div>
     </div>
     <div class="main-panel">
-     <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
-          <div class="navbar-wrapper" style="height: 50px;">
-              <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Bulk Order</a>
-            </div>
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
+          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -165,7 +208,24 @@ else
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-default btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
             <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
@@ -222,9 +282,9 @@ else
                           
                     </div> -->
                       
-                    <div class="form-group" style="margin-top:9%;" >
+                    <div class="form-group" style="margin-top:9%;">
                       <label for="Service ">Search By</label>
-                      <select  name="Service" id="Service" id="optionColor" class="form-control selection" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                      <select name="Service" id="Service" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
                         <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
                         <option value="First_Name_Last_Name" class=" bg-secondary text-light">First Name Last Name</option>
                         <option value="internal_reference_id"  class=" bg-secondary text-light">Internal Reference Id</option>
@@ -235,9 +295,14 @@ else
                         <option value="email_id"  class=" bg-secondary text-light">Email ID</option>
                         <option value="Order_Status"  class=" bg-secondary text-light">Order Status</option>
                       </select>
-
                     </div>
-                    
+
+                    <div class="form-group" style="margin-top:9%;">
+                      <label for="clientName">Client Name</label>
+                      <select name="clientName" id="clientName" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                        <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
+                      </select>
+                    </div>
 
                     </div>
 
@@ -246,7 +311,7 @@ else
                     <div class="col-md-4" style="margin-top:2.5%;">
                     
                     <div id="hide">
-                    <div class="form-group ">
+                    <div class="form-group">
                       <label>Search Criteria</label>
                     <input type="text" name="SearchCriteria" style="display:none;" id="SearchCriteria" class="form-control" placeholder="Enter As Per Search Criteria" onkeyup="showCustomer()">
                     </div>
@@ -331,10 +396,13 @@ else
                 </div>
                 <div class="card-body">
                   <div class="table-responsive" id="table">
-                    <table class="table table-hover" style="margin-top: 2%;">
+                    <table class="table table-hover" style="margin-top: 4%;">
                       <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                       <th>
                           Sr. No
+                        </th>
+                        <th>
+                          Client Name
                         </th>
                         <th>
                           First Name & last Name
@@ -443,46 +511,6 @@ else
       </ul>
     </div>
   </div>-->
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
-
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
-    }
-
-
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
-
-
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
-
-
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
-        trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
-
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -501,7 +529,7 @@ else
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="ClientViewOrder.js"></script>
+  <script src="vieworder2.js"></script>
   <script>
   function test(){
 var dob = document.getElementById("dateofbirth");
