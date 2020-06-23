@@ -300,8 +300,8 @@
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label for="Price" style="margin-left: 4%;">Price</label>
-                        <input name="Price" type="number" id="Price" class="form-control" min="0" placeholder="" />
+                        <label for="Price" style="margin-left: 4%;margin-top: 4%;">Price</label>
+                        <input name="Price" type="number" id="Price" class="form-control mt-4" min="0" placeholder="" />
                       </div>
                       <div class="form-group col-md-4">
                         <label for="currency" style="margin-left: 4%;">Currency</label>
@@ -311,12 +311,24 @@
                         </select>
                       </div>
                     </div>
-                    <div class="form-group col-md-4">
-                      <label for="SLA" style="margin-left: 4%;">SLA</label>
-                      <input name="SLA" id="SLA" type="text" class="form-control" placeholder="" />
-                    </div>
-                    <hr />
+                    <div class="row justify-content-start">
 
+                    <div class="form-group col-md-4">
+                      <label for="SLA" style="margin-left: 4%;margin-top: 4%;">SLA</label>
+                      <input name="SLA" id="SLA" type="text" class="form-control mt-4" placeholder="" />
+                    </div>
+                  </div>
+
+                    <hr />
+                    <div class="row justify-content-end" style="margin-right: 1%;">
+                      <button type="submit" id="assignSubmit" class="btn btn-primary mx-2">
+                        Add
+                      </button>
+
+                      <button type="button" onclick="formReset()" class="btn btn-primary">
+                        Reset
+                      </button>
+                    </div>
 
 
                     <!--table starts-->
@@ -345,6 +357,9 @@
                                 Service Name
                               </th>
                               <th>
+                                Price
+                              </th>
+                              <th>
                                 SLA
                               </th>
                               <th>
@@ -355,9 +370,9 @@
                               </th>
                             </thead>
                             <!--Problem occuring here-->
-                            <!-- <tbody id="table">
+                            <tbody id="table">
 
-                            </tbody> -->
+                            </tbody>
                           </table>
                         </div>
                       </div>

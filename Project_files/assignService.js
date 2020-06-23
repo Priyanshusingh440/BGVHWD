@@ -224,7 +224,7 @@ countrySelect.onchange = (e) => fetchService(e)
 serviceTypeSelect.onchange = (e) => fetchServiceName(e)
 
 
-const assignSubmit = document.querySelector('#ajax button#assignSubmit'),
+const assignSubmit = document.querySelector('#ajax '),
   inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
   inputFieldsArray = [...inputFields],
   inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
@@ -481,13 +481,13 @@ tbody ? tbody.ondblclick = (e) => {
           ${serviceTypeSelect2}
         </td>
         <td class="tablehead1">
-          <input type="text" id="service-name" name="service-name" />
+          <input type="text" class="form-control" id="service-name" name="service-name" />
         </td>
         <td class="tablehead1">
-          <input type="number" id="price" name="price" />
+          <input type="number" class="form-control" id="price" name="price" />
         </td>
         <td class="tablehead1">
-          <input type="text" id="SLA" name="SLA" />
+          <input type="text" class="form-control" id="SLA" name="SLA" />
         </td>
         <td class="text-primary tablehead1">
           <button
@@ -592,6 +592,6 @@ tbody ? tbody.ondblclick = (e) => {
 } : false
 
 
-assignSubmit && assignSubmit.addEventListener('click', submit('https://www.bgvhwd.xyz/Project_files/API/assignService.php'))
+assignSubmit && assignSubmit.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/assignService.php'))
 
 console.log('working all')
