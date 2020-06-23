@@ -13,29 +13,6 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 
-<?php
- 
-
-
-
-session_start();
-
-
-
-if(isset($_SESSION['uname']) && isset($_SESSION['password']))
-{
-   
-  // echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
-  $unsa=$_SESSION['uid'];
-}
-else
-{
-   
-  header("location:index.php?msg=invalid");
-}
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -321,7 +298,7 @@ else
                    
                     <div class="form-group">
                     <label class="bmd-label-static"></label>
-                    <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
+                    
                     <input  onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
                     </div>
                   </div>
