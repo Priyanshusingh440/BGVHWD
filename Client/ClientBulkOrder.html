@@ -52,6 +52,9 @@ else
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+   <!--Switching modes-->
+   <link rel="stylesheet" href="assets/css/style.css">
+
 
 <style>
 
@@ -137,11 +140,16 @@ else
       </div>
     </div>
     <div class="main-panel">
+        <!--toggle button-->
+ <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+  <input type="checkbox" id="switch" name="theme">
+  <label id="toggleButton" for="switch">Toggle</label>
+</div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
+            <a style="color: white;" class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -150,24 +158,7 @@ else
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
@@ -214,14 +205,14 @@ else
                       <div class="col-md-4">
                         <div class="form-group"style="margin-top:12%;">
 
-                     <label class="bmd-label-floating">Service</label>
+                     <label style="font-size: 13px;" class="bmd-label-floating">Service</label>
                      <select class="browser-default custom-select"type="select" id="Service" name="Service" style="color:#202940;margin-top:3%;">
                      
                      </select>
 
                      <a href="docs/book1.xlsx" download><button type="button" class="btn btn-primary">Download Sample Template</button></a>
 
-                    <div class="checkbox checkbox-circle checkbox-red"style="margin-top:12%;margin-left:7%;">
+                    <div class="checkbox checkbox-circle checkbox-red"style="margin-top:1%;margin-left:7%;">
                     <input class="form-check-input" type="radio" name="exampleRadios" onclick="UploadFile()" id="Client" value="options1" unchecked >
                     <label class="form-check-label" for="exampleRadios1">
                     Upload File
@@ -304,15 +295,40 @@ else
                     </form>
                     </div>
 
-              <!--Horizontal Line Part Starts Here-->
+  
 
-              <hr style="background-color:#9B43A9">
-
-              <h2 style="color:white;margin-left:2%;">Log Reports</h2>
+              <!-- <h2 style="color:white;margin-left:2%;">Log Reports</h2> -->
+              <div class="card-header card-header-primary" style="margin-top: 2%;">
+                <h4 class="card-title">Log Reports</h4>
+            </div>
+            <div class="card-body" style="margin-top: 3%;">
 
               <table class="table table-bordered table-dark"style="background-color:#1A2035;margin-bottom:9%;">
               
               <thead class="table table-hover">
+
+
+
+
+                 <!--table-->
+                 <div class="row" style="margin-top: 4%;">
+                  <div class="col-md-12">
+                      <div class="card">
+                          <div class="card-header card-header-primary">
+                              <h3 class="card-title">Log Reports</h3>
+                          </div>
+                          <table class="table table-hover " style="margin-top: 3%;">
+                              <thead class="text-primary "
+                                  style="background-color: rgb(44, 44, 104);">
+
+
+
+
+
+
+
+
+
 
               <th>Sr.no</th>
                         <th>Date</th>
@@ -347,7 +363,7 @@ else
              
            </tbody>
            </table>
-
+            </div>
           
 
             </div>
@@ -460,6 +476,45 @@ else
     </div>
   </div>-->
   <!--   Core JS Files   -->
+  <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>

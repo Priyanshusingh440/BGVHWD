@@ -58,6 +58,8 @@ else
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
   <link href="../CSS-file-icons-master/build/css-file-icons.css" rel="stylesheet" />
+   <!--Switching modes-->
+   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
     [type="date"] {
@@ -136,11 +138,16 @@ else
       </div>
     </div>
     <div class="main-panel">
+       <!--toggle button-->
+ <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+  <input type="checkbox" id="switch" name="theme">
+  <label id="toggleButton" for="switch">Toggle</label>
+ </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Create Order</a>
+            <a style="color: white;" class="navbar-brand" href="javascript:void(0)">Create Order</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
             aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -150,24 +157,7 @@ else
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
@@ -204,9 +194,9 @@ else
         </div>
       </nav>
       <!-- End Navbar -->
-      <div class="content">
+      <div class="content" >
         <div class="container-fluid">
-          <div class="row">
+          <div class="row" style="margin-top: 1%;">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -309,7 +299,7 @@ else
                           <div class="form-group">
                             <label class="bmd-label-floating"> Type Text Here...</label>
                             <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
-                            <textarea name='Additional Comments' class="form-control" rows="4"></textarea>
+                            <textarea name='Additional Comments' class="form-control" rows="2"></textarea>
                           </div>
                         </div>
                       </div>
@@ -317,16 +307,16 @@ else
 
                     <!--Package Details-->
 
-                    <div class="card-header card-header-primary" style="margin-top:3%;">
+                    <div class="card-header card-header-primary" style="margin-top:2%;">
                       <h4 class="card-title" style="color:white;">Package Details</h4>
                     </div>
 
 
-                    <div class="row" style="margin-left:1%;margin-top:2%;">
+                    <div class="row" style="margin-left:1%;margin-top:3%;">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown" onchange="getpackage(this.value)"
+                          <label style="font-size: 14px;" class="bmd-label-floating">Country</label>
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown" onchange="getpackage(this.value)"
                             style="color:#202940;" required>
                             
                           </select>
@@ -334,8 +324,8 @@ else
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Package</label>
-                          <select class="browser-default custom-select" type="select" id="package-dropdown" name="package-dropdown" 
+                          <label  style="font-size: 14px;" class="bmd-label-floating">Package</label>
+                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="package-dropdown" name="package-dropdown" 
                             style="color:#202940;">
                             <option>Select Package</option>
                           </select>
@@ -350,7 +340,7 @@ else
 
                     <!--Service  Details-->
 
-                    <div class="card-header card-header-primary" style="margin-top:3%;">
+                    <div class="card-header card-header-primary" style="margin-top:5%; margin-bottom: 2%;">
                       <h4 class="card-title" style="color:white;">Service Details</h4>
                     </div>
 
@@ -358,8 +348,8 @@ else
                     <div class="row" style="margin-left:1%;margin-top:2%;">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-static">Country</label>
-                          <select class="browser-default custom-select" type="select" id="select-country-service" name="select-country-service" onchange="getservice(this.value)"
+                          <label  style="font-size: 14px;" class="bmd-label-static">Country</label>
+                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select-country-service" name="select-country-service" onchange="getservice(this.value)"
                             style="color:#202940;">
                            
                           </select>
@@ -369,8 +359,8 @@ else
 
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-static">Service Type</label>
-                          <select class="browser-default custom-select" type="select" id="select_service_type" name="select_service_type" onchange="getservicename(this.value)"
+                          <label  style="font-size: 14px;" class="bmd-label-static">Service Type</label>
+                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_service_type" name="select_service_type" onchange="getservicename(this.value)"
                             style="color:#202940;">
                             
                           </select>
@@ -379,8 +369,8 @@ else
 
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-static">Service </label>
-                          <select class="browser-default custom-select" type="select" id="select_service_name" name="select_service_name" onchange="getdocumentlist(this.value)"
+                          <label style="font-size: 14px;" class="bmd-label-static">Service </label>
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_service_name" name="select_service_name" onchange="getdocumentlist(this.value)"
                             style="color:#202940;">
                             
                           </select>
@@ -413,195 +403,118 @@ else
                       <h4 class="card-title" style="color:white;">Upload Documents</h4>
                     </div>
 
-
-                    <div class="row" style="margin-left:1%;margin-top:2%;">
+                    <div class="row"style="margin-left:1%;margin-top:2%;">
                       <div class="col-md-4">
+                         <h5 class="selection">Upload Document Here</h5>
+                            <div class="row"style="margin-left:1%;">
+                              <p class="selection" style="margin-top:2.7%;">Document 1</p>   
+                               <div class="form-group"style="margin-left:2%;">
+                                <label class="selection border" for="exampleFormControlFile1"style="border: 1px solid white; cursor: pointer ;padding:3px;">Upload File</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                              </div>
+                             </div>
 
-                        <h5 style="color:white;">Upload Document Here</h5>
-
-                        <div class="row" style="margin-left:1%;">
-
-                          <p style="margin-top:3.5%;">Choose File </p>
-
-
-                    <div class="form-group" style="margin-left:2%;">
-                    <label for="filexzc" style="border: 1px solid white;padding:3px;">Upload
-                     File</label>
-                   <input type="file" multiple name='file' class="form-control-file" id="filexzc" onchange="javascript:updateList()">
-                  <!-- <input type="file" multiple name="file2" id="file2" onchange="javascript:updateList()" />-->
-                   
-                    </div>
-                    </div>
-
-                   <!-- <div class="row" id="chooseone"style="margin-left:1%;display:none;">
-                    <p style="margin-top:3.5%;">Choose File 2</p> 
-                    <div class="form-group"style="margin-left:2%;">
-                    <label for="exampleFormControlFile1"style="border: 1px solid white;padding:3px;">Upload File</label>
-                    <input type="file"id="choosefileone" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                    </div>-->
-                 
-                     <!--Add Another Icon Part starts Here-->
-
-                   <!-- <div class="d-flex flex-row"id="chooseanother"style="margin-left:2.2%;">
-                    <i class="fa fa-plus-circle" style="font-size:35px;color:#8e3a9b"onclick="myfunction()"></i>
-                    <p style="margin-top:3%;margin-left:3%;">Add Another</p>
-                     </div>-->
- 
-                   <!--Add Another Icon Part closes Here-->
-
+                       <div class="row"style="margin-left:1%;">
+                          <p class="selection" style="margin-top:2.7%;">Choose File</p>   
+                           <div class="form-group"style="margin-left:2%;">
+                             <label class="selection border" for="exampleFormControlFile1"style="border: 1px solid white;padding:3px; cursor: pointer;">Upload File</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                          </div>
                       </div>
+                    </div>
+
+                    <!--File Format Part of Upload Document Starts Here-->
+
+                    <div class="col-md-4">
+
+                   <h5 class="selection">File Formats</h5>
+            
+                   <div class="row selection"style="margin-left:2%;margin-top:2%;">
+
+                    <i class="fa fa-file-word-o"  style="font-size:40px; color: tomato;"></i>
+
+                    <i class="fa fa-file-excel-o " style="font-size:40px;margin-left:2%;color: green"></i>
+
+                    <i class="fa fa-file-powerpoint-o " style="font-size:40px;margin-left:2%;color: brown"></i>
+
+                    </div>
+
+                    <div class="row"style="margin-left:2%;margin-top:5%;">
+
+                    <i class="fa fa-file-pdf-o selection" style="color: orange !important; font-size:40px;"></i>
+
+                    </div>
+
+                    </div>
+                    <!--File Format part Closes Here-->
+
+                    <!--Document List View Starts Here-->
+
+                     <div class="col-md-4">
 
 
+                  <div class="form-group">
+                  <label for="exampleFormControlSelect5"style="color:white;margin-top:1%;"><h5 class="selection">Document List View</h5></label>
+                  <select multiple class="form-control selection" id="exampleFormControlSelect5"style="height:30%;margin-bottom:4%; ">
+                  <option style="margin-top:5%;">Document 1.xls</option>
+                  <option style="margin-top:3%;">Document 2.png</option>
+                  <option style="margin-top:3%;">Document 3.docs</option>
+                  <option style="margin-top:3%;">Document 4.rtf</option>
+                  <option style="margin-top:3%">Document 5.pdf</option>
+                  </select>
+                  </div>
 
-                      <!--File Format Part of Upload Document Starts Here-->
-
-                      <div class="col-md-4">
-
-<h5 style="color:white;">File Formats</h5>
-
-<div class="row" style="margin-left:2%;margin-top:2%;">
-
-  <div class="fi fi-doc " style="margin-left:0px;margin-right: 4%;">
-    <div class="fi-content">doc</div>
-</div>
-
-<div class="fi fi-docx" style="margin-left:0px;margin-right: 4%;">
-  <div class="fi-content">docx</div>
-</div>
-
-<div class="fi fi-csv" style="margin-left:0px;margin-right: 4%;">
-<div class="fi-content">csv</div>
-</div>
-</div>
-
-<div class="row" style="margin-left:2%;margin-top:2%;">
-
-  <div class="fi fi-rtf " style="margin-left:0px;margin-right: 4%;">
-    <div class="fi-content">rtf</div>
-</div>
-
-<div class="fi fi-pdf" style="margin-left:0px;margin-right: 4%;">
-  <div class="fi-content">pdf</div>
-</div>
-
-<div class="fi fi-jpeg" style="margin-left:0px;margin-right: 4%;">
-<div class="fi-content">jpeg</div>
-</div>
-
-<div class="fi fi-xlsx" style="margin-left:0px;margin-right: 4%;">
-<div class="fi-content">xlsx</div>
-</div>
-
-</div>
-<div class="row" style="margin-left:2%;margin-top:2%;">
-
-  <div class="fi fi-bmp " style="margin-left:0px;margin-right: 4%;">
-    <div class="fi-content">bmp</div>
-</div>
-
-<div class="fi fi-gif" style="margin-left:0px;margin-right: 4%;">
-  <div class="fi-content">gif</div>
-</div>
-
-<div class="fi fi-jpg" style="margin-left:0px;margin-right: 4%;">
-<div class="fi-content">jpg</div>
-</div>
-<div class="fi fi-xls " style="margin-left:0px;margin-right: 4%;">
-<div class="fi-content">xls</div>
-</div>
-</div>
-
-
-</div>
-                      <!--File Format part Closes Here-->
-
-                      <!--Document List View Starts Here-->
-
-                      <div class="col-md-4">
-
-
-                        <div class="form-group">
-                          <label for="exampleFormControlSelect5" style="color:white;margin-top:1%;">
-                            <h5>Document List View</h5>
-                          </label>
-                          
-                         <!-- <div id="fileList" 
-                            style="height:90px;margin-bottom:4%;overflow-y:scroll"></div>-->
-                          <select multiple class="form-control" size='8' id="documentlist" name="documentlist"
-                            style="height:100%;margin-bottom:4%;">
-                           <!-- <option style="margin-top:9%;">Document 1.xls</option>
-                            <option style="margin-top:3%;">Document 2.png</option>
-                            <option style="margin-top:3%;">Document 3.docs</option>
-                            <option style="margin-top:3%;">Document 4.rtf</option>
-                            <option style="margin-top:3%">Document 5.pdf</option>-->
-                            
-                          </select>
-                        </div>
-
-                      </div>
-                      <!--Document List View part Closes Here-->
+                    </div>
+                    <!--Document List View part Closes Here-->
                     </div>
                     <!--Main Row Of Upload Documents Closes Here-->
 
-                    <!--Add Another Icon Part starts Here-->
+                    <div class="row">
 
-                  
+                    <p style="margin-left:4.5%;margin-top:1%;" class="selection">In Case Of Insufficiency Contact?</p>
 
-                    <!--Add Another Icon Part Closes Here-->
-
-                    <div class="d-flex flex-row-reverse" style="margin-top:2%;">
-
-                      <div class="checkbox checkbox-square checkbox-red" style="margin-top:0.7%;">
-                        <input class="form-check-input" type="checkbox" name='rushorder' value="1" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          Rush Order
-                        </label>
-                      </div>
-
-                      <p style="margin-right:5%;margin-top:0.5%;">In Case Of Insufficiency Contact?</p>
+                    <div class="checkbox checkbox-circle checkbox-red selection"style="margin-left:5%;margin-top:0.7%;">
+                     <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadiosnew" id="exampleRadios1" value="option1" unchecked >
+            
+                     Rush Order
+                    </label>
+                    </div>
 
                     </div>
 
-                    <div class="d-flex flex-row-reverse" style="margin-top:1%;">
+                    <div class="row selection"style="margin-left:0%; margin-top:1%">
 
-                      <div class="checkbox checkbox-circle checkbox-red" style="margin-right:11%;">
-                        <input class="form-check-input" type="radio" name="Contactable" id="employee"
-                          value="0" style="border:5px solid red;">
-                        <label class="form-check-label" for="exampleRadios2">
-                          Employee
-                        </label>
-                      </div>
-
-                      <div class="checkbox checkbox-circle checkbox-red" style="margin-right:5%;">
-                        <input class="form-check-input" type="radio" name="Contactable" id="client"
-                          value="1">
-                        <label class="form-check-label" for="Contactable">
-                          Client
-                        </label>
-                      </div>
-
-                    </div>
-
-
-
-                    <div class="d-flex flex-row-reverse" style="margin-top:2%;">
-
-                      <button type="submit" class="btn btn-primary pull right" style="margin-left:2%;">Cancel</button>
-                      <div class="clearfix"></div>
-
-                      <button type="submit" id="submit" class="btn btn-primary" style="margin-left:2%;">Ok</button>
-                      <div class="clearfix"></div>
-
-                      <button type="submit"  class="btn btn-primary" style="margin-left:2%;">Preview</button>
-                      <div class="clearfix"></div>
-
-                    </div>
+                    <div class="checkbox checkbox-circle checkbox-red"style="margin-left:5%;">
+                    <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                     
+                    Client
+                    </label>
+                    </div>
+                
+                   <div class="blackcolor checkbox checkbox-circle checkbox-red"style="margin-left:5%;">
+                   <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"style="border:5px solid red;">
+          
+                    Employee
+                   </label>
+                  </div>
 
+                    </div>
 
+                    <div class="row justify-content-end"style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
+
+                  <button type="submit" class="btn btn-primary pull-left"style="margin-left:4%;">Preview</button>
+                  <div class="clearfix"></div>
+
+                   <button type="submit" class="btn btn-primary pull-left"style="margin-left:2%;">Ok</button>
+                  <div class="clearfix"></div>
+
+                   <button type="submit" class="btn btn-primary pull-left"style="margin-left:2%;">Cancel</button>
+                  <div class="clearfix"></div>
+
+                  </div>
 
                     <!--Upload Document Closes Here-->
+
 
 
 
@@ -720,6 +633,46 @@ else
       </ul>
     </div>
   </div>-->
+   <!--mode changing-->
+   <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>

@@ -13,29 +13,6 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 
-<?php
- 
-
-
-
-session_start();
-
-
-
-if(isset($_SESSION['uname']) && isset($_SESSION['password']))
-{
-   
-  // echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
-  $unsa=$_SESSION['uid'];
-}
-else
-{
-   
-  header("location:index.php?msg=invalid");
-}
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -350,7 +327,19 @@ else
 
                       <div class="col-md-4">
 
+<<<<<<< HEAD
                         <div class="card" id="order" value="" style="background-color:#1A2035;padding:4%;display:none;">
+=======
+                    <div class="card" id="DateOne" style="background-color:#1A2035;padding:2%;display:none;">
+                   
+                    <div class="form-group">
+                    <label class="bmd-label-static"></label>
+                    
+                    <input  onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
+                    </div>
+                  </div>
+               
+>>>>>>> 4eaf5ceb772c157773ecb15c81732da6225f36cd
 
                           <div class="form-group" style="margin-top:6%;">
                             <label>Order Status</label>
