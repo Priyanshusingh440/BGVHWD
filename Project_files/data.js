@@ -1,6 +1,6 @@
 console.log('working')
 
-const addClientSubmit = document.querySelector('#ajax'),
+const addClientSubmit = document.querySelector('#ajax button'),
   inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
   inputFieldsArray = [...inputFields],
   inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
@@ -231,30 +231,54 @@ const submit = (url) => {
   }
 }
 
-
+const addClientForm = document.querySelector("#ajax")
 // addClientSubmit && addClientSubmit.addEventListener('click', submit('API/addClient.php'))
-addClientSubmit && addClientSubmit.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/addClient.php'))
+addClientForm && addClientForm.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/addClient.php'))
 console.log('working 2');
 
 
 
 console.log('working 3');
 
+const getElement = (elementSelector) => {
+  return document.querySelector(`[name='${elementSelector}']`)
+}
+
 // when add user go to addClient through edit
-if (window.location.pathname === "/Project_files/addClient.php") {
+if (window.location.pathname === "/Project_files/addClient.html") {
+  console.log("ok")
   var url = new URL(window.location.href);
   let id = url.searchParams.get('id')
   if (id) {
     clientEditInfo = JSON.parse(localStorage.getItem("data"))
 
     // automatic fill up input fields
-    inputFieldsArray.map((inputField) => {
-      inputField.value = clientEditInfo[inputField.name]
-    })
-    inputRadiosArray.map((inputRadio) => {
-      inputRadio.checked = (clientEditInfo[inputRadio.name] == 1) ? true : false
-    })
-    inputCurrency.value = clientEditInfo[inputCurrency.name]
+    getElement("Client Name").value = clientEditInfo["Client_Name"]
+    getElement("Client Code").value = clientEditInfo["Client_Code"]
+    getElement("Client SPOC").value = clientEditInfo["Client_SPOC"]
+    getElement("locality-dropdown").value = clientEditInfo["country"]
+    getElement("select_state").value = clientEditInfo["State"]
+    getElement("select_city").value = clientEditInfo["city"]
+    getElement("Zip Code").value = clientEditInfo["Zip_Code"]
+    getElement("Applicant Response Time").value = clientEditInfo["App_Response_Time"]
+    getElement("Invoice Address Details").value = clientEditInfo["Inv_Address"]
+    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+    getElement("Invoice Code").value = clientEditInfo["Inv_Code"]
+    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+    getElement("Email ID").value = clientEditInfo["email"]
+    getElement("currency").value = clientEditInfo["Currency"]
+    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+    // getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+    getElement("dateofbirth").value = clientEditInfo["DOB"]
+    
+
+    // inputFieldsArray.map((inputField) => {
+    //   inputField.value = clientEditInfo[inputField.name]
+    // })
+    // inputRadiosArray.map((inputRadio) => {
+    //   inputRadio.checked = (clientEditInfo[inputRadio.name] == 1) ? true : false
+    // })
+    // inputCurrency.value = clientEditInfo[inputCurrency.name]
     addClientSubmit.innerHTML = "Update"
     data[id] = id
   }

@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Mandatory Documents
+    LOB type
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -105,7 +105,7 @@
                   <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./#">Auto SLA </a>
+                  <a class="nav-link" href="./#">Auto SLA</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
@@ -172,7 +172,7 @@
         id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Mandatory Documents</a>
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">LOB type</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
             aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -244,7 +244,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Mandatory Documents</h4>
+                  <h4 class="card-title">LOB Type</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
@@ -276,12 +276,12 @@
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header card-header-primary">
-                            <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
+                            <h4 style="color: white;" class="card-title">LOB Type</h4>
                           </div>
                           <table class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
-                                Document Name
+                                LOB type Name
                               </th>
                               <th>
                                 Edit
@@ -370,7 +370,7 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="mandatoryDocuments.js"></script>
+  <script src="LOBtype.js"></script>
   <script>
     popuTable();
   </script>
@@ -576,12 +576,12 @@
       });
 
       //console.log(data);
-      fetch('./API/addMandatoryDocument.php', {
+      fetch('./API/addlob.php', {
         method: 'post',
         body: JSON.stringify(data)
       }).then(function (res) {
         //console.log(res);
-        alert('Mandatory Document saved Successfully');
+        // alert('Mandatory Document saved Successfully');
         popuTable();
         formReset();
       }).catch(err => {
