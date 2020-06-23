@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-  DashBoard
+  Indian Check
   </title>
   <meta
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
@@ -39,7 +39,7 @@
     />
     <!-- CSS Files -->
     <link
-      href="../assets/css/material-dashboard.css?v=2.1.0"
+      href="assets/css/material-dashboard.css?v=2.1.0"
       rel="stylesheet"
     />
     <script
@@ -55,10 +55,42 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="assets/demo/demo.css" rel="stylesheet" />
 
     <!--Switching modes-->
     <link rel="stylesheet" href="assets/css/style.css">
+  
+ 
+<style>
+
+[type="date"] {
+  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 100;
+}
+
+#exampleRadios1 {
+
+background:red;
+
+border:2px solid red;
+}
+input .form-control{
+ margin-top: 100px;       
+}
+
+.form-control{
+  margin-top: 30px !important;
+}
+
+
+
+</style>
+
 
 </head>
 
@@ -68,7 +100,7 @@
         class="sidebar"
         data-color="purple"
         data-background-color="black"
-        data-image="../assets/img/sidebar-2.jpg"
+        data-image="assets/img/sidebar-2.jpg"
       >
         <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -82,36 +114,133 @@
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="./Dashboard.html">
+              <a class="nav-link" href="./adminDashboard_sidebar.php">
                 <i class="material-icons">dashboard</i>
                 <p>Dashboard</p>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./newlyAssignedOrder.html">
-                <i class="material-icons">person</i>
-                <p>Newly Assigned</p></a
+              <a href="#client" class="nav-link" data-toggle="collapse"
+                ><i class="material-icons">person</i>
+                <p>Client</p></a
               >
+              <div class="collapse" id="client">
+                <ul class="list-unstyled nav">
+                  <li class="nav-item">
+                    <a class="nav-link" name href="./addClient.php"
+                      >Add Client</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./modifyClient.php"
+                    >Modify Client</a >
+                    <li class="nav-item">                     
+                        <a class="nav-link" href="./assignService.php">Assign Services</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="./LOB.php">LOB</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                     </li> 
+                </ul>
+              </div>
+            </li>
             <li class="navbar-item">
-              <a class="nav-link" href="./SearchOrder.html">
+              <a href="#services" class="nav-link" data-toggle="collapse" >
                 <i class="material-icons">supervisor_account</i>
-                <p>Search Order</p></a>
+                <p>Services</p></a>
+              <div class="collapse" id="services">
+                <ul class="list-unstyled nav">
+                  <li class="nav-item">
+                    <a class="nav-link" name href="./serviceType.php"
+                      >Add Service Type</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./createService.php">Add Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="./service.php
+                    "
+                      >Modify Service</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./package.php"
+                      >Create/Modilfy Package </a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./#"
+                      >Auto SLA </a
+                    >
+                  </li>
+
+                </ul>
+              </div>
             </li>
             <!-- <i class="material-icons">bubble_chart</i> -->
              <li class="navbar-item">
-              <a class="nav-link" href="./PushedOrder.html">
+              <a href="#master" class="nav-link" data-toggle="collapse">
                 <i class="material-icons">library_books</i>
-                <p>Pushed Order</p></a > 
+                <p>Master</p></a > 
+
+                <div class="collapse" id="master">
+                  <ul class="list-unstyled nav">
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./mandatoryDocuments.php"
+                        >Mandatory Documents</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./standardMacro.php"
+                        >Standard Macro</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./#"
+                        >Auto SLA</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./reportColor.php"
+                        >Report Color Code</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./reportConfig.php"
+                        >Report Configuration Master</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" name href="./#"
+                        >Insufficient Emial Triggers</a
+                      >
+                    </li>
+                  </ul>
+                </div>             
             </li>
             <li class="navbar-item">
-              <a class="nav-link" href="./pushedBackOrder.html">
-                <i class="material-icons">account_circle</i>
-                <p>PushBack Order</p></a >
+              <a href="#user" class="nav-link" data-toggle="collapse"
+                ><i class="material-icons">account_circle</i>
+                <p>User</p></a >
+              <div class="collapse" id="user">
+                <ul class="list-unstyled nav">
+                  <li class="nav-item">
+                    <a class="nav-link" name href="./addModifyUser.php"
+                      >Add Modify User</a
+                    >
+                  </li> 
+                </ul>
+              </div>     
             </li>
           </ul>
         </div>
       <!--Side Bar End-->
-    </div>
+      </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
@@ -173,75 +302,181 @@
         </div>
       </nav>
       <!-- End Navbar -->
+      <div class="content" >
+        <div class="container-fluid" style="background-color: #EEEEEE">
+          <form>
+          <div class="row"  > 
+            <div class="col-md-12" id="carrd2"  > <!--grey color-->
+              <div class="card"id="cardh" style="background-color: rgba(255, 255, 255, 0.76)" >   <!--background white color-->
+                <div class="card-header card-header-primary " >
+                  <h4 id="cardh" class="card-title">Indian ID Check</h4 >
+                </div>
+                <div class="card-body">
+                      <!--first row-->
+                    <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="col-md-1">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">DOB</label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Name On The Id</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                           <label class="bmd-label-floating">ID Number</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                 
 
-      <div class="content">
+
+
+                   <div class="row justify-content-md-end justify-content-sm-end"style="margin-top:5%; margin-right: 2%; margin-bottom:5%">
+
+                        <button type="submit" class="btn btn-primary pull-left"style="margin-left:4%; ">Submit</button>
+                        <div class="clearfix"></div>
+
+                       <button type="submit" class="btn btn-primary pull-left" style="margin-left: 3%;">Cancel</button>
+                       <div class="clearfix"></div>
+                 </div>
+                  </form>
+              </div>
+            </div>
+           
+      <footer class="footer">
         <div class="container-fluid">
-          <div class="row">
-
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart">              
-                <div class="card-body">
-                  <h4 class="card-title">Total Cases</h4>
-                    <p class="card-category">205</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 minutes ago
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart">      
-                <div class="card-body">
-                  <h4 class="card-title">Total Resolved</h4>
-                  <p class="card-category">110</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 min ago
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart">              
-                <div class="card-body">
-                  <h4 class="card-title">Total In Progress</h4>
-                  <p class="card-category">95</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> campaign sent 2 days ago
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a style="color: black;" href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a style="color: black;" href="https://creative-tim.com/presentation">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a style="color: black;" href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a style="color: black;" href="https://www.creative-tim.com/license">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div style="color: black;" class="copyright float-right" id="date">
+            , made with <i class="material-icons" style="color: #823399;">favorite</i> by
+            <a style="color: black;" href="https://www.creative-tim.com" target="_blank">Creative Team</a> for a better web.
           </div>
         </div>
-      </div>
-
-    <!--   Core JS Files   -->
-    <script src="../assets/js/core/jquery.min.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+      </footer>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+  <!--<div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple active" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> 
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard/tree/dark-edition" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>-->
+   <!--   Core JS Files   -->
+   <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="https://unpkg.com/default-passive-events"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chartist JS -->
-    <script src="../assets/js/plugins/chartist.min.js"></script>
+    <script src="assets/js/plugins/chartist.min.js"></script>
     <!--  Notifications Plugin    -->
-    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
+    <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script src="../assets/demo/demo.js"></script>
+    <script src="assets/demo/demo.js"></script>
     <script src="data.js"></script>
   <script>
     $(document).ready(function() {
