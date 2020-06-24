@@ -352,6 +352,8 @@ else
                
                     <div class="clearfix"></div>
                   </form>
+                  <input id="client_id" name="client_id" class="unique-hidden-input" type="hidden" value="<?php echo $unsa;?>">
+
                 </div>
               </div>
             </div>
@@ -534,7 +536,7 @@ var val = val2.value;
 
         $sidebar_responsive = $('body > .navbar-collapse');
 
-        window_width = $(window).width();
+        window_width = $(window).width(); 
 
         $('.fixed-plugin a').click(function(event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
