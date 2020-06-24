@@ -253,7 +253,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Email Trigger Settings</h4>
+                  <h4 class="card-title">Servicewise Document Settings</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
@@ -276,8 +276,9 @@
                       </div>
                     </div>
                     <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
-                      <label for="Email">Shadow and placeholder</label><br>
-                      <textarea class="form-control textedArea z-depth-1" id="Email" rows="5" placeholder="Write something here..."></textarea>
+                      <label for="Email">Preview</label><br>
+                      <div id="previewDiv" style="width: 100%; height: 140px; border: 1px solid rgba(128, 128, 128, 0.671); border-radius: 5px; ">
+                      </div>
                     </div>
 
                     <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
@@ -299,38 +300,46 @@
                         <th>Sr.No</th>
                         <th>Services</th>
                         <th>Documents List</th>
+                        <th></th>
                       </thead>
                       <tbody id="table-body">
                         <tr>
-                          <td>1</td>
-                          <td></td>
+                          <td class="AllTds">1</td>
+                          <td class="AllTds">
+                            <p>Indian Address Verification</p>
+                          </td>
+                          <td class="AllTds">Light Bill, Pan Card, Adhar Card</td>
+
                           <td class="text-primary">
-                            <button style="margin-left: 10%;" id="btn1" type="button" class="btn btn-primary btn-sm togglebtn ">
-                              View
+                            <button style="margin-left: 10%;" id="btn1" type="button" class="btn btn-primary btn-sm togglebtn AllTds ">
+                              <i class="fa fa-trash AllTds" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                        <tr>
+                          <td class="AllTds"></td>
+                          <td class="AllTds"></td>
+                          <td class="AllTds"></td>
+                          <td class="text-primary">
+                            <button style="margin-left: 10%;" type="button" id="btn2" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash AllTds" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                        <tr>
+                          <td class="AllTds"></td>
+                          <td class="AllTds"></td>
+                          <td class="AllTds"></td>
+                          <td class="text-primary">
+                            <button type="button" style="margin-left: 10%;" id="btn3" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash AllTds" aria-hidden="true"></i>
                             </button>
                         </tr>
                         <tr>
                           <td></td>
                           <td></td>
-                          <td class="text-primary">
-                            <button style="margin-left: 10%;" type="button" id="btn2" class="btn btn-primary btn-sm togglebtn">
-                              View
-                            </button>
-                        </tr>
-                        <tr>
-                          <td></td>
                           <td></td>
                           <td class="text-primary">
-                            <button type="button" style="margin-left: 10%;" id="btn3" class="btn btn-primary btn-sm togglebtn">
-                              View
-                            </button>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td class="text-primary">
-                            <button type="button" style="margin-left: 10%;" id="btn4" class="btn btn-primary btn-sm togglebtn">
-                              View
+                            <button type="button" style="margin-left: 10%;" id="btn4" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash AllTds" aria-hidden="true"></i>
                             </button>
                         </tr>
                       </tbody>
