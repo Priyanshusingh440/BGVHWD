@@ -19,18 +19,15 @@
   <title>
     Modify User
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -159,6 +156,24 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->
@@ -172,14 +187,12 @@
 
 
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example"
-        style="padding: 0; margin: 0;">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Modify User</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -213,8 +226,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons" style="color: white;">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -230,8 +242,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -302,8 +313,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password Mail To</label>
-                          <input id="passwordMailTo" name="Password Mail To" type="email" class="form-control"
-                            required />
+                          <input id="passwordMailTo" name="Password Mail To" type="email" class="form-control" required />
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -463,14 +473,14 @@
   <script src="assets/demo/demo.js"></script>
   <script src="addModifyUser.js"></script>
   <script>
-    $(document).ready(function () {
-      $().ready(function () {
+    $(document).ready(function() {
+      $().ready(function() {
         $sidebar = $(".sidebar");
         $sidebar_img_container = $sidebar.find(".sidebar-background");
         $full_page = $(".full-page");
         $sidebar_responsive = $("body > .navbar-collapse");
         window_width = $(window).width();
-        $(".fixed-plugin a").click(function (event) {
+        $(".fixed-plugin a").click(function(event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
           if ($(this).hasClass("switch-trigger")) {
             if (event.stopPropagation) {
@@ -480,7 +490,7 @@
             }
           }
         });
-        $(".fixed-plugin .active-color span").click(function () {
+        $(".fixed-plugin .active-color span").click(function() {
           $full_page_background = $(".full-page-background");
           $(this).siblings().removeClass("active");
           $(this).addClass("active");
@@ -495,7 +505,7 @@
             $sidebar_responsive.attr("data-color", new_color);
           }
         });
-        $(".fixed-plugin .background-color .badge").click(function () {
+        $(".fixed-plugin .background-color .badge").click(function() {
           $(this).siblings().removeClass("active");
           $(this).addClass("active");
           var new_color = $(this).data("background-color");
@@ -503,7 +513,7 @@
             $sidebar.attr("data-background-color", new_color);
           }
         });
-        $(".fixed-plugin .img-holder").click(function () {
+        $(".fixed-plugin .img-holder").click(function() {
           $full_page_background = $(".full-page-background");
           $(this).parent("li").siblings().removeClass("active");
           $(this).parent("li").addClass("active");
@@ -512,7 +522,7 @@
             $sidebar_img_container.length != 0 &&
             $(".switch-sidebar-image input:checked").length != 0
           ) {
-            $sidebar_img_container.fadeOut("fast", function () {
+            $sidebar_img_container.fadeOut("fast", function() {
               $sidebar_img_container.css(
                 "background-image",
                 'url("' + new_image + '")'
@@ -527,7 +537,7 @@
             var new_image_full_page = $(".fixed-plugin li.active .img-holder")
               .find("img")
               .data("src");
-            $full_page_background.fadeOut("fast", function () {
+            $full_page_background.fadeOut("fast", function() {
               $full_page_background.css(
                 "background-image",
                 'url("' + new_image_full_page + '")'
@@ -558,7 +568,7 @@
             );
           }
         });
-        $(".switch-sidebar-image input").change(function () {
+        $(".switch-sidebar-image input").change(function() {
           $full_page_background = $(".full-page-background");
           $input = $(this);
           if ($input.is(":checked")) {
@@ -583,7 +593,7 @@
             background_image = false;
           }
         });
-        $(".switch-sidebar-mini input").change(function () {
+        $(".switch-sidebar-mini input").change(function() {
           $body = $("body");
           $input = $(this);
           if (md.misc.sidebar_mini_active == true) {
@@ -594,17 +604,17 @@
             $(".sidebar .sidebar-wrapper, .main-panel").perfectScrollbar(
               "destroy"
             );
-            setTimeout(function () {
+            setTimeout(function() {
               $("body").addClass("sidebar-mini");
               md.misc.sidebar_mini_active = true;
             }, 300);
           }
           // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function () {
+          var simulateWindowResize = setInterval(function() {
             window.dispatchEvent(new Event("resize"));
           }, 180);
           // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function () {
+          setTimeout(function() {
             clearInterval(simulateWindowResize);
           }, 1000);
         });

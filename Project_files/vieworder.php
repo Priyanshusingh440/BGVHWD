@@ -27,11 +27,9 @@
   <title>
     Dashboard
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-    name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
@@ -66,7 +64,7 @@
       <div class="logo"> <a class="navbar-brand" href="#">
           <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
-        <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="./adminDashboard_sidebar.php">
@@ -172,6 +170,24 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -182,8 +198,7 @@
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -209,8 +224,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -226,8 +240,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -269,8 +282,7 @@
 
                         <div class="form-group" style="margin-top:9%;">
                           <label for="Service ">Search By</label>
-                          <select name="Service" id="Service" class="form-control" style="margin-top:3%;"
-                            id="exampleFormControlSelect1" onchange="myFunction(event)">
+                          <select name="Service" id="Service" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
                             <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search
                               Criteria---</option>
                             <option value="First_Name_Last_Name" class=" bg-secondary text-light">First Name Last Name
@@ -298,8 +310,7 @@
                         <div id="hide">
                           <div class="form-group">
                             <label>Search Criteria</label>
-                            <input type="text" name="SearchCriteria" style="display:none;" id="SearchCriteria"
-                              class="form-control" placeholder="Enter As Per Search Criteria" onkeyup="showCustomer()">
+                            <input type="text" name="SearchCriteria" style="display:none;" id="SearchCriteria" class="form-control" placeholder="Enter As Per Search Criteria" onkeyup="showCustomer()">
                           </div>
                         </div>
 
@@ -307,9 +318,9 @@
 
                           <div class="form-group">
                             <label class="bmd-label-static"></label>
-                            <!--<input id="user_id" name="user_id" type="hidden" value="<?php // echo $unsa;?>">-->
-                            <input onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth"
-                              class="form-control">
+                            <!--<input id="user_id" name="user_id" type="hidden" value="<?php // echo $unsa;
+                                                                                        ?>">-->
+                            <input onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
                           </div>
                         </div>
 
@@ -325,8 +336,7 @@
 
                           <div class="form-group" style="margin-top:6%;">
                             <label>Order Status</label>
-                            <select name="OrderStatus" onchange="showCustomer()" id="OrderStatus" class="form-control"
-                              style="margin-top:3%;" id="exampleFormControlSelect1">
+                            <select name="OrderStatus" onchange="showCustomer()" id="OrderStatus" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1">
 
                               <option value="Education" class=" bg-secondary text-light">Education</option>
                               <option value="Criminal" class=" bg-secondary text-light">Criminal</option>
@@ -612,7 +622,7 @@
 
           //XHR AJAX for form data submit
           const form = document.getElementById("vieworder");
-          form.addEventListener("submit", function (e) {
+          form.addEventListener("submit", function(e) {
             e.preventDefault();
             let formData = new FormData(document.forms.form);
             let data = {};
@@ -630,8 +640,8 @@
 
           /*On Click of ClientBulkOrder*/
 
-          $(document).ready(function () {
-            $('#Client').click(function () {
+          $(document).ready(function() {
+            $('#Client').click(function() {
 
               $('#card1').toggle("slide");
 
@@ -642,8 +652,8 @@
 
 
 
-          $(document).ready(function () {
-            $().ready(function () {
+          $(document).ready(function() {
+            $().ready(function() {
               $sidebar = $('.sidebar');
 
               $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -654,7 +664,7 @@
 
               window_width = $(window).width();
 
-              $('.fixed-plugin a').click(function (event) {
+              $('.fixed-plugin a').click(function(event) {
                 // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
                 if ($(this).hasClass('switch-trigger')) {
                   if (event.stopPropagation) {
@@ -665,7 +675,7 @@
                 }
               });
 
-              $('.fixed-plugin .active-color span').click(function () {
+              $('.fixed-plugin .active-color span').click(function() {
                 $full_page_background = $('.full-page-background');
 
                 $(this).siblings().removeClass('active');
@@ -686,7 +696,7 @@
                 }
               });
 
-              $('.fixed-plugin .background-color .badge').click(function () {
+              $('.fixed-plugin .background-color .badge').click(function() {
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
 
@@ -697,7 +707,7 @@
                 }
               });
 
-              $('.fixed-plugin .img-holder').click(function () {
+              $('.fixed-plugin .img-holder').click(function() {
                 $full_page_background = $('.full-page-background');
 
                 $(this).parent('li').siblings().removeClass('active');
@@ -708,7 +718,7 @@
 
                 if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length !=
                   0) {
-                  $sidebar_img_container.fadeOut('fast', function () {
+                  $sidebar_img_container.fadeOut('fast', function() {
                     $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
                     $sidebar_img_container.fadeIn('fast');
                   });
@@ -717,9 +727,9 @@
                 if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length !=
                   0) {
                   var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data(
-                  'src');
+                    'src');
 
-                  $full_page_background.fadeOut('fast', function () {
+                  $full_page_background.fadeOut('fast', function() {
                     $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
                     $full_page_background.fadeIn('fast');
                   });
@@ -728,7 +738,7 @@
                 if ($('.switch-sidebar-image input:checked').length == 0) {
                   var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
                   var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data(
-                  'src');
+                    'src');
 
                   $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
                   $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
@@ -739,7 +749,7 @@
                 }
               });
 
-              $('.switch-sidebar-image input').change(function () {
+              $('.switch-sidebar-image input').change(function() {
                 $full_page_background = $('.full-page-background');
 
                 $input = $(this);
@@ -771,7 +781,7 @@
                 }
               });
 
-              $('.switch-sidebar-mini input').change(function () {
+              $('.switch-sidebar-mini input').change(function() {
                 $body = $('body');
 
                 $input = $(this);
@@ -786,7 +796,7 @@
 
                   $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
 
-                  setTimeout(function () {
+                  setTimeout(function() {
                     $('body').addClass('sidebar-mini');
 
                     md.misc.sidebar_mini_active = true;
@@ -794,12 +804,12 @@
                 }
 
                 // we simulate the window Resize so the charts will get updated in realtime.
-                var simulateWindowResize = setInterval(function () {
+                var simulateWindowResize = setInterval(function() {
                   window.dispatchEvent(new Event('resize'));
                 }, 180);
 
                 // we stop the simulation of Window Resize after the animations are completed
-                setTimeout(function () {
+                setTimeout(function() {
                   clearInterval(simulateWindowResize);
                 }, 1000);
 

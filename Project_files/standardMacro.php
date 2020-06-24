@@ -155,6 +155,24 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->
@@ -255,13 +273,13 @@
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service Type</label>
-                        <select name="ServiceType" id="Service Type"  class="browser-default custom-select" required>
+                        <select name="ServiceType" id="Service Type" class="browser-default custom-select" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
                         <label for="Macro" class="bmd-label-floating" style="margin-left: 4%;">Macro Type</label>
-                        <select name="MacroType" id="Macro Type"  class="browser-default custom-select" required>
+                        <select name="MacroType" id="Macro Type" class="browser-default custom-select" required>
                         </select>
                       </div>
                     </div>
@@ -322,8 +340,10 @@
                               </th>
                             </thead>
                             <tbody id="table">
-                            <script src="standardMacro.js"></script>
-                              <script>popuTable();</script>
+                              <script src="standardMacro.js"></script>
+                              <script>
+                                popuTable();
+                              </script>
                             </tbody>
                           </table>
                         </div>

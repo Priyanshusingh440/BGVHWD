@@ -23,11 +23,9 @@
   <title>
     Create Package
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
@@ -156,6 +154,24 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->
@@ -167,14 +183,12 @@
         <label id="toggleButton" for="switch">Toggle</label>
       </div>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;"
-        id="navigation-example">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;" id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Create Package</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -200,8 +214,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -217,8 +230,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -250,8 +262,7 @@
                     <div class="row justify-content-center">
                       <div class="form-group col-md-4">
                         <label style="margin-left: 3%;" class="bmd-label-floating">Client Name</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select"
-                          id="Client Name" name="Id" style="color:#202940;" required>
+                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
                         </select>
                       </div>
 
@@ -262,25 +273,20 @@
                               type="text"
                               class="form-control"
                             />-->
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select"
-                          id="locality-dropdown" name="country_id" style="color:#202940;"
-                          onchange="getservice(this.value)" required>
+                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" onchange="getservice(this.value)" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
                         <label style="margin-left: 3%;" class="bmd-label-floating">Service Type</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select"
-                          id="serviceType" name="service_type_id" style="color:#202940;"
-                          onclick="getservicename(this.value)" required>
+                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceType" name="service_type_id" style="color:#202940;" onclick="getservicename(this.value)" required>
                         </select>
                       </div>
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
                         <label style="margin-left: 3%;" class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select"
-                          id="serviceName" name="service_name_id" style="color:#202940;" required>
+                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
                         </select>
                       </div>
 
@@ -378,8 +384,8 @@
     function formReset() {
       document.getElementById("ajax").reset();
     }
-    $(document).ready(function () {
-      $().ready(function () {
+    $(document).ready(function() {
+      $().ready(function() {
         $sidebar = $(".sidebar");
 
         $sidebar_img_container = $sidebar.find(".sidebar-background");
@@ -390,7 +396,7 @@
 
         window_width = $(window).width();
 
-        $(".fixed-plugin a").click(function (event) {
+        $(".fixed-plugin a").click(function(event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
           if ($(this).hasClass("switch-trigger")) {
             if (event.stopPropagation) {
@@ -401,7 +407,7 @@
           }
         });
 
-        $(".fixed-plugin .active-color span").click(function () {
+        $(".fixed-plugin .active-color span").click(function() {
           $full_page_background = $(".full-page-background");
 
           $(this).siblings().removeClass("active");
@@ -422,7 +428,7 @@
           }
         });
 
-        $(".fixed-plugin .background-color .badge").click(function () {
+        $(".fixed-plugin .background-color .badge").click(function() {
           $(this).siblings().removeClass("active");
           $(this).addClass("active");
 
@@ -433,7 +439,7 @@
           }
         });
 
-        $(".fixed-plugin .img-holder").click(function () {
+        $(".fixed-plugin .img-holder").click(function() {
           $full_page_background = $(".full-page-background");
 
           $(this).parent("li").siblings().removeClass("active");
@@ -445,7 +451,7 @@
             $sidebar_img_container.length != 0 &&
             $(".switch-sidebar-image input:checked").length != 0
           ) {
-            $sidebar_img_container.fadeOut("fast", function () {
+            $sidebar_img_container.fadeOut("fast", function() {
               $sidebar_img_container.css(
                 "background-image",
                 'url("' + new_image + '")'
@@ -462,7 +468,7 @@
               .find("img")
               .data("src");
 
-            $full_page_background.fadeOut("fast", function () {
+            $full_page_background.fadeOut("fast", function() {
               $full_page_background.css(
                 "background-image",
                 'url("' + new_image_full_page + '")'
@@ -497,7 +503,7 @@
           }
         });
 
-        $(".switch-sidebar-image input").change(function () {
+        $(".switch-sidebar-image input").change(function() {
           $full_page_background = $(".full-page-background");
 
           $input = $(this);
@@ -529,7 +535,7 @@
           }
         });
 
-        $(".switch-sidebar-mini input").change(function () {
+        $(".switch-sidebar-mini input").change(function() {
           $body = $("body");
 
           $input = $(this);
@@ -544,7 +550,7 @@
               "destroy"
             );
 
-            setTimeout(function () {
+            setTimeout(function() {
               $("body").addClass("sidebar-mini");
 
               md.misc.sidebar_mini_active = true;
@@ -552,22 +558,22 @@
           }
 
           // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function () {
+          var simulateWindowResize = setInterval(function() {
             window.dispatchEvent(new Event("resize"));
           }, 180);
 
           // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function () {
+          setTimeout(function() {
             clearInterval(simulateWindowResize);
           }, 1000);
         });
       });
     });
 
-    $("form").submit(function (event) {
+    $("form").submit(function(event) {
       var formdata = $("form").serializeArray();
       var data = {};
-      $(formdata).each(function (index, obj) {
+      $(formdata).each(function(index, obj) {
         data[obj.name] = obj.value;
       });
 
@@ -575,7 +581,7 @@
       fetch('./API/createPackage.php', {
         method: 'post',
         body: JSON.stringify(data)
-      }).then(function (res) {
+      }).then(function(res) {
         //console.log(res.text());
         formReset();
       }).catch(err => {
