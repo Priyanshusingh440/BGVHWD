@@ -23,18 +23,15 @@
   <title>
     ADD OF/QC/Vendor
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -164,9 +161,28 @@
               </ul>
             </div>
           </li>
+
         </ul>
       </div>
-      <!--Side Bar End-->
+      </li>
+      <li class="navbar-item">
+        <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+          <p>Settings</p>
+        </a>
+        <div class="collapse" id="settings">
+          <ul class="list-unstyled nav">
+            <li class="nav-item">
+              <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+            </li>
+          </ul>
+        </div>
+        <!--Side Bar End-->
     </div>
 
 
@@ -178,15 +194,13 @@
         <label id="toggleButton" for="switch">Toggle</label>
       </div>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example"
-        style="padding: 0; margin: 0;">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Add OF/QC/Vendor</a>
           </div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -220,8 +234,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -237,8 +250,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -368,8 +380,7 @@
                       <div class="col-md-3">
                         <div class="form-group">
                           <input type="file" class="custom-file-input" id="customFile" name="photo">
-                          <label class="custom-file-label" for="customFile">Attach Photo <span><i
-                                class="fa fa-upload png icon" aria-hidden="true"></i></span> </label>
+                          <label class="custom-file-label" for="customFile">Attach Photo <span><i class="fa fa-upload png icon" aria-hidden="true"></i></span> </label>
 
                         </div>
                       </div>
@@ -405,16 +416,14 @@
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <select name="status" class="custom-select"
-                          style="border-top: none; border-left: none; border-right: none;">
+                        <select name="status" class="custom-select" style="border-top: none; border-left: none; border-right: none;">
                           <option selected>Status</option>
                           <option value="Active">Active</option>
                           <option value="Inactive">Inactive</option>
                         </select>
                       </div>
                       <div class="col-md-4">
-                        <select name="position" class="custom-select"
-                          style="border-top: none; border-left: none; border-right: none;">
+                        <select name="position" class="custom-select" style="border-top: none; border-left: none; border-right: none;">
                           <option selected>Select Position</option>
                           <option value="OrderFullfilment">Order Fullfilment</option>
                           <option value="QualityControl">Quality Control</option>
@@ -476,23 +485,19 @@
                                   <div class="col-md-4">
                                     <div class="form-group">
                                       <label>Date of Joining</label>
-                                      <input type="dateOfjoining" name="dateofbirth" id="dateofbirth"
-                                        class="form-control" />
+                                      <input type="dateOfjoining" name="dateofbirth" id="dateofbirth" class="form-control" />
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row justify-content-end" style="margin-top:2%; margin-right:1%">
 
-                                  <button type="submit" class="btn btn-primary pull-left"
-                                    style="margin-left:4%;">Save</button>
+                                  <button type="submit" class="btn btn-primary pull-left" style="margin-left:4%;">Save</button>
                                   <div class="clearfix"></div>
 
-                                  <button type="submit" class="btn btn-primary pull-left"
-                                    style="margin-left:2%;">Ok</button>
+                                  <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Ok</button>
                                   <div class="clearfix"></div>
 
-                                  <button type="submit" class="btn btn-primary pull-left"
-                                    style="margin-left:2%;">Cancel</button>
+                                  <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
                                   <div class="clearfix"></div>
 
                                 </div>

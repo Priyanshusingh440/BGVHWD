@@ -14,75 +14,48 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="assets/img/apple-icon.png"
-    />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-      View ALL OF/QC
-    </title>
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-      name="viewport"
-    />
-    <!--     Fonts and icons     -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-    />
-    <!-- CSS Files -->
-    <link
-      href="assets/css/material-dashboard.css?v=2.1.0"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/3aaaecc22c.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
-    />
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="assets/demo/demo.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    View ALL OF/QC
+  </title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
-     <!--Switching modes-->
-     <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
 
-  </head>
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <body class="dark-edition">
-    <div class="wrapper">
-      <div
-        class="sidebar"
-        data-color="purple"
-        data-background-color="black"
-        data-image="assets/img/sidebar-2.jpg"
-      >
-        <!--
+</head>
+
+<body class="dark-edition">
+  <div class="wrapper">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
+      <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
-    <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-      </a></div>
-        <!--Side Bar-->
-        <div class="sidebar-wrapper">
+      <div class="logo"> <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+        </a></div>
+      <!--Side Bar-->
+      <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="./adminDashboard_sidebar.php">
@@ -188,38 +161,44 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->
     </div>
 
 
-    
+
     <div class="main-panel mainP">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
-        id="navigation-example"
-        style="padding: 0; margin: 0;"
-      >
-          <div class="container-fluid">
-            <div class="navbar-wrapper"style="height: 70px;" >
-              <a class="navbar-brand" href="javascript:void(0)" style="color: white;">View ALL OF/QC</a>
-            </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            aria-controls="navigation-index"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-target="#navigation-example"
-          >
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">View ALL OF/QC</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -253,237 +232,204 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link"
-                  href="javscript:void(0)"
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
                   </p>
                 </a>
-                <div
-                  class="dropdown-menu dropdown-menu-right"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    >Mike John responded to your email</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    >You have 5 new tasks</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    >You're now friend with Andrew</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    >Another Notification</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    >Another One</a
-                  >
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="javascript:void(0)">Mike John responded to your email</a>
+                  <a class="dropdown-item" href="javascript:void(0)">You have 5 new tasks</a>
+                  <a class="dropdown-item" href="javascript:void(0)">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="javascript:void(0)">Another Notification</a>
+                  <a class="dropdown-item" href="javascript:void(0)">Another One</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
-              <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i style="color: white;" class="material-icons">person</i>
-                <p class="d-lg-none d-md-block">
-                  Account
-                </p>
-              <div class="ripple-container"></div></a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                <a class="dropdown-item" href="MyProfile.php">Profile</a>
-                <a class="dropdown-item" href="#">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="API/db_logout.php">Log out</a>
-              </div>
-            </li>
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i style="color: white;" class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                  <div class="ripple-container"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="MyProfile.php">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="API/db_logout.php">Log out</a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-        <!-- End Navbar -->
-        <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header card-header-primary">
-                    <h4 class="card-title">View ALL OF/QC</h4></div> 
-                     <div class="card-body">
-                       <form id="ajax">                   
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">View ALL OF/QC</h4>
+                </div>
+                <div class="card-body">
+                  <form id="ajax">
                     <!--First row-->
-                      <div class="row">
-                          <div class="col-md-2">
-                            <label style="margin-top:5%" for="viewType">Search By</label>
-                          </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                              <select
-                                name="viewType"
-                                class="form-control icon"
-                                id="exampleFormControlSelect1"
-                                
-                              >
-                                <option style="color:black !important;"  value="orderFullfilment" class="text-primary"
-                                  >Order Fulfilment</option
-                                >
-                                <option style="color:black !important;"  value="qualityControl" class="text-primary"
-                                  >Quality Control</option
-                                >
-                              </select>
-                            </div>
-                          </div>                        
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label style="margin-top:5%" for="viewType">Search By</label>
                       </div>
-                     </form> 
-                     
-                     <!-- table -->        
-                    <table class="table table-hover" style="margin-top: 4%;">
-                      <thead class="text-primary " style="background-color: rgba(15, 13, 13, 0.856) !important;">
-                        <th>
-                          Sr.No
-                        </th>
-                        <th>
-                          Full Name
-                        </th>
-                        <th>
-                          Email ID
-                        </th>
-                        <th>
-                          Contact Number
-                        </th>
-                        <th>
-                          Address
-                        </th>
-                        <th>
-                           
-                        </th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="tablehead1">
-                            1
-                          </td>
-                          <td class="tablehead1">
-                            rice
-                          </td>
-                          <td class="tablehead1">
-                            abc@xyz.com
-                          </td>
-                          <td class="tablehead1">
-                            648484248
-                          </td>
-                          <td class="tablehead1">
-                            Bangalore
-                          </td>
-                          <td class="text-primary tablehead1">
-                            <button
-                              type="button"
-                              class="btn btn-primary btn-sm"
-                            >
-                              View
-                            </button>
-                        </tr>
-                        <tr>
-                          <td class="tablehead1">
-                            2
-                          </td>
-                          <td class="tablehead1">
-                            Hooper
-                          </td>
-                          <td class="tablehead1">
-                            abc@xyz.com
-                          </td>
-                          <td class="tablehead1">
-                            986564648
-                          </td class="tablehead1">
-                          <td class="tablehead1">
-                            Mumbai
-                          </td>
-                          <td class="text-primary tablehead1">
-                            <button
-                              type="button"
-                              class="btn btn-primary btn-sm "
-                            >
-                              View
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                 </div>                             
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select name="viewType" class="form-control icon" id="exampleFormControlSelect1">
+                            <option style="color:black !important;" value="orderFullfilment" class="text-primary">Order Fulfilment</option>
+                            <option style="color:black !important;" value="qualityControl" class="text-primary">Quality Control</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <!-- table -->
+                  <table class="table table-hover" style="margin-top: 4%;">
+                    <thead class="text-primary " style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                      <th>
+                        Sr.No
+                      </th>
+                      <th>
+                        Full Name
+                      </th>
+                      <th>
+                        Email ID
+                      </th>
+                      <th>
+                        Contact Number
+                      </th>
+                      <th>
+                        Address
+                      </th>
+                      <th>
+
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tablehead1">
+                          1
+                        </td>
+                        <td class="tablehead1">
+                          rice
+                        </td>
+                        <td class="tablehead1">
+                          abc@xyz.com
+                        </td>
+                        <td class="tablehead1">
+                          648484248
+                        </td>
+                        <td class="tablehead1">
+                          Bangalore
+                        </td>
+                        <td class="text-primary tablehead1">
+                          <button type="button" class="btn btn-primary btn-sm">
+                            View
+                          </button>
+                      </tr>
+                      <tr>
+                        <td class="tablehead1">
+                          2
+                        </td>
+                        <td class="tablehead1">
+                          Hooper
+                        </td>
+                        <td class="tablehead1">
+                          abc@xyz.com
+                        </td>
+                        <td class="tablehead1">
+                          986564648
+                        </td class="tablehead1">
+                        <td class="tablehead1">
+                          Mumbai
+                        </td>
+                        <td class="text-primary tablehead1">
+                          <button type="button" class="btn btn-primary btn-sm ">
+                            View
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </div>
-              <!-- table end -->
-                              
-                  </div>         
-                </div>
-                 </div>
               </div>
             </div>
           </div>
+          <!-- table end -->
+
         </div>
       </div>
     </div>
-    <script>
-
-
-
-
-    </script>
-    <script>
-        const x = new Date().getFullYear();
-        let date = document.getElementById("date");
-        date.innerHTML = "&copy; " + x + date.innerHTML;
-      </script>
-    </div>
   </div>
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script>
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+
+
+
+  </script>
+  <script>
+    const x = new Date().getFullYear();
+    let date = document.getElementById("date");
+    date.innerHTML = "&copy; " + x + date.innerHTML;
+  </script>
+  </div>
+  </div>
+  <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
+
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -503,6 +449,6 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
   <script src="data.js"></script>
-  </body>
+</body>
+
 </html>
-                               
