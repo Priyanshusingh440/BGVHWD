@@ -43,6 +43,7 @@ class country
                 $country[$i][$i]['about_me']=$reed['about_me'];
                 $i++;
                }    
+               echo json_encode($country);
             }
             else
             {
