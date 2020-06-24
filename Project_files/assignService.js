@@ -447,7 +447,7 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/servicetype.php", {
 
 tbody ? tbody.ondblclick = (e) => {
   
-  let target = e.target.parentElement.getAttribute("data-sr")
+  let target = e.target.parentElement.getAttribute("data-sr") 
   // console.log(e.target)
   setAllAssignService(allAssignService)
 

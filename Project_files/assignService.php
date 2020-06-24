@@ -310,7 +310,7 @@
                         <label for="Price" style="margin-left: 4%;margin-top: 4%;">Price</label>
                         <input name="Price" type="number" id="Price" class="form-control mt-4" min="0" placeholder="" />
                       </div>
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-4"> 
                         <label for="currency" style="margin-left: 4%;">Currency</label>
                         <select style="margin-top:5%" id="currency" class="browser-default custom-select" name="currency" onchange="getservicename(this.value)" class="form-control" required>
                           <option class='bg-secondary text-light' default not selected>Choose...</option>

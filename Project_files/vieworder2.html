@@ -336,8 +336,7 @@
 
                       <div class="col-md-4">
 
-                        <<<<<<< HEAD <div class="card" id="order" value="" style="background-color:#1A2035;padding:4%;display:none;">
-                          =======
+                        <div class="card" id="order" value="" style="background-color:#1A2035;padding:4%;display:none;">
                           <div class="card" id="DateOne" style="background-color:#1A2035;padding:2%;display:none;">
 
                             <div class="form-group">
@@ -347,7 +346,6 @@
                             </div>
                           </div>
 
-                          >>>>>>> 4eaf5ceb772c157773ecb15c81732da6225f36cd
 
                           <div class="form-group" style="margin-top:6%;">
                             <label>Order Status</label>
@@ -406,6 +404,9 @@
                     </th>
                     <th>
                       Email id
+                    </th>
+                    <th>
+                      Assign to
                     </th>
                     <th>
                       Order Creation Date Time
@@ -569,10 +570,11 @@
         function myFunction(e) {
 
           var color = document.getElementById("Service").selectedIndex;
+          console.log(color)
           if (color == 0) {
 
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e. target.value;
             document.getElementById("hide").style.display = "none";
             document.getElementById("SearchCriteria").style.display = "none";
             document.getElementById("DateOne").style.display = "none"
@@ -582,50 +584,55 @@
           if (color == 1) {
 
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;  
+            document.getElementById("hide").style.display = "block";
             document.getElementById("SearchCriteria").style.display = "block";
             document.getElementById("DateOne").style.display = "none"
             document.getElementById("order").style.display = "none";
 
           } else if (color == 2) {
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value; 
+            document.getElementById("hide").style.display = "block";
             document.getElementById("SearchCriteria").style.display = "block";
             document.getElementById("DateOne").style.display = "none"
             document.getElementById("order").style.display = "none";
           } else if (color == 3) {
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;  
+            document.getElementById("hide").style.display = "block";
             document.getElementById("SearchCriteria").style.display = "block";
             document.getElementById("DateOne").style.display = "none"
             document.getElementById("order").style.display = "none";
           } else if (color == 4) {
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;
+            document.getElementById("hide").style.display = "block";
             document.getElementById("SearchCriteria").style.display = "block";
             document.getElementById("DateOne").style.display = "none"
             document.getElementById("order").style.display = "none";
           } else if (color == 5) {
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;  
             document.getElementById("SearchCriteria").style.display = "none";
             document.getElementById("hide").style.display = "none";
             document.getElementById("DateOne").style.display = "block";
             document.getElementById("order").style.display = "none";
           } else if (color == 6) {
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;  
             document.getElementById("SearchCriteria").style.display = "none";
             document.getElementById("DateOne").style.display = "block";
             document.getElementById("hide").style.display = "none";
             document.getElementById("order").style.display = "none";
           } else if (color == 7) {
 
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;
+            document.getElementById("hide").style.display = "block";
             document.getElementById("SearchCriteria").style.display = "block";
             document.getElementById("DateOne").style.display = "none"
             document.getElementById("order").style.display = "none";
 
           } else if (color == 8) {
-            document.getElementById("SearchCriteria").value = e.target.value;
+            // document.getElementById("SearchCriteria").value = e.target.value;
             document.getElementById("SearchCriteria").style.display = "none";
             document.getElementById("hide").style.display = "none";
             document.getElementById("order").style.display = "block";
