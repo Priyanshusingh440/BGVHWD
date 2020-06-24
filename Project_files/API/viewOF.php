@@ -25,30 +25,33 @@ class country
                 $i=0;
                while($reed=$result1->fetch_assoc())
                {
-                $country[$i][$i][$i]['Id']=$reed['id'];
-                $country[$i][$i]['Company']=$reed['Company'];
-                $country[$i][$i]['first_name']=$reed['first_name'];
-                $country[$i][$i]['middle_name']=$reed['middle_name'];
-                $country[$i][$i]['last_name']=$reed['last_name'];
-                $country[$i][$i]['fullname']=$reed['fullname'];
-                $country[$i][$i]['email_id']=$reed['email_id'];
-                $country[$i][$i]['Address']=$reed['Address'];
-                $country[$i][$i]['city']=$reed['city'];
-                $country[$i][$i]['country']=$reed['country'];
-                $country[$i][$i]['postal_code']=$reed['postal_code'];
-                $country[$i][$i]['mobile_number']=$reed['mobile_number'];
-                $country[$i][$i]['password']=$reed['password'];
-                $country[$i][$i]['otp']=$reed['otp'];
-                $country[$i][$i]['user_status']=$reed['user_status'];
-                $country[$i][$i]['about_me']=$reed['about_me'];
+                $country[$i]['Id']=$reed['id'];
+                $country[$i]['Company']=$reed['Company'];
+                $country[$i]['first_name']=$reed['first_name'];
+                $country[$i]['middle_name']=$reed['middle_name'];
+                $country[$i]['last_name']=$reed['last_name'];
+                $country[$i]['fullname']=$reed['fullname'];
+                $country[$i]['email_id']=$reed['email_id'];
+                $country[$i]['Address']=$reed['Address'];
+                $country[$i]['city']=$reed['city'];
+                $country[$i]['country']=$reed['country'];
+                $country[$i]['postal_code']=$reed['postal_code'];
+                $country[$i]['mobile_number']=$reed['mobile_number'];
+                $country[$i]['password']=$reed['password'];
+                $country[$i]['otp']=$reed['otp'];
+                $country[$i]['user_status']=$reed['user_status'];
+                $country[$i]['about_me']=$reed['about_me'];
                 $i++;
                }    
-               echo json_encode($country);
+              
             }
             else
             {
-                echo "No client Found";
+                $country['Status']="0";
+                $country['Message']="No Data Found";
             }
+
+            echo json_encode($country);
  
     }
 }
