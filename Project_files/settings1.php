@@ -279,7 +279,14 @@
                               <labe style="color: black;">DOB</labe>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -289,7 +296,14 @@
                               <p style="color: black;">Father's Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -302,7 +316,14 @@
                               <p style="color: black;">Stay Duration From</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -312,7 +333,14 @@
                               <p style="color: black;">Stay Duration To</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -325,7 +353,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -335,7 +370,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -348,7 +390,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -358,7 +407,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -371,7 +427,14 @@
                               <p style="color: black;">Pin Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -381,7 +444,14 @@
                               <p style="color: black;">Phone Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -394,7 +464,14 @@
                               <p style="color: black;">Relation Of Respondent With the Candidate</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -416,7 +493,14 @@
                               <p style="color: black;">University</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -426,7 +510,14 @@
                               <p style="color: black;">College</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -439,7 +530,14 @@
                               <p style="color: black;">Degree</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -449,7 +547,14 @@
                               <p style="color: black;">Specialization</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -462,7 +567,14 @@
                               <p style="color: black;">Register No</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -472,7 +584,14 @@
                               <p style="color: black;">GPA/Marks Obtained</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -485,7 +604,14 @@
                               <p style="color: black;">Year Of Passing</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -495,7 +621,14 @@
                               <p style="color: black;">Graduate</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -507,7 +640,14 @@
                               <p style="color: black;">Start Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -517,7 +657,14 @@
                               <p style="color: black;">End Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -530,7 +677,14 @@
                               <p style="color: black;">Conatct Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -540,7 +694,14 @@
                               <p style="color: black;">Contact No</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -553,7 +714,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -563,7 +731,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -576,7 +751,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -586,7 +768,14 @@
                               <p style="color: black;">Pin Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -599,7 +788,14 @@
                               <p style="color: black;">Date Of Attendence</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -609,7 +805,14 @@
                               <p style="color: black;">Regular/Part Time</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -631,7 +834,14 @@
                               <p style="color: black;">Employee Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -641,7 +851,14 @@
                               <p style="color: black;">Employee ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -654,7 +871,14 @@
                               <p style="color: black;">Current Employment</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -664,7 +888,14 @@
                               <p style="color: black;">Contact Current Employer</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -677,7 +908,14 @@
                               <p style="color: black;">Employment Duration From</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -687,7 +925,14 @@
                               <p style="color: black;">Employment Duration To</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -700,7 +945,14 @@
                               <p style="color: black;">Last Designation</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -710,7 +962,14 @@
                               <p style="color: black;">Reason For Leaving</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -722,7 +981,14 @@
                               <p style="color: black;">Last Drawn Salary</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -732,7 +998,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -745,7 +1018,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -755,7 +1035,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -768,7 +1055,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -778,7 +1072,14 @@
                               <p style="color: black;">Pin Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -791,7 +1092,14 @@
                               <p style="color: black;">Reporting Manager Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -801,7 +1109,14 @@
                               <p style="color: black;">Reporting Manager Contact NO</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -814,7 +1129,14 @@
                               <p style="color: black;">Reporting Manager Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -824,7 +1146,14 @@
                               <p style="color: black;">HR Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -837,7 +1166,14 @@
                               <p style="color: black;">Reporting Manager Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -847,7 +1183,14 @@
                               <p style="color: black;">HR Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -860,7 +1203,14 @@
                               <p style="color: black;">HR Contact Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -870,7 +1220,14 @@
                               <p style="color: black;">HR Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -883,7 +1240,14 @@
                               <p style="color: black;">Can We Ignore This Employee For Verification</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -893,7 +1257,14 @@
                               <p style="color: black;">Are You Still Working With This Employer</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -906,7 +1277,14 @@
                               <p style="color: black;">Is It Contractual Employment</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -916,7 +1294,14 @@
                               <p style="color: black;">Remark</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -929,7 +1314,14 @@
                               <p style="color: black;">Eligible For Hire</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -939,7 +1331,14 @@
                               <p style="color: black;">EXIT COMPLETED</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -961,7 +1360,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -971,7 +1377,14 @@
                               <p style="color: black;">Father's Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -984,7 +1397,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -994,7 +1414,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1007,7 +1434,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1017,7 +1451,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1030,7 +1471,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1052,7 +1500,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1062,7 +1517,14 @@
                               <p style="color: black;">Name Of The ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1075,7 +1537,14 @@
                               <p style="color: black;">ID Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1098,7 +1567,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1108,7 +1584,14 @@
                               <p style="color: black;">Driving License Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1121,7 +1604,14 @@
                               <p style="color: black;">License Issued Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1131,7 +1621,14 @@
                               <p style="color: black;">Expiration Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1144,7 +1641,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1154,7 +1658,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1167,7 +1678,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1177,7 +1695,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1190,7 +1715,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1200,7 +1732,14 @@
                               <p style="color: black;">License Status</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1213,7 +1752,14 @@
                               <p style="color: black;">Conviction And Discharge</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1236,7 +1782,14 @@
                               <p style="color: black;">Financial Check</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1246,7 +1799,14 @@
                               <p style="color: black;">DOB</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1259,7 +1819,14 @@
                               <p style="color: black;">Remarks</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1269,7 +1836,14 @@
                               <p style="color: black;">Mother's Maiden Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1282,7 +1856,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1292,7 +1873,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1305,7 +1893,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1315,7 +1910,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1328,7 +1930,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1350,7 +1959,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1360,7 +1976,14 @@
                               <p style="color: black;">Father's Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1373,7 +1996,14 @@
                               <p style="color: black;">Mother's Maiden Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1383,7 +2013,14 @@
                               <p style="color: black;">Stay Duration From</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1396,7 +2033,14 @@
                               <p style="color: black;">Stay Duration To</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1406,7 +2050,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1419,7 +2070,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1429,7 +2087,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1442,7 +2107,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1452,7 +2124,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1475,7 +2154,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1485,7 +2171,14 @@
                               <p style="color: black;">Father's Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1498,7 +2191,14 @@
                               <p style="color: black;">Mother's Maiden Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1508,7 +2208,14 @@
                               <p style="color: black;">Stay Duration From</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1521,7 +2228,14 @@
                               <p style="color: black;">Stay Duration To</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1531,7 +2245,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1544,7 +2265,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1554,12 +2282,18 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-
                       <div class="row ">
                         <div class="col-md-6">
                           <div class="row ">
@@ -1567,7 +2301,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1577,7 +2318,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1599,7 +2347,14 @@
                               <p style="color: black;">Dob</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1609,7 +2364,14 @@
                               <p style="color: black;">Company Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1622,7 +2384,14 @@
                               <p style="color: black;">Company Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1632,7 +2401,14 @@
                               <p style="color: black;">Directorship No</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1645,7 +2421,14 @@
                               <p style="color: black;">Date Appointed</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1655,7 +2438,14 @@
                               <p style="color: black;">date Resigned</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1668,7 +2458,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1678,7 +2475,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1691,7 +2495,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1701,7 +2512,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1724,7 +2542,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1734,7 +2559,14 @@
                               <p style="color: black;">Contact Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1747,7 +2579,14 @@
                               <p style="color: black;">Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1770,7 +2609,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1780,7 +2626,14 @@
                               <p style="color: black;">LOB</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1793,7 +2646,14 @@
                               <p style="color: black;">FSA Registration Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1803,7 +2663,14 @@
                               <p style="color: black;">License Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1816,7 +2683,14 @@
                               <p style="color: black;">Company Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1839,7 +2713,14 @@
                               <p style="color: black;">Was There Gap Between Educational Qualification</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1849,7 +2730,14 @@
                               <p style="color: black;">From Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1862,7 +2750,14 @@
                               <p style="color: black;">To Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1872,7 +2767,14 @@
                               <p style="color: black;">Reason</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1885,7 +2787,14 @@
                               <p style="color: black;">Was There Gap Between Employment</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1895,7 +2804,14 @@
                               <p style="color: black;">From Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1908,7 +2824,14 @@
                               <p style="color: black;">To Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1918,7 +2841,14 @@
                               <p style="color: black;">Reason</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1931,7 +2861,14 @@
                               <p style="color: black;">Was There Gap Between Education and Employment</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1941,7 +2878,14 @@
                               <p style="color: black;">From Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1954,7 +2898,14 @@
                               <p style="color: black;">To Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1964,7 +2915,14 @@
                               <p style="color: black;">Reason</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1988,7 +2946,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1998,7 +2963,14 @@
                               <p style="color: black;">DOB</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2011,7 +2983,14 @@
                               <p style="color: black;">SSN</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="radio">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2034,7 +3013,14 @@
                               <p style="color: black;">DOB</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2044,7 +3030,14 @@
                               <p style="color: black;">Father's Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2057,7 +3050,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2067,7 +3067,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2080,7 +3087,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2090,7 +3104,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2103,7 +3124,14 @@
                               <p style="color: black;">Contact Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2113,7 +3141,14 @@
                               <p style="color: black;">Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2135,7 +3170,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2145,7 +3187,14 @@
                               <p style="color: black;">Governing Board/Licensing Body</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2158,7 +3207,14 @@
                               <p style="color: black;">License Type</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2168,7 +3224,14 @@
                               <p style="color: black;">License/Registration Number</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2181,7 +3244,14 @@
                               <p style="color: black;">Original Issuance Date</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2191,7 +3261,14 @@
                               <p style="color: black;">Date Of Expiration</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2204,7 +3281,14 @@
                               <p style="color: black;">Diciplinary Action</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2214,7 +3298,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2227,7 +3318,14 @@
                               <p style="color: black;">City</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2237,7 +3335,14 @@
                               <p style="color: black;">State</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2250,7 +3355,14 @@
                               <p style="color: black;">Country</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2260,7 +3372,14 @@
                               <p style="color: black;">Zip Code</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2282,7 +3401,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2292,7 +3418,14 @@
                               <p style="color: black;">Reference Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2305,7 +3438,14 @@
                               <p style="color: black;">Employer Name</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2315,7 +3455,14 @@
                               <p style="color: black;">Employment Duration</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2328,7 +3475,14 @@
                               <p style="color: black;">Candidate Designation</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2338,7 +3492,14 @@
                               <p style="color: black;">Reference/Supervisor's Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2351,7 +3512,14 @@
                               <p style="color: black;">Relationship Status</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2361,7 +3529,14 @@
                               <p style="color: black;">Duties And Responsibilities</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2374,7 +3549,14 @@
                               <p style="color: black;">Strength And Achievement</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2384,7 +3566,14 @@
                               <p style="color: black;">Area Of Improvement</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2397,7 +3586,14 @@
                               <p style="color: black;">Communication Skill Rating</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2407,7 +3603,14 @@
                               <p style="color: black;">Job Performance Rating</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2429,7 +3632,14 @@
                               <p style="color: black;">Location</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2439,7 +3649,14 @@
                               <p style="color: black;">SSN</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2452,7 +3669,14 @@
                               <p style="color: black;">Year Of Issue</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2462,7 +3686,14 @@
                               <p style="color: black;">Address</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2475,7 +3706,14 @@
                               <p style="color: black;">Email ID</p>
                             </div>
                             <div class="col-md-1">
-                              <input name="" type="checkbox">
+                              <div class="form-check">
+                                <label class="form-check-label" style="margin-bottom:14px !important;">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2507,7 +3745,7 @@
                           </select>
                         </div>
                       </div>
-                      </>
+                    </div>
                   </form>
                 </div>
               </div>
