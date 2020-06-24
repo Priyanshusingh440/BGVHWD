@@ -243,9 +243,9 @@ console.log('working 3');
 const getElement = (elementSelector) => {
   return document.querySelector(`[name='${elementSelector}']`)
 }
-
+ 
 // when add user go to addClient through edit
-if (window.location.pathname === "/Project_files/addClient.html") {
+if (window.location.pathname === "/Project_files/addClient.php") {
   console.log("ok")
   var url = new URL(window.location.href);
   let id = url.searchParams.get('id')
