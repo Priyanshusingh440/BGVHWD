@@ -261,19 +261,7 @@
                 <div class="card-body">
                   <form id="ajax">
                     <div class="row justify-content-start">
-                      <div class="form-group col-md-4">
-                        <label for="Service Type" style="margin-left: 4%;">Document name</label>
-                        <select style="margin-top:5%" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
-                          <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
-                        </select>
-                        <!-- <input type="text" list="cars" multiple/>
-                        <datalist id="cars" >
-                          <option>Volvo</option>
-                          <option>Saab</option>
-                          <option>Mercedes</option>
-                          <option>Audi</option>
-                        </datalist> -->
-                      </div>
+                      
                       <div class="form-group col-md-4">
                         <label for="Service Type" style="margin-left: 4%;">Service Type</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" class="form-control" required>
@@ -287,6 +275,19 @@
                           <option class='bg-secondary text-light' default not selected>Choose...</option>
 
                         </select>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="Service Type" style="margin-left: 4%;">Document name</label>
+                        <select style="margin-top:5%" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
+                          <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
+                        </select>
+                        <!-- <input type="text" list="cars" multiple/>
+                        <datalist id="cars" >
+                          <option>Volvo</option>
+                          <option>Saab</option>
+                          <option>Mercedes</option>
+                          <option>Audi</option>
+                        </datalist> -->
                       </div>
                     </div>
                     <div class="row justify-content-end" style="margin-right: 1%;">
@@ -307,6 +308,12 @@
                           </div>
                           <table class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                              <th>
+                                Service Type
+                              </th>
+                              <th>
+                                Service Name
+                              </th>
                               <th>
                                 Document Name
                               </th>
