@@ -237,6 +237,14 @@ const assignSubmit = document.querySelector('#ajax '),
 
 let jsonData = {}
 
+
+let modal = document.querySelector(".add-service-modal #exampleModal")
+let modalOkBtn = document.querySelector(".add-service-modal #modal-ok-btn")
+let modalLabel = document.querySelector(".add-service-modal #exampleModalLabel")
+let modalCloseButton = document.querySelector(".add-service-modal .close")
+
+let modalLaunchButton = document.querySelector(".add-service-modal .launch")
+
 const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
@@ -245,10 +253,19 @@ const sendRequest = (url) => {
     .then(response => response.text())
     .then(data => {
       if (data.trim() == "Service Assigned Successfully") {
-        alert(data)
+        // alert(data)
+        // console.log("form submit")
+        modalLaunchButton.click()
+        modalOkBtn.onclick = () => {
+          modalCloseButton.click()
+        }
         getAllAssignService(`https://www.bgvhwd.xyz/Project_files/API/viewassignedservice.php`)
       } else {
-        alert(data)
+        modalLabel.innerHTML = data
+        modalLaunchButton.click()
+        modalOkBtn.onclick = () => {
+          modalCloseButton.click()
+        }
       }
       console.log('Success:', data);
     })
@@ -402,20 +419,31 @@ const setAllAssignService = (d) => {
   })
 }
 
+let deleteModal = document.querySelector(".delete-modal #exampleModal")
+let deleteModalOkBtn = document.querySelector(".delete-modal #modal-ok-btn")
+let deleteModalModalLabel = document.querySelector(".delete-modal #exampleModalLabel")
 
+let deleteModalLaunchButton = document.querySelector(".delete-modal .launch")
+let deleteModalCloseButton = document.querySelector(".delete-modal .close")
 
 tbody ? tbody.onclick = (e) => {
   if (e.target.classList.contains('delete')) {
     e.preventDefault()
-    console.log('delete')
     jsonData["Id"] = e.target.id
     jsonData["action"] = "delete"
-    let r = confirm("Are you sure you want to delete?")
-    if (r == true) {
-      sendRequest("API/modifyService.php")
+    deleteModalLaunchButton.click()
+    
+    deleteModalOkBtn.onclick = () => {
+      console.log("delete")
+      console.log("json data", jsonData)
+      deleteModalCloseButton.click()
+      sendRequest("https://www.bgvhwd.xyz/Project_files/API/assignService.php")
+      jsonData = {}
     }
+
+    // if (r == true) {
+    // }
   }
-  jsonData = {}
 } : false
 
 let serviceType2 = ''
@@ -447,14 +475,14 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/servicetype.php", {
 
 tbody ? tbody.ondblclick = (e) => {
   
-  let target = e.target.parentElement.getAttribute("data-sr")
+  let target = e.target.parentElement.getAttribute("data-sr") 
   // console.log(e.target)
   setAllAssignService(allAssignService)
 
   let currentEdit = allAssignService.filter(v => v.id === e.target.parentElement.id)
 
   let countrySelect2 = countrySelect
-  let serviceTypeSelect2 = serviceType2
+  let serviceTypeSelect2 = serviceType2 
   let clientNameSelect = clientName
 
   // console.log(serviceTypeSelect2)

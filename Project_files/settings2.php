@@ -281,22 +281,22 @@
                   <form id="ajax">
                     <div class="row justify-content-around">
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
-                          <option value="">Select Case</option>
-                          <option value="">Insuffiency</option>
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
+                          <option value="select case">Select Case</option>
+                          <option value="Insuffiency">Insuffiency</option>
                         </select>
                       </div>
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
-                          <option value="">First Name</option>
-                          <option value="">Middle Name</option>
-                          <option value="">Last Name</option>
-                          <option value="">Mother's Name</option>
-                          <option value="">Address Line 1</option>
-                          <option value="">Address Line 2</option>
-                          <option value="">City</option>
-                          <option value="">State</option>
-                          <option value="">Pin Code</option>
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="second" style="color:#202940;" required>
+                          <option value="First Name">First Name</option>
+                          <option value="Middle Name">Middle Name</option>
+                          <option value="Last Name">Last Name</option>
+                          <option value="Mother's Name">Mother's Name</option>
+                          <option value="Address Line 1">Address Line 1</option>
+                          <option value="Address Line 2">Address Line 2</option>
+                          <option value="City">City</option>
+                          <option value="State">State</option>
+                          <option value="Pin Code">Pin Code</option>
                         </select>
                       </div>
                     </div>
@@ -443,7 +443,7 @@
       document.documentElement.classList.add('transition');
       window.setTimeout(() => {
         document.documentElement.classList.remove('transition');
-      }, 1000)
+      }, 1000) 
     }
   </script>
   <!--mode change end-->
@@ -465,6 +465,7 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
+  <script src="settings2.js"></script>
   <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {

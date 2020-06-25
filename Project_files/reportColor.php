@@ -23,18 +23,39 @@
   <title>
     Report Color
   </title>
+<<<<<<< HEAD
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+=======
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+<<<<<<< HEAD
+=======
 
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 </head>
 
 <body class="dark-edition">
@@ -70,7 +91,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -108,7 +133,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -157,11 +186,24 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
+              <p>Settings </p>
+=======
               <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -169,11 +211,29 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
           </li>
         </ul>
+<<<<<<< HEAD
+      </div>
+      <!--Side Bar End-->
+    </div>
+      <div class="main-panel">
+         <!--toggle button-->
+ <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+  <input type="checkbox" id="switch" name="theme">
+  <label id="toggleButton" for="switch">Toggle</label>
+</div>
+        <!-- Navbar -->
+        <nav
+          class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
+          id="navigation-example"
+          style="padding: 0; margin: 0;"
+        >
+=======
       </div>
       <!--Side Bar End-->
     </div>
@@ -185,6 +245,7 @@
       </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Report color</a>
@@ -325,7 +386,83 @@
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header card-header-primary">
+<<<<<<< HEAD
+                             <h4 style="color: white;" class="card-title">Report Color</h4>
+                          </div>
+                            <table
+                              class="table table-hover"
+                              style="margin-top: 4%; width:96%;margin-left:2%"
+                            >
+                              <thead class="text-primary " 
+                              style="background-color: rgba(15, 13, 13, 0.856) !important;" 
+                              >
+                                <th>
+                                  Order Status
+                                </th>
+
+                                <th>
+                                  Color Code
+                                </th>
+                                <th>
+                                  Report Text
+                                </th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td  class="tablehead1">
+                                    Dakota Rice
+                                  </td>
+
+                                  <td  class="tablehead1">
+                                    <select
+                                      id="Colors"
+                                      class="form-control"
+                                      required
+                                    >
+                                      <option selected>Yellow</option>
+                                      <option>Green</option>
+                                    </select>
+                                  </td>
+                                  <td  class="tablehead1">
+                                    <input
+                                      id="Report Text"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td  class="tablehead1">
+                                    Minerva Hooper
+                                  </td>
+
+                                  <td  class="tablehead1">
+                                    <select
+                                      id="Colors"
+                                      class="form-control"
+                                      required
+                                    >
+                                      <option selected>Yellow</option>
+                                      <option>Green</option>
+                                    </select>
+                                  </td>
+                                  <td  class="tablehead1">
+                                    <input
+                                      id="Report Text"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+=======
                             <h4 style="color: white;" class="card-title">Report Color</h4>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                           </div>
                           <table class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary thead-dark" style="background-color: rgba(15, 13, 13, 0.856) !important;">

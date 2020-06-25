@@ -21,25 +21,55 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Add Client
+    Email Trigger
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+  <!--jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .hidediv{
+      border-radius:15px solid black;
+      background-color: grey;
+      border: 1px solid black;
+      height: 271px;
+      width: 690px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% ,-50%);
+    
+      
+
+     
+    }
+    .innerdivs{
+      position: absolute;
+      left: 65%;
+      top: 80%;
+    }
+
+    
+  </style>
 </head>
 
 <body class="dark-edition">
@@ -75,7 +105,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -113,7 +143,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
                 </li>
               </ul>
             </div>
@@ -162,18 +192,18 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-              <p>Settings</p>
+              <p>Settings </p>
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
                 </li>
               </ul>
             </div>
@@ -182,18 +212,17 @@
       </div>
       <!--Side Bar End-->
     </div>
-    <div class="main-panel">
+    <div class="main-panel mainP">
+       <!--toggle button-->
+ <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+  <input type="checkbox" id="switch" name="theme">
+  <label id="toggleButton" for="switch">Toggle</label>
+ </div>
       <!-- Navbar -->
-
-      <!--toggle button-->
-      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-        <input type="checkbox" id="switch" name="theme">
-        <label id="toggleButton" for="switch">Toggle</label>
-      </div>
-      <nav style="padding:0; margin:0; border:0" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
-        <div class="container-fluid">
-          <div class="navbar-wrapper" style="height: 70px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Add Clients</a>
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;" id="navigation-example">
+        <div class="container-fluid" >
+          <div class="navbar-wrapper"  style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Settings</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -203,25 +232,17 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end">
             <!-- <form class="navbar-form">
-                <div class="input-group no-border">
-                  <input
-                    type="text"
-                    value=""
-                    class="form-control"
-                    placeholder="Search..."
-                  />
-                  <button
-                    type="submit"
-                    class="btn btn-default btn-round btn-just-icon"
-                  >
-                    <i class="material-icons">search</i>
-                    <div class="ripple-container"></div>
-                  </button>
-                </div>
-              </form> -->
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search..." />
+                <button type="submit" class="btn btn-default btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form> -->
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/client_Side_Files/adminDashboard_sidebar.php">
+                <a class="nav-link" href="javascript:void(0)">
                   <i style="color: white;" class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
@@ -270,258 +291,137 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Clients</h4>
+                  <h4 class="card-title">Email Trigger Settings</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Client Name</label>
-                          <input name="Client Name" type="text" class="form-control" required />
-                        </div>
+                    <div class="row justify-content-around">
+                      <div class="form-group col-md-5">
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">Select Case</option>
+                            <option value="">Insuffiency</option>
+                        </select>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Client Code</label>
-                          <input name="Client Code" type="text" class="form-control" required />
-                        </div>
+                      <div class="form-group col-md-5">
+                          <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">First Name</option>
+                            <option value="">Middle Name</option>
+                            <option value="">Last Name</option>
+                            <option value="">Mother's Name</option>
+                            <option value="">Address Line 1</option>
+                            <option value="">Address Line 2</option>
+                            <option value="">City</option>
+                            <option value="">State</option>
+                            <option value="">Pin Code</option>
+                        </select>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Client SPOC</label>
-                          <input name="Client SPOC" type="text" class="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <!-- <input
-                              name="Country"
-                              type="text"
-                              class="form-control"
-                            />-->
-                          <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown" onchange="getservice(this.value)" style="color:#202940;" required>
+                     </div>                 
+                  <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
+                    <label for="Email">Email Content</label><br>
+                    <textarea style= "border-radius: 6px;" sty class="form-control textedArea z-depth-1" id="Email" rows="12" placeholder="Post the Text here..."></textarea>
+                  </div>
 
-                          </select>
-
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">State</label>
-                          <!-- <input
-                              name="State"
-                              type="text"
-                              class="form-control"
-                            />-->
-                          <select class="browser-default custom-select" type="select" id="select_state" name="select_state" onchange="getservicename(this.value)" style="color:#202940;">
-
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <!-- <input
-                              name="City"
-                              type="text"
-                              class="form-control"
-                            />-->
-                          <select class="browser-default custom-select" type="select" id="select_city" name="select_city" onchange="getdocumentlist(this.value)" style="color:#202940;">
-
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Zip Code</label>
-                          <input name="Zip Code" type="number" min="0" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Contact Number</label>
-                          <input name="Contact Number" type="number" min="0" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Applicant Response Time</label>
-                          <input name="Applicant Response Time" type="number" min="0" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Invoice Address Details</label>
-                          <input name="Invoice Address Details" type="text" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Invoice Bank Detail</label>
-                          <input name="Invoice Bank Detail" type="text" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Invoice Payment Due Days</label>
-                          <input name="Invoice Payment Due Days" type="number" min="0" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Invoice Code</label>
-                          <input name="Invoice Code" type="text" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Is GSTIN</label>
-                          <input name="Is GSTIN" type="text" class="form-control" />
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email ID</label>
-                          <input name="Email ID" type="email" class="form-control" />
-                        </div>
-                      </div>
-                      <!--checkBoxes-->
-                      <!-- <div class="container" style="margin-top: 2%;">
-                          <div class="row">
-                            <div class="col-sm-4">
-                              <div
-                                class="checkbox checkbox-circle checkbox-red"
-                              >
-                                <label
-                                  class="form-check-label"
-                                  for="Is Package"
-                                >
-                                  Is Package
-                                </label>
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  name="Is Package"
-                                  id="Is Package"
-                                  value="Yes"
-                                  style="margin-left: 3%;"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="Is Package"
-                                  style="margin-left: 10%;"
-                                >
-                                  Yes
-                                </label>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <div
-                                class="checkbox checkbox-circle checkbox-red"
-                              >
-                                <label class="form-check-label" for="Email ID">
-                                  Email ID
-                                </label>
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  name="Email ID radio"
-                                  id="Email ID"
-                                  value="Yes"checkbox
-                                  style="margin-left: 3%;"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="Email ID"
-                                  style="margin-left: 10%;"
-                                >
-                                  Yes
-                                </label>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <div
-                                class="checkbox checkbox-circle checkbox-red"
-                              >
-                                <label
-                                  class="form-check-label"
-                                  for="Is LOB Mapping"
-                                >
-                                  Is LOB Mapping
-                                </label>
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  name="Is LOB Mapping"
-                                  id="Is LOB Mapping"
-                                  value="Yes"
-                                  style="margin-left: 3%;"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="Is LOB Mapping"
-                                  style="margin-left: 10%;"
-                                >
-                                  Yes
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div> -->
-                      <!--checkBoxes-->
-                    </div>
-                    <div class="row" style="margin-top: 2%;">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="Currency" class="bmd-label-floating" style="margin-left: 4%;">Currency</label>
-                          <select id="currency" name="currency" class="browser-default custom-select" required>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label>Date of Registration</label>
-                          <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="Password" class="bmd-label-floating">Password</label>
-                          <input name="Password" type="text" class="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row justify-content-end">
-                      <button id="add-client" type="submit" class="btn btn-primary" style="margin-right: 1%;">
-                        Submit
+                    <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
+                      <button type="submit" class="btn btn-primary mx-2">
+                        Save
                       </button>
-                      <button type="button" class="btn btn-primary" style="margin-right: 2%;" onclick="formReset()">
+
+                      <button type="button" class="btn btn-primary" >
                         Cancel
                       </button>
                     </div>
-
-                    <div class="clearfix"></div>
                   </form>
                 </div>
+             <!-- table -->
+             <div class="col-md-11" style="margin: auto;">
+                <div class="row">
+                  <table class="table table-hover" style="margin-top: 1%;">
+                    <thead class="text-primary " style="background-color: rgba(0, 0, 0, 0.781) !important;">
+                      <th style="text-align: center;">Sr.No</th>
+                      <th style="text-align: center;">Case</th>
+                      <th style="text-align: center;">Case Name</th>
+                      <th style="text-align: center;">Content</th>                     
+                    </thead>
+                    <tbody id="table-body">
+                     <tr>
+                       <td style="text-align: center;" class="tdth"></td>
+                       <td style="text-align: center;"class="tdth"></td>
+                       <td style="text-align: center;" class="tdth"></td>                       
+                       <td style="text-align: center;" class="text-primary tdth">
+                        <button
+                          style="margin-left: 10%;"
+                          id="btn1"
+                           type="button"
+                           class="btn btn-primary btn-sm togglebtn ">
+                           View
+                        </button>
+                     </tr> 
+                     <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          style="margin-left: 10%;"
+                          type="button"
+                          id="btn2"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn3"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>                       
+                      <td style="text-align: center;"class="text-primary">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn4"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr>         
+                    </tbody>
+                  </table>
+                </div>
+              </div>       
+            <!-- table end -->
+            <!--New Div-->
+              <div class="hidediv">
+                <div class="row innerdivs">
+                   <div class="col-md-1.2" style="padding-right:0">
+                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Save</button>
+                   </div>
+                 <div class="col-md-1.2">
+                    <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Okay</button>
+                 </div>
+                 <div class="col-md-1.2">
+                   <button  type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Cancel</button>
+                </div>
+                 </div>
+               </div> 
+             </div>
+             <!--New Div End-->
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById("date");
@@ -529,46 +429,56 @@
       </script>
     </div>
   </div>
-  <!--mode changing-->
-  <script>
-    let darkmode = localStorage.getItem("darkmode");
-    const darkmodetoggle = document.querySelector('input[name=theme]');
-
-    const enabledarkmode = () => {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      localStorage.setItem("darkmode", "enabled");
-    }
-
-
-    const disabledarkmode = () => {
-      document.documentElement.setAttribute('data-theme', 'light')
-      localStorage.setItem("darkmode", null);
-    }
-
-
-    if (darkmode === "enabled") {
-      enabledarkmode();
-    }
-
-
-    darkmodetoggle.addEventListener("change", () => {
-      darkmode = localStorage.getItem("darkmode");
-      if (darkmode !== "enabled") {
-        trans()
-        enabledarkmode();
-      } else {
-        trans()
-        disabledarkmode();
-      }
+   <!--mode changing-->
+   <script>
+     $(".hidediv").hide()
+    $(function(){
+      $(".togglebtn").click(function(){
+        $(".hidediv").fadeToggle("slow");
+      })
     })
+  
 
-    let trans = () => {
-      document.documentElement.classList.add('transition');
-      window.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-      }, 1000)
+
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
     }
-  </script>
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
+   <!--mode change end--> 
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -587,12 +497,11 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="data.js"></script>
+  <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {
-      document.getElementById("ajax").reset();
-    }
-
+        document.getElementById("ajax").reset();
+      }
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $(".sidebar");
@@ -779,16 +688,28 @@
       });
     });
 
-    $("form").submit(function(event) {
-      var formdata = $("form").serializeArray();
-      var data = {};
-      $(formdata).each(function(index, obj) {
-        data[obj.name] = obj.value;
+    $("form").submit(function (event) {
+        var formdata = $("form").serializeArray();
+        var data = {};
+        $(formdata).each(function (index, obj) {
+          data[obj.name] = obj.value;
+        });
+        
+        //console.log(data);
+        fetch('./API/createPackage.php',{
+          method:'post',
+          body:JSON.stringify(data)
+      }).then(function(res){
+        //console.log(res.text());
+        formReset();
+      }
+      ).catch(err=>{
+        //console.log(err);
+        return err;
+      })
+        event.preventDefault();
       });
-      //console.log(data);
-      event.preventDefault();
-    });
-    $.ajax;
+      $.ajax;
   </script>
 </body>
 

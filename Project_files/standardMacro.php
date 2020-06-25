@@ -23,18 +23,26 @@
   <title>
     Standard Macro
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body class="dark-edition">
@@ -70,7 +78,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -108,7 +120,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -157,11 +173,24 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
+              <p>Settings </p>
+=======
               <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -169,6 +198,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -272,14 +302,24 @@
                   <form id="ajax" method="POST">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
+<<<<<<< HEAD
+                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Service Type</label>
+                        <select style="margin-top: 2%;" name="ServiceType" id="Service Type"  class="browser-default custom-select" required>
+=======
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service Type</label>
                         <select name="ServiceType" id="Service Type" class="browser-default custom-select" required>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
+<<<<<<< HEAD
+                        <label for="Macro" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Macro Type</label>
+                        <select style="margin-top: 2%;" name="MacroType" id="Macro Type"  class="browser-default custom-select" required>
+=======
                         <label for="Macro" class="bmd-label-floating" style="margin-left: 4%;">Macro Type</label>
                         <select name="MacroType" id="Macro Type" class="browser-default custom-select" required>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
                     </div>
@@ -287,15 +327,17 @@
                       <div class="form-group col-md-4">
                         <label for="Service" style="margin-left: 4%;">Scenario</label>
                         <input name="Scenario" id="Scenario" type="text" class="form-control" placeholder="" required />
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="Service" style="margin-left: 4%;">Comment</label>
+                      </div>        
+                    </div>
+                    <div class="row">
+                      <div class="col-md-10">               
+                        <label class="bmd-label-floating" for="Service">Comment</label>
                         <input name="Comment" id="Comment" type="text" class="form-control" placeholder="" required />
                       </div>
                     </div>
 
 
-                    <div class="row justify-content-end" style="margin-right:1%">
+                    <div class="row justify-content-end" style="margin-right:1%; margin-top:4%">
                       <button type="submit" class="btn btn-primary">
                         Save
                       </button>

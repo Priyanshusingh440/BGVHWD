@@ -4,6 +4,7 @@ let searchCriteria
 let modifyClientData
 let orderStatus
 let dateOne
+let globalClientId
 
 let data = {}
 
@@ -108,28 +109,35 @@ const updateModifyClientData = (d) => {
   tbody ? tbody.innerHTML = '' : false
   d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${i + 1}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["first_Name"]} ${value["last_Name"]} 
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["internal_reference_id"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["email_id"]}
     </td>
+<<<<<<< HEAD
+    <td class="tablehead1" style="text-align: center;">
+=======
+    <td class="tablehead1 assign-to" data-sr="${i}" id="assign-to">
+      assign to
+    </td>
     <td class="tablehead1">
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
       ${value["order_creation_date_time"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["order_completion_date"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["Order_Status"] == 0 ? "pending" : value["Order_Status"] == 1 ? "Started" : value["Order_Status"] == 2 ? "Completed" : null}
     </td>
-    <td class="text-primary tablehead1">
+    <td class="text-primary tablehead1" style="text-align: center;">
       <ul style="list-style: none;">
         <li class="nav-item dropdown">
           <a
@@ -151,6 +159,7 @@ const updateModifyClientData = (d) => {
               id="${value.id}"
               class="dropdown-item edit"
               href="./addClient.html"
+              data-sr-submit="${i}"
               >Edit</a
             >
             <a class="dropdown-item delete" href="#" id="${value.id}">Delete</a>
@@ -164,27 +173,6 @@ const updateModifyClientData = (d) => {
 }
 
 
-// const hiddenInput = document.querySelector("#user_id")
-
-// console.log(hiddenInput.value)
-
-// const sendHiddenId = (url) => {
-//   fetch(url, {
-//     method: 'POST',
-//     body: JSON.stringify({"user": hiddenInput.value}),
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log('Success:', data);
-//   })
-//   .catch((error) => {
-//     console.error('Error:', error);
-//   });
-// }
-// sendHiddenId("https://www.bgvhwd.xyz/Client/API/dashboard.php")
-// sendHiddenId("https://www.bgvhwd.xyz/Client/API/viewclienttable.php")
-
-
 const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
@@ -192,6 +180,7 @@ const sendRequest = (url) => {
     })
     .then(response => response.json())
     .then(data => {
+      getAllClientData()
       console.log('Success:', data);
     })
     .catch((error) => {
@@ -208,5 +197,74 @@ tbody ? tbody.onclick = (e) => {
   }
   data = {}
 } : false
+
+console.log("working 2")
+
+const assignTo = document.querySelector(".assign-to")
+
+let options = ""
+const assignToDropDown = () => {
+  fetch("https://www.bgvhwd.xyz/Project_files/API/viewOF.php")
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      data.map(v => {
+        options += `<option value="${v.Id}" class='bg-secondary text-light'>${v.fullname}</option>`
+      })
+      console.log(options)
+      // assignTo.innerHTML = options
+    })
+    .catch(err => console.log(err))
+}
+assignToDropDown()
+tbody ? tbody.ondblclick = (e) => {
+  e.target.classList.contains("assign-to") ? assignToDropDown2(e) : null
+} : false
+
+const assignToDropDown2 = (e) => {
+  console.log("assign 2")
+  let target = e.target.getAttribute("data-sr")
+  console.log(modifyClientData)
+  updateModifyClientData(modifyClientData)
+
+  let element = document.querySelector(`#table-body [data-sr="${target}"]`)
+  console.log(element)
+  element.innerHTML = `
+    <select style="margin-top:5%" id="assign-to" class="browser-default custom-select" name="currency" class="form-control" required>
+      ${options}
+    </select>
+    `
+  document.querySelector(`#table-body select`).value = element.value
+  document.querySelector(`#table-body [data-sr-submit="${target}"]`).innerHTML = "Assign"
+
+  // })
+
+
+  const inputFields2 = document.querySelectorAll('.edit-table input:not([type="radio"] )'),
+    inputFieldsArray2 = [...inputFields2],
+    select2 = document.querySelectorAll('.edit-table select'),
+    selectArray2 = [...select2]
+
+
+  const editOnchange = (url) => {
+    return e => {
+      e.preventDefault()
+      data["assign_to"] = document.querySelector(`#table-body select`).value
+      console.log(e.target.id)
+      data["client_id"] = e.target.id
+
+      console.log(data)
+      sendRequest(url)
+
+      data = {}
+    }
+  }
+  console.log(target)
+  let assignButton = document.querySelector(`#table-body [data-sr-submit="${target}"]`)
+  console.log(assignButton)
+  assignButton.addEventListener('click', editOnchange("https://www.bgvhwd.xyz/Project_files/API/viewOF.php"))
+
+  data = {}
+}
 
 console.log("working all")

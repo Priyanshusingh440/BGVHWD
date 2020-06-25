@@ -23,12 +23,30 @@
   <title>
     Assign Services
   </title>
+<<<<<<< HEAD
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+=======
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -107,7 +125,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -156,11 +178,24 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
+              <p>Settings </p>
+=======
               <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -168,6 +203,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -175,7 +211,6 @@
         </ul>
       </div>
       <!--Side Bar End-->
-
     </div>
     <div class="main-panel">
       <!--toggle button-->
@@ -271,7 +306,7 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-start">
+                    <div class="row justify-content-around">
                       <div class="form-group col-md-4">
                         <label for="Client Name" style="margin-left: 4%;">Client Name</label>
                         <!-- code change -->
@@ -289,7 +324,7 @@
                       </div>
                     </div>
 
-                    <div class="row justify-content-start">
+                    <div class="row justify-content-around">
                       <div class="form-group col-md-4">
                         <label for="Service Type" style="margin-left: 4%;">Service Type</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" onchange="getservice(this.value)" class="form-control" required>
@@ -305,19 +340,26 @@
                         </select>
                       </div>
                     </div>
-                    <div class="row justify-content-start">
+                    <div class="row justify-content-around">
                       <div class="form-group col-md-4">
                         <label for="Price" style="margin-left: 4%;margin-top: 4%;">Price</label>
                         <input name="Price" type="number" id="Price" class="form-control mt-4" min="0" placeholder="" />
                       </div>
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-4"> 
                         <label for="currency" style="margin-left: 4%;">Currency</label>
                         <select style="margin-top:5%" id="currency" class="browser-default custom-select" name="currency" onchange="getservicename(this.value)" class="form-control" required>
                           <option class='bg-secondary text-light' default not selected>Choose...</option>
                         </select>
                       </div>
+<<<<<<< HEAD
+                    </div> 
+                        <div class=" form-group col-md-4" style="margin-left:8%">
+                          <label for="SLA" style="margin-left: 4%;">SLA</label>
+                          <input name="SLA" id="SLA" type="text" class="form-control" placeholder="" />
+                        </div>
+=======
                     </div>
-                    <div class="row justify-content-start">
+                    <div class="row justify-content-start"> 
 
                       <div class="form-group col-md-4">
                         <label for="SLA" style="margin-left: 4%;margin-top: 4%;">SLA</label>
@@ -325,6 +367,7 @@
                       </div>
                     </div>
 
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                     <hr />
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" id="assignSubmit" class="btn btn-primary mx-2">
@@ -387,6 +430,54 @@
                 </div>
               </div>
             </div>
+
+            <!-- Modal -->
+<div class="add-service-modal">
+  <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Service Assigned Successfully</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="modal-ok-btn" data-dismiss="modal" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="delete-modal">
+  <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#deleteModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="modal-ok-btn">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
             <script src="assignService.js"></script>
             <script>
               window.onload = T2;
