@@ -291,7 +291,7 @@
                         <div class="form-group">
                           <label class="bmd-label-floating">Client SPOC</label>
                           <input name="Client SPOC" type="text" class="form-control" />
-                        </div>
+                        </div> 
                       </div>
                     </div>
                     <div class="row">
@@ -522,6 +522,21 @@
           </div>
         </div>
       </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bank Details added successfully</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="modal-ok-btn" data-dismiss="modal" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById("date");

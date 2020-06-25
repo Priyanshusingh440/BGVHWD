@@ -174,6 +174,9 @@ function getservicename(x) {
 
 let data = {}
 
+let modal = document.getElementById("exampleModal")
+let modalOkBtn = document.getElementById("modal-ok-btn")
+
 const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
@@ -182,10 +185,14 @@ const sendRequest = (url) => {
     .then(response => response.text())
     .then(data => {
       if (url === "https://www.bgvhwd.xyz/Project_files/API/addClient.php" && data.trim() == 'sucess') {
-        alert('data submitted successfully')
-        window.location.href = "modifyClient.php"
+        //modal show up
+        modal.setAttribute("aria-hidden", "false")
+        modal.style.display = "block"
+        modal.classList.add("show");
+        modalOkBtn.onclick = () => {
+          window.location.href = "modifyClient.php"  
+        }
       }
-
       console.log('Success:', data);
     })
     .catch((error) => {
