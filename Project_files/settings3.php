@@ -259,19 +259,19 @@
                   <form id="ajax">
                     <div class="row justify-content-around">
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
-                          <option value="">Select Services</option>
-                          <option value="">India Address Verification</option>
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
+                          <option value="Select Services">Select Services</option>
+                          <option value="India Address Verification">India Address Verification</option>
                         </select>
                       </div>
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
-                          <option value="">Birth Certificate</option>
-                          <option value="">Adhar Card</option>
-                          <option value="">Last Name</option>
-                          <option value="">12th Marks Sheet</option>
-                          <option value="">10th Marks Sheet</option>
-                          <option value="">Pan Card</option>
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="second" style="color:#202940;" required>
+                          <option value="Birth Certificate">Birth Certificate</option>
+                          <option value="Adhar Card">Adhar Card</option>
+                          <option value="Last Name">Last Name</option>
+                          <option value="12th Marks Sheet">12th Marks Sheet</option>
+                          <option value="10th Marks Sheet">10th Marks Sheet</option>
+                          <option value="Pan Card">Pan Card</option>
                         </select>
                       </div>
                     </div>
@@ -430,6 +430,7 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
+  <script src="settings2.js"></script>
   <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {

@@ -6,7 +6,7 @@ const addClientSubmit = document.querySelector('#ajax button'),
   inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
   inputRadiosArray = [...inputRadios],
   inputCheckbox = document.querySelectorAll('#ajax input[type="checkbox"]'),
-  inputCheckboxArray = [...inputCheckbox],
+  inputCheckboxArray = [...inputCheckbox], 
   select = document.querySelectorAll('#ajax select'),
   selectArray = [...select],
   inputCurrency = document.querySelector('#ajax select[name="currency"]')
