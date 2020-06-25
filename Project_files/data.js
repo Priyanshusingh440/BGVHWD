@@ -176,6 +176,9 @@ let data = {}
 
 let modal = document.getElementById("exampleModal")
 let modalOkBtn = document.getElementById("modal-ok-btn")
+let modalCloseButton = document.querySelector(".close")
+
+let modalLaunchButton = document.querySelector(".launch")
 
 const sendRequest = (url) => {
   fetch(url, {
@@ -186,12 +189,14 @@ const sendRequest = (url) => {
     .then(data => {
       if (url === "https://www.bgvhwd.xyz/Project_files/API/addClient.php" && data.trim() == 'sucess') {
         //modal show up
-        modal.setAttribute("aria-hidden", "false")
-        modal.style.display = "block"
-        modal.classList.add("show");
-        modalOkBtn.onclick = () => {
-          window.location.href = "modifyClient.php"  
-        }
+        // modal.setAttribute("aria-hidden", "false")
+        // modal.style.display = "block"
+        // modal.classList.add("show");
+        // modalOkBtn.onclick = () => {
+        //   window.location.href = "modifyClient.php"  
+        // }
+        modalLaunchButton.click()
+        window.onclick = () => window.location.href = "modifyClient.php"  
       }
       console.log('Success:', data);
     })
