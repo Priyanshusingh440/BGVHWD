@@ -172,6 +172,12 @@ tbody ? tbody.onclick = (e) => {
     sendRequest("https://www.bgvhwd.xyz/client/API/editOrder.php")
   }
   data = {}
+  if (e.target.classList.contains('edit')) {
+    e.preventDefault()    
+    clientEditInfo = modifyClientData.find(client => client.Id == e.target.id)
+    localStorage.setItem("data", JSON.stringify(clientEditInfo))
+    window.location.href = `editOrder.php?id=${e.target.id}`
+  }
 } : false
 
 console.log("working 2")

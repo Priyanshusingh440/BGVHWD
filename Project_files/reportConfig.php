@@ -23,6 +23,7 @@
   <title>
     Report Configuration
   </title>
+<<<<<<< HEAD
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
   <!--     Fonts and icons     -->
@@ -38,6 +39,14 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+=======
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -78,7 +87,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,7 +129,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -165,11 +182,16 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
               <p>Settings </p>
+=======
+              <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,11 +199,21 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
           </li>
         </ul>
+<<<<<<< HEAD
       </div>
       <!--Side Bar End-->
     </div>
@@ -197,26 +229,33 @@
           id="navigation-example"
           style="padding: 0; margin: 0;"
         >
+=======
+      </div>
+      <!--Side Bar End-->
+
+
+    </div>
+    <div class="main-panel">
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Report Configuration</a>
           </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              aria-controls="navigation-index"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              data-target="#navigation-example"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end">
-              <!-- <form class="navbar-form">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <!-- <form class="navbar-form">
                 <div class="input-group no-border">
                   <input
                     type="text"
@@ -233,58 +272,39 @@
                   </button>
                 </div>
               </form> -->
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:void(0)">
-                    <i style="color: white;" class="material-icons">dashboard</i>
-                    <p class="d-lg-none d-md-block">
-                      Stats
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link"
-                    href="javscript:void(0)"
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i style="color: white;" class="material-icons">notifications</i>
-                    <span class="notification">5</span>
-                    <p class="d-lg-none d-md-block">
-                      Some Actions
-                    </p>
-                  </a>
-                  <div
-                    class="dropdown-menu dropdown-menu-right"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      >Mike John responded to your email</a
-                    >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      >You have 5 new tasks</a
-                    >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      >You're now friend with Andrew</a
-                    >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      >Another Notification</a
-                    >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      >Another One</a
-                    >
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i style="color: white;" class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i style="color: white;" class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="javascript:void(0)">Mike John responded to your email</a>
+                  <a class="dropdown-item" href="javascript:void(0)">You have 5 new tasks</a>
+                  <a class="dropdown-item" href="javascript:void(0)">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="javascript:void(0)">Another Notification</a>
+                  <a class="dropdown-item" href="javascript:void(0)">Another One</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
-                <div class="ripple-container"></div></a>
+                  <div class="ripple-container"></div>
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="MyProfile.php">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
@@ -292,97 +312,63 @@
                   <a class="dropdown-item" href="API/db_logout.php">Log out</a>
                 </div>
               </li>
-              </ul>
-            </div>
+            </ul>
           </div>
-        </nav>
-        <!-- End Navbar -->
-        <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header card-header-primary">
-                    <h4 class="card-title">Report Configuration</h4>
-                  </div>
-                  <div class="card-body">
-                    <form id="ajax" method="POST">
-                      <div class="row justify-content-start">
-                        <div
-                          class="form-group col-md-4"
-                          style="margin-left: 4%;"
-                        >
-                          <label for="Service Type" style="margin-left: 4%;"
-                            >Client Name</label
-                          >
-                          <select
-                            name="Service Type"
-                            id="Service Type"
-                            class="form-control"
-                            required
-                          >
-                            <option selected>Choose...</option>
-                            <option>Client1</option>
-                          </select>
-                        </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Report Configuration</h4>
+                </div>
+                <div class="card-body">
+                  <form id="ajax" method="POST">
+                    <div class="row justify-content-start">
+                      <div class="form-group col-md-4" style="margin-left: 4%;">
+                        <label for="Service Type" style="margin-left: 4%;">Client Name</label>
+                        <select name="Service Type" id="Service Type" class="form-control" required>
+                          <option selected>Choose...</option>
+                          <option>Client1</option>
+                        </select>
                       </div>
-                      <div class="row justify-content-start">
-                        <div
-                          class="form-group col-md-4"
-                          style="margin-left: 4%;"
-                        >
-                          <label for="Macro" style="margin-left: 4%;"
-                            >Process name</label
-                          >
-                          <select
-                            name="Macro Type"
-                            id="Macro Type"
-                            class="form-control"
-                            required
-                          >
-                            <option selected>Choose...</option>
-                            <option>Criminal Content</option>
-                          </select>
-                        </div>
+                    </div>
+                    <div class="row justify-content-start">
+                      <div class="form-group col-md-4" style="margin-left: 4%;">
+                        <label for="Macro" style="margin-left: 4%;">Process name</label>
+                        <select name="Macro Type" id="Macro Type" class="form-control" required>
+                          <option selected>Choose...</option>
+                          <option>Criminal Content</option>
+                        </select>
                       </div>
-                      <div class="row justify-content-start">
-                        <div
-                          class="form-group col-md-4"
-                          style="margin-left: 4%;"
-                        >
-                          <label for="Service Type" style="margin-left: 4%;"
-                            >Template</label
-                          >
-                          <select
-                            name="Service Type"
-                            id="Service Type"
-                            class="form-control"
-                            required
-                          >
-                            <option selected>Choose...</option>
-                            <option>Template1</option>
-                          </select>
-                        </div>
+                    </div>
+                    <div class="row justify-content-start">
+                      <div class="form-group col-md-4" style="margin-left: 4%;">
+                        <label for="Service Type" style="margin-left: 4%;">Template</label>
+                        <select name="Service Type" id="Service Type" class="form-control" required>
+                          <option selected>Choose...</option>
+                          <option>Template1</option>
+                        </select>
                       </div>
-                      <div class="row justify-content-end" style="margin-right: 1%;">
-                        <button type="submit" class="btn btn-primary">
-                          Save
-                        </button>
+                    </div>
+                    <div class="row justify-content-end" style="margin-right: 1%;">
+                      <button type="submit" class="btn btn-primary">
+                        Save
+                      </button>
 
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          onclick="reset()"
-                          style="margin-left: 1%;"
-                        >
-                          Reset
-                        </button>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="card">
+                      <button type="button" class="btn btn-primary" onclick="reset()" style="margin-left: 1%;">
+                        Reset
+                      </button>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card">
                           <div class="card-header card-header-primary">
+<<<<<<< HEAD
                              <h4 style="color:white" class="card-title">Reports</h4>
                           </div>
                             <table
@@ -436,291 +422,335 @@
                                 </tr>
                               </tbody>
                             </table>
+=======
+                            <h4 class="card-title">Reports</h4>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                           </div>
+                          <table class="table table-hover" style="margin-top: 4%; width: 98% !important; margin-left: 1%;">
+                            <thead class="text-light" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                              <th>
+                                Client Name
+                              </th>
+
+                              <th>
+                                Process name
+                              </th>
+
+                              <th>
+                                Edit
+                              </th>
+                              <th>
+                                Delete
+                              </th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tablehead1">
+                                  Client1
+                                </td>
+                                <td class="tablehead1">
+                                  ApplicantData
+                                </td>
+
+                                <td class="text-primary tablehead1">
+                                  <button type="button" class="btn btn-primary btn-sm">
+                                    Edit
+                                  </button>
+                                </td>
+                                <td class="text-primary tablehead1">
+                                  <button type="button" class="btn btn-primary btn-sm">
+                                    Delete
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <script>
-          const x = new Date().getFullYear();
-          let date = document.getElementById("date");
-          date.innerHTML = "&copy; " + x + date.innerHTML;
-        </script>
       </div>
-    </div>
-     <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById("date");
+        date.innerHTML = "&copy; " + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+  <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
+
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
-
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
-    <!--   Core JS Files   -->
-    <script src="assets/js/core/jquery.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-    <script src="https://unpkg.com/default-passive-events"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Chartist JS -->
-    <script src="assets/js/plugins/chartist.min.js"></script>
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/plugins/bootstrap-notify.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script src="assets/demo/demo.js"></script>
-    <script>
-      function reset() {
-        document.getElementById("ajax").reset();
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
       }
-      $(document).ready(function () {
-        $().ready(function () {
-          $sidebar = $(".sidebar");
+    })
 
-          $sidebar_img_container = $sidebar.find(".sidebar-background");
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="assets/demo/demo.js"></script>
+  <script>
+    function reset() {
+      document.getElementById("ajax").reset();
+    }
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $(".sidebar");
 
-          $full_page = $(".full-page");
+        $sidebar_img_container = $sidebar.find(".sidebar-background");
 
-          $sidebar_responsive = $("body > .navbar-collapse");
+        $full_page = $(".full-page");
 
-          window_width = $(window).width();
+        $sidebar_responsive = $("body > .navbar-collapse");
 
-          $(".fixed-plugin a").click(function (event) {
-            // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
-            if ($(this).hasClass("switch-trigger")) {
-              if (event.stopPropagation) {
-                event.stopPropagation();
-              } else if (window.event) {
-                window.event.cancelBubble = true;
-              }
+        window_width = $(window).width();
+
+        $(".fixed-plugin a").click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass("switch-trigger")) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
             }
-          });
+          }
+        });
 
-          $(".fixed-plugin .active-color span").click(function () {
-            $full_page_background = $(".full-page-background");
+        $(".fixed-plugin .active-color span").click(function() {
+          $full_page_background = $(".full-page-background");
 
-            $(this).siblings().removeClass("active");
-            $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+          $(this).addClass("active");
 
-            var new_color = $(this).data("color");
+          var new_color = $(this).data("color");
 
-            if ($sidebar.length != 0) {
-              $sidebar.attr("data-color", new_color);
-            }
+          if ($sidebar.length != 0) {
+            $sidebar.attr("data-color", new_color);
+          }
 
-            if ($full_page.length != 0) {
-              $full_page.attr("filter-color", new_color);
-            }
+          if ($full_page.length != 0) {
+            $full_page.attr("filter-color", new_color);
+          }
 
-            if ($sidebar_responsive.length != 0) {
-              $sidebar_responsive.attr("data-color", new_color);
-            }
-          });
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr("data-color", new_color);
+          }
+        });
 
-          $(".fixed-plugin .background-color .badge").click(function () {
-            $(this).siblings().removeClass("active");
-            $(this).addClass("active");
+        $(".fixed-plugin .background-color .badge").click(function() {
+          $(this).siblings().removeClass("active");
+          $(this).addClass("active");
 
-            var new_color = $(this).data("background-color");
+          var new_color = $(this).data("background-color");
 
-            if ($sidebar.length != 0) {
-              $sidebar.attr("data-background-color", new_color);
-            }
-          });
+          if ($sidebar.length != 0) {
+            $sidebar.attr("data-background-color", new_color);
+          }
+        });
 
-          $(".fixed-plugin .img-holder").click(function () {
-            $full_page_background = $(".full-page-background");
+        $(".fixed-plugin .img-holder").click(function() {
+          $full_page_background = $(".full-page-background");
 
-            $(this).parent("li").siblings().removeClass("active");
-            $(this).parent("li").addClass("active");
+          $(this).parent("li").siblings().removeClass("active");
+          $(this).parent("li").addClass("active");
 
-            var new_image = $(this).find("img").attr("src");
+          var new_image = $(this).find("img").attr("src");
 
-            if (
-              $sidebar_img_container.length != 0 &&
-              $(".switch-sidebar-image input:checked").length != 0
-            ) {
-              $sidebar_img_container.fadeOut("fast", function () {
-                $sidebar_img_container.css(
-                  "background-image",
-                  'url("' + new_image + '")'
-                );
-                $sidebar_img_container.fadeIn("fast");
-              });
-            }
-
-            if (
-              $full_page_background.length != 0 &&
-              $(".switch-sidebar-image input:checked").length != 0
-            ) {
-              var new_image_full_page = $(".fixed-plugin li.active .img-holder")
-                .find("img")
-                .data("src");
-
-              $full_page_background.fadeOut("fast", function () {
-                $full_page_background.css(
-                  "background-image",
-                  'url("' + new_image_full_page + '")'
-                );
-                $full_page_background.fadeIn("fast");
-              });
-            }
-
-            if ($(".switch-sidebar-image input:checked").length == 0) {
-              var new_image = $(".fixed-plugin li.active .img-holder")
-                .find("img")
-                .attr("src");
-              var new_image_full_page = $(".fixed-plugin li.active .img-holder")
-                .find("img")
-                .data("src");
-
+          if (
+            $sidebar_img_container.length != 0 &&
+            $(".switch-sidebar-image input:checked").length != 0
+          ) {
+            $sidebar_img_container.fadeOut("fast", function() {
               $sidebar_img_container.css(
                 "background-image",
                 'url("' + new_image + '")'
               );
+              $sidebar_img_container.fadeIn("fast");
+            });
+          }
+
+          if (
+            $full_page_background.length != 0 &&
+            $(".switch-sidebar-image input:checked").length != 0
+          ) {
+            var new_image_full_page = $(".fixed-plugin li.active .img-holder")
+              .find("img")
+              .data("src");
+
+            $full_page_background.fadeOut("fast", function() {
               $full_page_background.css(
                 "background-image",
                 'url("' + new_image_full_page + '")'
               );
+              $full_page_background.fadeIn("fast");
+            });
+          }
+
+          if ($(".switch-sidebar-image input:checked").length == 0) {
+            var new_image = $(".fixed-plugin li.active .img-holder")
+              .find("img")
+              .attr("src");
+            var new_image_full_page = $(".fixed-plugin li.active .img-holder")
+              .find("img")
+              .data("src");
+
+            $sidebar_img_container.css(
+              "background-image",
+              'url("' + new_image + '")'
+            );
+            $full_page_background.css(
+              "background-image",
+              'url("' + new_image_full_page + '")'
+            );
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css(
+              "background-image",
+              'url("' + new_image + '")'
+            );
+          }
+        });
+
+        $(".switch-sidebar-image input").change(function() {
+          $full_page_background = $(".full-page-background");
+
+          $input = $(this);
+
+          if ($input.is(":checked")) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn("fast");
+              $sidebar.attr("data-image", "#");
             }
 
-            if ($sidebar_responsive.length != 0) {
-              $sidebar_responsive.css(
-                "background-image",
-                'url("' + new_image + '")'
-              );
-            }
-          });
-
-          $(".switch-sidebar-image input").change(function () {
-            $full_page_background = $(".full-page-background");
-
-            $input = $(this);
-
-            if ($input.is(":checked")) {
-              if ($sidebar_img_container.length != 0) {
-                $sidebar_img_container.fadeIn("fast");
-                $sidebar.attr("data-image", "#");
-              }
-
-              if ($full_page_background.length != 0) {
-                $full_page_background.fadeIn("fast");
-                $full_page.attr("data-image", "#");
-              }
-
-              background_image = true;
-            } else {
-              if ($sidebar_img_container.length != 0) {
-                $sidebar.removeAttr("data-image");
-                $sidebar_img_container.fadeOut("fast");
-              }
-
-              if ($full_page_background.length != 0) {
-                $full_page.removeAttr("data-image", "#");
-                $full_page_background.fadeOut("fast");
-              }
-
-              background_image = false;
-            }
-          });
-
-          $(".switch-sidebar-mini input").change(function () {
-            $body = $("body");
-
-            $input = $(this);
-
-            if (md.misc.sidebar_mini_active == true) {
-              $("body").removeClass("sidebar-mini");
-              md.misc.sidebar_mini_active = false;
-
-              $(".sidebar .sidebar-wrapper, .main-panel").perfectScrollbar();
-            } else {
-              $(".sidebar .sidebar-wrapper, .main-panel").perfectScrollbar(
-                "destroy"
-              );
-
-              setTimeout(function () {
-                $("body").addClass("sidebar-mini");
-
-                md.misc.sidebar_mini_active = true;
-              }, 300);
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn("fast");
+              $full_page.attr("data-image", "#");
             }
 
-            // we simulate the window Resize so the charts will get updated in realtime.
-            var simulateWindowResize = setInterval(function () {
-              window.dispatchEvent(new Event("resize"));
-            }, 180);
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr("data-image");
+              $sidebar_img_container.fadeOut("fast");
+            }
 
-            // we stop the simulation of Window Resize after the animations are completed
-            setTimeout(function () {
-              clearInterval(simulateWindowResize);
-            }, 1000);
-          });
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr("data-image", "#");
+              $full_page_background.fadeOut("fast");
+            }
+
+            background_image = false;
+          }
+        });
+
+        $(".switch-sidebar-mini input").change(function() {
+          $body = $("body");
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $("body").removeClass("sidebar-mini");
+            md.misc.sidebar_mini_active = false;
+
+            $(".sidebar .sidebar-wrapper, .main-panel").perfectScrollbar();
+          } else {
+            $(".sidebar .sidebar-wrapper, .main-panel").perfectScrollbar(
+              "destroy"
+            );
+
+            setTimeout(function() {
+              $("body").addClass("sidebar-mini");
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event("resize"));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
         });
       });
+    });
 
-      //XHR AJAX for form data submit
-      const form = document.getElementById("ajax");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const xhr = new XMLHttpRequest();
-        let formData = new FormData(form);
-        let data = {};
-        for (let entry of formData.entries()) {
-          data[entry[0]] = entry[1];
-        }
-        //to log the data object on the console
-        console.log(JSON.stringify(data));
-        let jsonData = JSON.stringify(data);
-        //change the /submit url to your requirment to divert it to that file
-        xhr.open("POST", "/submit");
-        xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
-        xhr.send(jsonData);
-      });
-    </script>
-  </body>
+    //XHR AJAX for form data submit
+    const form = document.getElementById("ajax");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const xhr = new XMLHttpRequest();
+      let formData = new FormData(form);
+      let data = {};
+      for (let entry of formData.entries()) {
+        data[entry[0]] = entry[1];
+      }
+      //to log the data object on the console
+      console.log(JSON.stringify(data));
+      let jsonData = JSON.stringify(data);
+      //change the /submit url to your requirment to divert it to that file
+      xhr.open("POST", "/submit");
+      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+      xhr.send(jsonData);
+    });
+  </script>
+</body>
+
 </html>

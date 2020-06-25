@@ -40,7 +40,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -78,7 +81,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,7 +123,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -165,11 +176,16 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
               <p>Settings </p>
+=======
+              <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,6 +193,15 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -184,17 +209,21 @@
         </ul>
       </div>
       <!--Side Bar End-->
+<<<<<<< HEAD
+=======
+
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
     </div>
     <div class="main-panel mainP">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
 
       <!-- Navbar -->
-      <nav  style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
-        <div class="container-fluid" >
+      <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+        <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Mandatory Documents</a>
           </div>
@@ -217,7 +246,7 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
-                  <i  style="color: white;" class="material-icons">dashboard</i>
+                  <i style="color: white;" class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
@@ -225,7 +254,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">notifications</i>
+                  <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
@@ -241,7 +270,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">person</i>
+                  <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
@@ -271,7 +300,8 @@
                   <form id="ajax">
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label for="DocumentName" style="margin-left: 4%;" class="bmd-label-floating">Document Name</label>
+                        <label for="DocumentName" style="margin-left: 4%;" class="bmd-label-floating">Document
+                          Name</label>
                         <input type="text" class="form-control" name="document_name" id="DocumentName" required>
                         <!-- <select
                             class="form-control"
@@ -295,11 +325,19 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card">
+<<<<<<< HEAD
                         <div class="card-header card-header-primary">
                              <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
                        </div>
                           <table class="table table-hover" style="margin-top: 4%;margin-left: 2%; width: 96%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;"> 
+=======
+                          <div class="card-header card-header-primary">
+                            <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
+                          </div>
+                          <table class="table table-hover" style="margin-top: 4%;">
+                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                               <th>
                                 Document Name
                               </th>
@@ -332,47 +370,47 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
+  <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>

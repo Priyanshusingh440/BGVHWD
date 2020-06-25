@@ -78,7 +78,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,8 +116,9 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
+
               </ul>
             </div>
           </li>
@@ -165,11 +166,16 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
               <p>Settings </p>
+=======
+              <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,6 +183,15 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -186,15 +201,15 @@
       <!--Side Bar End-->
     </div>
     <div class="main-panel mainP">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
       <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
         <div class="container-fluid">
-          <div class="navbar-wrapper" style="height: 70px;" >
+          <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">LOB</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -263,7 +278,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary" style="padding: 1%; margin: 0;" >
+                <div class="card-header card-header-primary" style="padding: 1%; margin: 0;">
                   <h4 class="card-title">LOB</h4>
                 </div>
                 <div class="card-body">
@@ -357,47 +372,47 @@
       </script>
     </div>
   </div>
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
+  <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -420,8 +435,8 @@
   <script src="LOB.js"></script>
   <script>
     function formReset() {
-        document.getElementById("ajax").reset();
-      }
+      document.getElementById("ajax").reset();
+    }
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $(".sidebar");

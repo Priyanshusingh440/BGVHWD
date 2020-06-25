@@ -78,7 +78,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,7 +120,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -165,11 +173,16 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
               <p>Settings </p>
+=======
+              <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,6 +190,15 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -280,14 +302,24 @@
                   <form id="ajax" method="POST">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
+<<<<<<< HEAD
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Service Type</label>
                         <select style="margin-top: 2%;" name="ServiceType" id="Service Type"  class="browser-default custom-select" required>
+=======
+                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service Type</label>
+                        <select name="ServiceType" id="Service Type" class="browser-default custom-select" required>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
+<<<<<<< HEAD
                         <label for="Macro" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Macro Type</label>
                         <select style="margin-top: 2%;" name="MacroType" id="Macro Type"  class="browser-default custom-select" required>
+=======
+                        <label for="Macro" class="bmd-label-floating" style="margin-left: 4%;">Macro Type</label>
+                        <select name="MacroType" id="Macro Type" class="browser-default custom-select" required>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
                     </div>
@@ -350,8 +382,10 @@
                               </th>
                             </thead>
                             <tbody id="table">
-                            <script src="standardMacro.js"></script>
-                              <script>popuTable();</script>
+                              <script src="standardMacro.js"></script>
+                              <script>
+                                popuTable();
+                              </script>
                             </tbody>
                           </table>
                         </div>

@@ -9,7 +9,7 @@
 * Coded by www.creative-tim.com
 
 =========================================================
-
+ 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
@@ -43,6 +43,12 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+<<<<<<< HEAD
+=======
+
+  <!-- <script src="package.js"></script> -->
+
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 </head>
 
 <body class="dark-edition">
@@ -78,7 +84,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,7 +126,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -165,11 +179,16 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
               <p>Settings </p>
+=======
+              <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,6 +196,15 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -316,19 +344,27 @@
                         </select>
                       </div>
 
-                      <div class="form-group col-md-4" style="margin-left: 8%;">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service Name</label>
-                        <select class="browser-default custom-select" id="framework" name="framework[]" multiple >
-                          <option value="Codeigniter">Codeigniter</option>
+                      <div class="form-group col-md-4 service-name-DD-wrapper" style="margin-left: 8%;">
+
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
+                          Name</label>
+                        <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" class="form-control" required multiple>
+                          <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
+                        </select>
+                        <!-- <select class="browser-default custom-select service-name-dd" id="framework" name="framework[]" -->
+                        <!-- multiple> -->
+                        <!-- <option value="Codeigniter">Codeigniter</option>
                           <option value="CakePHP">CakePHP</option>
                           <option value="Laravel">Laravel</option>
                           <option value="YII">YII</option>
                           <option value="Zend">Zend</option>
                           <option value="Symfony">Symfony</option>
                           <option value="Phalcon">Phalcon</option>
-                          <option value="Slim">Slim</option>
-                        </select>
+                          <option value="Slim">Slim</option> -->
+                        <!-- </select> -->
+                        <!-- <div class="service-name-DD-wrapper"></div> -->
                       </div>
+
                     </div>
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
@@ -396,6 +432,7 @@
   </script>
   <!--mode change end-->
   <!--   Core JS Files   -->
+  <script src="package.js"></script>
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
@@ -413,12 +450,12 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="package.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js">
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
   <script>
     $(document).ready(function() {
@@ -641,3 +678,26 @@
 </body>
 
 </html>
+
+<!-- <div class="btn-group show open" style="width: 400px;"><button type="button"
+    class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="Select Service Name"
+    style="width: 400px; overflow: hidden; text-overflow: ellipsis;" aria-expanded="true"><span
+      class="multiselect-selected-text">Select Service Name</span> <b class="caret"></b></button>
+  <ul class="multiselect-container dropdown-menu show" x-placement="top-start"
+    style="position: absolute; top: -215px; left: 0px; will-change: top, left;">
+    <li class="multiselect-item filter" value="0">
+      <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input
+          class="form-control multiselect-search" type="text" placeholder="Search"><span class="input-group-btn"><button
+            class="btn btn-default multiselect-clear-filter" type="button"><i
+              class="glyphicon glyphicon-remove-circle"></i></button></span></div>
+    </li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Codeigniter"> Codeigniter</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="CakePHP"> CakePHP</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Laravel"> Laravel</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="YII"> YII</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Zend"> Zend</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Symfony"> Symfony</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Phalcon"> Phalcon</label></a></li>
+    <li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="Slim"> Slim</label></a></li>
+  </ul>
+</div> -->
