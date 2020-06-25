@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-   Mandatory Documents
+    Add Client
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -186,17 +186,16 @@
       <!--Side Bar End-->
     </div>
     <div class="main-panel mainP">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
-</div>
-
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
-      <nav  style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
-        <div class="container-fluid" >
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;" id="navigation-example">
+        <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Mandatory Documents</a>
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Settings</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -217,7 +216,7 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
-                  <i  style="color: white;" class="material-icons">dashboard</i>
+                  <i style="color: white;" class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
@@ -225,7 +224,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">notifications</i>
+                  <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
@@ -241,7 +240,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">person</i>
+                  <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
@@ -265,59 +264,102 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Mandatory Documents</h4>
+                  <h4 class="card-title">Servicewise Document Settings</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-start">
-                      <div class="form-group col-md-4">
-                        <label for="DocumentName" style="margin-left: 4%;" class="bmd-label-floating">Document Name</label>
-                        <input type="text" class="form-control" name="document_name" id="DocumentName" required>
-                        <!-- <select
-                            class="form-control"
-                            
-                          >
-                            <option selected>Mr</option>
-                            <option>Mrs</option>
-                          </select> -->
+                    <div class="row justify-content-around">
+                      <div class="form-group col-md-5">
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                          <option value="">Select Services</option>
+                          <option value="">India Address Verification</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-5">
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                          <option value="">Birth Certificate</option>
+                          <option value="">Adhar Card</option>
+                          <option value="">Last Name</option>
+                          <option value="">12th Marks Sheet</option>
+                          <option value="">10th Marks Sheet</option>
+                          <option value="">Pan Card</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="row justify-content-end" style="margin-right: 1%;">
+                    <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
+                      <label for="Email">Preview</label><br>
+                      <div id="previewDiv" style="width: 100%; height: 140px; border: 1px solid rgba(128, 128, 128, 0.671); border-radius: 5px; ">
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
-                        Add
+                        Okay
                       </button>
 
-                      <button type="button" onclick="formReset()" class="btn btn-primary">
-                        Reset
+                      <button type="button" class="btn btn-primary">
+                        Cancel
                       </button>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="card">
-                        <div class="card-header card-header-primary">
-                             <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
-                       </div>
-                          <table class="table table-hover" style="margin-top: 4%;margin-left: 2%; width: 96%;">
-                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;"> 
-                              <th>
-                                Document Name
-                              </th>
-                              <th>
-                                Edit
-                              </th>
-                              <th>
-                                Delete
-                              </th>
-                            </thead>
-                            <tbody id="table">
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
                     </div>
                   </form>
                 </div>
+                <!-- table -->
+                <div class="col-md-11" style="margin: auto;">
+                  <div class="row">
+                    <table class="table table-hover" style="margin-top: 1%; text-align: center;">
+                      <thead class="text-primary" style="background-color: rgba(0, 0, 0, 0.836) !important;">
+                        <th>Sr.No</th>
+                        <th>Services</th>
+                        <th>Documents List</th>
+                        <th></th>
+                      </thead>
+                      <tbody id="table-body">
+                        <tr>
+                          <td class="tdth">1</td>
+                          <td class="tdth">
+                            <p>Indian Address Verification</p>
+                          </td>
+                          <td class="tdth">Light Bill, Pan Card, Adhar Card</td>
+
+                          <td class="text-primary">
+                            <button style="margin-left: 10%;" id="btn1" type="button" class="btn btn-primary btn-sm togglebtn AllTds ">
+                              <i class="fa fa-trash tdth" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                        <tr>
+                          <td class="tdth"></td>
+                          <td class="tdth"></td>
+                          <td class="tdth"></td>
+                          <td class="text-primary">
+                            <button style="margin-left: 10%;" type="button" id="btn2" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash tdth" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                        <tr>
+                          <td class="tdth"></td>
+                          <td class="tdth"></td>
+                          <td class="tdth"></td>
+                          <td class="text-primary">
+                            <button type="button" style="margin-left: 10%;" id="btn3" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash tdth" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-primary">
+                            <button type="button" style="margin-left: 10%;" id="btn4" class="btn btn-primary btn-sm togglebtn AllTds">
+                              <i class="fa fa-trash tdth" aria-hidden="true"></i>
+                            </button>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- table end -->
+
+
               </div>
             </div>
           </div>
@@ -331,48 +373,58 @@
       </script>
     </div>
   </div>
-  <!--   Core JS Files   -->
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
+  <!--mode changing-->
+  <script>
+     $(".hidediv").hide()
+    $(function() {
+      $(".togglebtn").click(function() {
+        $(".hidediv").fadeToggle("slow");
+      })
+    })
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
+
+  </script>
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
+
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
     }
 
 
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
         trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
-   <!--mode change end--> 
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
+  <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
@@ -390,10 +442,7 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="mandatoryDocuments.js"></script>
-  <script>
-    popuTable();
-  </script>
+  <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {
       document.getElementById("ajax").reset();
@@ -584,25 +633,19 @@
       });
     });
 
-    let form = document.getElementById("ajax");
-    $(form).submit(function(event) {
+    $("form").submit(function(event) {
       var formdata = $("form").serializeArray();
-      //console.log(formdata);
       var data = {};
       $(formdata).each(function(index, obj) {
-
-
         data[obj.name] = obj.value;
       });
 
       //console.log(data);
-      fetch('./API/addMandatoryDocument.php', {
+      fetch('./API/createPackage.php', {
         method: 'post',
         body: JSON.stringify(data)
       }).then(function(res) {
-        //console.log(res);
-        alert('Mandatory Document saved Successfully');
-        popuTable();
+        //console.log(res.text());
         formReset();
       }).catch(err => {
         //console.log(err);

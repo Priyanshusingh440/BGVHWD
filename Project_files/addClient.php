@@ -78,7 +78,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -159,6 +159,24 @@
               <ul class="list-unstyled nav">
                 <li class="nav-item">
                   <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings </p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
                 </li>
               </ul>
             </div>
@@ -286,13 +304,13 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
+                          <label class="bmd-label-floating" style="font-size: 13px;">Country</label>
                           <!-- <input
                               name="Country"
                               type="text"
                               class="form-control"
                             />-->
-                          <select class="browser-default custom-select" type="select" id="locality-dropdown"
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown"
                             name="locality-dropdown" onchange="getservice(this.value)" style="color:#202940;" required>
 
                           </select>
@@ -302,13 +320,13 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">State</label>
+                          <label class="bmd-label-floating"style="font-size: 13px;">State</label>
                           <!-- <input
                               name="State"
                               type="text"
                               class="form-control"
                             />-->
-                          <select class="browser-default custom-select" type="select" id="select_state"
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_state"
                             name="select_state" onchange="getservicename(this.value)" style="color:#202940;">
 
                           </select>
@@ -316,13 +334,13 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
+                          <label class="bmd-label-floating" style="font-size: 13px;">City</label>
                           <!-- <input
                               name="City"
                               type="text"
                               class="form-control"
                             />-->
-                          <select class="browser-default custom-select" type="select" id="select_city"
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_city"
                             name="select_city" onchange="getdocumentlist(this.value)" style="color:#202940;">
 
                           </select>
@@ -479,8 +497,8 @@
                     <div class="row" style="margin-top: 2%;">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label for="Currency" class="bmd-label-floating" style="margin-left: 4%;">Currency</label>
-                          <select id="currency" name="currency" class="browser-default custom-select" required>
+                          <label style="font-size: 13px;" for="Currency" class="bmd-label-floating" style="margin-left: 4%;">Currency</label>
+                          <select style="margin-top: 2%;" id="currency" name="currency" class="browser-default custom-select" required>
                           </select>
                         </div>
                       </div>

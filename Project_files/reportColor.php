@@ -14,192 +14,177 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="assets/img/apple-icon.png"
-    />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-      Report Color
-    </title>
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-      name="viewport"
-    />
-    <!--     Fonts and icons     -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-    />
-    <!-- CSS Files -->
-    <link
-      href="assets/css/material-dashboard.css?v=2.1.0"
-      rel="stylesheet"
-    />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="assets/demo/demo.css" rel="stylesheet" />
 
-     <!--Switching modes-->
-     <link rel="stylesheet" href="assets/css/style.css">
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Report Color
+  </title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
-  </head>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
 
-  <body class="dark-edition">
-    <div class="wrapper">
-      <div
-        class="sidebar"
-        data-color="purple"
-        data-background-color="black"
-        data-image="assets/img/sidebar-2.jpg"
-      >
-        <!--
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="dark-edition">
+  <div class="wrapper">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
+      <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
-    <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-      </a></div>
-       <!--Side Bar-->
-       <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./adminDashboard_sidebar.php">
-                <i class="material-icons">dashboard</i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#client" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">person</i>
-                <p>Client</p></a
-              >
-              <div class="collapse" id="client">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addClient.php"
-                      >Add Client</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./modifyClient.php"
-                    >Modify Client</a >
-                    <li class="nav-item">                     
-                        <a class="nav-link" href="./assignService.php">Assign Services</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./LOB.php">LOB</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./createPackage.php">Assign Package</a>
-                     </li> 
-                </ul>
-              </div>
-            </li>
-            <li class="navbar-item">
-              <a href="#services" class="nav-link" data-toggle="collapse" >
-                <i class="material-icons">supervisor_account</i>
-                <p>Services</p></a>
-              <div class="collapse" id="services">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./serviceType.php"
-                      >Add Service Type</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./createService.php">Add Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./service.php
-                    "
-                      >Modify Service</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./package.php"
-                      >Create/Modilfy Package </a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./#"
-                      >Auto SLA </a
-                    >
-                  </li>
+      <div class="logo"> <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+        </a></div>
+      <!--Side Bar-->
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./adminDashboard_sidebar.php">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
+              <p>Client</p>
+            </a>
+            <div class="collapse" id="client">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addClient.php">Add Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./assignService.php">Assign Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./LOB.php">LOB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createPackage.php">Assign Package</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">supervisor_account</i>
+              <p>Services</p>
+            </a>
+            <div class="collapse" id="services">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./createService.php">Add Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.php
+                    ">Modify Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./#">Auto SLA </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <i class="material-icons">bubble_chart</i> -->
+          <li class="navbar-item">
+            <a href="#master" class="nav-link" data-toggle="collapse">
+              <i class="material-icons">library_books</i>
+              <p>Master</p>
+            </a>
 
-                </ul>
-              </div>
-            </li>
-            <!-- <i class="material-icons">bubble_chart</i> -->
-             <li class="navbar-item">
-              <a href="#master" class="nav-link" data-toggle="collapse">
-                <i class="material-icons">library_books</i>
-                <p>Master</p></a > 
-
-                <div class="collapse" id="master">
-                  <ul class="list-unstyled nav">
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./mandatoryDocuments.php"
-                        >Mandatory Documents</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./standardMacro.php"
-                        >Standard Macro</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Auto SLA</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportColor.php"
-                        >Report Color Code</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportConfig.php"
-                        >Report Configuration Master</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Insufficient Emial Triggers</a
-                      >
-                    </li>
-                  </ul>
-                </div>             
-            </li>
-            <li class="navbar-item">
-              <a href="#user" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">account_circle</i>
-                <p>User</p></a >
-              <div class="collapse" id="user">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addModifyUser.php"
-                      >Add Modify User</a
-                    >
-                  </li> 
-                </ul>
-              </div>     
-            </li>
-          </ul>
-        </div>
-      <!--Side Bar End-->
+            <div class="collapse" id="master">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Auto SLA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
+              <p>User</p>
+            </a>
+            <div class="collapse" id="user">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings </p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
+      <!--Side Bar End-->
+    </div>
       <div class="main-panel">
          <!--toggle button-->
  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
@@ -416,9 +401,9 @@
                           </div>
                             <table
                               class="table table-hover"
-                              style="margin-top: 4%;"
+                              style="margin-top: 4%; width:96%;margin-left:2%"
                             >
-                              <thead class="text-primary thead-dark" 
+                              <thead class="text-primary " 
                               style="background-color: rgba(15, 13, 13, 0.856) !important;" 
                               >
                                 <th>

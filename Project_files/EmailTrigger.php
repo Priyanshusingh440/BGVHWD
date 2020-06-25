@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-   Mandatory Documents
+    Email Trigger
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -40,9 +40,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+  <!--jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .hidediv{
+      border-radius:15px solid black;
+      background-color: grey;
+      border: 1px solid black;
+      height: 271px;
+      width: 690px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% ,-50%);
+    
+      
+
+     
+    }
+    .innerdivs{
+      position: absolute;
+      left: 65%;
+      top: 80%;
+    }
+
+    
+  </style>
 </head>
 
 <body class="dark-edition">
@@ -190,13 +217,12 @@
  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
   <input type="checkbox" id="switch" name="theme">
   <label id="toggleButton" for="switch">Toggle</label>
-</div>
-
+ </div>
       <!-- Navbar -->
-      <nav  style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;" id="navigation-example">
         <div class="container-fluid" >
-          <div class="navbar-wrapper" style="height: 70px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Mandatory Documents</a>
+          <div class="navbar-wrapper"  style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Settings</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -217,7 +243,7 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
-                  <i  style="color: white;" class="material-icons">dashboard</i>
+                  <i style="color: white;" class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
@@ -225,7 +251,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">notifications</i>
+                  <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
@@ -241,7 +267,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i  style="color: white;" class="material-icons">person</i>
+                  <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
@@ -265,59 +291,131 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Mandatory Documents</h4>
+                  <h4 class="card-title">Email Trigger Settings</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-start">
-                      <div class="form-group col-md-4">
-                        <label for="DocumentName" style="margin-left: 4%;" class="bmd-label-floating">Document Name</label>
-                        <input type="text" class="form-control" name="document_name" id="DocumentName" required>
-                        <!-- <select
-                            class="form-control"
-                            
-                          >
-                            <option selected>Mr</option>
-                            <option>Mrs</option>
-                          </select> -->
+                    <div class="row justify-content-around">
+                      <div class="form-group col-md-5">
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">Select Case</option>
+                            <option value="">Insuffiency</option>
+                        </select>
                       </div>
-                    </div>
-                    <div class="row justify-content-end" style="margin-right: 1%;">
+                      <div class="form-group col-md-5">
+                          <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">First Name</option>
+                            <option value="">Middle Name</option>
+                            <option value="">Last Name</option>
+                            <option value="">Mother's Name</option>
+                            <option value="">Address Line 1</option>
+                            <option value="">Address Line 2</option>
+                            <option value="">City</option>
+                            <option value="">State</option>
+                            <option value="">Pin Code</option>
+                        </select>
+                      </div>
+                     </div>                 
+                  <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
+                    <label for="Email">Email Content</label><br>
+                    <textarea style= "border-radius: 6px;" sty class="form-control textedArea z-depth-1" id="Email" rows="12" placeholder="Post the Text here..."></textarea>
+                  </div>
+
+                    <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
-                        Add
+                        Save
                       </button>
 
-                      <button type="button" onclick="formReset()" class="btn btn-primary">
-                        Reset
+                      <button type="button" class="btn btn-primary" >
+                        Cancel
                       </button>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="card">
-                        <div class="card-header card-header-primary">
-                             <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
-                       </div>
-                          <table class="table table-hover" style="margin-top: 4%;margin-left: 2%; width: 96%;">
-                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;"> 
-                              <th>
-                                Document Name
-                              </th>
-                              <th>
-                                Edit
-                              </th>
-                              <th>
-                                Delete
-                              </th>
-                            </thead>
-                            <tbody id="table">
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
                     </div>
                   </form>
                 </div>
+             <!-- table -->
+             <div class="col-md-11" style="margin: auto;">
+                <div class="row">
+                  <table class="table table-hover" style="margin-top: 1%;">
+                    <thead class="text-primary " style="background-color: rgba(0, 0, 0, 0.781) !important;">
+                      <th style="text-align: center;">Sr.No</th>
+                      <th style="text-align: center;">Case</th>
+                      <th style="text-align: center;">Case Name</th>
+                      <th style="text-align: center;">Content</th>                     
+                    </thead>
+                    <tbody id="table-body">
+                     <tr>
+                       <td style="text-align: center;" class="tdth"></td>
+                       <td style="text-align: center;"class="tdth"></td>
+                       <td style="text-align: center;" class="tdth"></td>                       
+                       <td style="text-align: center;" class="text-primary tdth">
+                        <button
+                          style="margin-left: 10%;"
+                          id="btn1"
+                           type="button"
+                           class="btn btn-primary btn-sm togglebtn ">
+                           View
+                        </button>
+                     </tr> 
+                     <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          style="margin-left: 10%;"
+                          type="button"
+                          id="btn2"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn3"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>                       
+                      <td style="text-align: center;"class="text-primary">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn4"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr>         
+                    </tbody>
+                  </table>
+                </div>
+              </div>       
+            <!-- table end -->
+            <!--New Div-->
+              <div class="hidediv">
+                <div class="row innerdivs">
+                   <div class="col-md-1.2" style="padding-right:0">
+                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Save</button>
+                   </div>
+                 <div class="col-md-1.2">
+                    <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Okay</button>
+                 </div>
+                 <div class="col-md-1.2">
+                   <button  type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Cancel</button>
+                </div>
+                 </div>
+               </div> 
+             </div>
+             <!--New Div End-->
               </div>
             </div>
           </div>
@@ -331,9 +429,17 @@
       </script>
     </div>
   </div>
-  <!--   Core JS Files   -->
    <!--mode changing-->
    <script>
+     $(".hidediv").hide()
+    $(function(){
+      $(".togglebtn").click(function(){
+        $(".hidediv").fadeToggle("slow");
+      })
+    })
+  
+
+
     let darkmode=localStorage.getItem("darkmode");
     const darkmodetoggle=document.querySelector('input[name=theme]');
 
@@ -373,6 +479,7 @@
  }
    </script>
    <!--mode change end--> 
+  <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
@@ -390,14 +497,11 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="mandatoryDocuments.js"></script>
-  <script>
-    popuTable();
-  </script>
+  <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {
-      document.getElementById("ajax").reset();
-    }
+        document.getElementById("ajax").reset();
+      }
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $(".sidebar");
@@ -584,33 +688,28 @@
       });
     });
 
-    let form = document.getElementById("ajax");
-    $(form).submit(function(event) {
-      var formdata = $("form").serializeArray();
-      //console.log(formdata);
-      var data = {};
-      $(formdata).each(function(index, obj) {
-
-
-        data[obj.name] = obj.value;
-      });
-
-      //console.log(data);
-      fetch('./API/addMandatoryDocument.php', {
-        method: 'post',
-        body: JSON.stringify(data)
-      }).then(function(res) {
-        //console.log(res);
-        alert('Mandatory Document saved Successfully');
-        popuTable();
+    $("form").submit(function (event) {
+        var formdata = $("form").serializeArray();
+        var data = {};
+        $(formdata).each(function (index, obj) {
+          data[obj.name] = obj.value;
+        });
+        
+        //console.log(data);
+        fetch('./API/createPackage.php',{
+          method:'post',
+          body:JSON.stringify(data)
+      }).then(function(res){
+        //console.log(res.text());
         formReset();
-      }).catch(err => {
+      }
+      ).catch(err=>{
         //console.log(err);
         return err;
       })
-      event.preventDefault();
-    });
-    $.ajax;
+        event.preventDefault();
+      });
+      $.ajax;
   </script>
 </body>
 

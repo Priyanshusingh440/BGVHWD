@@ -21,14 +21,23 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Create Package
+    Create Packages
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -47,8 +56,8 @@
       <div class="logo"> <a class="navbar-brand" href="#">
           <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
-        <!--Side Bar-->
-        <div class="sidebar-wrapper">
+      <!--Side Bar-->
+      <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="./adminDashboard_sidebar.php">
@@ -154,6 +163,24 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings </p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->
@@ -243,32 +270,32 @@
                   <form id="ajax">
                     <div class="row justify-content-center">
                       <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;" class="bmd-label-floating">Client Name</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
+                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">Client Name</label>
+                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;" class="bmd-label-floating">Country</label>
+                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">Country</label>
                         <!-- <input
                               name="Country"
                               type="text"
                               class="form-control"
                             />-->
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" onchange="getservice(this.value)" required>
+                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" onchange="getservice(this.value)" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;" class="bmd-label-floating">Service Type</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceType" name="service_type_id" style="color:#202940;" onclick="getservicename(this.value)" required>
+                        <label style="margin-left: 3%;font-size: 13px;" class="bmd-label-floating">Service Type</label>
+                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceType" name="service_type_id" style="color:#202940;" onclick="getservicename(this.value)" required>
                         </select>
                       </div>
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;"  class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
+                        <label style="margin-left: 3%; font-size: 13px;"  class="bmd-label-floating">Service Name</label>
+                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
                         </select>
                       </div>
 
