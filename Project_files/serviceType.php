@@ -283,6 +283,7 @@
                           <div class="card-header card-header-primary">
                             <h4 style="color: white;" class="card-title">Service Type</h4>
                           </div>
+                          <!-- Modal -->
                           <table style="width: 97%; margin-left: 1.5%; margin-top: 2%;" class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary " style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
@@ -299,6 +300,27 @@
                                 Delete
                               </th>
                             </thead>
+                            <div class="delete-modal">
+                                <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#deleteModal">
+                                  Launch demo modal
+                                </button>
+                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="modal-ok-btn">Yes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             <tbody id="table">
                               <script src="table_serviceType.js"></script>
                               <script>
@@ -601,6 +623,9 @@
     });
     $.ajax;
   </script>
+
+
+
 </body>
 
 </html>

@@ -1,3 +1,10 @@
+let deleteModal = document.querySelector(".delete-modal #exampleModal")
+let deleteModalOkBtn = document.querySelector(".delete-modal #modal-ok-btn")
+let deleteModalModalLabel = document.querySelector(".delete-modal #exampleModalLabel")
+let deleteModalLaunchButton = document.querySelector(".delete-modal .launch")
+let deleteModalCloseButton = document.querySelector(".delete-modal .close")
+
+
 const onSave = (id, action, value) => {
   //console.log(value);
   obj = { "id": id, "action": action, "value": value };
@@ -41,31 +48,40 @@ const onEdit = (id, action) => {
       btn2.onclick = (() => {confirm('Are you sure you want to Save it?')?onSave(id, action,document.getElementById(id+"a").value):popuTable()});
       edit.appendChild(btn2);
 }
-const onDelete = (id, action) => {
-  obj = { "id": id, "action": action };
-  //console.log(obj.id);
-  fetch('./API/modifyServiceType.php', {
-    method: 'post',
-    body: JSON.stringify(obj)
-  }).then(function (res) {
-
-    //console.log(res.text());
-    popuTable();
-  }).catch(err => {
-    //console.log(err);
-    return err;
-  })
+const onDelete = (id, action,c) => {
+  //let cnf= false;
+  // let cnf = await deleteModalOkBtn1();
+  // //console.log(cnf);
+  // if (cnf){
+    obj = { "id": id, "action": action };
+    console.log(obj.id);
+    fetch('./API/modifyServiceType.php', {
+      method: 'post',
+      body: JSON.stringify(obj)
+    }).then(function (res) {
+      popuTable();
+      //console.log(res.text());
+      
+    }).catch(err => {
+      //console.log(err);
+      return err;
+    })
+  //}
 }
 const popuTable = () => {
+  console.log("hi");
   document.getElementById("table").innerHTML = "";
   let table = document.getElementById('table');
   //let cell = document.createElement('td');
   fetch('./API/veiwServiceType.php').then(res => {
     return res.text();
   }).then(text => {
+    let id = [];
     //console.table(text);
     let stat = JSON.parse(text);
     for (let i = 0, j = stat.length; i < stat.length; i++, j--) {
+      id.push(stat[i].id);
+      console.log(id);
       var row = table.insertRow(0);
       var cell0 = row.insertCell(0);
       var cell1 = row.insertCell(1);
@@ -85,8 +101,25 @@ const popuTable = () => {
       btn.type = "button";
       btn.className = "btn btn-primary btn-sm";
       btn.value = "DELETE";
-      btn.onclick = (() => { confirm('Are you sure you want to delete it?') ? onDelete(stat[i].id, "delete") : ''; });
+      //btn.addEventListener(onclick,deleteModalLaunchButton1);
+      //btn.addEventListener(onclick,deleteModalOkBtn1(stat[i].id, "delete"));
+      //addHandler("click", btn, deleteModalLaunchButton.click);
+      //addHandler("click", btn, deleteModalOkBtn1(stat[i].id, "delete"));
+      btn.onclick = (() => {deleteModalOkBtn1(stat[i].id, "delete",0)});
       cell3.appendChild(btn);
     }
   });
+}
+//let c = 0;
+const deleteModalOkBtn1 = (id, action,c) => {
+  deleteModalLaunchButton.click();
+  $(deleteModalOkBtn).click(function(){
+    console.log("delete")
+    // //console.log("json data", jsonData)
+    // onDelete(stat[i].id, "delete")
+    deleteModalCloseButton.click()
+    // jsonData = {}
+    if(c==0)onDelete(id, action, c);
+    c=1;
+   })
 }
