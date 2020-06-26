@@ -1,7 +1,7 @@
 <!--
 =========================================================
 * Material Dashboard Dark Edition - v2.1.0
-=========================================================
+========================================================= 
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-dark
 * Copyright 2019 Creative Tim (http://www.creative-tim.com)
@@ -281,7 +281,7 @@
                             <div class="col-md-1">
                               <div class="form-check">
                                 <label class="form-check-label" style="margin-bottom:14px !important;">
-                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <input class="form-check-input" name="DOB" type="checkbox" value="" checked>
                                   <span class="form-check-sign">
                                     <span class="check"></span>
                                   </span>
@@ -3904,6 +3904,7 @@
     }
   </script>
   <!--mode change end-->
+  <script src="settings1.js"></script>
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
