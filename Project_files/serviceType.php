@@ -29,6 +29,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -156,11 +163,24 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
+              <p>Settings </p>
+=======
               <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -168,6 +188,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -283,6 +304,7 @@
                           <div class="card-header card-header-primary">
                             <h4 style="color: white;" class="card-title">Service Type</h4>
                           </div>
+                          <!-- Modal -->
                           <table style="width: 97%; margin-left: 1.5%; margin-top: 2%;" class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary " style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
@@ -299,6 +321,27 @@
                                 Delete
                               </th>
                             </thead>
+                            <div class="delete-modal">
+                                <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#deleteModal">
+                                  Launch demo modal
+                                </button>
+                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="modal-ok-btn">Yes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             <tbody id="table">
                               <script src="table_serviceType.js"></script>
                               <script>
@@ -601,6 +644,9 @@
     });
     $.ajax;
   </script>
+
+
+
 </body>
 
 </html>

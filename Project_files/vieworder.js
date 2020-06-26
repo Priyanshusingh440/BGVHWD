@@ -109,31 +109,35 @@ const updateModifyClientData = (d) => {
   tbody ? tbody.innerHTML = '' : false
   d.map((value, i) => {
     tbody ? tbody.innerHTML += `<tr>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${i + 1}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["first_Name"]} ${value["last_Name"]} 
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["internal_reference_id"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["email_id"]}
     </td>
+<<<<<<< HEAD
+    <td class="tablehead1" style="text-align: center;">
+=======
     <td class="tablehead1 assign-to" data-sr="${i}" id="assign-to">
       assign to
     </td>
     <td class="tablehead1">
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
       ${value["order_creation_date_time"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["order_completion_date"]}
     </td>
-    <td class="tablehead1">
+    <td class="tablehead1" style="text-align: center;">
       ${value["Order_Status"] == 0 ? "pending" : value["Order_Status"] == 1 ? "Started" : value["Order_Status"] == 2 ? "Completed" : null}
     </td>
-    <td class="text-primary tablehead1">
+    <td class="text-primary tablehead1" style="text-align: center;">
       <ul style="list-style: none;">
         <li class="nav-item dropdown">
           <a

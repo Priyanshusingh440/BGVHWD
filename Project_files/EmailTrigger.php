@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Create Packages
+    Email Trigger
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -40,9 +40,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+  <!--jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .hidediv{
+      border-radius:15px solid black;
+      background-color: grey;
+      border: 1px solid black;
+      height: 271px;
+      width: 690px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% ,-50%);
+    
+      
+
+     
+    }
+    .innerdivs{
+      position: absolute;
+      left: 65%;
+      top: 80%;
+    }
+
+    
+  </style>
 </head>
 
 <body class="dark-edition">
@@ -78,7 +105,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -116,7 +143,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
                 </li>
               </ul>
             </div>
@@ -165,16 +192,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
               <p>Settings </p>
-=======
-              <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
                   <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
                 </li>
                 <li class="nav-item">
@@ -182,15 +204,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
-                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -200,16 +213,16 @@
       <!--Side Bar End-->
     </div>
     <div class="main-panel mainP">
-      <!--toggle button-->
-      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-        <input type="checkbox" id="switch" name="theme">
-        <label id="toggleButton" for="switch">Toggle</label>
-      </div>
+       <!--toggle button-->
+ <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+  <input type="checkbox" id="switch" name="theme">
+  <label id="toggleButton" for="switch">Toggle</label>
+ </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" style="padding: 0; margin: 0;" id="navigation-example">
-        <div class="container-fluid">
-          <div class="navbar-wrapper" style="height: 70px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Create Package</a>
+        <div class="container-fluid" >
+          <div class="navbar-wrapper"  style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Settings</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -278,63 +291,131 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Create Package</h4>
+                  <h4 class="card-title">Email Trigger Settings</h4>
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-center">
-                      <div class="form-group col-md-4">
-                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">Client Name</label>
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
+                    <div class="row justify-content-around">
+                      <div class="form-group col-md-5">
+                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">Select Case</option>
+                            <option value="">Insuffiency</option>
                         </select>
                       </div>
+                      <div class="form-group col-md-5">
+                          <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="" style="color:#202940;" required>
+                            <option value="">First Name</option>
+                            <option value="">Middle Name</option>
+                            <option value="">Last Name</option>
+                            <option value="">Mother's Name</option>
+                            <option value="">Address Line 1</option>
+                            <option value="">Address Line 2</option>
+                            <option value="">City</option>
+                            <option value="">State</option>
+                            <option value="">Pin Code</option>
+                        </select>
+                      </div>
+                     </div>                 
+                  <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
+                    <label for="Email">Email Content</label><br>
+                    <textarea style= "border-radius: 6px;" sty class="form-control textedArea z-depth-1" id="Email" rows="12" placeholder="Post the Text here..."></textarea>
+                  </div>
 
-                      <div class="form-group col-md-4">
-                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">Country</label>
-                        <!-- <input
-                              name="Country"
-                              type="text"
-                              class="form-control"
-                            />-->
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" onchange="getservice(this.value)" required>
-                        </select>
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;font-size: 13px;" class="bmd-label-floating">Service Type</label>
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceType" name="service_type_id" style="color:#202940;" onclick="getservicename(this.value)" required>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row justify-content-start">
-                      <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label style="margin-left: 3%; font-size: 13px;"  class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
-=======
-                        <label style="margin-left: 3%;" class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
-                        </select>
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <label class="bmd-label-floating">Package Name</label>
-                        <input name="Package_Name" type="text" class="form-control" />
-                      </div>
-                    </div>
-                    <div class="row justify-content-end">
-                      <button type="submit" class="btn btn-primary mx-2" style="margin-right: 3%;">
+                    <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
+                      <button type="submit" class="btn btn-primary mx-2">
                         Save
                       </button>
 
-                      <button type="button" class="btn btn-primary" style="margin-right: 3%;">
-                        Reset
+                      <button type="button" class="btn btn-primary" >
+                        Cancel
                       </button>
                     </div>
-                    <hr />
                   </form>
                 </div>
+             <!-- table -->
+             <div class="col-md-11" style="margin: auto;">
+                <div class="row">
+                  <table class="table table-hover" style="margin-top: 1%;">
+                    <thead class="text-primary " style="background-color: rgba(0, 0, 0, 0.781) !important;">
+                      <th style="text-align: center;">Sr.No</th>
+                      <th style="text-align: center;">Case</th>
+                      <th style="text-align: center;">Case Name</th>
+                      <th style="text-align: center;">Content</th>                     
+                    </thead>
+                    <tbody id="table-body">
+                     <tr>
+                       <td style="text-align: center;" class="tdth"></td>
+                       <td style="text-align: center;"class="tdth"></td>
+                       <td style="text-align: center;" class="tdth"></td>                       
+                       <td style="text-align: center;" class="text-primary tdth">
+                        <button
+                          style="margin-left: 10%;"
+                          id="btn1"
+                           type="button"
+                           class="btn btn-primary btn-sm togglebtn ">
+                           View
+                        </button>
+                     </tr> 
+                     <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          style="margin-left: 10%;"
+                          type="button"
+                          id="btn2"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>
+                      <td style="text-align: center;" class="tdth"></td>                       
+                      <td style="text-align: center;" class="text-primary tdth">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn3"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr> 
+                    <tr>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>                       
+                      <td style="text-align: center;"class="text-primary">
+                       <button
+                          type="button"
+                          style="margin-left: 10%;"
+                          id="btn4"
+                          class="btn btn-primary btn-sm togglebtn">
+                          View
+                       </button>
+                    </tr>         
+                    </tbody>
+                  </table>
+                </div>
+              </div>       
+            <!-- table end -->
+            <!--New Div-->
+              <div class="hidediv">
+                <div class="row innerdivs">
+                   <div class="col-md-1.2" style="padding-right:0">
+                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Save</button>
+                   </div>
+                 <div class="col-md-1.2">
+                    <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Okay</button>
+                 </div>
+                 <div class="col-md-1.2">
+                   <button  type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Cancel</button>
+                </div>
+                 </div>
+               </div> 
+             </div>
+             <!--New Div End-->
               </div>
             </div>
           </div>
@@ -348,47 +429,56 @@
       </script>
     </div>
   </div>
-  <!--mode changing-->
-  <script>
-    let darkmode = localStorage.getItem("darkmode");
-    const darkmodetoggle = document.querySelector('input[name=theme]');
-
-    const enabledarkmode = () => {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      localStorage.setItem("darkmode", "enabled");
-    }
-
-
-    const disabledarkmode = () => {
-      document.documentElement.setAttribute('data-theme', 'light')
-      localStorage.setItem("darkmode", null);
-    }
-
-
-    if (darkmode === "enabled") {
-      enabledarkmode();
-    }
-
-
-    darkmodetoggle.addEventListener("change", () => {
-      darkmode = localStorage.getItem("darkmode");
-      if (darkmode !== "enabled") {
-        trans()
-        enabledarkmode();
-      } else {
-        trans()
-        disabledarkmode();
-      }
+   <!--mode changing-->
+   <script>
+     $(".hidediv").hide()
+    $(function(){
+      $(".togglebtn").click(function(){
+        $(".hidediv").fadeToggle("slow");
+      })
     })
+  
 
-    let trans = () => {
-      document.documentElement.classList.add('transition');
-      window.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-      }, 1000)
+
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
     }
-  </script>
-  <!--mode change end-->
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
+   <!--mode change end--> 
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -410,8 +500,8 @@
   <script type="text/javascript" src="data2.js"></script>
   <script>
     function formReset() {
-      document.getElementById("ajax").reset();
-    }
+        document.getElementById("ajax").reset();
+      }
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $(".sidebar");
@@ -598,27 +688,28 @@
       });
     });
 
-    $("form").submit(function(event) {
-      var formdata = $("form").serializeArray();
-      var data = {};
-      $(formdata).each(function(index, obj) {
-        data[obj.name] = obj.value;
-      });
-
-      //console.log(data);
-      fetch('./API/createPackage.php', {
-        method: 'post',
-        body: JSON.stringify(data)
-      }).then(function(res) {
+    $("form").submit(function (event) {
+        var formdata = $("form").serializeArray();
+        var data = {};
+        $(formdata).each(function (index, obj) {
+          data[obj.name] = obj.value;
+        });
+        
+        //console.log(data);
+        fetch('./API/createPackage.php',{
+          method:'post',
+          body:JSON.stringify(data)
+      }).then(function(res){
         //console.log(res.text());
         formReset();
-      }).catch(err => {
+      }
+      ).catch(err=>{
         //console.log(err);
         return err;
       })
-      event.preventDefault();
-    });
-    $.ajax;
+        event.preventDefault();
+      });
+      $.ajax;
   </script>
 </body>
 

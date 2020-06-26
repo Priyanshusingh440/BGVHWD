@@ -30,6 +30,14 @@ html {
 
     --navLinkColor:linear-gradient(to right, #1488CC, rgb(21, 21, 78) ) !important;
     --navLinkopacity: 0.6 !important; 
+
+    --textAreaBorder:black !important;
+    --textAreaBackgroundColor:#F1F4F1 !important;
+    --textAreaColor:black !important;
+
+    --tdColor:black !important;
+    --thcolor:white !important;
+    
    
 
 }
@@ -62,9 +70,37 @@ html[data-theme='dark']{
     --pannel:#060C24 !important;
      
     --navLinkColor:linear-gradient(to right, rgb(141, 63, 162), #1488CC) !important;  
-   
+    --textAreaBorder:grey !important;
+    --textAreaBackgroundColor:#060B22 !important;
+    --textAreaColor:white !important;
+
+    --tdColor:rgba(255, 255, 255, 0.753) !important;
+    --thcolor:rgba(255, 255, 255, 0.74) !important;
     
    
+}
+.logo img{
+    opacity: 0.5 !important;
+    background: #060C24;
+}
+.col-md-5 p{
+    color: var(--textColor) !important;
+}
+
+thead th{
+    text-align: center !important;
+    color: var( --thcolor) !important;
+}
+
+.tdth{
+    color: var(--tdColor) !important;
+}
+
+#previewDiv, #Email{
+    border: 1px solid var(--textAreaBorder) !important;
+    padding: 8px !important;
+    background-color: var(--textAreaBackgroundColor) !important;
+    color: var(--textAreaColor) !important;
 }
 
 
@@ -102,6 +138,10 @@ div.card-header.card-header-primary,
 
  th td{
     color: var(--tableColor) !important;
+}
+
+tbody tr td{
+text-align: center;    
 }
 
 .tablehead1{

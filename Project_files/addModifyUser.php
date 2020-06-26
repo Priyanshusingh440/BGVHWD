@@ -2,10 +2,14 @@
 =========================================================
 * Material Dashboard Dark Edition - v2.1.0
 =========================================================
+
 * Product Page: https://www.creative-tim.com/product/material-dashboard-dark
 * Copyright 2019 Creative Tim (http://www.creative-tim.com)
+
 * Coded by www.creative-tim.com
+
 =========================================================
+
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
@@ -17,17 +21,33 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
+<<<<<<< HEAD
+    Add Modify User
+  </title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    name="viewport" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+=======
     Modify User
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
+<<<<<<< HEAD
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+=======
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -42,13 +62,12 @@
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"> <a class="navbar-brand" href="#">
           <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-        </a>
-      </div>
+        </a></div>
       <!--Side Bar-->
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -71,7 +90,11 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -109,7 +132,11 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" href="./vieworder.php">View Order</a>
+=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -158,11 +185,24 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+<<<<<<< HEAD
+              <p>Settings </p>
+=======
               <p>Settings</p>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
+<<<<<<< HEAD
+                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
+=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -170,11 +210,23 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
           </li>
         </ul>
+<<<<<<< HEAD
+      </div>
+      <!--Side Bar End-->
+    </div>
+      <div class="main-panel">
+       <!--toggle button-->
+        <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+          <input type="checkbox" id="switch" name="theme">
+          <label id="toggleButton" for="switch">Toggle</label>
+       </div>
+=======
       </div>
       <!--Side Bar End-->
     </div>
@@ -184,6 +236,7 @@
         <input type="checkbox" id="switch" name="theme">
         <label id="toggleButton" for="switch">Toggle</label>
       </div>
+>>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
 
       <!-- Navbar -->
@@ -271,11 +324,11 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row">
-                      <div class="col-md-4">
+                    <div class="row justify-content-between">
+                      <div class="col-md-2 ">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Title</label>
-                          <select name="Title" id="Title" class="browser-default custom-select" required>
+                          <label style="font-size: 13px;" class="bmd-label-floating">Title</label>
+                          <select style="margin-top: 2%;" name="Title" id="Title" class="browser-default custom-select" required>
                             <option selected="selected" hidden value="null">Choose..</option>
                             <option value="Mr.">Mr.</option>
                             <option value="Mrs.">Mrs.</option>
@@ -318,8 +371,8 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Groups</label>
-                          <select name="Groups" class="browser-default custom-select" required>
+                          <label style="font-size: 13px;" class="bmd-label-floating">Groups</label>
+                          <select style="margin-top: 2%;" name="Groups" class="browser-default custom-select" required>
                             <option selected="selected" hidden value="null">Choose..</option>
                             <option value=0>OF</option>
                             <option value=1>QC</option>
@@ -329,8 +382,8 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Status</label>
-                          <select name="Status" class="browser-default custom-select">
+                          <label style="font-size: 13px;" class="bmd-label-floating">Status</label>
+                          <select style="margin-top: 2%;" name="Status" class="browser-default custom-select">
                             <option selected="selected" hidden value="null">Choose..</option>
                             <option value=1>Active</option>
                             <option value=0>Inactive</option>
@@ -339,8 +392,8 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Password</label>
-                          <input name="Password" type="password" class="form-control" />
+                          <label  style="font-size: 13px;" class="bmd-label-floating">Password</label>
+                          <input style="margin-top: 2%;" name="Password" type="password" class="form-control" />
                         </div>
                       </div>
                       <!--checkBoxes-->
@@ -366,8 +419,8 @@
                   <div class="card-header card-header-primary">
                     <h4 class="card-title">Modify User</h4>
                   </div>
-                  <table class="table table-hover" style="margin-top: 4%;">
-                    <thead class="text-primary thead-dark">
+                  <table class="table table-hover" style="margin-top: 4%; width:96%; margin-left:2% ">
+                    <thead class="text-primary" style="background-color: rgba(0, 0, 0, 0.788) !important;">
                       <th>
                         S. No.
                       </th>
