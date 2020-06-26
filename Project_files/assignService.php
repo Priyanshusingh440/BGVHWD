@@ -161,15 +161,6 @@
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -177,7 +168,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
