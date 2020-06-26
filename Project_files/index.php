@@ -83,6 +83,27 @@
             </div>
           </div>
         </div>
+        <div class="new-modal">
+          <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+          </button>
+    
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Service Assigned Successfully</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="modal-ok-btn" data-dismiss="modal" class="btn btn-primary">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- <div class="card login-card">
         <img src="assets/images/login.jpg" alt="login" class="login-card-img">
@@ -116,6 +137,14 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script>
+    let modal = document.querySelector(".new-modal #exampleModal")
+    let modalOkBtn = document.querySelector(".new-modal #modal-ok-btn")
+    let modalLabel = document.querySelector(".new-modal #exampleModalLabel")
+  
+    let modalLaunchButton = document.querySelector(".new-modal .launch")
+    let modalCloseButton = document.querySelector(".new-modal .close")
+  </script>
+  <script>
     const form = document.getElementById('ajax');
 
     $("form").submit(function(event) {
@@ -134,7 +163,9 @@
       }).then(function(text) {
         console.log(text);
         if (text == "Please Select User-type") {
-          alert(text);
+          modalLabel.innerHTML = text
+          modalLaunchButton.click()
+          // alert(text);
         } else if (text == "Admin logged in") {
           window.location.href = "home.php";
         } else if (text == "Employee Logged OF In") {
@@ -144,7 +175,9 @@
         } else if (text == "Employee Logged vendor In") {
           window.location.href = "./employee_vendor/Dashboard.php";
         } else if (text == "Wrong admin Credentials" || text == "Wrong Employee Credentials") {
-          alert(text);
+          // alert(text);
+          modalLabel.innerHTML = text
+          modalLaunchButton.click()
         }
       }).catch(function(error) {
         console.error(error);
