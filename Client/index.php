@@ -79,7 +79,29 @@
   </head>
 
   <body>
+    <div class="new-modal">
+      <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Service Assigned Successfully</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="modal-ok-btn" data-dismiss="modal" class="btn btn-primary">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="container">
+      <!-- <h1>hello</h1> -->
       <div style="position: absolute; z-index: 10; top: 5%; left: 3%;">
         <a class="navbar-brand" href="#">
           <img src="./assets/img/logo.png" width="30%" height="20%" alt="" />
@@ -132,7 +154,7 @@
                   required
                 />
               </div>
-
+ 
               <a href="forgot.php">Forgot your username ?</a>
 
               <div class="input-group form-group">
@@ -174,6 +196,7 @@
         </div>
       </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -210,13 +233,33 @@
     ></script>
     <script src="js/my-login.js"></script>
     <script src="js/index.js"></script>
+  <script>
+    let modal = document.querySelector(".new-modal #exampleModal")
+    let modalOkBtn = document.querySelector(".new-modal #modal-ok-btn")
+    let modalLabel = document.querySelector(".new-modal #exampleModalLabel")
+  
+    let modalLaunchButton = document.querySelector(".new-modal .launch")
+    let modalCloseButton = document.querySelector(".new-modal .close")
+    // modalLaunchButton.click()
+    // console.log(modalLaunchButton)
+    // alert("ok")
+    const launchModal = () => {
+  
+    }
+  </script>
   </body>
-</html>
+
 
 <?php 
 		if(isset($_GET['msg']) && $_GET['msg'] == "invalid"){
 			?>
-				<script>alert('Invalid username/password');</script>
+        <script>
+          // alert('Invalid username/password');
+          modalLabel.innerHTML = "Invalid username/password"
+          modalLaunchButton.click()
+
+          // deleteModalLaunchButton.click()
+        </script>
 			<?php
 		}
 	
@@ -225,7 +268,12 @@
 
 		if(isset($_GET['msg']) && $_GET['msg'] == "Success"){
 			?>
-				<script>alert('Successfully Logout');</script>
+        <script>
+          // alert('Successfully Logout');
+          modalLabel.innerHTML = "Successfully Logout"
+          modalLaunchButton.click()
+
+        </script>
 			<?php
 		}
 	

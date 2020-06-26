@@ -430,7 +430,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Modal -->
 <div class="add-service-modal">
   <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#exampleModal">
