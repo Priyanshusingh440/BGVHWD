@@ -23,30 +23,12 @@
   <title>
     Assign Services
   </title>
-<<<<<<< HEAD
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <!-- CSS Files -->
-  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-=======
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -125,11 +107,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -178,11 +156,7 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
@@ -351,13 +325,6 @@
                           <option class='bg-secondary text-light' default not selected>Choose...</option>
                         </select>
                       </div>
-<<<<<<< HEAD
-                    </div> 
-                        <div class=" form-group col-md-4" style="margin-left:8%">
-                          <label for="SLA" style="margin-left: 4%;">SLA</label>
-                          <input name="SLA" id="SLA" type="text" class="form-control" placeholder="" />
-                        </div>
-=======
                     </div>
                     <div class="row justify-content-start"> 
 
@@ -367,7 +334,6 @@
                       </div>
                     </div>
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                     <hr />
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" id="assignSubmit" class="btn btn-primary mx-2">

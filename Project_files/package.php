@@ -43,12 +43,9 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
-<<<<<<< HEAD
-=======
 
   <!-- <script src="package.js"></script> -->
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 </head>
 
 <body class="dark-edition">
@@ -84,11 +81,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -126,11 +119,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>

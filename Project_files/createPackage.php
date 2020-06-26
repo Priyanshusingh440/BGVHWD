@@ -308,13 +308,8 @@
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label style="margin-left: 3%; font-size: 13px;"  class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
-=======
                         <label style="margin-left: 3%;" class="bmd-label-floating">Service Name</label>
                         <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 

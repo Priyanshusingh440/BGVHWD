@@ -317,12 +317,7 @@
                               type="text"
                               class="form-control"
                             />-->
-<<<<<<< HEAD:Project_files/addClient.php
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown"
-                            name="locality-dropdown" onchange="getservice(this.value)" style="color:#202940;" required>
-=======
                           <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown" onchange="getservice(this.value)" style="color:#202940;" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef:Project_files/addClient..php
 
                           </select>
 
@@ -337,12 +332,7 @@
                               type="text"
                               class="form-control"
                             />-->
-<<<<<<< HEAD:Project_files/addClient.php
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_state"
-                            name="select_state" onchange="getservicename(this.value)" style="color:#202940;">
-=======
                           <select class="browser-default custom-select" type="select" id="select_state" name="select_state" onchange="getservicename(this.value)" style="color:#202940;">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef:Project_files/addClient..php
 
                           </select>
                         </div>
@@ -355,12 +345,7 @@
                               type="text"
                               class="form-control"
                             />-->
-<<<<<<< HEAD:Project_files/addClient.php
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_city"
-                            name="select_city" onchange="getdocumentlist(this.value)" style="color:#202940;">
-=======
                           <select class="browser-default custom-select" type="select" id="select_city" name="select_city" onchange="getdocumentlist(this.value)" style="color:#202940;">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef:Project_files/addClient..php
 
                           </select>
                         </div>
