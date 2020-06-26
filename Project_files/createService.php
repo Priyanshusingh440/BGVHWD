@@ -40,13 +40,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-<<<<<<< HEAD
-=======
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -85,11 +82,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -127,11 +120,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -180,24 +169,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -205,7 +181,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -308,14 +283,9 @@
                   <form id="ajax" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Service Type</label>
-                        <select style="margin-top: 2%;" id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
-=======
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service
                           Type</label>
                         <select id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
                     </div>
@@ -382,14 +352,9 @@
                   <form id="ajax2" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%; font-size: 13px;">Service Type</label>
-                        <select style="margin-top: 2%;" id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
-=======
                         <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;">Service
                           Type</label>
                         <select id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
                       <div class="form-group col-md-6">
@@ -406,12 +371,8 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px">Service Name</label>
-=======
                         <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
                           Name</label>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control" required>
                           <option selected>Choose...</option>
                           <option>fgg</option>
@@ -420,14 +381,9 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px">Select Country</label>
-                        <select  style="margin-top: 2%;" id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
-=======
                         <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Select
                           Country</label>
                         <select id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 

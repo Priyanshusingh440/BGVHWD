@@ -21,32 +21,17 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-<<<<<<< HEAD
-    View All Of Qc
-  </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-=======
     View ALL OF/QC
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
-<<<<<<< HEAD
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
-=======
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -55,14 +40,9 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
-<<<<<<< HEAD
-</head>
-
-=======
 
 </head>
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 <body class="dark-edition">
   <div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
@@ -72,11 +52,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"> <a class="navbar-brand" href="#">
-<<<<<<< HEAD
-          <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-=======
           <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
         </a></div>
       <!--Side Bar-->
       <div class="sidebar-wrapper">
@@ -100,11 +76,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -142,11 +114,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -195,24 +163,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -220,7 +175,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -229,12 +183,9 @@
       </div>
       <!--Side Bar End-->
     </div>
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
     <div class="main-panel mainP">
       <!--toggle button-->
       <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">

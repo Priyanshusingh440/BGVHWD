@@ -16,42 +16,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Dashboard
-  </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <!-- CSS Files -->
-  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
-
-  <!--Switching modes-->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body class="dark-edition">
-  <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-=======
   <title>Admin Dashboard</title>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
@@ -204,7 +168,6 @@
         </ul>
       </div>
       <!--Side Bar End-->
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
         Tip 2: you can also add an image using data-image tag
     -->
@@ -283,98 +246,6 @@
               <p>Master</p>
             </a>
 
-<<<<<<< HEAD
-            <div class="collapse" id="master">
-              <ul class="list-unstyled nav">
-                <li class="nav-item">
-                  <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./#">Auto SLA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./#">Insufficient Emial Triggers</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="navbar-item">
-            <a href="#user" class="nav-link" data-toggle="collapse"><i class="material-icons">account_circle</i>
-              <p>User</p>
-            </a>
-            <div class="collapse" id="user">
-              <ul class="list-unstyled nav">
-                <li class="nav-item">
-                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="navbar-item">
-            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-              <p>Settings </p>
-            </a>
-            <div class="collapse" id="settings">
-              <ul class="list-unstyled nav">
-                <li class="nav-item">
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!--Side Bar End-->
-    </div>
-      <div class="main-panel">
-        <!-- Navbar -->
-        <nav
-          class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
-        >
-          <div class="container-fluid">
-            <div class="navbar-wrapper">
-              <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
-            </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              aria-controls="navigation-index"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:void(0)">
-                    <i class="material-icons">notifications</i>
-                    <p class="d-lg-none d-md-block">
-                      Notifications
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-=======
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -400,7 +271,6 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">

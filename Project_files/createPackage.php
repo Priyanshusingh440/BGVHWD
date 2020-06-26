@@ -165,24 +165,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -190,7 +177,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -308,13 +294,8 @@
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label style="margin-left: 3%; font-size: 13px;"  class="bmd-label-floating">Service Name</label>
-                        <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
-=======
                         <label style="margin-left: 3%;" class="bmd-label-floating">Service Name</label>
                         <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 

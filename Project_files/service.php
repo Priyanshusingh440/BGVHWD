@@ -78,11 +78,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -120,11 +116,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -173,24 +165,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -198,7 +177,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -294,14 +272,9 @@
                   <form id="ajax">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-<<<<<<< HEAD
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left:4%;font-size:13px">Service Type</label>
-                        <select style=" margin-top: 2%;" id="select_service_type" name="service_type_id" class="browser-default custom-select" required>
-=======
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service
                           Type</label>
                         <select style=" margin-top: 1%;" id="select_service_type" name="service_type_id" class="browser-default custom-select" required>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                         </select>
                       </div>
 
@@ -336,13 +309,8 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card">
-<<<<<<< HEAD
-                        <div class="card-header card-header-primary">
-                             <h4 style="color:white" class="card-title">Services</h4>
-=======
                           <div class="card-header card-header-primary">
                             <h4 class="card-title">Services</h4>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                           </div>
                           <table style="width: 97%; margin-left: 1.5%; margin-top: 2%;" class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">

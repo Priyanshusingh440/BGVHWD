@@ -40,10 +40,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-<<<<<<< HEAD
 
-=======
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -81,11 +78,7 @@
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
@@ -123,11 +116,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -209,10 +198,7 @@
         </ul>
       </div>
       <!--Side Bar End-->
-<<<<<<< HEAD
-=======
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
     </div>
     <div class="main-panel mainP">
       <!--toggle button-->
@@ -325,19 +311,11 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card">
-<<<<<<< HEAD
-                        <div class="card-header card-header-primary">
-                             <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
-                       </div>
-                          <table class="table table-hover" style="margin-top: 4%;margin-left: 2%; width: 96%;">
-                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;"> 
-=======
                           <div class="card-header card-header-primary">
                             <h4 style="color: white;" class="card-title">Mandatory Documents</h4>
                           </div>
                           <table class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                               <th>
                                 Document Name
                               </th>

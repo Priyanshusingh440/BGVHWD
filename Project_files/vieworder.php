@@ -21,16 +21,6 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-<<<<<<< HEAD
-    View Order
-  </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-=======
     Dashboard
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
@@ -39,7 +29,6 @@
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
@@ -52,10 +41,6 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
-<<<<<<< HEAD
-  <!--Switching modes-->
-  <link rel="stylesheet" href="assets/css/style.css">
-=======
   <style>
     [type="date"] {
       background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
@@ -71,7 +56,6 @@
   </style>
 
 
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 </head>
 
 <body class="dark-edition">
@@ -83,14 +67,8 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"> <a class="navbar-brand" href="#">
-<<<<<<< HEAD
-          <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-        </a></div>
-      <!--Side Bar-->
-=======
           <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
@@ -150,11 +128,7 @@
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" href="./vieworder.php">View Order</a>
-=======
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -203,24 +177,11 @@
           </li>
           <li class="navbar-item">
             <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
-<<<<<<< HEAD
-              <p>Settings </p>
-=======
               <p>Settings</p>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-<<<<<<< HEAD
-                  <a class="nav-link" name href="./mandatoryFieldManager.php">Mandatory Fiends Manager</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./EmailTrigger.php">Email Trigger Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" name href="./ServiceWiseDocument.php">Service Wise Documents</a>
-=======
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">
@@ -228,7 +189,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </li>
               </ul>
             </div>
@@ -288,11 +248,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
-                  <i style="color: white;" class="material-icons">notifications</i>
-=======
                   <i class="material-icons">notifications</i>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
@@ -309,11 +265,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
-                  <i style="color: white;" class="material-icons">person</i>
-=======
                   <i class="material-icons">person</i>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
@@ -351,24 +303,6 @@
                     </select>
                           
                     </div> -->
-<<<<<<< HEAD
-                      
-                    <div class="form-group" style="margin-top:9%;">
-                      <label for="Service ">Search By</label>
-                      <select  name="Service" id="Service" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
-                        <option style="background-color: white !important; color: black !important;" value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search Criteria---</option>
-                        <option style="background-color: white !important; color: black !important;" value="First_Name_Last_Name" class=" bg-secondary text-light">First Name Last Name</option>
-                        <option style="background-color: white !important; color: black !important;" value="internal_reference_id"  class=" bg-secondary text-light">Internal Reference Id</option>
-                        <option style="background-color: white !important; color: black !important;" value="Joing_Location"  class=" bg-secondary text-light">Joing Location</option>
-                        <option style="background-color: white !important; color: black !important;" value="Case_Ref_ID"  class=" bg-secondary text-light">Case Ref ID</option>
-                        <option style="background-color: white !important; color: black !important;" value="order_creation_date_time"  class=" bg-secondary text-light">Order Creation Date</option>
-                        <option style="background-color: white !important; color: black !important;" value="Order_Completion_Date"  class=" bg-secondary text-light">Order Completion Date</option>
-                        <option style="background-color: white !important; color: black !important;"value="email_id"  class=" bg-secondary text-light">Email ID</option>
-                        <option style="background-color: white !important; color: black !important;" value="Order_Status"  class=" bg-secondary text-light">Order Status</option>
-                      </select>
-                    </div>
-=======
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
                         <div class="form-group" style="margin-top:9%;">
                           <label for="Service ">Search By</label>
@@ -455,42 +389,6 @@
                     <!-- <button type="submit" class="btn btn-primary pull-right" onclick="showCustomer()">Search</button>-->
 
                 </div>
-<<<<<<< HEAD
-                <div class="card-body">
-                  <div class="table-responsive" id="table">
-                    <table class="table table-hover" style="margin-top: 4%;overflow-x: auto; white-space: nowrap;">
-                      <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
-                      <th style="text-align: center;">
-                          Sr. No
-                        </th>
-                        <th style="text-align: center;">
-                          First Name & last Name
-                        </th>
-                        <th style="text-align: center;">
-                          Internal Reference Id
-                        </th>
-                        <th style="text-align: center;">
-                          Email id
-                        </th>
-                        <th style="text-align: center;">
-                          Order Creation Date Time
-                        </th> 
-                        <th style="text-align: center;">
-                          Order Completion Date
-                        </th> 
-                        <th style="text-align: center;">
-                          Order status
-                        </th>
-                        <th style="text-align: center;" >
-                          Actions
-                        </th>
-                      </thead>
-                      <tbody id="table-body">
-                       
-                      </tbody>
-                    </table>
-                  </div>
-=======
                 </form>
               </div>
             </div>
@@ -539,7 +437,6 @@
 
                     </tbody>
                   </table>
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
                 </div>
               </div>
             </div>
@@ -621,180 +518,6 @@
       </ul>
     </div>
   </div>-->
-<<<<<<< HEAD
-  <script>
-    const x = new Date().getFullYear();
-    let date = document.getElementById("date");
-    date.innerHTML = "&copy; " + x + date.innerHTML;
-  </script>
-</div>
-</div>
-<!--mode changing-->
-<script>
-let darkmode=localStorage.getItem("darkmode");
-const darkmodetoggle=document.querySelector('input[name=theme]');
-
-const enabledarkmode=()=>{
-document.documentElement.setAttribute('data-theme', 'dark')
-localStorage.setItem("darkmode","enabled");
-}
-
-
-const disabledarkmode=()=>{
-document.documentElement.setAttribute('data-theme', 'light')
-localStorage.setItem("darkmode",null);
-}
-
-
-if(darkmode==="enabled"){
- enabledarkmode();
-}
-
-
-darkmodetoggle.addEventListener("change", ()=>{
- darkmode=localStorage.getItem("darkmode");
- if(darkmode !== "enabled"){
-    trans()
-   enabledarkmode();
- }else{
-  trans()
-   disabledarkmode();
- }
-})
-
-let trans = () => {
-document.documentElement.classList.add('transition');
-window.setTimeout(() => {
-document.documentElement.classList.remove('transition');
-}, 1000)
-}
-</script>
-  <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js"></script>
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chartist JS -->
-  <script src="assets/js/plugins/chartist.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="assets/demo/demo.js"></script>
-  <script src="vieworder.js"></script>
-  <script>
-  function test(){
-var dob = document.getElementById("dateofbirth");
-console.log(dob.value+"value");    
-  }
-  
-//this is a sample data
-
-
-
-
-// thilm is 
-
-// function showCustomer(){
-// var e = document.getElementById("Service");
-// var strUser = e.options[e.selectedIndex].value;
-// var val2 = document.getElementById("SearchCriteria");
-// var val = val2.value;
-// try{
-// var dob2 = document.getElementById("dateofbirth");var dob = dob2.value;
-// }catch(err) {var dob="";}
-// try{
-// var opt2 = document.getElementById("OrderStatus");var opt = opt2.options[opt2.selectedIndex].value;
-// }catch(err) {var opt="";}
-//       $.post("API/ClientViewtable.php",
-//     {
-//       Service: strUser,
-//       option: val,
-//       dob: dob,
-//       opt: opt
-//     },
-//     function(data,status){
-//         $("#table").html(data);
-//     document.getElementById("table").innerHTML = data;
-//     console.log("r"+data);
-//     //  alert("Data: " + data + "\nStatus: " + status);
-//     });
-// }
-    
-</script>
-  <script>
-
-  /*On Select Value Click */
-
-  function myFunction(e) {
-
-var color=document.getElementById("Service").selectedIndex;
-if(color == 0) {
-
-
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("hide").style.display="none";
-document.getElementById("SearchCriteria").style.display="none";
-document.getElementById("DateOne").style.display="none"
-document.getElementById("order").style.display="none";
-
-}
-if(color == 1) {
-
-
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="block";
-document.getElementById("DateOne").style.display="none"
-document.getElementById("order").style.display="none";
-
-}
-
-else if(color == 2) {
-
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="block";
-document.getElementById("DateOne").style.display="none"
-document.getElementById("order").style.display="none";
-}
-
-else if(color == 3) {
-
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="block";
-document.getElementById("DateOne").style.display="none"
-document.getElementById("order").style.display="none";
-}
-
-else if(color == 4) {
-
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="block";
-document.getElementById("DateOne").style.display="none"
-document.getElementById("order").style.display="none";
-}
-
-else if(color == 5) {
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="none";
-document.getElementById("hide").style.display="none";
-document.getElementById("DateOne").style.display="block";
-document.getElementById("order").style.display="none";
-}
-
-else if(color == 6) {
-document.getElementById("SearchCriteria").value = e.target.value;
-document.getElementById("SearchCriteria").style.display="none";
-document.getElementById("DateOne").style.display="block"
-;document.getElementById("hide").style.display="none";
-document.getElementById("order").style.display="none";
-}
-=======
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>
@@ -819,7 +542,6 @@ document.getElementById("order").style.display="none";
             var dob = document.getElementById("dateofbirth");
             console.log(dob.value + "value");
           }
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 
           //this is a sample data
 
