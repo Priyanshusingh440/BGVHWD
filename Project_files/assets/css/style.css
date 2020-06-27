@@ -79,6 +79,16 @@ html[data-theme='dark']{
     
    
 }
+
+.optColor{
+    color: var(--textColor) !important;
+}
+.textlight{
+    color: black !important;
+    background-color: white !important;
+}
+
+
 .logo img{
     opacity: 0.5 !important;
     background: #060C24;

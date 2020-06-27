@@ -270,7 +270,7 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-between">
                       <div class="form-group col-md-4">
                         <label for="Client Name" style="margin-left: 4%;">Client Name</label>
                         <!-- code change -->
@@ -288,7 +288,7 @@
                       </div>
                     </div>
 
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-between">
                       <div class="form-group col-md-4">
                         <label for="Service Type" style="margin-left: 4%;">Service Type</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" onchange="getservice(this.value)" class="form-control" required>
@@ -304,7 +304,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-between">
                       <div class="form-group col-md-4">
                         <label for="Price" style="margin-left: 4%;margin-top: 4%;">Price</label>
                         <input name="Price" type="number" id="Price" class="form-control mt-4" min="0" placeholder="" />

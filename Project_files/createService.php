@@ -405,7 +405,7 @@
                             <h4 style="color: white;" class="card-title">Service List</h4 >
                           </div>
                           <table class="table table-hover" style="margin-top: 4%;">
-                            <thead class="text-primary thead-dark">
+                            <thead class="text-primary" style="background-color: rgba(0, 0, 0, 0.733) !important;">
                               <th>
                                 Sr No.
                               </th>

@@ -34,10 +34,6 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
-<<<<<<< HEAD
-=======
-
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
 </head>
 
 <body class="dark-edition">
@@ -401,54 +397,6 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <h4 style="color: white;" class="card-title">Report Color</h4>
-                          </div>
-                          <table class="table table-hover" style="margin-top: 4%;">
-                            <thead class="text-primary thead-dark" style="background-color: rgba(15, 13, 13, 0.856) !important;">
-                              <th>
-                                Order Status
-                              </th>
-
-                              <th>
-                                Color Code
-                              </th>
-                              <th>
-                                Report Text
-                              </th>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="tablehead1">
-                                  Dakota Rice
-                                </td>
-
-                                <td class="tablehead1">
-                                  <select id="Colors" class="form-control" required>
-                                    <option selected>Yellow</option>
-                                    <option>Green</option>
-                                  </select>
-                                </td>
-                                <td class="tablehead1">
-                                  <input id="Report Text" type="text" class="form-control" placeholder="" required />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tablehead1">
-                                  Minerva Hooper
-                                </td>
-
-                                <td class="tablehead1">
-                                  <select id="Colors" class="form-control" required>
-                                    <option selected>Yellow</option>
-                                    <option>Green</option>
-                                  </select>
-                                </td>
-                                <td class="tablehead1">
-                                  <input id="Report Text" type="text" class="form-control" placeholder="" required />
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
                         </div>
                       </div>
                     </div>

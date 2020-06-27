@@ -363,47 +363,7 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <h4 class="card-title">Reports</h4>
                           </div>
-                          <table class="table table-hover" style="margin-top: 4%; width: 98% !important; margin-left: 1%;">
-                            <thead class="text-light" style="background-color: rgba(15, 13, 13, 0.856) !important;">
-                              <th>
-                                Client Name
-                              </th>
-
-                              <th>
-                                Process name
-                              </th>
-
-                              <th>
-                                Edit
-                              </th>
-                              <th>
-                                Delete
-                              </th>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="tablehead1">
-                                  Client1
-                                </td>
-                                <td class="tablehead1">
-                                  ApplicantData
-                                </td>
-
-                                <td class="text-primary tablehead1">
-                                  <button type="button" class="btn btn-primary btn-sm">
-                                    Edit
-                                  </button>
-                                </td>
-                                <td class="text-primary tablehead1">
-                                  <button type="button" class="btn btn-primary btn-sm">
-                                    Delete
-                                  </button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
                         </div>
                       </div>
                     </div>
