@@ -269,7 +269,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-primary"> 
                   <h4 class="card-title">Add Clients</h4>
                 </div>
                 <div class="card-body">

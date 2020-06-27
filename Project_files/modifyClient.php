@@ -55,7 +55,7 @@
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
             <a href="#client" class="nav-link" data-toggle="collapse"><i class="material-icons">person</i>
               <p>Client</p>

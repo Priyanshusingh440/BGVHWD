@@ -22,7 +22,7 @@ defaultOption.value = '0';
 dropdown.add(defaultOption);
 dropdown.selectedIndex = 0;
 
-const country = 'API/country.php';
+const country = './API/country.php';
 
 fetch(country)
   .then(
@@ -36,13 +36,13 @@ fetch(country)
       // Examine the text in the response
       response.json().then(function (data) {
         let option;
-
         for (let i = 0; i < data.length; i++) {
           option = document.createElement('option');
           option.text = data[i].country_name;
           option.value = data[i].id;
           dropdown.add(option);
         }
+        setDDData(1)
       });
     }
   )
@@ -77,6 +77,7 @@ fetch(country)
           option.value = data[i].id;
           currency.add(option);
         }
+        setDDData(1)
       });
     }
   )
@@ -167,7 +168,7 @@ function getservicename(x) {
     }
 
   }).catch(function (error) {
-    console.error(error);
+    console.error(error); 
   })
 
 }
@@ -257,45 +258,126 @@ const getElement = (elementSelector) => {
 }
  
 // when add user go to addClient through edit
+
+// if () {
+
+// }
+
 if (window.location.pathname === "/Project_files/addClient.php") {
-  console.log("ok")
   var url = new URL(window.location.href);
   let id = url.searchParams.get('id')
+  clientEditInfo = JSON.parse(localStorage.getItem("data"))
+
   if (id) {
-    clientEditInfo = JSON.parse(localStorage.getItem("data"))
+        
+    const id = {
+      country_id: clientEditInfo["country"],
+    };
+    fetch('https://www.bgvhwd.xyz/Project_files/API/state.php', {
+      method: 'post',
+      body: JSON.stringify(id)
+    }).then(function (response) {
+      return response.text();
+    }).then(function (text) {
+      //	console.log(text);
+  
+      let stat = JSON.parse(text);
+      var wrap = document.getElementById('select_state')
+      while (wrap.firstChild) wrap.removeChild(wrap.firstChild)
+      let option;
+  
+      for (let i = 0; i < stat.length; i++) {
+        option = document.createElement('option');
+        option.text = stat[i].service_type;
+        option.value = stat[i].id;
+        servicetype.add(option);
+      }
+      getElement("select_state").value = clientEditInfo["State"]
+  
+    }).catch(function (error) {
+      console.error(error);
+    })
 
-    // automatic fill up input fields
-    getElement("Client Name").value = clientEditInfo["Client_Name"]
-    getElement("Client Code").value = clientEditInfo["Client_Code"]
-    getElement("Client SPOC").value = clientEditInfo["Client_SPOC"]
-    getElement("locality-dropdown").value = clientEditInfo["country"]
-    getElement("select_state").value = clientEditInfo["State"]
-    getElement("select_city").value = clientEditInfo["city"]
-    getElement("Zip Code").value = clientEditInfo["Zip_Code"]
-    getElement("Applicant Response Time").value = clientEditInfo["App_Response_Time"]
-    getElement("Invoice Address Details").value = clientEditInfo["Inv_Address"]
-    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
-    getElement("Invoice Code").value = clientEditInfo["Inv_Code"]
-    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
-    getElement("Email ID").value = clientEditInfo["email"]
-    getElement("currency").value = clientEditInfo["Currency"]
-    getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
-    // getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
-    getElement("dateofbirth").value = clientEditInfo["DOB"]
-    
-
-    // inputFieldsArray.map((inputField) => {
-    //   inputField.value = clientEditInfo[inputField.name]
-    // })
-    // inputRadiosArray.map((inputRadio) => {
-    //   inputRadio.checked = (clientEditInfo[inputRadio.name] == 1) ? true : false
-    // })
-    // inputCurrency.value = clientEditInfo[inputCurrency.name]
-    addClientSubmit.innerHTML = "Update"
-    data[id] = id
+    const id2 = {
+      service_type_id: clientEditInfo["State"],
+    };
+    fetch('https://www.bgvhwd.xyz/Project_files/API/cities.php', {
+      method: 'post',
+      body: JSON.stringify(id2)
+    }).then(function (response) {
+      return response.text();
+    }).then(function (text) {
+      // console.log(text);
+  
+      let stat = JSON.parse(text);
+      var wrap = document.getElementById('select_city')
+      while (wrap.firstChild) wrap.removeChild(wrap.firstChild)
+      let option;
+  
+      for (let i = 0; i < stat.length; i++) {
+        option = document.createElement('option');
+        option.text = stat[i].service_name;
+        option.value = stat[i].id;
+        servicename.add(option);
+      }
+      
+      getElement("select_city").value = clientEditInfo["city"]
+    }).catch(function (error) {
+      console.error(error); 
+    })
+    // getservicename()
   }
 }
 
+
+const setDDData = (ddData) => {
+  if (window.location.pathname === "/Project_files/addClient.php") {
+  console.log("setDDData", ddData)
+    console.log("ok")
+    var url = new URL(window.location.href);
+    let id = url.searchParams.get('id')
+    if (id) {
+      clientEditInfo = JSON.parse(localStorage.getItem("data"))
+      
+      // automatic fill up input fields
+
+      if(ddData === 1) {
+          getElement("locality-dropdown").value = clientEditInfo["country"]
+          // console.log(getElement("locality-dropdown").value, )
+          // console.log(object)
+          getElement("currency").value = clientEditInfo["Currency"]
+          // console.log(object)
+        return
+      }
+      console.log("not returned")
+      getElement("Client Name").value = clientEditInfo["Client_Name"]
+      getElement("Client Code").value = clientEditInfo["Client_Code"]
+      getElement("Client SPOC").value = clientEditInfo["Client_SPOC"]
+      getElement("Zip Code").value = clientEditInfo["Zip_Code"]
+      getElement("Applicant Response Time").value = clientEditInfo["App_Response_Time"]
+      getElement("Invoice Address Details").value = clientEditInfo["Inv_Address"]
+      getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+      getElement("Invoice Code").value = clientEditInfo["Inv_Code"]
+      getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+      getElement("Email ID").value = clientEditInfo["email"]
+      getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+      // getElement("Invoice Bank Detail").value = clientEditInfo["Inv_Bank"]
+      getElement("dateofbirth").value = clientEditInfo["DOB"]
+      
+  
+      // inputFieldsArray.map((inputField) => {
+      //   inputField.value = clientEditInfo[inputField.name]
+      // })
+      // inputRadiosArray.map((inputRadio) => {
+      //   inputRadio.checked = (clientEditInfo[inputRadio.name] == 1) ? true : false
+      // })
+      // inputCurrency.value = clientEditInfo[inputCurrency.name]
+      addClientSubmit.innerHTML = "Update"
+      data[id] = id
+    }
+  }
+}
+setDDData(0)
 
 const addBankDetails = document.querySelector('#ajax')
 addBankDetails && addBankDetails.addEventListener('submit', submit("API/addBankDetails.php"))
