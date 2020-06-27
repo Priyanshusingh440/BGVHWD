@@ -294,7 +294,7 @@
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label style="margin-left: 3%;" class="bmd-label-floating">Service Name</label>
+                        <label style="margin-left: 3%; font-size:13px" class="bmd-label-floating">Service Name</label>
                         <select style="margin-top: 1.5%;" class="browser-default custom-select" type="select" id="serviceName" name="service_name_id" style="color:#202940;" required>
                         </select>
                       </div>

@@ -276,7 +276,7 @@
                         <div class="col-md-6">
                           <div class="row ">
                             <div class="col-md-5">
-                              <labe style="color: black;">DOB</labe>
+                            <p style="color: black;">DOB</p>
                             </div>
                             <div class="col-md-1">
                               <div class="form-check">

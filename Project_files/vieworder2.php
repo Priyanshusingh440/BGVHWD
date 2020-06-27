@@ -12,56 +12,49 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Dashboard
+    View ALL OF/QC
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
-  <style>
-    [type="date"] {
-      background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
-    }
-
-    [type="date"]::-webkit-inner-spin-button {
-      display: none;
-    }
-
-    [type="date"]::-webkit-calendar-picker-indicator {
-      opacity: 100;
-    }
-  </style>
-
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body class="dark-edition">
-  <div class="wrapper ">
+  <div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"> <a class="navbar-brand" href="#">
-          <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+    <div class="logo"> <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
+      <!--Side Bar-->
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
@@ -188,13 +181,22 @@
           </li>
         </ul>
       </div>
+      <!--Side Bar End-->
     </div>
-    <div class="main-panel">
+
+
+
+    <div class="main-panel mainP">
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example" style="padding: 0; margin: 0;">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
+          <div class="navbar-wrapper" style="height: 70px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">View Order</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -203,19 +205,27 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
+            <!-- <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
+                <input
+                  type="text"
+                  value=""
+                  class="form-control"
+                  placeholder="Search..."
+                />
+                <button
+                  type="submit"
+                  class="btn btn-default btn-round btn-just-icon"
+                >
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
                 </button>
               </div>
-            </form>
+            </form> -->
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">dashboard</i>
+                  <i style="color: white;" class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
@@ -223,7 +233,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
+                  <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
@@ -239,7 +249,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
+                  <i style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
@@ -279,28 +289,28 @@
                     </div> -->
 
                         <div class="form-group" style="margin-top:9%;">
-                          <label for="Service ">Search By</label>
-                          <select name="Service" id="Service" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
-                            <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search
+                          <label  for="Service" >Search By</label>
+                          <select name="Service" id="Service" class="form-control optColor" style="margin-top:3%; color: black;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                            <option value="NULL_OPT" selected="" class=" bg-secondary textlight">---Select Search
                               Criteria---</option>
-                            <option value="First_Name_Last_Name" class=" bg-secondary text-light">First Name Last Name
+                            <option value="First_Name_Last_Name" class=" bg-secondary textlight">First Name Last Name
                             </option>
-                            <option value="internal_reference_id" class=" bg-secondary text-light">Internal Reference Id
+                            <option value="internal_reference_id" class=" bg-secondary textlight">Internal Reference Id
                             </option>
-                            <option value="Joing_Location" class=" bg-secondary text-light">Joing Location</option>
-                            <option value="Case_Ref_ID" class=" bg-secondary text-light">Case Ref ID</option>
-                            <option value="order_creation_date_time" class=" bg-secondary text-light">Order Creation
+                            <option value="Joing_Location" class=" bg-secondary textlight">Joing Location</option>
+                            <option value="Case_Ref_ID" class=" bg-secondary textlight">Case Ref ID</option>
+                            <option value="order_creation_date_time" class=" bg-secondary textlight">Order Creation
                               Date</option>
-                            <option value="Order_Completion_Date" class=" bg-secondary text-light">Order Completion Date
+                            <option value="Order_Completion_Date" class=" bg-secondary textlight">Order Completion Date
                             </option>
-                            <option value="email_id" class=" bg-secondary text-light">Email ID</option>
-                            <option value="Order_Status" class=" bg-secondary text-light">Order Status</option>
+                            <option value="email_id" class=" bg-secondary textlight">Email ID</option>
+                            <option value="Order_Status" class=" bg-secondary textlight">Order Status</option>
                           </select>
                         </div>
 
                         <div class="form-group" style="margin-top:9%;">
                           <label for="clientName">Client Name</label>
-                          <select name="clientName" id="clientName" class="form-control" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                          <select name="clientName" id="clientName" class="form-control optColor" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
                             <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search
                               Criteria---</option>
                           </select>
@@ -388,7 +398,7 @@
             </div>
             <div class="card-body">
               <div class="table-responsive" id="table">
-                <table class="table table-hover" style="margin-top: 4%;">
+                <table class="table table-hover" style="margin-top: 4%;overflow-x: auto; white-space: nowrap;">
                   <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                     <th>
                       Sr. No
@@ -439,6 +449,47 @@
           </script>
         </div>
       </div>
+       <!--mode changing-->
+  <script>
+    let darkmode = localStorage.getItem("darkmode");
+    const darkmodetoggle = document.querySelector('input[name=theme]');
+
+    const enabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem("darkmode", "enabled");
+    }
+
+
+    const disabledarkmode = () => {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem("darkmode", null);
+    }
+
+
+    if (darkmode === "enabled") {
+      enabledarkmode();
+    }
+
+
+    darkmodetoggle.addEventListener("change", () => {
+      darkmode = localStorage.getItem("darkmode");
+      if (darkmode !== "enabled") {
+        trans()
+        enabledarkmode();
+      } else {
+        trans()
+        disabledarkmode();
+      }
+    })
+
+    let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000)
+    }
+  </script>
+  <!--mode change end-->
       <!--<div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
