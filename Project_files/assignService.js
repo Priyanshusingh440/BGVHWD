@@ -249,6 +249,9 @@ const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
       body: JSON.stringify(jsonData),
+      headers: {
+        'Content-type': 'application/json'
+      }
     })
     .then(response => response.text())
     .then(data => {
@@ -595,11 +598,11 @@ tbody ? tbody.ondblclick = (e) => {
     }
   }
 
-  editTableClientName.addEventListener('change', editOnchange("API/editAssignService.php"))
-  editTableLocalityDropdown.addEventListener('change', editOnchange("API/editAssignService.php"))
-  editTableServiceTypeName.addEventListener('change', editOnchange("API/editAssignService.php"))
+  editTableClientName.addEventListener('change', editOnchange("./API/assignService.php"))
+  editTableLocalityDropdown.addEventListener('change', editOnchange("./API/assignService.php"))
+  editTableServiceTypeName.addEventListener('change', editOnchange("./API/assignService.php"))
   let saveButton = document.querySelector(".edit-table button[type='submit']")
-  saveButton.addEventListener('click', editOnchange("API/editAssignService.php"))
+  saveButton.addEventListener('click', editOnchange("./API/assignService.php"))
 
   const editOneEnter = (url) => {
     return e => {
@@ -612,9 +615,9 @@ tbody ? tbody.ondblclick = (e) => {
     }
   }
   
-  // editTableServiceName.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
-  // editTablePrice.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
-  // editTableSLA.addEventListener('keyup', editOneEnter("API/editAssignService.php"))
+  // editTableServiceName.addEventListener('keyup', editOneEnter("API/assignService.php"))
+  // editTablePrice.addEventListener('keyup', editOneEnter("API/assignService.php"))
+  // editTableSLA.addEventListener('keyup', editOneEnter("API/assignService.php"))
 
   data = {}
 } : false
