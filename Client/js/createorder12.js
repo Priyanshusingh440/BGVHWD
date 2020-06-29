@@ -76,8 +76,8 @@ const previewAppear = (e) => {
 		console.log("dataToShow", x, dataToShow[x])
 		tbody.innerHTML += `
 			<tr>
-				<td>${x}</td>
-				<td>${dataToShow[x]}</td>
+				<td style="color: #3C4858 !important">${x}</td>
+				<td style="color: #3C4858 !important">${dataToShow[x]}</td>
 			</tr>
 		`
 	}

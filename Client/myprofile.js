@@ -18,7 +18,7 @@ let hiddenInput = document.querySelector(".unique-hidden-input")
 console.log(hiddenInput)
 fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php", {
     method: 'POST',
-    body: JSON.stringify({
+    body: JSON.stringify({ 
       "Id": hiddenInput.value
     }),
   })
