@@ -1,6 +1,7 @@
 console.log('working')
 
 let data = {}
+let dataToShow = {}
 
 const preview = document.querySelector(".preview-modal")
 const previewCancel = document.querySelector(".preview-btns button[type='button']")
@@ -15,13 +16,14 @@ const addClientSubmit = document.querySelector('#ajax button'),
 	inputRadiosArray = [...inputRadios],
 	inputCheckbox = document.querySelectorAll('#ajax input[type="checkbox"]'),
 	inputCheckboxArray = [...inputCheckbox],
-	select = document.querySelectorAll('#ajax select'),
+	select = document.querySelectorAll('#ajax select:not([multiple])'),
 	selectArray = [...select],
 	textarea = document.querySelector('#ajax textarea')
 
 const getFormData = () => {
 	inputFieldsArray ? inputFieldsArray.map((value) => {
 		data[value.name] = value.value
+		value.getAttribute('data-name') ? (dataToShow[value.getAttribute('data-name')] = value.value ) : false
 	}) : false
 	inputRadiosArray ? inputRadiosArray.map((value) => {
 		
@@ -29,6 +31,7 @@ const getFormData = () => {
 		if (value.checked) {
 			checked = value.value
 			data[value.name] = checked
+			dataToShow[value.getAttribute('data-name')] = checked 
 		}
 	}) : false
 	inputCheckboxArray ? inputCheckboxArray.map((value) => {
@@ -38,11 +41,15 @@ const getFormData = () => {
 			checked = 1
 		}
 		data[value.name] = checked
+		console.log(checked)
+		dataToShow[value.getAttribute('data-name')] = checked == 1 ? "Yes" : "No"
+
 	}) : false
 	selectArray ? selectArray.map(value => {
 		console.log(value.name)
 
 		data[value.name] = value.value
+		dataToShow[value.getAttribute('data-name')] = value.options[value.selectedIndex].text
 	}) : false
 	var selected = [];
 	for (var option of document.getElementById('exampleFormControlSelect5').options) {
@@ -50,11 +57,11 @@ const getFormData = () => {
 			selected.push(option.value);
 		}
 	}
-	console.log(selected)
 	data["document_list_view"] = selected
-	console.log(selected);
+	dataToShow["Document List View"] = selected
 	// inputCurrency ? data["currency"] = inputCurrency.value : false
 	textarea ? data["comments"] = textarea.value : false
+	textarea ? dataToShow["comments"] = textarea.value : false
 
 	console.log(data)
 }
@@ -64,12 +71,13 @@ const previewAppear = (e) => {
 	preview.classList.add("active")
 	getFormData()
 	tbody.innerHTML = ''
-	for (let x in data) {
-		console.log("data", x, data[x])
+	console.log(dataToShow)
+	for (let x in dataToShow) {
+		console.log("dataToShow", x, dataToShow[x])
 		tbody.innerHTML += `
 			<tr>
 				<td>${x}</td>
-				<td>${data[x]}</td>
+				<td>${dataToShow[x]}</td>
 			</tr>
 		`
 	}

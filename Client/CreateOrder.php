@@ -45,7 +45,7 @@ else
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Create Order
+    Dashboard
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -58,14 +58,9 @@ else
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
   <link href="../CSS-file-icons-master/build/css-file-icons.css" rel="stylesheet" />
-   <!--Switching modes-->
-   <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--pop up-->
-    <link rel="stylesheet" href="assets/css/createOrder.css">
-
-
-   
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="CreateOrder.css">
 
   <style>
     [type="date"] {
@@ -92,9 +87,9 @@ else
 
         Tip 2: you can also add an image using data-image tag
     -->
-    <div class="logo"> <a class="navbar-brand" href="#">
-    <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-      </a></div>
+      <div class="logo"> <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+        </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
@@ -144,11 +139,11 @@ else
       </div>
     </div>
     <div class="main-panel">
-       <!--toggle button-->
- <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-  <input type="checkbox" id="switch" name="theme">
-  <label id="toggleButton" for="switch">Toggle</label>
- </div>
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input name="name" type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
@@ -182,12 +177,14 @@ else
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
-                <div class="ripple-container"></div></a>
+                  <div class="ripple-container"></div>
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
@@ -200,7 +197,7 @@ else
         </div>
       </nav>
       <!-- End Navbar -->
-      <div class="content" >
+      <div class="content">
         <div class="container-fluid">
           <div class="row" style="margin-top: 1%;">
             <div class="col-md-12">
@@ -214,19 +211,19 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">First Name</label>
-                          <input type="text" class="form-control" name="First Name" required>
+                          <input type="text" class="form-control" name="First Name" data-name="First Name" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Middle Name</label>
-                          <input name="Middle Name" type="text" class="form-control">
+                          <input name="Middle Name" data-name="Middle Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input name="Last Name" type="text" class="form-control">
+                          <input name="Last Name" data-name="Last Name" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -234,19 +231,19 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Alias Name</label>
-                          <input name="Alias Name" type="text" class="form-control">
+                          <input name="Alias Name" data-name="Alias Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Middle Name</label>
-                          <input name="Alias Middle Name" type="text" class="form-control">
+                          <input name="Alias Middle Name" data-name="Alias Middle Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input name="Alias Last Name" type="text" class="form-control">
+                          <input name="Alias Last Name" data-name="Alias Last Name" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -254,7 +251,7 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Enter Email ID</label>
-                          <input name="Enter Email ID" type="text" class="form-control" required>
+                          <input name="email_id" data-name="Enter Email ID" type="text" class="form-control" required>
                         </div>
                       </div>
                     </div>
@@ -262,7 +259,7 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Internal Reference ID</label>
-                          <input name="Internal Reference ID" type="text" class="form-control">
+                          <input name="Internal Reference ID" data-name="Internal Reference ID" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -271,13 +268,13 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Joining Location</label>
-                          <input name="Joining Location" type="text" class="form-control" required> 
+                          <input name="Joining Location" data-name="Joining Location" type="text" class="form-control" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating"></label>
-                          <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" required> 
+                          <input type="date" name="Joining date" data-name="Joining date" id="dateofbirth" class="form-control" required>
                         </div>
                       </div>
                     </div>
@@ -290,8 +287,8 @@ else
                           <!--<select class="form-control" id="lob_type"type="select"style="color:white;background-color:#202940;">
                          <option>Select LOB/Vertical/Division</option>
                          </select>-->
-                          <select class="browser-default custom-select" type="select" name="lob_type" id="lob_type"
-                            style="color:#202940;margin-top:9%;"> 
+                          <select class="browser-default custom-select" type="select" name="LOB Type" data-name="LOB Type" id="lob_type"
+                            style="color:#202940;margin-top:9%;">
                           </select>
 
 
@@ -304,15 +301,14 @@ else
                           <label>Additional Comments</label>
                           <div class="form-group">
                             <label class="bmd-label-floating"> Type Text Here...</label>
-                            <input  id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
-                            <textarea  name='Additional Comments' class="form-control selection" rows="2"></textarea>
+                            <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
+                            <textarea name='Additional Comments' class="form-control" rows="2"></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <!--Package Details-->
-
                     <div class="card-header card-header-primary" style="margin-top:2%;">
                       <h4 class="card-title" style="color:white;">Package Details</h4>
                     </div>
@@ -322,25 +318,26 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-floating">Country</label>
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown" onchange="getpackage(this.value)"
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
+                            id="locality-dropdown" name="Country" data-name="Country" onchange="getpackage(this.value)"
                             style="color:#202940;" required>
-                            
+
                           </select>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label  style="font-size: 14px;" class="bmd-label-floating">Package</label>
-                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="package-dropdown" name="package-dropdown" 
-                            style="color:#202940;">
+                          <label style="font-size: 14px;" class="bmd-label-floating">Package</label>
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
+                            id="package-dropdown" name="package-dropdown" data-name="Package" style="color:#202940;">
                             <option>Select Package</option>
                           </select>
 
-                          
+
                         </div>
                       </div>
 
-                      </div>
+                    </div>
 
                     <!--Package Details Closes Here-->
 
@@ -354,10 +351,11 @@ else
                     <div class="row" style="margin-left:1%;margin-top:2%;">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label  style="font-size: 14px;" class="bmd-label-static">Country</label>
-                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select-country-service" name="select-country-service" onchange="getservice(this.value)"
+                          <label style="font-size: 14px;" class="bmd-label-static">Country</label>
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
+                            id="select-country-service" name="select-country-service" data-name="Service Country" onchange="getservice(this.value)"
                             style="color:#202940;">
-                           
+
                           </select>
 
                         </div>
@@ -365,10 +363,11 @@ else
 
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label  style="font-size: 14px;" class="bmd-label-static">Service Type</label>
-                          <select  style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_service_type" name="select_service_type" onchange="getservicename(this.value)"
+                          <label style="font-size: 14px;" class="bmd-label-static">Service Type</label>
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
+                            id="select_service_type" name="select_service_type" data-name="Service Type" onchange="getservicename(this.value)"
                             style="color:#202940;">
-                            
+
                           </select>
                         </div>
                       </div>
@@ -376,30 +375,15 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-static">Service </label>
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="select_service_name" name="select_service_name" onchange="getdocumentlist(this.value)"
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
+                            id="select_service_name" name="select_service_name" data-name="Service Name" onchange="getdocumentlist(this.value)"
                             style="color:#202940;">
-                            
+
                           </select>
                         </div>
                       </div>
 
                     </div>
-
-                    <!--Second Row Of Service Details Part-->
-
-                    <div class="col-md-4">
-                      <div class="form-group" style="margin-left:3%;margin-top:6%;">
-                        <label class="bmd-label-floating">Source Name</label>
-                        <div class="d-flex flex-row">
-                          <input name="Source Name" type="text" class="form-control">
-                          <i class="fa fa-plus-circle" style="font-size:35px;color:#8e3a9b"></i>
-
-                        </div>
-
-                      </div>
-                    </div>
-
-
 
                     <!--Service Details Closes Here-->
 
@@ -409,322 +393,142 @@ else
                       <h4 class="card-title" style="color:white;">Upload Documents</h4>
                     </div>
 
-                    <div class="row"style="margin-left:1%;margin-top:2%;">
+                    <div class="row" style="margin-left:1%;margin-top:2%;">
                       <div class="col-md-4">
-                         <h5 class="selection">Upload Document Here</h5>
-                            <div class="row"style="margin-left:1%;">
-                              <p class="selection" style="margin-top:2.7%;">Document 1</p>   
-                               <div class="form-group"style="margin-left:2%;">
-                                <label class="selection border" for="exampleFormControlFile1"style="border: 1px solid white; cursor: pointer ;padding:3px;">Upload File</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                              </div>
-                             </div>
-
-                       <div class="row"style="margin-left:1%;">
-                          <p class="selection" style="margin-top:2.7%;">Choose File</p>   
-                           <div class="form-group"style="margin-left:2%;">
-                             <label class="selection border" for="exampleFormControlFile1"style="border: 1px solid white;padding:3px; cursor: pointer;">Upload File</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <h5 class="selection">Upload Document Here</h5>
+                        <div class="row" style="margin-left:1%;">
+                          <p class="selection" style="margin-top:2.7%;">Document 1</p>
+                          <div class="form-group" style="margin-left:2%;">
+                            <label class="selection border" for="exampleFormControlFile1"
+                              style="border: 1px solid white; cursor: pointer ;padding:3px;">Upload File</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="document 1" data-name="document 1">
                           </div>
+                        </div>
+
+                        <div class="row" style="margin-left:1%;">
+                          <p class="selection" style="margin-top:2.7%;">Choose File</p>
+                          <div class="form-group" style="margin-left:2%;">
+                            <label class="selection border" for="exampleFormControlFile2"
+                              style="border: 1px solid white;padding:3px; cursor: pointer;">Upload File</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile2" name="document 2" data-name="document 2">
+                          </div>
+                        </div>
                       </div>
-                    </div>
 
-                    <!--File Format Part of Upload Document Starts Here-->
+                      <!--File Format Part of Upload Document Starts Here-->
 
-                    <div class="col-md-4">
+                      <div class="col-md-4">
 
-                   <h5 class="selection">File Formats</h5>
-            
-                   <div class="row selection"style="margin-left:2%;margin-top:2%;">
+                        <h5 class="selection">File Formats</h5>
 
-                    <i class="fa fa-file-word-o"  style="font-size:40px; color: tomato;"></i>
+                        <div class="row selection" style="margin-left:2%;margin-top:2%;">
 
-                    <i class="fa fa-file-excel-o " style="font-size:40px;margin-left:2%;color: green"></i>
+                          <i class="fa fa-file-word-o" style="font-size:40px; color: tomato;"></i>
 
-                    <i class="fa fa-file-powerpoint-o " style="font-size:40px;margin-left:2%;color: brown"></i>
+                          <i class="fa fa-file-excel-o " style="font-size:40px;margin-left:2%;color: green"></i>
 
-                    </div>
+                          <i class="fa fa-file-powerpoint-o " style="font-size:40px;margin-left:2%;color: brown"></i>
 
-                    <div class="row"style="margin-left:2%;margin-top:5%;">
+                        </div>
 
-                    <i class="fa fa-file-pdf-o selection" style="color: orange !important; font-size:40px;"></i>
+                        <div class="row" style="margin-left:2%;margin-top:5%;">
 
-                    </div>
+                          <i class="fa fa-file-pdf-o selection" style="color: orange !important; font-size:40px;"></i>
 
-                    </div>
-                    <!--File Format part Closes Here-->
+                        </div>
 
-                    <!--Document List View Starts Here-->
+                      </div>
+                      <!--File Format part Closes Here-->
 
-                     <div class="col-md-4">
+                      <!--Document List View Starts Here-->
+
+                      <div class="col-md-4">
 
 
-                  <div class="form-group">
-                  <label for="exampleFormControlSelect5"style="color:white;margin-top:1%;"><h5 class="selection">Document List View</h5></label>
-                  <select multiple class="form-control selection" id="exampleFormControlSelect5"style="height:30%;margin-bottom:4%; ">
-                  <option style="margin-top:5%;">Document 1.xls</option>
-                  <option style="margin-top:3%;">Document 2.png</option>
-                  <option style="margin-top:3%;">Document 3.docs</option>
-                  <option style="margin-top:3%;">Document 4.rtf</option>
-                  <option style="margin-top:3%">Document 5.pdf</option>
-                  </select>
-                  </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect5" style="color:white;margin-top:1%;">
+                            <h5 class="selection">Document List View</h5>
+                          </label>
+                          <select multiple name="document_list_view" data-name="Document List View" class="form-control selection"
+                            id="exampleFormControlSelect5" style="height:30%;margin-bottom:4%; ">
+                            <option style="margin-top:5%;">Document 1.xls</option>
+                            <option style="margin-top:3%;">Document 2.png</option>
+                            <option style="margin-top:3%;">Document 3.docs</option>
+                            <option style="margin-top:3%;">Document 4.rtf</option>
+                            <option style="margin-top:3%">Document 5.pdf</option>
+                          </select>
+                        </div>
 
-                    </div>
-                    <!--Document List View part Closes Here-->
+                      </div>
+                      <!--Document List View part Closes Here-->
                     </div>
                     <!--Main Row Of Upload Documents Closes Here-->
 
                     <div class="row">
 
-                    <p style="margin-left:4.5%;margin-right:2%;" class="selection">In Case Of Insufficiency Contact?</p>
+                      <p style="margin-left:4.5%;margin-right:2%;" class="selection">In Case Of Insufficiency Contact?
+                      </p>
 
-                    <div class="form-check">
-                      <label class="form-check-label">
-                          <input class="form-check-input" name="rush-order" type="checkbox" value="">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" name="rush-order" data-name="Rush Order" type="checkbox" value="">
                           Rush Order
                           <span class="form-check-sign">
-                              <span class="check"></span>
+                            <span class="check"></span>
                           </span>
-                      </label>
-                  </div>
+                        </label>
+                      </div>
 
                     </div>
 
-                    <div class="row selection"style="margin-left:0%; margin-top:1%">
+                    <div class="row selection" style="margin-left:0%; margin-top:1%">
 
-                    <div class="checkbox checkbox-circle checkbox-red"style="margin-left:5%;">
-                    <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    
-                    Client
-                    </label>
+                      <div class="checkbox checkbox-circle checkbox-red" style="margin-left:5%;">
+                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="Insufficiency-contact" data-name="In Case Of Insufficiency Contact?"
+                          id="exampleRadios1" value="Client" checked>
+
+                        Client
+                        </label>
+                      </div>
+
+                      <div class="blackcolor checkbox checkbox-circle checkbox-red" style="margin-left:5%;">
+                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="Insufficiency-contact" data-name="In Case Of Insufficiency Contact?"
+                          id="exampleRadios2" value="Employee" style="border:5px solid red;">
+
+                        Employee
+                        </label>
+                      </div>
+
                     </div>
-                
-                   <div class="blackcolor checkbox checkbox-circle checkbox-red"style="margin-left:5%;">
-                   <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"style="border:5px solid red;">
-          
-                    Employee
-                   </label>
-                  </div>
-  
+
+                    <div class="row justify-content-end" style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
+
+                      <button type="submit" id="preview" class="btn btn-primary pull-left"
+                        style="margin-left:4%;">Preview</button>
+                      <div class="clearfix"></div>
+
+                      <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Ok</button>
+                      <div class="clearfix"></div>
+
+                      <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
+                      <div class="clearfix"></div>
+
                     </div>
-
-                    <div class="row justify-content-end"style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
-
-                   <!-- <a class="button" href="#popup1">Preview</a> -->
-                   <a class="btn btn primary button"  href="#popup1">Preview</a>
-                  <div class="clearfix"></div>
-
-                   <button type="submit" class="btn btn-primary pull-left"style="margin-left:2%;">Ok</button>
-                  <div class="clearfix"></div>
-
-                   <button type="submit" class="btn btn-primary pull-left"style="margin-left:2%;">Cancel</button>
-                  <div class="clearfix"></div>
-
-                  </div>
 
                     <!--Upload Document Closes Here-->
-                   
-                   <!--pop up div-->
-                    <div id="popup1" class="overlay">
-                      <div class="popup">
-                        <a class="close" href="#">&times;</a>
-                        <div class="content">
 
 
 
-                          <div class="row justify-content-between" style="text-align:left;">
-                            <div class="col-md-2 col-sm-3 ">
-                                <label class="doc" style="font-style:oblique;">First Name :</label>
-                             </div>
-                             <div class="col-md-2 col-sm-2">
-                                <label class="doc">RajShekar</label>
-                             </div>
-          
-                             <div class="col-md-2 col-sm-3">
-                                <label class="doc" style="font-style:oblique;">Middle Name :</label>
-                             </div>
-                             <div class="col-md-2 col-sm-2">
-                                <label class="doc">shekar</label>
-                              </div>
-                           </div>
-                            <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                                <div class="col-md-2 col-sm-3">
-                                    <label class="doc" style="font-style:oblique;">Last Name :</label>
-                                 </div>
-                                 <div class="col-md-2 col-sm-2">
-                                    <label class="doc">Raj</label>
-                                 </div>
-              
-                                 <div class="col-md-2 col-sm-3">
-                                    <label class="doc" style="font-style:oblique;">Alias First Name :</label>
-                                 </div>
-                                 <div class="col-md-2 col-sm-2">
-                                    <label class="doc">shan</label>
-                                  </div>
-                                  <!-- <div class="col-md-2 col-sm-3">
-                                    <label style="font-style:oblique;">Closure Date :</label>
-                                  </div>
-                                  <div class="col-md-2 col-sm-2">
-                                    <label>23/4/2019</label>
-                                  </div>      -->
-                               </div>
 
-                                  <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Alias Middle Name :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">sandip</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Alias Last Name :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">kumar</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>
-
-                                <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Email ID :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">shan@gmail.com</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Internal Reference ID</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">12345</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>
-
-                                <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Joining Location :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">Bangalore</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Joining Date Date :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">23/4/2018</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>
-
-                                <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">LOB Type :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">hget-12345</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Additional comment :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">unknown</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>
-
-                                 <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Country :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">India</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Package :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">Criminal</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>
-
-                                 <!--second Row-->
-                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
-                              <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Service Type :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">Unknown</label>
-                               </div>
-            
-                               <div class="col-md-2 col-sm-3">
-                                  <label class="doc" style="font-style:oblique;">Service :</label>
-                               </div>
-                               <div class="col-md-2 col-sm-2">
-                                  <label class="doc">23/4/2018</label>
-                                </div>
-                                <!-- <div class="col-md-2 col-sm-3">
-                                  <label style="font-style:oblique;">Closure Date :</label>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                  <label>23/4/2019</label>
-                                </div>      -->
-                             </div>     
-                            <div class="row justify-content-end" style="margin-right: 2%;">
-                              <button class="btn btn-primary" style="margin-top: 2%;">Edit</button>
-                            </div>
-                             
-
-                        </div>
-                      </div>
-                    </div>
                     <!--<button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                     <div class="clearfix"></div>-->
                   </form>
-                </div>         
+                </div>
+
+
               </div>
             </div>
 
-           
-             <!--Preview div ends -->
             <!--<footer class="footer">
               <div class="container-fluid">
                 <nav class="float-left">
@@ -763,6 +567,27 @@ else
               date.innerHTML = '&copy; ' + x + date.innerHTML;
             </script>
           </div>
+        </div>
+        <div class="preview-modal">
+          <table class="table table-hover" style="margin-top: 4%;">
+            <tbody id="table">
+              <tr>
+                <!-- <td>name</td>
+                <td>sam</td> -->
+              </tr>
+            </tbody>
+          </table>
+          <div class="row justify-content-center preview-btns" style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
+
+            <button type="submit" id="preview" class="btn btn-primary pull-left" style="margin-left:4%;">Place
+              Order</button>
+            <div class="clearfix"></div>
+
+            <button type="button" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
+            <div class="clearfix"></div>
+
+          </div>
+
         </div>
         <!--<div class="fixed-plugin">
     <div class="dropdown show-dropdown">
@@ -831,46 +656,46 @@ else
       </ul>
     </div>
   </div>-->
-   <!--mode changing-->
-   <script>
-    let darkmode=localStorage.getItem("darkmode");
-    const darkmodetoggle=document.querySelector('input[name=theme]');
+        <!--mode changing-->
+        <script>
+          let darkmode = localStorage.getItem("darkmode");
+          const darkmodetoggle = document.querySelector('input[name=theme]');
 
-    const enabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem("darkmode","enabled");
-    }
-
-
-  const disabledarkmode=()=>{
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem("darkmode",null);
-  }
+          const enabledarkmode = () => {
+            document.documentElement.setAttribute('data-theme', 'dark')
+            localStorage.setItem("darkmode", "enabled");
+          }
 
 
-   if(darkmode==="enabled"){
-     enabledarkmode();
-   }
+          const disabledarkmode = () => {
+            document.documentElement.setAttribute('data-theme', 'light')
+            localStorage.setItem("darkmode", null);
+          }
 
 
-   darkmodetoggle.addEventListener("change", ()=>{
-     darkmode=localStorage.getItem("darkmode");
-     if(darkmode !== "enabled"){
-        trans()
-       enabledarkmode();
-     }else{
-      trans()
-       disabledarkmode();
-     }
-   })
+          if (darkmode === "enabled") {
+            enabledarkmode();
+          }
 
-   let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-  document.documentElement.classList.remove('transition');
-   }, 1000)
- }
-   </script>
+
+          darkmodetoggle.addEventListener("change", () => {
+            darkmode = localStorage.getItem("darkmode");
+            if (darkmode !== "enabled") {
+              trans()
+              enabledarkmode();
+            } else {
+              trans()
+              disabledarkmode();
+            }
+          })
+
+          let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+              document.documentElement.classList.remove('transition');
+            }, 1000)
+          }
+        </script>
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>
@@ -889,19 +714,23 @@ else
         <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="assets/demo/demo.js"></script>
-        <script src="js/createorder12.js"></script>
+        <script src="js/createorder12.js">
+
+
+
+
+        </script>
 </body>
 <script>
-     updateList = function() {
+  updateList = function () {
     var input = document.getElementById('filexzc');
     var output = document.getElementById('fileList');
     var children = "";
     for (var i = 0; i < input.files.length; ++i) {
-        children += '<li>' + input.files.item(i).name + '</li>';
+      children += '<li>' + input.files.item(i).name + '</li>';
     }
-    output.innerHTML = '<ul>'+children+'</ul>';
-}
+    output.innerHTML = '<ul>' + children + '</ul>';
+  }
+</script>
 
-
- </script>
 </html>
