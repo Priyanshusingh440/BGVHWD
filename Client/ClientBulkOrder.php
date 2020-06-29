@@ -42,7 +42,7 @@ else
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-  Dashboard
+  Client Bulk Order
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -84,7 +84,7 @@ else
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+    <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
       </a></div>
       <div class="sidebar-wrapper">
       <ul class="nav">
@@ -212,11 +212,20 @@ else
 
                      <a href="docs/book1.xlsx" download><button type="button" class="btn btn-primary">Download Sample Template</button></a>
 
-                    <div class="checkbox checkbox-circle checkbox-red"style="margin-top:1%;margin-left:7%;">
+                    <!-- <div class="checkbox checkbox-circle checkbox-red"style="margin-top:1%;margin-left:7%;">
                     <input class="form-check-input" type="radio" name="exampleRadios" onclick="UploadFile()" id="Client" value="options1" unchecked >
                     <label class="form-check-label" for="exampleRadios1">
                     Upload File
                     </label>
+                    </div> -->
+
+                    <div class="form-check">
+                      <label class="form-check-label" style="margin-bottom:14px !important;">
+                        <input class="form-check-input" name="exampleRadios" checked="UploadFile()" id="Client" type="checkbox" value="options1"  >
+                        <span class="form-check-sign">
+                          <span class="check"></span>
+                        </span>
+                      </label>
                     </div>
                           
                       </div>
@@ -296,41 +305,16 @@ else
                     </div>
 
   
-
-              <!-- <h2 style="color:white;margin-left:2%;">Log Reports</h2> -->
-              <div class="card-header card-header-primary" style="margin-top: 2%;">
-                <h4 class="card-title">Log Reports</h4>
-            </div>
-            <div class="card-body" style="margin-top: 3%;">
-
-              <table class="table table-bordered table-dark"style="background-color:#1A2035;margin-bottom:9%;">
-              
-              <thead class="table table-hover">
-
-
-
-
-                 <!--table-->
-                 <div class="row" style="margin-top: 4%;">
-                  <div class="col-md-12">
-                      <div class="card">
-                          <div class="card-header card-header-primary">
-                              <h3 class="card-title">Log Reports</h3>
-                          </div>
-                          <table class="table table-hover " style="margin-top: 3%;">
-                              <thead class="text-primary "
-                                  style="background-color: rgb(44, 44, 104);">
-
-
-
-
-
-
-
-
-
-
-              <th>Sr.no</th>
+        <div class="row" style="margin-top: 4%;">
+         <div class="col-md-12">
+            <div class="card">
+              <div class="card-header card-header-primary">
+                 <h4 class="card-title">Log Reports</h4>
+             </div>
+             <table class="table table-hover " style="margin-top: 2%; width: 96%; margin-left: 2%;">
+              <thead class="text-primary "
+                         style="background-color: rgba(0, 0, 0, 0.781) !important;">
+                        <th>Sr.no</th>
                         <th>Date</th>
                         <th>Time</th>
                         <th>File Name</th>

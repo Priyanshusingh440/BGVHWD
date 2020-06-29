@@ -46,7 +46,7 @@ else
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Dashboard
+    View Order
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -97,7 +97,7 @@ else
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"> <a class="navbar-brand" href="#">
-          <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+      <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -157,7 +157,7 @@ else
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 50px;">
-            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Bulk Order</a>
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">View Orders</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
             aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -327,7 +327,7 @@ else
               <div class="card-body">
                 <div class="table-responsive" id="table">
                   <table class="table table-hover" style="margin-top: 2%;">
-                    <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                    <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.822) !important;">
                       <th>
                         Sr. No
                       </th>

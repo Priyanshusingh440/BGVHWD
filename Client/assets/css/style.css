@@ -71,7 +71,28 @@ html[data-theme='dark']{
     --texrAreaColor:rgba(255, 255, 255, 0.623) !important;
    
 }
+.doc{
+    color: black !important;
+}
+
+tbody tr td{
+    color: var(--textColor) !important;
+    text-align: center !important;
+}
+thead th{
+    color: white !important;
+    text-align: center !important;
+}
+
+.optionColor{ 
+  
+    color: var(--textColor) !important;
+
+}
+
+
 #optionColor{
+    background-color: white;
     color: black !important;
 }
 

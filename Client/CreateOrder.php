@@ -45,7 +45,7 @@ else
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Dashboard
+    Create Order
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -60,6 +60,12 @@ else
   <link href="../CSS-file-icons-master/build/css-file-icons.css" rel="stylesheet" />
    <!--Switching modes-->
    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Switching modes-->
+    <link rel="stylesheet" href="assets/css/createOrder.css">
+
+
+   
 
   <style>
     [type="date"] {
@@ -87,7 +93,7 @@ else
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+    <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
       </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -298,8 +304,8 @@ else
                           <label>Additional Comments</label>
                           <div class="form-group">
                             <label class="bmd-label-floating"> Type Text Here...</label>
-                            <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
-                            <textarea name='Additional Comments' class="form-control" rows="2"></textarea>
+                            <input  id="user_id" name="user_id" type="hidden" value="<?php echo $unsa;?>">
+                            <textarea  name='Additional Comments' class="form-control selection" rows="2"></textarea>
                           </div>
                         </div>
                       </div>
@@ -500,12 +506,13 @@ else
                     Employee
                    </label>
                   </div>
-
+  
                     </div>
 
                     <div class="row justify-content-end"style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
 
-                  <button type="submit" class="btn btn-primary pull-left"style="margin-left:4%;">Preview</button>
+                   <!-- <a class="button" href="#popup1">Preview</a> -->
+                   <a class="btn btn primary button"  href="#popup1">Preview</a>
                   <div class="clearfix"></div>
 
                    <button type="submit" class="btn btn-primary pull-left"style="margin-left:2%;">Ok</button>
@@ -517,19 +524,206 @@ else
                   </div>
 
                     <!--Upload Document Closes Here-->
+                   
+                    <div id="popup1" class="overlay">
+                      <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
 
 
 
+                          <div class="row justify-content-between" style="text-align:left;">
+                            <div class="col-md-2 col-sm-3 ">
+                                <label class="doc" style="font-style:oblique;">First Name :</label>
+                             </div>
+                             <div class="col-md-2 col-sm-2">
+                                <label class="doc">RajShekar</label>
+                             </div>
+          
+                             <div class="col-md-2 col-sm-3">
+                                <label class="doc" style="font-style:oblique;">Middle Name :</label>
+                             </div>
+                             <div class="col-md-2 col-sm-2">
+                                <label class="doc">shekar</label>
+                              </div>
+                           </div>
+                            <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                                <div class="col-md-2 col-sm-3">
+                                    <label class="doc" style="font-style:oblique;">Last Name :</label>
+                                 </div>
+                                 <div class="col-md-2 col-sm-2">
+                                    <label class="doc">Raj</label>
+                                 </div>
+              
+                                 <div class="col-md-2 col-sm-3">
+                                    <label class="doc" style="font-style:oblique;">Alias First Name :</label>
+                                 </div>
+                                 <div class="col-md-2 col-sm-2">
+                                    <label class="doc">shan</label>
+                                  </div>
+                                  <!-- <div class="col-md-2 col-sm-3">
+                                    <label style="font-style:oblique;">Closure Date :</label>
+                                  </div>
+                                  <div class="col-md-2 col-sm-2">
+                                    <label>23/4/2019</label>
+                                  </div>      -->
+                               </div>
 
+                                  <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Alias Middle Name :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">sandip</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Alias Last Name :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">kumar</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>
+
+                                <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Email ID :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">shan@gmail.com</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Internal Reference ID</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">12345</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>
+
+                                <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Joining Location :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">Bangalore</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Joining Date Date :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">23/4/2018</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>
+
+                                <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">LOB Type :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">hget-12345</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Additional comment :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">unknown</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>
+
+                                 <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Country :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">India</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Package :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">Criminal</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>
+
+                                 <!--second Row-->
+                            <div class="row justify-content-between" style="text-align:left; margin-top: 1%;" >
+                              <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Service Type :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">Unknown</label>
+                               </div>
+            
+                               <div class="col-md-2 col-sm-3">
+                                  <label class="doc" style="font-style:oblique;">Service :</label>
+                               </div>
+                               <div class="col-md-2 col-sm-2">
+                                  <label class="doc">23/4/2018</label>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-3">
+                                  <label style="font-style:oblique;">Closure Date :</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                  <label>23/4/2019</label>
+                                </div>      -->
+                             </div>     
+                            <div class="row justify-content-end" style="margin-right: 2%;">
+                              <button class="btn btn-primary" style="margin-top: 2%;">Edit</button>
+                            </div>
+                             
+
+                        </div>
+                      </div>
+                    </div>
                     <!--<button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                     <div class="clearfix"></div>-->
                   </form>
-                </div>
-
-
+                </div>         
               </div>
             </div>
 
+           
+             <!--Preview div ends -->
             <!--<footer class="footer">
               <div class="container-fluid">
                 <nav class="float-left">
@@ -694,12 +888,7 @@ else
         <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="assets/demo/demo.js"></script>
-        <script src="js/createorder12.js">
-
-  
-
-
-        </script>
+        <script src="js/createorder12.js"></script>
 </body>
 <script>
      updateList = function() {
