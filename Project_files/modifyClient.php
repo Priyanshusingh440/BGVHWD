@@ -289,7 +289,7 @@
                         <th>
                           Sr. No
                         </th>
-                        <th>
+                        <th> 
                           Client Name
                         </th>
                         <th>
