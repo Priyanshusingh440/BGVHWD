@@ -27,12 +27,23 @@ const getModifyClientData = (d) => {
 
 const getAllClientData = () => {
   fetch('https://www.bgvhwd.xyz/Project_files/API/viewclient.php')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data) 
-    modifyClientData = data
+  .then(function (response) {
+    if (response.status !== 200) {
+      console.warn('Looks like there was a problem. Status Code: ' +
+        response.status);
+      return;
+    }
+    console.log(response);
+
+    // Examine the text in the response
+    response.text().then(data => {
+      console.log(data);
+    modifyClientData = JSON.parse(data);
+    console.log(modifyClientData);
     updateModifyClientData(modifyClientData)
   })
+}
+  )
   .catch((error) => {
     console.error('Error:', error);
   });
