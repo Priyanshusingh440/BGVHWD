@@ -86,7 +86,7 @@ class country
                 $country[$i]['postal_code']=$row['postal_code'];
                 $country[$i]['about_me']=$row['about_me'];
                 $country[$i]['password']=$row['password'];
-                $country[$i]['Profile']=$row['Profile'];
+             //   $country[$i]['Profile']=$row['Profile'];
                 $country[$i]['Client_Code']=$row['Client_Code'];
                 $country[$i]['Client_SPOC']=$row['Client_SPOC'];
                 $country[$i]['country']=$row['country'];
@@ -107,7 +107,7 @@ class country
                 $country[$i]['Email_ID']=$row['Email_ID'];
                 $country[$i]['user_status']=$row['user_status'];
                 $country[$i]['is_block']=$row['is_block'];
-                var_dump($_FILES['Profile']);
+               // var_dump($_FILES['Profile']);
 
                 $i++;
             }
