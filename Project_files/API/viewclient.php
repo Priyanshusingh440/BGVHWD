@@ -68,6 +68,7 @@ class country
     else
     {
         $check='SELECT * FROM client WHERE user_status="1" ORDER BY id DESC';
+        echo 'SELECT * FROM client WHERE user_status="1" ORDER BY id DESC';
         $result=$this->conn->query($check);
         if($result->num_rows>0)
         {
