@@ -22,7 +22,7 @@ class country
 
     if(isset($data['id']))
     {
-        $checbk='SELECT * FROM client WHERE user_status="1" and Id="'.$data['id'].'" ORDER BY Id DESC';
+        $checbk='SELECT * FROM client WHERE user_status="1" and id="'.$data['id'].'" ORDER BY Id DESC';
             $result1=$this->conn->query($checbk);
             if($result1->num_rows>0)
             {
@@ -37,7 +37,6 @@ class country
                     $country['postal_code']=$reed['postal_code'];
                     $country['about_me']=$reed['about_me'];
                     $country['password']=$reed['password'];
-                    $country['Profile']=$reed['Profile'];
                     $country['Client_Code']=$reed['Client_Code'];
                     $country['Client_SPOC']=$reed['Client_SPOC'];
                     $country['country']=$reed['country'];
@@ -67,11 +66,13 @@ class country
     }
     else
     {
-        $check='SELECT * FROM client WHERE user_status="1" ORDER BY Id DESC';
+        $check='SELECT * FROM client WHERE user_status="1" ORDER BY id DESC';
+      //  echo 'SELECT * FROM client WHERE user_status="1" ORDER BY id DESC';
         $result=$this->conn->query($check);
         if($result->num_rows>0)
         {
             $i=0;
+        //   var_dump($row=$result->fetch_assoc());
             while($row = $result->fetch_assoc())
             {
                 $country[$i]['Id']=$row['id'];
@@ -84,7 +85,7 @@ class country
                 $country[$i]['postal_code']=$row['postal_code'];
                 $country[$i]['about_me']=$row['about_me'];
                 $country[$i]['password']=$row['password'];
-                $country[$i]['Profile']=$row['Profile'];
+             //   $country[$i]['Profile']=$row['Profile'];
                 $country[$i]['Client_Code']=$row['Client_Code'];
                 $country[$i]['Client_SPOC']=$row['Client_SPOC'];
                 $country[$i]['country']=$row['country'];
@@ -105,11 +106,12 @@ class country
                 $country[$i]['Email_ID']=$row['Email_ID'];
                 $country[$i]['user_status']=$row['user_status'];
                 $country[$i]['is_block']=$row['is_block'];
-                
+               // var_dump($_FILES['Profile']);
 
                 $i++;
             }
             echo json_encode($country);
+          //  var_dump($country);
         }
         else {
             echo "0 results";
