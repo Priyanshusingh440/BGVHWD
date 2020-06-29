@@ -37,7 +37,6 @@ class country
                     $country['postal_code']=$reed['postal_code'];
                     $country['about_me']=$reed['about_me'];
                     $country['password']=$reed['password'];
-                    $country['Profile']=$reed['Profile'];
                     $country['Client_Code']=$reed['Client_Code'];
                     $country['Client_SPOC']=$reed['Client_SPOC'];
                     $country['country']=$reed['country'];
@@ -84,7 +83,6 @@ class country
                 $country[$i]['postal_code']=$row['postal_code'];
                 $country[$i]['about_me']=$row['about_me'];
                 $country[$i]['password']=$row['password'];
-                $country[$i]['Profile']=$row['Profile'];
                 $country[$i]['Client_Code']=$row['Client_Code'];
                 $country[$i]['Client_SPOC']=$row['Client_SPOC'];
                 $country[$i]['country']=$row['country'];
