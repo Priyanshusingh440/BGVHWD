@@ -73,7 +73,7 @@ class country
         if($result->num_rows>0)
         {
             $i=0;
-            var_dump($row=$result->fetch_assoc());
+           // var_dump($row=$result->fetch_assoc());
             while($row = $result->fetch_assoc())
             {
                 $country[$i]['Id']=$row['id'];
@@ -112,6 +112,7 @@ class country
                 $i++;
             }
             echo json_encode($country);
+            var_dump($country);
         }
         else {
             echo "0 results";
