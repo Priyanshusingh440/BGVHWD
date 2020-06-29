@@ -211,19 +211,19 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">First Name</label>
-                          <input type="text" class="form-control" name="First Name" required>
+                          <input type="text" class="form-control" name="First Name" data-name="First Name" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Middle Name</label>
-                          <input name="Middle Name" type="text" class="form-control">
+                          <input name="Middle Name" data-name="Middle Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input name="Last Name" type="text" class="form-control">
+                          <input name="Last Name" data-name="Last Name" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -231,19 +231,19 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Alias Name</label>
-                          <input name="Alias Name" type="text" class="form-control">
+                          <input name="Alias Name" data-name="Alias Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Middle Name</label>
-                          <input name="Alias Middle Name" type="text" class="form-control">
+                          <input name="Alias Middle Name" data-name="Alias Middle Name" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input name="Alias Last Name" type="text" class="form-control">
+                          <input name="Alias Last Name" data-name="Alias Last Name" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -251,7 +251,7 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Enter Email ID</label>
-                          <input name="Enter Email ID" type="text" class="form-control" required>
+                          <input name="email_id" data-name="Enter Email ID" type="text" class="form-control" required>
                         </div>
                       </div>
                     </div>
@@ -259,7 +259,7 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Internal Reference ID</label>
-                          <input name="Internal Reference ID" type="text" class="form-control">
+                          <input name="Internal Reference ID" data-name="Internal Reference ID" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -268,13 +268,13 @@ else
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Joining Location</label>
-                          <input name="Joining Location" type="text" class="form-control" required>
+                          <input name="Joining Location" data-name="Joining Location" type="text" class="form-control" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating"></label>
-                          <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" required>
+                          <input type="date" name="Joining date" data-name="Joining date" id="dateofbirth" class="form-control" required>
                         </div>
                       </div>
                     </div>
@@ -287,7 +287,7 @@ else
                           <!--<select class="form-control" id="lob_type"type="select"style="color:white;background-color:#202940;">
                          <option>Select LOB/Vertical/Division</option>
                          </select>-->
-                          <select class="browser-default custom-select" type="select" name="lob_type" id="lob_type"
+                          <select class="browser-default custom-select" type="select" name="LOB Type" data-name="LOB Type" id="lob_type"
                             style="color:#202940;margin-top:9%;">
                           </select>
 
@@ -309,7 +309,6 @@ else
                     </div>
 
                     <!--Package Details-->
-
                     <div class="card-header card-header-primary" style="margin-top:2%;">
                       <h4 class="card-title" style="color:white;">Package Details</h4>
                     </div>
@@ -320,7 +319,7 @@ else
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-floating">Country</label>
                           <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
-                            id="locality-dropdown" name="locality-dropdown" onchange="getpackage(this.value)"
+                            id="locality-dropdown" name="Country" data-name="Country" onchange="getpackage(this.value)"
                             style="color:#202940;" required>
 
                           </select>
@@ -330,7 +329,7 @@ else
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-floating">Package</label>
                           <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
-                            id="package-dropdown" name="package-dropdown" style="color:#202940;">
+                            id="package-dropdown" name="package-dropdown" data-name="Package" style="color:#202940;">
                             <option>Select Package</option>
                           </select>
 
@@ -354,7 +353,7 @@ else
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-static">Country</label>
                           <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
-                            id="select-country-service" name="select-country-service" onchange="getservice(this.value)"
+                            id="select-country-service" name="select-country-service" data-name="Service Country" onchange="getservice(this.value)"
                             style="color:#202940;">
 
                           </select>
@@ -366,7 +365,7 @@ else
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-static">Service Type</label>
                           <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
-                            id="select_service_type" name="select_service_type" onchange="getservicename(this.value)"
+                            id="select_service_type" name="select_service_type" data-name="Service Type" onchange="getservicename(this.value)"
                             style="color:#202940;">
 
                           </select>
@@ -377,7 +376,7 @@ else
                         <div class="form-group">
                           <label style="font-size: 14px;" class="bmd-label-static">Service </label>
                           <select style="margin-top: 2%;" class="browser-default custom-select" type="select"
-                            id="select_service_name" name="select_service_name" onchange="getdocumentlist(this.value)"
+                            id="select_service_name" name="select_service_name" data-name="Service Name" onchange="getdocumentlist(this.value)"
                             style="color:#202940;">
 
                           </select>
@@ -385,22 +384,6 @@ else
                       </div>
 
                     </div>
-
-                    <!--Second Row Of Service Details Part-->
-
-                    <div class="col-md-4">
-                      <div class="form-group" style="margin-left:3%;margin-top:6%;">
-                        <label class="bmd-label-floating">Source Name</label>
-                        <div class="d-flex flex-row">
-                          <input name="Source Name" type="text" class="form-control">
-                          <i class="fa fa-plus-circle" style="font-size:35px;color:#8e3a9b"></i>
-
-                        </div>
-
-                      </div>
-                    </div>
-
-
 
                     <!--Service Details Closes Here-->
 
@@ -418,7 +401,7 @@ else
                           <div class="form-group" style="margin-left:2%;">
                             <label class="selection border" for="exampleFormControlFile1"
                               style="border: 1px solid white; cursor: pointer ;padding:3px;">Upload File</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="document 1">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="document 1" data-name="document 1">
                           </div>
                         </div>
 
@@ -427,7 +410,7 @@ else
                           <div class="form-group" style="margin-left:2%;">
                             <label class="selection border" for="exampleFormControlFile2"
                               style="border: 1px solid white;padding:3px; cursor: pointer;">Upload File</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile2" name="document 2">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile2" name="document 2" data-name="document 2">
                           </div>
                         </div>
                       </div>
@@ -466,7 +449,7 @@ else
                           <label for="exampleFormControlSelect5" style="color:white;margin-top:1%;">
                             <h5 class="selection">Document List View</h5>
                           </label>
-                          <select multiple name="document_list_view" class="form-control selection"
+                          <select multiple name="document_list_view" data-name="Document List View" class="form-control selection"
                             id="exampleFormControlSelect5" style="height:30%;margin-bottom:4%; ">
                             <option style="margin-top:5%;">Document 1.xls</option>
                             <option style="margin-top:3%;">Document 2.png</option>
@@ -488,7 +471,7 @@ else
 
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input class="form-check-input" name="rush-order" type="checkbox" value="">
+                          <input class="form-check-input" name="rush-order" data-name="Rush Order" type="checkbox" value="">
                           Rush Order
                           <span class="form-check-sign">
                             <span class="check"></span>
@@ -501,16 +484,16 @@ else
                     <div class="row selection" style="margin-left:0%; margin-top:1%">
 
                       <div class="checkbox checkbox-circle checkbox-red" style="margin-left:5%;">
-                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios"
-                          id="exampleRadios1" value="option1" checked>
+                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="Insufficiency-contact" data-name="In Case Of Insufficiency Contact?"
+                          id="exampleRadios1" value="Client" checked>
 
                         Client
                         </label>
                       </div>
 
                       <div class="blackcolor checkbox checkbox-circle checkbox-red" style="margin-left:5%;">
-                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="exampleRadios"
-                          id="exampleRadios2" value="option2" style="border:5px solid red;">
+                        <input style=" cursor: pointer;" class="form-check-input" type="radio" name="Insufficiency-contact" data-name="In Case Of Insufficiency Contact?"
+                          id="exampleRadios2" value="Employee" style="border:5px solid red;">
 
                         Employee
                         </label>
