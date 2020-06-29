@@ -127,7 +127,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a style="color: white;" class="navbar-brand" href="javascript:void(0)">Bulk Order</a>
+            <a style="color: white;" class="navbar-brand" href="javascript:void(0)">Reports</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -186,7 +186,7 @@
                                         <div class="row justify-content-around">
                                             <div class="form-group col-md-4">
                                                 <label for="type" style="margin-left: 4%;">Status</label>
-                                                <select id="Status" class="form-control optionColor" onchange="data();" 
+                                                <select id="Status" class="form-control optionColor2" onchange="data();" 
                                                     required>
                                                     <option class="optionColor" value="Order Level type" >Order Level
                                                         type</option>

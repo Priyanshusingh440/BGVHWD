@@ -219,8 +219,8 @@ else
                     </label>
                     </div> -->
 
-                    <div class="form-check">
-                      <label class="form-check-label" style="margin-bottom:14px !important;">
+                    <div class="form-check" style="margin-top:4%">
+                      <label class="form-check-label" style="margin-bottom:14px !important;">Click here to Upload File
                         <input class="form-check-input" name="exampleRadios" checked="UploadFile()" id="Client" type="checkbox" value="options1"  >
                         <span class="form-check-sign">
                           <span class="check"></span>

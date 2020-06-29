@@ -36,7 +36,7 @@ const getAllClientData = () => {
     console.log(response);
 
     // Examine the text in the response
-    response.text().then(data => {
+    response.json().then(data => {
       console.log(data);
     modifyClientData = JSON.parse(data);
     console.log(modifyClientData);
