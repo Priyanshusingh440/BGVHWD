@@ -107,7 +107,7 @@ class country
                 $country[$i]['Email_ID']=$row['Email_ID'];
                 $country[$i]['user_status']=$row['user_status'];
                 $country[$i]['is_block']=$row['is_block'];
-                
+                var_dump($_FILES['Profile']);
 
                 $i++;
             }
