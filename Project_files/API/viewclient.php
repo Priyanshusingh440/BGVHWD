@@ -22,7 +22,7 @@ class country
 
     if(isset($data['id']))
     {
-        $checbk='SELECT * FROM client WHERE user_status="1" and Id="'.$data['id'].'" ORDER BY Id DESC';
+        $checbk='SELECT * FROM client WHERE user_status="1" and id="'.$data['id'].'" ORDER BY Id DESC';
             $result1=$this->conn->query($checbk);
             if($result1->num_rows>0)
             {
@@ -67,7 +67,7 @@ class country
     }
     else
     {
-        $check='SELECT * FROM client WHERE user_status="1" ORDER BY Id DESC';
+        $check='SELECT * FROM client WHERE user_status="1" ORDER BY id DESC';
         $result=$this->conn->query($check);
         if($result->num_rows>0)
         {
