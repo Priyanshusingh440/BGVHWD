@@ -14,7 +14,7 @@
 -->
 
 <?php
-
+ 
 
 
 
@@ -36,6 +36,7 @@ else
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,17 +48,19 @@ else
   <title>
     Dashboard
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-
-<style>
-
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
+<!-- <style>
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
@@ -139,11 +142,8 @@ body {font-family: Verdana, sans-serif;}
   .weekdays li, .days li {width: 12.2%;}
 }
 
-
-</style>
-
-
-
+</style> -->
+  
 </head>
 
 <body class="dark-edition">
@@ -154,21 +154,21 @@ body {font-family: Verdana, sans-serif;}
 
         Tip 2: you can also add an image using data-image tag
     -->
-    <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
-      </a></div>
+      <div class="logo"> <a class="navbar-brand" href="#">
+      <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+        </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item  ">
             <a class="nav-link" href="Dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a class="nav-link" href="ClientViewOrder.php">
               <i class="material-icons">content_paste</i>
-              <p>View Order</p>
+              <p>View Orders</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -177,15 +177,15 @@ body {font-family: Verdana, sans-serif;}
               <p>Create Order</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="ClientBulkOrder.php">
               <i class="material-icons">library_books</i>
               <p>Bulk Orders</p>
             </a>
           </li>
-            <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link" href="reports.php">
-              <i class="material-icons">library_books</i>
+              <i class="material-icons">bubble_chart</i>
               <p>Reports</p>
             </a>
           </li>
@@ -195,12 +195,7 @@ body {font-family: Verdana, sans-serif;}
               <p>My Profile</p>
             </a>
           </li>
-         <!-- <li class="nav-item ">
-            <a class="nav-link" href="notifications.php">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>-->
+
           <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="upgrade.php">
                     <i class="material-icons">unarchive</i>
@@ -211,39 +206,29 @@ body {font-family: Verdana, sans-serif;}
       </div>
     </div>
     <div class="main-panel">
+      <!--toggle button-->
+      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+        <input type="checkbox" id="switch" name="theme">
+        <label id="toggleButton" for="switch">Toggle</label>
+      </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+          <div class="navbar-wrapper" style="height: 50px;">
+            <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Dashboard</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -251,7 +236,7 @@ body {font-family: Verdana, sans-serif;}
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="javascript:void(0)"><?php echo $_SESSION['uname'].$_SESSION['password'];?></a>
+                  <a class="dropdown-item" href="javascript:void(0)">Mike John responded to your email</a>
                   <a class="dropdown-item" href="javascript:void(0)">You have 5 new tasks</a>
                   <a class="dropdown-item" href="javascript:void(0)">You're now friend with Andrew</a>
                   <a class="dropdown-item" href="javascript:void(0)">Another Notification</a>
@@ -259,12 +244,14 @@ body {font-family: Verdana, sans-serif;}
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
-                <div class="ripple-container"></div></a>
+                  <div class="ripple-container"></div>
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="MyProfile.php">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
@@ -280,50 +267,52 @@ body {font-family: Verdana, sans-serif;}
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart" style="background-color:green;" id="total-cases">
-                
+            <div class="col-md-12">
+              <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title"style="color:#1A2035;">Total Cases</h4>
-                    <p class="card-category"style="color:#1A2035;">Loading</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats"style="color:#1A2035;">
-                    <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart"style="background-color:orange;" id="total-resolved" >
-                
-                <div class="card-body" >
-                  <h4 class="card-title"style="color:#1A2035;">Total Resolved</h4>
-                  <p class="card-category"style="color:#1A2035;">Loading</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats"style="color:#1A2035;">
-                    <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-12">
-              <div class="card card-chart"style="background-color:yellow;" id="total-in-progress">
-                
-                <div class="card-body" >
-                  <h4 class="card-title"style="color:#1A2035;">Total In Progress</h4>
-                  <p class="card-category"style="color:#1A2035;">Loading</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats"style="color:#1A2035;">
-                    <i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent 2 days ago
-                  </div>
-                </div>
-              </div>
-              <input id="client_id" name="client_id" type="hidden" value="<?php echo $unsa;?>">
-            </div>
-<!--Calender Content-->
+
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-12">
+                          <div class="card card-chart" style="background-color:green !important;" id="total-cases">     
+                            <div class="card-body">
+                              <h4 class="card-title"style="color:#1A2035;">Total Cases</h4>
+                                <p class="card-category"style="color:#1A2035;">Loading</p>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats"style="color:#1A2035;">
+                                <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-12">
+                          <div class="card card-chart" style="background-color: orangered !important;" id="total-resolved" >               
+                            <div class="card-body" >
+                              <h4 class="card-title"style="color:#1A2035;">Total Resolved</h4>
+                              <p class="card-category"style="color:#1A2035;">Loading</p>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats"style="color:#1A2035;">
+                                <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-12">
+                          <div class="card card-chart" style="background-color: yellow !important;" id="total-in-progress">              
+                            <div class="card-body" >
+                              <h4 class="card-title"style="color:#1A2035;">Total In Progress</h4>
+                              <p class="card-category"style="color:#1A2035;">Loading</p>
+                            </div>
+                            <div class="card-footer">
+                              <div class="stats"style="color:#1A2035;">
+                                <i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent 2 days ago
+                              </div>
+                            </div>
+                          </div>
+                          <input id="client_id" name="client_id" type="hidden" value="<?php echo $unsa;?>">
+                        </div>
+                        <!--Calender Content-->
               <!--<div class="col-xl-3">
               <div class="card card-chart">
                 
@@ -395,8 +384,138 @@ body {font-family: Verdana, sans-serif;}
   
     </div>
   </div>-->
- 
-  <!--   Core JS Files   -->
+                 
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+            <!--Table closes Here-->
+
+
+
+            <script>
+              const x = new Date().getFullYear();
+              let date = document.getElementById('date');
+              date.innerHTML = '&copy; ' + x + date.innerHTML;
+            </script>
+          </div>
+        </div>
+        <!--<div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple active" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="assets/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="assets/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="assets/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="assets/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> 
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.php" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard/tree/dark-edition" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>-->
+        <!--mode changing-->
+        <script>
+          let darkmode = localStorage.getItem("darkmode");
+          const darkmodetoggle = document.querySelector('input[name=theme]');
+
+          const enabledarkmode = () => {
+            document.documentElement.setAttribute('data-theme', 'dark')
+            localStorage.setItem("darkmode", "enabled");
+          }
+
+
+          const disabledarkmode = () => {
+            document.documentElement.setAttribute('data-theme', 'light')
+            localStorage.setItem("darkmode", null);
+          }
+
+
+          if (darkmode === "enabled") {
+            enabledarkmode();
+          }
+
+
+          darkmodetoggle.addEventListener("change", () => {
+            darkmode = localStorage.getItem("darkmode");
+            if (darkmode !== "enabled") {
+              trans()
+              enabledarkmode();
+            } else {
+              trans()
+              disabledarkmode();
+            }
+          })
+
+          let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+              document.documentElement.classList.remove('transition');
+            }, 1000)
+          }
+        </script>
+      <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
