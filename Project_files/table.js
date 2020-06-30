@@ -1,3 +1,9 @@
+let deleteModal = document.querySelector(".delete-modal #exampleModal")
+let deleteModalOkBtn = document.querySelector(".delete-modal #modal-ok-btn")
+let deleteModalModalLabel = document.querySelector(".delete-modal #exampleModalLabel")
+let deleteModalLaunchButton = document.querySelector(".delete-modal .launch")
+let deleteModalCloseButton = document.querySelector(".delete-modal .close")
+
 const onSave = (id, action, value) => {
   //console.log(value);
   obj = { id: id, action: action, value: value };
@@ -54,7 +60,7 @@ const onEdit = (id, action) => {
 };
 const onDelete = (id, action) => {
   obj = { id: id, action: action };
-  //console.log(obj.id);
+  console.log(obj.id);
   fetch("./API/modifyService.php", {
     method: "post",
     body: JSON.stringify(obj),
@@ -104,7 +110,7 @@ const popuTable = () => {
         btn.className = "btn btn-primary btn-sm";
         btn.value = "DELETE";
         btn.onclick = () => {
-          deleteModalOkBtn1(stat[i].id, "delete");
+          deleteModalOkBtn1(stat[i].id, "delete", 0);
         };
         cell4.appendChild(btn);
       }
@@ -118,7 +124,7 @@ const deleteModalOkBtn1 = (id, action, c) => {
     // onDelete(stat[i].id, "delete")
     deleteModalCloseButton.click();
     // jsonData = {}
-    if (c == 0) onDelete(id, action, c);
+    if (c == 0) onDelete(id, action);
     c = 1;
   });
 };
