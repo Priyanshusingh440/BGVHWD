@@ -86,7 +86,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./LOB.php">LOB</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./createPackage.php">Assign Package</a>
                 </li>
               </ul>

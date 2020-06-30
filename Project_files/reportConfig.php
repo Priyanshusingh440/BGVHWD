@@ -133,7 +133,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./reportConfig.php">Report Configuration Master</a>
                 </li>
                 <li class="nav-item">
@@ -272,28 +272,25 @@
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4" style="margin-left: 4%;">
                         <label for="Service Type" style="margin-left: 4%;">Client Name</label>
-                        <select name="Service Type" id="Service Type" class="form-control" required>
-                          <option selected>Choose...</option>
-                          <option>Client1</option>
+                        <select  name="Service Type" id="Service Type" class="form-control lightColor" required>
+                          <option style="color: black;" selected>Choose...</option>
+                          <option style="color: black;">Client1</option>
                         </select>
                       </div>
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4" style="margin-left: 4%;">
                         <label for="Macro" style="margin-left: 4%;">Process name</label>
-                        <select name="Macro Type" id="Macro Type" class="form-control" required>
-                          <option selected>Choose...</option>
-                          <option>Criminal Content</option>
+                        <select name="Macro Type" id="Macro Type" class="form-control lightColor" required>
+                          <option style="color: black;" selected>Choose...</option>
+                          <option style="color: black;">Criminal Content</option>
                         </select>
                       </div>
                     </div>
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4" style="margin-left: 4%;">
-                        <label for="Service Type" style="margin-left: 4%;">Template</label>
-                        <select name="Service Type" id="Service Type" class="form-control" required>
-                          <option selected>Choose...</option>
-                          <option>Template1</option>
-                        </select>
+                        <label class="bmd-label-floating" for="Service Type" style="margin-left: 4%;">Template</label>
+                          <input name="" type="text" class="form-control" />
                       </div>
                     </div>
                     <div class="row justify-content-end" style="margin-right: 1%;">

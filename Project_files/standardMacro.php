@@ -133,7 +133,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
                 </li>
                 <li class="nav-item">
@@ -280,14 +280,14 @@
                   <form id="ajax" method="POST">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service Type</label>
-                        <select name="ServiceType" id="Service Type" class="browser-default custom-select" required>
+                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Service Type</label>
+                        <select style="margin-top:1%" name="ServiceType" id="Service Type" class="browser-default custom-select" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="Macro" class="bmd-label-floating" style="margin-left: 4%;">Macro Type</label>
-                        <select name="MacroType" id="Macro Type" class="browser-default custom-select" required>
+                        <label for="Macro" class="bmd-label-floating" style="margin-left: 4%; font-size:13px">Macro Type</label>
+                        <select  style="margin-top:1%" name="MacroType" id="Macro Type" class="browser-default custom-select" required>
                         </select>
                       </div>
                     </div>

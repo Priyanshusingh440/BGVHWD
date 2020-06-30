@@ -9,7 +9,7 @@
 * Coded by www.creative-tim.com
 
 =========================================================
- 
+
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Package
+    Create Service
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     name="viewport" />
@@ -40,12 +40,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- <script src="package.js"></script> -->
 
+
+  <!--Switching modes-->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="dark-edition">
@@ -112,13 +113,13 @@
                   <a class="nav-link" href="./service.php
                     ">Modify Service</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./package.php">Create/Modilfy Package </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
               </ul>
@@ -281,13 +282,13 @@
                   <form id="ajax">
                     <div class="row justify-content-around">
                       <div class="form-group col-md-4">
-                        <label for="ClientName" class="bmd-label-floating" style="margin-left: 4%;">Client Name</label>
+                        <label for="ClientName" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Client Name</label>
                         <select style="margin-top: 1%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
                         </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="Country" class="bmd-label-floating" style="margin-left: 4%;">Country</label>
+                        <label for="Country" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Country</label>
                         <select style="margin-top: 1%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" required>
                         </select>
                       </div>
@@ -307,40 +308,52 @@
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label class="bmd-label-floating" style="margin-left: 4%;">Price</label>
+                        <label class="bmd-label-floating" >Price</label>
                         <input name="Price" type="number" class="form-control" placeholder="" min="0" />
                       </div>
                     </div>
 
-                    <div class="row justify-content-start">
-                      <div class="form-group col-md-4" style="margin-left: 13%;">
-                        <label for="LOB" class="bmd-label-floating" style="margin-left: 4%;">LOB</label>
-                        <select style="margin-top: 1%;" id="LOB" class="browser-default custom-select" name="LOB" style="color:#202940;" required>
+
+
+                    <div class="row justify-content-around">
+                      <div class="form-group col-md-4">
+                        <label style="margin-left: 12px; font-size: 13px;" for="LOB">LOB</label>
+                        <select style="margin-top: 2%;margin-top: 1%;" id="LOB" class="browser-default custom-select" name="LOB" style="color:#202940;" required>
                         </select>
                       </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating" style="font-size: 13px;">Service Name</label>
+                          <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown">
 
-                      <div class="form-group col-md-4 service-name-DD-wrapper" style="margin-left: 8%;">
+                          </select>
 
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+                      <!-- <div class="form-group col-md-4 service-name-DD-wrapper">
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Service
                           Name</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" class="form-control" required multiple>
-                          <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
+                          <option class='bg-secondary text-light' default not selected>Choose...</option> 
                         </select>
-                        <!-- <select class="browser-default custom-select service-name-dd" id="framework" name="framework[]" -->
-                        <!-- multiple> -->
-                        <!-- <option value="Codeigniter">Codeigniter</option>
+                         <select class="browser-default custom-select service-name-dd" id="framework" name="framework[]"
+                         multiple> 
+                       <option value="Codeigniter">Codeigniter</option>
                           <option value="CakePHP">CakePHP</option>
                           <option value="Laravel">Laravel</option>
                           <option value="YII">YII</option>
                           <option value="Zend">Zend</option>
                           <option value="Symfony">Symfony</option>
                           <option value="Phalcon">Phalcon</option>
-                          <option value="Slim">Slim</option> -->
-                        <!-- </select> -->
-                        <!-- <div class="service-name-DD-wrapper"></div> -->
-                      </div>
-
-                    </div>
+                          <option value="Slim">Slim</option> 
+                       </select> -->
                     <div class="row justify-content-end" style="margin-right: 1%;">
                       <button type="submit" class="btn btn-primary mx-2">
                         Submit
@@ -406,9 +419,8 @@
     }
   </script>
   <!--mode change end-->
-  <!--   Core JS Files   -->
-  <script src="package.js"></script>
-  <script src="assets/js/core/jquery.min.js"></script>
+   <!--   Core JS Files   -->
+   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
   <script src="https://unpkg.com/default-passive-events"></script>
@@ -425,13 +437,8 @@
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js">
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+  <script src="updateservice.js"></script>
+  <script src="createService.js"></script>
   <script>
     $(document).ready(function() {
       $('#framework').multiselect({

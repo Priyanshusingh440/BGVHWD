@@ -83,7 +83,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./LOB.php">LOB</a>
                 </li>
                 <li class="nav-item">
@@ -293,16 +293,13 @@
                       </div>
                     </div>
                     <div class="row justify-content-around">
-                      <div class="form-group col-md-4">
-                        <!-- <label for="City" style="margin-left: 4%;">City</label> -->
-                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">City</label>
-                        <select class="browser-default custom-select" type="select" id="city" name="city" style="color:#202940; margin-top: 2%;" required>
-                          <option value="0">Select City</option>
+                    <div class="form-group col-md-4">
+                        <label style="margin-left: 3%;font-size: 13px;" class="bmd-label-floating">Country</label>
+                        <select class="browser-default custom-select" type="select" id="country" name="country" style="color:#202940;margin-top: 2%;" required>
+                          <option value="0">Select Country</option>
                         </select>
-                      </div>
-
+                      </div>              
                       <div class="form-group col-md-4">
-                        <!-- <label for="State" style="margin-left: 4%;">State</label> -->
                         <label style="margin-left: 3%;font-size: 13px;" class="bmd-label-floating">State</label>
                         <select class="browser-default custom-select" type="select" id="state" name="state" style="color:#202940;margin-top: 2%;" required>
                           <option value="0">Select State</option>
@@ -310,18 +307,16 @@
                       </div>
                     </div>
                     <div class="row justify-content-around">
+                        <div class="form-group col-md-4">
+                        <label style="margin-left: 3%; font-size: 13px;" class="bmd-label-floating">City</label>
+                        <select class="browser-default custom-select" type="select" id="city" name="city" style="color:#202940; margin-top: 2%;" required>
+                          <option value="0">Select City</option>
+                        </select>
+                      </div>  
                       <div class="form-group col-md-4">
                         <label for="GST" style="margin-left: 4%;">GST</label>
                         <input type="text" class="form-control" name="gst" placeholder="" />
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <!-- <label for="Country" style="margin-left: 4%;">Country</label> -->
-                        <label style="margin-left: 3%;font-size: 13px;" class="bmd-label-floating">Countrye</label>
-                        <select class="browser-default custom-select" type="select" id="country" name="country" style="color:#202940;margin-top: 2%;" required>
-                          <option value="0">Select Country</option>
-                        </select>
-                      </div>
+                      </div>               
                     </div>
                     <div class="row justify-content-around">
                       <div class="form-group col-md-4">

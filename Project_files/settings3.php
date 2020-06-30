@@ -164,7 +164,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
                 </li>
               </ul>
