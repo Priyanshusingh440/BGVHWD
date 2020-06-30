@@ -159,13 +159,13 @@ body {font-family: Verdana, sans-serif;}
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item  active">
             <a class="nav-link" href="Dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item  ">
             <a class="nav-link" href="ClientViewOrder.php">
               <i class="material-icons">content_paste</i>
               <p>View Orders</p>

@@ -45,7 +45,7 @@ else
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Dashboard
+    Create Order
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -88,7 +88,7 @@ else
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"> <a class="navbar-brand" href="#">
-          <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+          <img src="assets\img\logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -716,8 +716,11 @@ else
         <script src="assets/demo/demo.js"></script>
         <script src="js/createorder12.js">
 
+
+
+
         </script>
-</body> 
+</body>
 <script>
   updateList = function () {
     var input = document.getElementById('filexzc');
