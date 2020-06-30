@@ -12,9 +12,8 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
-
 <?php
- 
+
 
 
 
@@ -25,125 +24,37 @@ session_start();
 if(isset($_SESSION['uname']) && isset($_SESSION['password']))
 {
    
-  // echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
-  $unsa=$_SESSION['uid'];
+  //echo "Hiii".$_SESSION['uname']."your password is".$_SESSION['password'];
 }
 else
 {
-   
-  header("location:index.php?msg=invalid");
+    header("location:index.php?msg=invalid");
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Dashboard
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-    name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
-  <!--Switching modes-->
-  <link rel="stylesheet" href="assets/css/style.css">
-<!-- <style>
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #202940;
-  text-align: center;
-}
-
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ddd;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 12.6%;
-  color: #666;
-  text-align: center;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
-}
-
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
-}
-
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
-}
-
-</style> -->
-  
+  <head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+      MY Profile
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+      name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/demo/demo.css" rel="stylesheet" />
+    <!--Switching modes-->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="dark-edition">
@@ -159,7 +70,7 @@ body {font-family: Verdana, sans-serif;}
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  active">
+          <li class="nav-item  ">
             <a class="nav-link" href="Dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
@@ -189,7 +100,7 @@ body {font-family: Verdana, sans-serif;}
               <p>Reports</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="MyProfile.php">
               <i class="material-icons">person</i>
               <p>My Profile</p>
@@ -264,151 +175,247 @@ body {font-family: Verdana, sans-serif;}
         </div>
       </nav>
       <!-- End Navbar -->
+      <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
               <div class="card">
-                <div class="card-body">
-
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-12">
-                          <div class="card card-chart" style="background-color:green !important;" id="total-cases">     
-                            <div class="card-body">
-                              <h4 class="card-title"style="color:#1A2035;">Total Cases</h4>
-                                <p class="card-category"style="color:#1A2035;">Loading</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="stats"style="color:#1A2035;">
-                                <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-12">
-                          <div class="card card-chart" style="background-color: orangered !important;" id="total-resolved" >               
-                            <div class="card-body" >
-                              <h4 class="card-title"style="color:#1A2035;">Total Resolved</h4>
-                              <p class="card-category"style="color:#1A2035;">Loading</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="stats"style="color:#1A2035;">
-                                <i class="material-icons"style="color:#1A2035;">access_time</i> Loading
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-12">
-                          <div class="card card-chart" style="background-color: yellow !important;" id="total-in-progress">              
-                            <div class="card-body" >
-                              <h4 class="card-title"style="color:#1A2035;">Total In Progress</h4>
-                              <p class="card-category"style="color:#1A2035;">Loading</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="stats"style="color:#1A2035;">
-                                <i class="material-icons"style="color:#1A2035;">access_time</i> campaign sent 2 days ago
-                              </div>
-                            </div>
-                          </div>
-                          <input id="client_id" name="client_id" type="hidden" value="<?php echo $unsa;?>">
-                        </div>
-                        <!--Calender Content-->
-              <!--<div class="col-xl-3">
-              <div class="card card-chart">
-                
-                <div class="card-body">
-
-                <div class="month">      
-  <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>
-      August<br>
-      <span style="font-size:18px">2017</span>
-    </li>
-  </ul>
-</div>
-
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-
-<ul class="days">  
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
-</ul>
-                  
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">My Profile</h4>
+                  <!--<p class="card-category"></p>-->
                 </div>
+                 <div class="card-body">
+                  <form id="ajax"  method="POST">
+                  <div id="pp">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"
+                            >Organisation Name</label
+                          >
+                          <input
+                            name="Company"
+                            id="Company"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                      
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Username</label>
+                          <input
+                            name="UserName"
+                            id="UserName"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                         
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"
+                            >Contact Email Id</label
+                          >
+                          <input
+                            name="EmailID"
+                            id="EmailID"
+                            type="email"
+                            class="form-control bg-transparent  text-light"
+                           
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Fist Name</label>
+                          <input
+                            name="First Name"
+                            id="First Name"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Last Name</label>
+                          <input
+                            name="Last name"
+                            id="Last name"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                   
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Adress</label>
+                          <input
+                            name="Address"
+                            id="Address"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                       
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">City</label>
+                          <input
+                            name="City"
+                            id="City"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+             
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Country</label>
+                          <input
+                            name="Country"
+                            id="Country"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                  
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"
+                            >Postal Code</label
+                          >
+                          <input
+                            name="Postal Code"
+                            id="Postal Code"
+                            type="text"
+                            class="form-control bg-transparent  text-light"
+                          
+                            readonly
+                            
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>About Me</label>
+                          <div class="form-group">
+                            <label class="bmd-label-floating"> </label>
+                            <textarea
+
+                              name="About Me"
+                              id="About Me"
+                              class="form-control bg-transparent  text-light"
+                              rows="5"
+                             
+                              readonly
+                              
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <button class="btn btn-primary pull-right" > <label style="color:white !important" class="pull-right"> upload profile image
+                      <input type="file" id="path" class=" pull-right" style="display: none;">
+                      
+                    </input></label></button>
                
+                    <div class="clearfix"></div>
+                  </form>
+                  <input id="client_id" name="client_id" class="unique-hidden-input" type="hidden" value="<?php echo $unsa;?>">
+
+                </div>
               </div>
             </div>
-          </div>
-          </div>
 
-            
-  
-    </div>
-  </div>-->
-                 
+            <!--Side Part-->
 
-
-
-
-
-
+            <!-- <div class="col-md-4">
+              <div class="card card-profile" id="img">
+                <div class="card-avatar">
+                  <a href="#pablo" >
+                  <img class="img" src=""/>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-category">CEO / Co-Founder</h6>
+                  <h4 class="card-title">Alec Thompson</h4>
+                  <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                 -- <a href="#pablo" class="btn btn-primary btn-round">Follow</a>--
+                </div>
+              </div>
+            </div> -->
+         
+            <div class="col-md-4">
+                <div class="card card-profile">
+                  <div class="card-avatar">
+                    <a href="#pablo">
+                      <img class="img" src="assets\img\faces\marc copy.jpg" />
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-category">CEO / Co-Founder</h6>
+                    <h4 class="card-title">Alec Thompson</h4>
+                    <p class="card-description">
+                      Don't be scared of the truth because we need to restart
+                      the human foundation in truth And I love you like Kanye
+                      loves Kanye I love Rick Owens’ bed design but the back
+                      is...
+                    </p>
+                    <a href="#pablo" class="btn btn-primary btn-round"
+                      >Follow</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-         </div>
-       </div>
-            <!--Table closes Here-->
-
-
-
-            <script>
-              const x = new Date().getFullYear();
-              let date = document.getElementById('date');
-              date.innerHTML = '&copy; ' + x + date.innerHTML;
-            </script>
+         
           </div>
         </div>
-        <!--<div class="fixed-plugin">
+      </div>
+          
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+  <!--<div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
@@ -451,7 +458,7 @@ body {font-family: Verdana, sans-serif;}
         <li class="button-container">
           <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank" class="btn btn-primary btn-block">Free Download</a>
         </li>
-        <!-- <li class="header-title">Want more components?</li>
+         <li class="header-title">Want more components?</li>
             <li class="button-container">
                 <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
                   Get the pro version
@@ -475,47 +482,48 @@ body {font-family: Verdana, sans-serif;}
       </ul>
     </div>
   </div>-->
-        <!--mode changing-->
-        <script>
-          let darkmode = localStorage.getItem("darkmode");
-          const darkmodetoggle = document.querySelector('input[name=theme]');
+    <!--mode changing-->
+    <script>
+      let darkmode = localStorage.getItem("darkmode");
+      const darkmodetoggle = document.querySelector('input[name=theme]');
 
-          const enabledarkmode = () => {
-            document.documentElement.setAttribute('data-theme', 'dark')
-            localStorage.setItem("darkmode", "enabled");
-          }
-
-
-          const disabledarkmode = () => {
-            document.documentElement.setAttribute('data-theme', 'light')
-            localStorage.setItem("darkmode", null);
-          }
+      const enabledarkmode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        localStorage.setItem("darkmode", "enabled");
+      }
 
 
-          if (darkmode === "enabled") {
-            enabledarkmode();
-          }
+      const disabledarkmode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        localStorage.setItem("darkmode", null);
+      }
 
 
-          darkmodetoggle.addEventListener("change", () => {
-            darkmode = localStorage.getItem("darkmode");
-            if (darkmode !== "enabled") {
-              trans()
-              enabledarkmode();
-            } else {
-              trans()
-              disabledarkmode();
-            }
-          })
+      if (darkmode === "enabled") {
+        enabledarkmode();
+      }
 
-          let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-              document.documentElement.classList.remove('transition');
-            }, 1000)
-          }
-        </script>
-      <!--   Core JS Files   -->
+
+      darkmodetoggle.addEventListener("change", () => {
+        darkmode = localStorage.getItem("darkmode");
+        if (darkmode !== "enabled") {
+          trans()
+          enabledarkmode();
+        } else {
+          trans()
+          disabledarkmode();
+        }
+      })
+
+      let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+          document.documentElement.classList.remove('transition');
+        }, 1000)
+      }
+    </script>
+  <!--   Core JS Files   -->
+  <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
@@ -533,8 +541,58 @@ body {font-family: Verdana, sans-serif;}
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="moment.js"></script>
-  <script src="Dashboard.js "></script>
+  <script src="myprofile.js"></script>
+  <script>
+  function showCustomer(){
+var val2 = document.getElementById("path");
+var val = val2.value;
+//var user=$_SESSION['uname'];
+
+      $.post("API/Profile.php",
+    {
+     Fpath: val,
+	 //UID: user
+	 
+    },
+    function(data,status){
+        $("#pp").html(data);
+    document.getElementById("pp").innerHTML = data;
+    
+    console.log("r"+data);
+    //alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+function imag(){
+var val2 = document.getElementById("path");
+var val = val2.value;
+
+      $.post("API/dp.php",
+    {
+     Fpath: val,
+    },
+    function(data,status){
+        $("#img").html(data);
+    document.getElementById("img").innerHTML = data;
+    console.log("r"+data);
+    //alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+function update(){
+var val2 = document.getElementById("path");
+var val = val2.value;
+
+      $.post("API/updateProfile.php",
+    {
+     Fpath: val,
+    },
+    function(data,status){
+        $("#img").html(data);
+    document.getElementById("img").innerHTML = data;
+    console.log("r"+data);
+    //alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+ </script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -546,7 +604,7 @@ body {font-family: Verdana, sans-serif;}
 
         $sidebar_responsive = $('body > .navbar-collapse');
 
-        window_width = $(window).width();
+        window_width = $(window).width(); 
 
         $('.fixed-plugin a').click(function(event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
@@ -696,13 +754,24 @@ body {font-family: Verdana, sans-serif;}
         });
       });
     });
-  </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
 
-    });
+  let form = document.getElementById("ajax");
+      form.addEventListener(
+        "submit",
+        function (ev) {
+          let oData = new FormData(form);
+          for (let pair of oData.entries()) {
+            console.log(pair[0] + ", " + pair[1]);
+          }
+          ev.preventDefault();
+        },
+        false
+      );
+
+  </script>
+   <script>
+  showCustomer();
+  imag();
   </script>
 </body>
 

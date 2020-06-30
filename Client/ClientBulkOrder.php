@@ -88,7 +88,7 @@ else
       </a></div>
       <div class="sidebar-wrapper">
       <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item ">
             <a class="nav-link" href="Dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
@@ -106,7 +106,7 @@ else
               <p>Create Order</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="ClientBulkOrder.php">
               <i class="material-icons">library_books</i>
               <p>Bulk Orders</p>
@@ -461,6 +461,11 @@ else
   </div>-->
   <!--   Core JS Files   -->
   <script>
+   window.onload=function(){
+    $("#Client").attr('checked', false);
+   }
+
+
     let darkmode=localStorage.getItem("darkmode");
     const darkmodetoggle=document.querySelector('input[name=theme]');
 

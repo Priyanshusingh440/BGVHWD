@@ -12,12 +12,13 @@
  else
  {
     
-  // header("location:index.php");
- // echo "Hello";
+  header("location:index.php");
+  echo "Hello";
  }
  
  
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +27,8 @@
     <meta name="author" content="Kodinger" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Login</title>
+    <style>
+    </style>
     <!--Bootsrap 4 CDN-->
     <link
       rel="stylesheet"
@@ -43,42 +46,58 @@
     />
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <style>
-   /* .cb-slideshow{ 
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 36s linear infinite 0s; 
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/Demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/indexStyle.css" />
+   <script type="text/javascript" src="assets/js/SlideEffects.js"></script>
+   <style>
+      
+ #LogoAnimation{
+  position: absolute; 
+  z-index: 10;
+  color: white;
+  animation: myAnimation;
+  animation-duration:4s;
+  animation-fill-mode:forwards ;
+  animation-timing-function: ease-out;
 }
+@keyframes myAnimation{
+  0%{
+    top: -50%;
+    left: 5%;
+  }
+  
+  100%{
+    top: 10%;
+    left: 5%;
+  }
+  
+} 
 
+   </style>
 
-
-
-@keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
-    100% { opacity: 0 }
-}
-     */
-     .lol{
-       transition:10s ease-in;
-     }
-    
-    </style>
   </head>
 
-  <body>
+  <body id="page">
+    <div class="container">
+    
+      <ul class="cb-slideshow">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+    </ul>
+
+
+
+
+
+
+
     <div class="new-modal">
       <button style="opacity: 0; pointer-events: none; display: none;" type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#exampleModal">
         Launch demo modal
@@ -100,9 +119,14 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
   <div class="container">
-      <!-- <h1>hello</h1> -->
-      <div style="position: absolute; z-index: 10; top: 5%; left: 3%;">
+      <div id="LogoAnimation">
         <a class="navbar-brand" href="#">
           <img src="./assets/img/logo.png" width="30%" height="20%" alt="" />
         </a>
@@ -136,15 +160,16 @@
               <p><strong>CLIENT ERP</strong></p>
             </div>
           </div>
-          <div class="card-body">
-            <form id="postform" class="my-login-validation">
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"
+          <div class="card-body" style="padding-bottom: 0;">
+            <form id="postform" class="my-login-validation" style="padding-bottom: 0;">
+              <div class="input-group form-group" style="padding-bottom: 0;">
+                <div class="input-group-prepend" style="padding-bottom: 0;">
+                  <span class="input-group-text" style="padding-bottom: 0;"
                     ><i class="fas fa-user"></i
                   ></span>
                 </div>
                 <input
+                style="padding-bottom: 0;"
                   type="email"
                   class="form-control"
                   name="username"
@@ -154,16 +179,19 @@
                   required
                 />
               </div>
- 
-              <a href="forgot.php">Forgot your username ?</a>
+              <a style="margin-top: 0;" href="forgotUsername.php">Forgot your username ?</a>
+            
 
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
+
+             
+              <div class="input-group form-group" style="margin-top: 4%; padding-bottom: 0;">
+                <div class="input-group-prepend"  style="padding-bottom: 0;">
                   <span class="input-group-text"
                     ><i class="fas fa-key"></i
                   ></span>
                 </div>
                 <input
+                style="padding-bottom: 0;"
                   type="password"
                   class="form-control"
                   id="pwd"
@@ -172,14 +200,22 @@
                   required
                 />
               </div>
-              <a href="forgot.php">Forgot your password?</a>
+              <a href="forgotPassword.php">Forgot your password?</a>
               <div class="row align-items-center remember">
-                <input
+                <!-- <input
                   type="checkbox"
                   name="remember"
                   id="remember"
                   class="custom-control-input"
-                />Remember Me
+                />Remember Me -->
+                <div class="form-check" style=" margin-top: 2% !important;"  >
+                  <label class="form-check-label"  style="margin-bottom:14px !important;">Remember
+                    <input class="form-check-input" type="checkbox" value="" checked style="cursor: pointer;">
+                    <span class="form-check-sign">
+                      <span class="check"></span>
+                    </span>
+                  </label>
+                </div>
               </div>
               <div class="form-group">
                 <input
@@ -190,15 +226,29 @@
               </div>
             </form>
           </div>
+          </div>
           <div class="card-footer">
             <div class="d-flex justify-content-center"></div>
           </div>
         </div>
       </div>
-    </div>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $("body").addClass("lol")
         var urls = [
@@ -214,7 +264,7 @@
           cout == urls.length - 1 ? (cout = 0) : cout++;
         }, 5000);
       });
-    </script>
+    </script> -->
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -226,6 +276,9 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+    
+    
+    
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
