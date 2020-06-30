@@ -106,7 +106,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./createService.php">Add Services</a>
                 </li>
                 <li class="nav-item">
@@ -283,9 +283,9 @@
                   <form id="ajax" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service
+                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Service
                           Type</label>
-                        <select id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
                         </select>
                       </div>
                     </div>
@@ -352,9 +352,9 @@
                   <form id="ajax2" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;">Service
+                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;font-size: 13px;">Service
                           Type</label>
-                        <select id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
                         </select>
                       </div>
                       <div class="form-group col-md-6">
@@ -371,7 +371,7 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Service
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Service
                           Name</label>
                         <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control" required>
                           <option selected>Choose...</option>
@@ -381,9 +381,9 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;">Select
+                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Select
                           Country</label>
-                        <select id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
                         </select>
                       </div>
 

@@ -130,7 +130,7 @@
 
             <div class="collapse" id="master">
               <ul class="list-unstyled nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
                 </li>
                 <li class="nav-item">

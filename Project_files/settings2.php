@@ -44,9 +44,9 @@
       border: 1px solid black;
       height: 271px;
       width: 690px;
-      position: absolute;
-      top: 50.5%;
-      left: 50%;
+      position: fixed;
+      top: 48%;
+      left: 53%;
       transform: translate(-50%, -50%);
 
 
@@ -183,7 +183,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
                 </li>
                 <li class="nav-item">
@@ -301,7 +301,7 @@
                       </div>
                     </div>
                     <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
-                      <label for="Email">Shadow and placeholder</label><br>
+                      <label for="Email">Email Content</label><br>
                       <textarea class="form-control textedArea z-depth-1" id="Email" rows="12" placeholder="Write something here..."></textarea>
                     </div>
 
@@ -378,7 +378,7 @@
                       <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Okay</button>
                     </div>
                     <div class="col-md-1.2">
-                      <button type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Cancel</button>
+                      <button type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1 cancelbtn"> Cancel</button>
                     </div>
                   </div>
                 </div>
@@ -399,6 +399,12 @@
   </div>
   <!--mode changing-->
   <script>
+  $(".cancelbtn").click(function(){
+    $(".hidediv").hide();
+  })
+
+
+
     $(".hidediv").hide()
     $(function() {
       $(".togglebtn").click(function() {

@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    View ALL OF/QC
+    View Orders
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
@@ -75,7 +75,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
                 <li class="nav-item">
@@ -113,7 +113,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
               </ul>

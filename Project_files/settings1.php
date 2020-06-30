@@ -161,7 +161,7 @@
             </a>
             <div class="collapse" id="settings">
               <ul class="list-unstyled nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
                 </li>
                 <li class="nav-item">

@@ -105,7 +105,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./createService.php">Add Services</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./service.php
                     ">Modify Service</a>
                 </li>
@@ -310,7 +310,7 @@
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header card-header-primary">
-                            <h4 class="card-title">Services</h4>
+                            <h4 style="color:white" class="card-title">Services</h4>
                           </div>
                           <table style="width: 97%; margin-left: 1.5%; margin-top: 2%;" class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">

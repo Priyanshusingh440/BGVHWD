@@ -71,7 +71,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./vieworder2.php">View Order</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
                 </li>
                 <li class="nav-item">
@@ -283,7 +283,7 @@
                       <div class="form-group col-md-4">
                         <label for="Country" style="margin-left: 4%;">Country</label>
                         <select style="margin-top:5%" class="browser-default custom-select" id="locality-dropdown" name="locality-dropdown" onchange="getpackage(this.value)" class="form-control" required>
-                          <option>Choose...</option>
+                          <option >Choose...</option>
                         </select>
                       </div>
                     </div>
@@ -292,7 +292,7 @@
                       <div class="form-group col-md-4">
                         <label for="Service Type" style="margin-left: 4%;">Service Type</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" onchange="getservice(this.value)" class="form-control" required>
-                          <option class='bg-secondary text-light' default not selected>Choose...</option>
+                          <option class='bg-secondary ' default not selected>Choose...</option>
                         </select>
                       </div>
 

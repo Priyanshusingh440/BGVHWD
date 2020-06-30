@@ -130,7 +130,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./#">Auto SLA</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./reportColor.php">Report Color Code</a>
                 </li>
                 <li class="nav-item">
@@ -394,6 +394,13 @@
                                       required
                                     />
                                   </td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td> <button type="button" class="btn btn-primary;" style="float: right;margin-right: 1%;" >
+                                    Save
+                                  </button></td>
                                 </tr>
                               </tbody>
                             </table>

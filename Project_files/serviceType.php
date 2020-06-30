@@ -97,7 +97,7 @@
             </a>
             <div class="collapse" id="services">
               <ul class="list-unstyled nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./serviceType.php">Add Service Type</a>
                 </li>
                 <li class="nav-item">
