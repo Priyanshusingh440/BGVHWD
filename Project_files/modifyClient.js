@@ -26,7 +26,7 @@ const getModifyClientData = (d) => {
 }
 
 const getAllClientData = () => {
-  fetch('./API/viewclient.php')
+  fetch('https://www.bgvhwd.xyz/Project_files/API/viewclient.php')
   .then(function (response) {
     if (response.status !== 200) {
       console.warn('Looks like there was a problem. Status Code: ' +
@@ -87,7 +87,7 @@ const updateModifyClientData = (d) => {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <i  class="material-icons icon">person</i>
+            <i  class="material-icons icon">${value.is_block == 1 ? "person_add_disabled" : "person"}</i>
             <p class="d-lg-none d-md-block">
               Account
             </p>
@@ -98,8 +98,7 @@ const updateModifyClientData = (d) => {
             aria-labelledby="navbarDropdownProfile" 
           >
             <a class="dropdown-item view-order" href="#" id="${value.Id}">View Order</a>
-            <a class="dropdown-item" href="#">View</a>
-            <a class="dropdown-item block" href="#" id="${value.Id}">${value.is_block == 1 ? "Unblock" : "Block"}</a>
+            <a class="dropdown-item edit" href="#" id="${value.Id}">View / Edit</a>
             <!-- <div class="dropdown-divider"></div> -->
             <a
               id="${value.Id}"
@@ -109,12 +108,7 @@ const updateModifyClientData = (d) => {
               >Add bank details</a
             >
             <div class="dropdown-divider"></div>
-            <a
-              id="${value.Id}"
-              class="dropdown-item edit"
-              href="./addClient.html"
-              >Edit</a
-            >
+            <a class="dropdown-item block" href="#" id="${value.Id}">${value.is_block == 1 ? "Unblock" : "Block"}</a>
             <a class="dropdown-item soft-delete" href="#" id="${value.Id}">Soft Delete</a>
             <a class="dropdown-item hard-delete" href="#" id="${value.Id}">Hard Delete</a>
           </div>
@@ -160,10 +154,9 @@ const sendRequestBlock = (e, url) => {
   })
   .then(response => response.text())
   .then(data => {
-    if (data.trim() == 'Blocked Successfully') {
-      e.target.innerHTML = "Unblock"
-    } else if (data.trim() == 'Unblocked Successfully') {
-      e.target.innerHTML = "Block"
+    if (data.trim() == 'Blocked Successfully' || data.trim() == 'Unblocked Successfully') {
+      // e.target.innerHTML = "Unblock"
+      getAllClientData()
     }
     console.log('Success:', data);
   })
