@@ -68,7 +68,7 @@
             </a>
             <div class="collapse" id="client">
               <ul class="list-unstyled nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" name href="./addClient.php">Add Client</a>
                 </li>
                 <li class="nav-item">
@@ -501,7 +501,12 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="Password" class="bmd-label-floating">Password</label>
-                          <input name="Password" type="text" class="form-control" />
+                          <div class="input-group">
+                            <input name="Password" type="password" class="form-control" />
+                            <div class="input-group-addon eye">
+                              <i class="fas fa-eye-slash"></i>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -541,7 +546,7 @@
   </div>
 </div>
 
-<!-- Button trigger modal -->
+<!-- Button trigger modal --> 
 
 
       <script>
@@ -785,6 +790,36 @@
               $("body").addClass("sidebar-mini");
 
               md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event("resize"));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+      });
+    });
+
+    $("form").submit(function(event) {
+      var formdata = $("form").serializeArray();
+      var data = {};
+      $(formdata).each(function(index, obj) {
+        data[obj.name] = obj.value;
+      });
+      //console.log(data);
+      event.preventDefault();
+    });
+    $.ajax;
+  </script>
+</body>
+
+ive = true;
             }, 300);
           }
 

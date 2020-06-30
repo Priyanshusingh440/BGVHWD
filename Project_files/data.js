@@ -1,3 +1,17 @@
+let eye = document.querySelector(".eye")
+let passwordInput = document.querySelector("[name='Password']")
+eye.onclick = () => {
+  console.log("click eye")
+  if (passwordInput.type == "text") {
+    console.log(passwordInput.type)
+    passwordInput.type = "password"
+    eye.innerHTML = "<i class='fas fa-eye-slash'></i>"
+  } else {
+    passwordInput.type = "text"
+    eye.innerHTML = "<i class='fas fa-eye'></i>"
+  }
+}
+
 console.log('working')
 
 const addClientSubmit = document.querySelector('#ajax button'),
@@ -176,7 +190,7 @@ function getservicename(x) {
 let data = {}
 
 let modal = document.getElementById("exampleModal")
-let modalOkBtn = document.getElementById("modal-ok-btn")
+let modalOkBtn = document.getElementById("modal-ok-btn") 
 let modalCloseButton = document.querySelector(".close")
 
 let modalLaunchButton = document.querySelector(".launch")

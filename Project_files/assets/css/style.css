@@ -360,6 +360,14 @@ div.card-header.card-header-primary,
 
 /* middle */
 
+.eye {
+    cursor: pointer;
+    margin-top: 9px;
+    position: relative;
+    left: -19px;
+    z-index: 10;
+}
+
 
 
 
