@@ -9,7 +9,13 @@ let data = {}
 const pageUrl = new URL(window.location.href);
 let id = pageUrl.searchParams.get('id')
 let internalReferenceId = pageUrl.searchParams.get('internal_reference_id')
- 
+
+// let modal = document.querySelector(".add-service-modal #exampleModal")
+// let modalOkBtn = document.querySelector(".add-service-modal #modal-ok-btn")
+let modalLabel = document.querySelector(".add-service-modal #exampleModalLabel")
+// let modalCloseButton = document.querySelector(".add-service-modal .close")
+
+let modalLaunchButton = document.querySelector(".add-service-modal .launch")
 
 const sendRequest = (url) => {
   fetch(url, {
@@ -20,9 +26,11 @@ const sendRequest = (url) => {
     .then(data => {
       if (data.trim() == "Bank Details Added Successfully" || data.trim() == "Deleted Successfully") {
         getAllBankDetails(`https://www.bgvhwd.xyz/Project_files/API/viewbankdetails.php?id=${id}&internal_reference_id=${internalReferenceId}`)
-        alert(data)
+        modalLabel.innerHTML = data
+        modalLaunchButton.click()
       } else {
-        alert(data)
+        modalLabel.innerHTML = data
+        modalLaunchButton.click()
       }
 
       console.log('Success:', data);
@@ -35,23 +43,13 @@ const sendRequest = (url) => {
 const submit = (url) => {
   return e => {
     e.preventDefault()
-    let run = true
     inputFieldsArray ? inputFieldsArray.map((value) => {
-      if (run === true) {
-        if (value.value.trim().length == 0) {
-          console.log(value)
-          alert('all fields are required')
-          run = false
-        }
-        data[value.name] = value.value
-      }
+      data[value.name] = value.value
     }) : false
     data["id"] = id
     data["internal_reference_id"] = internalReferenceId
 
-    if (run === true) {
-      sendRequest(url)
-    }
+    sendRequest(url)
     data = {}
   }
 }
@@ -135,7 +133,12 @@ const setAllBankDetails = (d) => {
   })
 }
 
-let r
+let deleteModal = document.querySelector(".delete-modal #exampleModal")
+let deleteModalOkBtn = document.querySelector(".delete-modal #modal-ok-btn")
+let deleteModalModalLabel = document.querySelector(".delete-modal #exampleModalLabel")
+
+let deleteModalLaunchButton = document.querySelector(".delete-modal .launch")
+let deleteModalCloseButton = document.querySelector(".delete-modal .close")
 
 tbody ? tbody.onclick = (e) => {
   if (e.target.classList.contains('edit')) {
@@ -147,17 +150,22 @@ tbody ? tbody.onclick = (e) => {
     console.log('delete')
     data["Id"] = e.target.id
     data["action"] = "delete"
-    r = confirm("Are you sure you want to delete?")
-    if(r == true) {
+
+    deleteModalLaunchButton.click()
+
+    deleteModalOkBtn.onclick = () => {
+      console.log("delete")
+      console.log("json data", data)
+      deleteModalCloseButton.click()
       sendRequest("https://www.bgvhwd.xyz/Project_files/API/modifybankdetail.php")
+      data = {}
     }
   }
-  data = {}
 } : false
 
 console.log("working 2")
 let jsonData = {}
-  const edit = (e) => {
+const edit = (e) => {
   console.log('dblclick')
   let target = e.target.parentElement.getAttribute("data-sr")
   console.log(target)
@@ -222,21 +230,11 @@ let jsonData = {}
   const editOnchange = (url) => {
     return e => {
       e.preventDefault()
-      let run = true
       inputFieldsArray2 ? inputFieldsArray2.map((value) => {
-        console.log(value.name)
-        if (run === true) {          
-          if (value.value.trim().length == 0) {
-            console.log(value)
-            alert('all fields are required')
-            run = false
-          }
-          data[value.name] = value.value
-        }
+        data[value.name] = value.value
       }) : false
-      if (run === true) {
-        sendRequest(url)
-      }
+      sendRequest(url)
+
       data = {}
     }
   }
@@ -246,7 +244,11 @@ let jsonData = {}
   saveButton && saveButton.addEventListener('click', editOnchange("API/editBankDetails.php"))
 
   data = {}
-} 
+}
 tbody ? tbody.addEventListener("dblclick", edit) : null
+
+function formReset() {
+  document.getElementById("ajax").reset();
+}
 
 console.log("working all")

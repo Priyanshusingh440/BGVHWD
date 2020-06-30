@@ -82,7 +82,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./LOB.php">LOB</a>
-                </li>
+                </li> 
                 <li class="nav-item">
                   <a class="nav-link" href="./createPackage.php">Assign Package</a>
                 </li>
@@ -537,7 +537,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Bank Details added successfully</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Client added successfully</h5>
       </div>
       <div class="modal-footer">
         <button type="button" id="modal-ok-btn" data-dismiss="modal" class="btn btn-primary">OK</button>
