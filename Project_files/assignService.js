@@ -224,7 +224,7 @@ countrySelect.onchange = (e) => fetchService(e)
 serviceTypeSelect.onchange = (e) => fetchServiceName(e)
 
 
-const assignSubmit = document.querySelector('#ajax '),
+const assignSubmit = document.querySelector('#ajax'),
   inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
   inputFieldsArray = [...inputFields],
   inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
@@ -237,7 +237,7 @@ const assignSubmit = document.querySelector('#ajax '),
 
 let jsonData = {}
 
-
+ 
 let modal = document.querySelector(".add-service-modal #exampleModal")
 let modalOkBtn = document.querySelector(".add-service-modal #modal-ok-btn")
 let modalLabel = document.querySelector(".add-service-modal #exampleModalLabel")
@@ -256,8 +256,6 @@ const sendRequest = (url) => {
     .then(response => response.text())
     .then(data => {
       if (data.trim() == "Service Assigned Successfully") {
-        // alert(data)
-        // console.log("form submit")
         modalLaunchButton.click()
         modalOkBtn.onclick = () => {
           modalCloseButton.click()

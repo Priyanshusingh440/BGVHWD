@@ -432,7 +432,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
             <script src="assignService.js"></script>
             <script>
@@ -697,23 +697,23 @@
           });
 
           //XHR AJAX for form data submit
-          const form = document.getElementById("ajax");
-          form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const xhr = new XMLHttpRequest();
-            let formData = new FormData(form);
-            let data = {};
-            for (let entry of formData.entries()) {
-              data[entry[0]] = entry[1];
-            }
-            //to log the data object on the console
-            console.log(JSON.stringify(data));
-            let jsonData = JSON.stringify(data);
-            // change the /submit url to your requirment to divert it to that file
-            xhr.open("POST", "./API/assignService.php");
-            xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
-            xhr.send(jsonData);
-          });
+          // const form = document.getElementById("ajax");
+          // form.addEventListener("submit", function(e) {
+          //   e.preventDefault();
+          //   const xhr = new XMLHttpRequest();
+          //   let formData = new FormData(form);
+          //   let data = {};
+          //   for (let entry of formData.entries()) {
+          //     data[entry[0]] = entry[1];
+          //   }
+          //   //to log the data object on the console
+          //   console.log(JSON.stringify(data));
+          //   let jsonData = JSON.stringify(data);
+          //   // change the /submit url to your requirment to divert it to that file
+          //   xhr.open("POST", "./API/assignService.php");
+          //   xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+          //   xhr.send(jsonData);
+          // });
         </script>
 </body>
 
