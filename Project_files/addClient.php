@@ -501,7 +501,12 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="Password" class="bmd-label-floating">Password</label>
-                          <input name="Password" type="text" class="form-control" />
+                          <div class="input-group">
+                            <input name="Password" type="password" class="form-control" />
+                            <div class="input-group-addon eye">
+                              <i class="fas fa-eye-slash"></i>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -541,7 +546,7 @@
   </div>
 </div>
 
-<!-- Button trigger modal -->
+<!-- Button trigger modal --> 
 
 
       <script>

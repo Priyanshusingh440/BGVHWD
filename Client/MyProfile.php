@@ -199,7 +199,6 @@ else
                             id="Company"
                             type="text"
                             class="form-control bg-transparent  text-light"
-                      
                             readonly
                             
                           />
@@ -336,7 +335,7 @@ else
                             <textarea
 
                               name="About Me"
-                              id="About Me"
+                              id="aboutMe"
                               class="form-control bg-transparent  text-light"
                               rows="5"
                              
@@ -384,7 +383,7 @@ else
             <div class="col-md-4">
                 <div class="card card-profile">
                   <div class="card-avatar">
-                    <a href="#pablo">
+                    <a href="#pablo" id="pablo">
                       <img class="img" src="assets\img\faces\marc copy.jpg" />
                     </a>
                   </div>

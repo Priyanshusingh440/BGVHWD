@@ -12,6 +12,19 @@ const getElement = (elementSelector) => {
 // .catch(err => {
 //   console.log(err)
 // })
+const sendRequest = (url) => {
+  fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log('myprofile:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
 
 let clientEditInfo = {}
 let hiddenInput = document.querySelector(".unique-hidden-input")
@@ -19,7 +32,7 @@ console.log(hiddenInput)
 fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php", {
     method: 'POST',
     body: JSON.stringify({ 
-      "Id": hiddenInput.value
+      "Id": 1
     }),
   })
   .then(response => response.json())
@@ -28,7 +41,7 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php", {
     //   alert('data submitted successfully')
     //   window.location.href = "modifyClient.php"
     // }
-    clientEditInfo = data[7]
+    clientEditInfo = data[5]
     console.log('Success:', data[4]);
     try {
       setData()
@@ -47,11 +60,11 @@ const setData = () => {
   getElement("Company").focus()
 
   getElement("UserName").value = clientEditInfo["User_name"]
-  getElement("EmailID").value = clientEditInfo["Email_ID"]
+  getElement("EmailID").value = clientEditInfo["email"]
   getElement("First Name").value = clientEditInfo["first_name"]
   getElement("Last name").value = clientEditInfo["Last_name"]
   getElement("Address").value = clientEditInfo["Address"]
-  getElement("city").value = clientEditInfo["city"]
+  getElement("City").value = clientEditInfo["city"]
   getElement("Postal Code").value = clientEditInfo["postal_code"]
   // getElement("Last name").value = clientEditInfo["Last_name"]
   // getElement("Last name").value = clientEditInfo["Last_name"]
@@ -70,7 +83,6 @@ const setCountry = () => {
     .then(data => {
       countries = data
       // clientEditInfo = data[7]
-      console.log('Success:', data);
 
       let countryName = countries.filter(v => v.id == clientEditInfo["country"])[0].country_name
       console.log(countryName)
@@ -81,6 +93,62 @@ const setCountry = () => {
       console.error('Error:', error);
     });
 }
+
+let uploadImage = document.querySelector('input[type="file"]')
+
+console.log(uploadImage)
+uploadImage.onchange = () => {
+  console.log(uploadImage.files[0])
+  let reader = new FileReader()
+  reader.onload = () => {
+    // console.log(reader.result)
+    const img = new Image()
+    console.log(reader.result)
+    // img.src = reader.result
+    fetch("./API/dp.php", {
+      method: 'POST',
+      body: JSON.stringify({ 
+        "Id": hiddenInput.value,
+        "image": reader.result
+      })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+  }
+  // reader.readAsText(uploadImage.files[0])
+  
+  reader.readAsDataURL(uploadImage.files[0])
+}
+
+fetch("https://www.bgvhwd.xyz/Client/API/dp.php")
+  .then(res => res.text())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => console.log(err)) 
+
+
+let aboutMe = document.querySelector("#aboutMe")
+
+aboutMe.ondblclick = () => {
+  console.log('dblclick')
+  aboutMe.removeAttribute("readonly")
+
+}
+aboutMe.onblur = () => {
+  console.log("blur")
+  aboutMe.setAttribute("readonly", true)
+  data["id"] = hiddenInput.value
+  data['about_me'] = aboutMe.textContent
+  sendRequest("https://www.bgvhwd.xyz/Client/API/dp.php")
+}
+
+
+
+
+
+
 
 
 // https://www.bgvhwd.xyz/Project_files/API/cities.php
@@ -121,3 +189,5 @@ const setCountry = () => {
 // password: "1234"
 // postal_code: "0"
 // user_status: "1"
+
+
