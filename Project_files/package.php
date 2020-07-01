@@ -23,18 +23,15 @@
   <title>
     Create Service
   </title>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -282,15 +279,15 @@
                   <form id="ajax">
                     <div class="row justify-content-around">
                       <div class="form-group col-md-4">
-                        <label for="ClientName" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Client Name</label>
-                        <select style="margin-top: 1%;" class="browser-default custom-select" type="select" id="Client Name" name="Id" style="color:#202940;" required>
-                        </select>
-                      </div>
-
-                      <div class="form-group col-md-4">
                         <label for="Country" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Country</label>
                         <select style="margin-top: 1%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" required>
                         </select>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating" style="font-size: 13px;">Service Name</label>
+                          <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown"></select>
+                        </div>
                       </div>
                     </div>
                     <div class="row justify-content-around">
@@ -308,7 +305,7 @@
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label class="bmd-label-floating" >Price</label>
+                        <label class="bmd-label-floating">Price</label>
                         <input name="Price" type="number" class="form-control" placeholder="" min="0" />
                       </div>
                     </div>
@@ -316,20 +313,7 @@
 
 
                     <div class="row justify-content-around">
-                      <div class="form-group col-md-4">
-                        <label style="margin-left: 12px; font-size: 13px;" for="LOB">LOB</label>
-                        <select style="margin-top: 2%;margin-top: 1%;" id="LOB" class="browser-default custom-select" name="LOB" style="color:#202940;" required>
-                        </select>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating" style="font-size: 13px;">Service Name</label>
-                          <select class="browser-default custom-select" type="select" id="locality-dropdown" name="locality-dropdown">
 
-                          </select>
-
-                        </div>
-                      </div>
                     </div>
 
 
@@ -337,7 +321,7 @@
 
 
 
-                      <!-- <div class="form-group col-md-4 service-name-DD-wrapper">
+                    <!-- <div class="form-group col-md-4 service-name-DD-wrapper">
                         <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Service
                           Name</label>
                         <select style="margin-top:5%" id="select_service_type" class="browser-default custom-select" name="select_service_type" class="form-control" required multiple>
@@ -419,8 +403,8 @@
     }
   </script>
   <!--mode change end-->
-   <!--   Core JS Files   -->
-   <script src="assets/js/core/jquery.min.js"></script>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
   <script src="https://unpkg.com/default-passive-events"></script>
