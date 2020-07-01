@@ -56,8 +56,7 @@ else
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -246,7 +245,7 @@ else
                             <option value="email_id" class=" bg-secondary text-light">Email ID</option>
                             <option value="Order_Status" class=" bg-secondary text-light">Order Status</option>
                           </select>
-
+                          
                         </div>
 
 
@@ -486,18 +485,27 @@ else
         <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
         <!-- Place this tag in your head or just before your close body tag. -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <!--  Google Maps Plugin    -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         <!-- Chartist JS -->
         <script src="assets/js/plugins/chartist.min.js"></script>
         <!--  Notifications Plugin    -->
         <script src="assets/js/plugins/bootstrap-notify.js"></script>
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-        <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-        <script src="assets/demo/demo.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
         <script src="ClientViewOrder.js"></script>
+        <!-- <script>
+          let p = 0
+          for (let i = 0; i < 1000000000; i++) {
+            p += i
+            
+          }
+        </script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+        <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+
         <script>
+          console.log("frame")
           function test() {
             var dob = document.getElementById("dateofbirth");
             console.log(dob.value + "value");
@@ -553,7 +561,7 @@ else
               document.getElementById("order").style.display = "none";
 
             }
-            if (color == 1) {
+            if (color == 1) { 
 
 
               // document.getElementById("SearchCriteria").value = e.target.value;  

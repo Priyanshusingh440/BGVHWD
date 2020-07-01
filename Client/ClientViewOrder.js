@@ -182,5 +182,56 @@ tbody ? tbody.onclick = (e) => {
 
 console.log("working 2")
 
+// fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php")
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log("api")
+//         data.map((v, i) => {
+//             document.querySelector("#client-option-live-search").innerHTML += `
+//             <option>link ${i}</option>
+//           `
+          
+//         })
+//     })
+//     .catch(err => console.log(err))
 
-console.log("working all")
+
+// async () => await Sleep(1000)
+// function fetchOHLC(yUrl){
+//   return fetch(yUrl)
+//   .then(response => response.json())
+//   .then(function(response) {
+//           // alert(JSON.stringify(response.query));
+//     // console.log(response)
+//     console.log("api")
+//     // document.body.innerHTML += '<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>'
+//     // document.body.innerHTML += '<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>'
+//   return response;
+
+//   })
+//   .catch(function(error) {
+//       console.log(error);
+//   });    
+// }
+
+// fetchOHLC("https://www.bgvhwd.xyz/Project_files/API/viewclient.php")
+
+
+  // async function fetchOHLC(yUrl) {
+  //   try {
+  //     const res = await ( await fetch(yUrl)
+  //     .then(res => res.json()) 
+  //     .then(data => console.log(data))
+  //     )
+      
+  //   } catch(e) { console.log(e); }
+  // }
+  
+  // (async function () {
+  //   const fetchData = await fetchOHLC("https://www.bgvhwd.xyz/Project_files/API/viewclient.php");
+  //   // console.log(fetchData)
+  // })()
+
+console.log("working all") 
+
+
