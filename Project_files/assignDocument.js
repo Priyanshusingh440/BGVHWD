@@ -69,24 +69,67 @@ serviceTypeSelect.onchange = (e) => fetchServiceName(e)
 
 let documentNames
 const documentNameDD = document.querySelector("#document-name")
+const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
+
 const setDocumentNames = () => {
-  let options = ``
-  documentNames.map(v => {
-    options += `<option value="${v.id}"  class="bg-secondary text-light" >${v.document_name}</option>`
+  let options = ""
+  multipleSelectDD.innerHTML = ""
+  console.log(documentNames)
+  documentNames.map((v, i) => {
+    console.log(v.active)
+    options += `<div id="${v.id}" data-index="${i}" class="bg-secondary text-light" ><span>${v.document_name}</span><i data-index="${i}" style="color: white;" class="material-icons remove">${v.active ? "check_box" : "check_box_outline_blank"}</i></div>`
   })
-  documentNameDD.innerHTML += options
+  multipleSelectDD.innerHTML += options
 }
 
 fetch("https://www.bgvhwd.xyz/Project_files/API/assigndocuments.php")
   .then(response => response.json())
   .then(data => {
     documentNames = data
+    documentNames.map(function (v) {
+      v.active = false;
+    });
     console.log('document names', documentNames) 
     setDocumentNames()
   })
   .catch((error) => {
     console.error('Error:', error);
   });
+
+let selectedDocuments = document.querySelector(".multiple-select-dd .selected")
+
+selectedDocuments.onmousedown = e => {
+  console.log(e.target)
+  if (e.target.classList.contains("remove")) {
+    documentNames[e.target.getAttribute("data-index")].active = false
+  }
+  selectedFields()
+  setDocumentNames() 
+}
+
+const selectedFields = () => {
+  // console.log(selectedDocuments)
+  selectedDocuments.innerHTML = ""
+  
+  documentNames.map((v, i) => {
+    v.active ? selectedDocuments.innerHTML += `
+      <div class="doc"><span class="doc-name">${v.document_name}</span><i data-index="${i}" class="material-icons remove">cancel</i></div>
+    ` : false
+  })
+
+  if (selectedDocuments.innerHTML === "") {
+    return selectedDocuments.innerHTML = "Choose Documents"
+  }
+}
+
+multipleSelectDD.onmousedown = e => {
+  let target = e.target.getAttribute("data-index") || e.target.parentElement.getAttribute("data-index")
+  console.log(target)
+  documentNames[target].active = !documentNames[target].active
+  console.log(documentNames)
+  selectedFields()
+  setDocumentNames()
+}
 
 
 const assignSubmit = document.querySelector('#ajax button#assignSubmit'),
@@ -130,7 +173,7 @@ const submit = (url) => {
       console.log(e.target)
       console.log('submit')
       let run = true
-      inputFieldsArray ? inputFieldsArray.map((value) => {
+      inputFieldsArray ? inputFieldsArray.map((value) => { 
           jsonData[value.name] = value.value
       }) : false
 
@@ -138,7 +181,7 @@ const submit = (url) => {
         for (var option of document.getElementById('document-name').options) {
           if (option.selected) {
             selected.push(option.value);
-          }
+          } 
         }
         jsonData["document_names"] = selected
         console.log(selected);

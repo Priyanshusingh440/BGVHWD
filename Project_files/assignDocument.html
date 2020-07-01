@@ -29,8 +29,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -278,8 +277,20 @@
                       </div>
                       <div class="form-group col-md-4">
                         <label for="Service Type" style="margin-left: 4%;">Document name</label>
-                        <select style="margin-top:5%" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
-                          <!-- <option class='bg-secondary text-light' default not selected>Choose...</option> -->
+
+                        <div class="multiple-select-dd">
+                          <div class="selected">
+                            Choose Documents
+                          </div>
+                          <div class="select custom-scroll">
+
+                          </div>
+                          <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+                          <!-- <button class="btn btn-primary dd-btn" type="button">Choose Documents <i style="color: white;" class="material-icons">keyboard_arrow_down</i> </button> -->
+                        </div>
+
+                        <select style="margin-top:5%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
+                          <option class='bg-secondary text-light' default not selected>Choose...</option>
                         </select>
                         <!-- <input type="text" list="cars" multiple/>
                         <datalist id="cars" >
@@ -334,7 +345,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
 

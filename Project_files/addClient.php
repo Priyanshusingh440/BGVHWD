@@ -273,7 +273,7 @@
                   <h4 class="card-title">Add Clients</h4>
                 </div>
                 <div class="card-body">
-                  <form id="ajax">
+                  <form id="ajax" autocomplete="off">
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">

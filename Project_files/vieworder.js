@@ -121,14 +121,10 @@ const updateModifyClientData = (d) => {
     <td class="tablehead1" style="text-align: center;">
       ${value["email_id"]}
     </td>
-<<<<<<< HEAD
-    <td class="tablehead1" style="text-align: center;">
-=======
-    <td class="tablehead1 assign-to" data-sr="${i}" id="assign-to">
+    <td class="tablehead1 assign-to" data-sr="${i}" id="assign-to" style="text-align: center;">
       assign to
     </td>
     <td class="tablehead1">
->>>>>>> cef0191af601cc78dc656c020e12c404a6c62eef
       ${value["order_creation_date_time"]}
     </td>
     <td class="tablehead1" style="text-align: center;">
@@ -172,7 +168,7 @@ const updateModifyClientData = (d) => {
   })
 }
 
-
+ 
 const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
