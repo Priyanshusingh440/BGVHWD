@@ -12,8 +12,8 @@
  else
  {
     
-  header("location:index.php");
-  echo "Hello";
+  //header("location:index.php");
+  //echo "Hello";
  }
  
  
