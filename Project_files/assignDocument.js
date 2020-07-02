@@ -71,6 +71,8 @@ let documentNames
 const documentNameDD = document.querySelector("#document-name")
 const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
 
+var selected = [];
+
 const setDocumentNames = () => {
   let options = ""
   multipleSelectDD.innerHTML = ""
@@ -111,7 +113,9 @@ const selectedFields = () => {
   // console.log(selectedDocuments)
   selectedDocuments.innerHTML = ""
   
+  selected = []
   documentNames.map((v, i) => {
+    v.active ? selected.push(v.id) : false
     v.active ? selectedDocuments.innerHTML += `
       <div class="doc"><span class="doc-name">${v.document_name}</span><i data-index="${i}" class="material-icons remove">cancel</i></div>
     ` : false
@@ -177,12 +181,11 @@ const submit = (url) => {
           jsonData[value.name] = value.value
       }) : false
 
-        var selected = [];
-        for (var option of document.getElementById('document-name').options) {
-          if (option.selected) {
-            selected.push(option.value);
-          } 
-        }
+        // for (var option of document.getElementById('document-name').options) {
+        //   if (option.selected) {
+        //     selected.push(option.value);
+        //   } 
+        // }
         jsonData["document_names"] = selected
         console.log(selected);
 
