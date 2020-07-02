@@ -39,7 +39,7 @@
     />
     <!-- CSS Files -->
     <link
-      href="../assets/css/material-dashboard.css?v=2.1.0"
+      href="assets/css/material-dashboard.css?v=2.1.0"
       rel="stylesheet"
     />
     <script
@@ -55,42 +55,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="assets/demo/demo.css" rel="stylesheet" />
 
-    <!--Switching modes-->
-    <link rel="stylesheet" href="../assets/css/style.css">
+   <!--Switching modes-->
+   <link rel="stylesheet" href="assets/css/style.css">
   
- 
-<style>
-
-[type="date"] {
-  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-}
-[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 100;
-}
-
-#exampleRadios1 {
-
-background:red;
-
-border:2px solid red;
-}
-input .form-control{
- margin-top: 100px;       
-}
-
-.form-control{
-  margin-top: 30px !important;
-}
-
-
-
-</style>
-
 
 </head>
 
@@ -100,7 +69,7 @@ input .form-control{
         class="sidebar"
         data-color="purple"
         data-background-color="black"
-        data-image="../assets/img/sidebar-2.jpg"
+        data-image="assets/img/sidebar-2.jpg"
       >
         <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -108,7 +77,7 @@ input .form-control{
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo"> <a class="navbar-brand" href="#">
-      <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+      <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
       </a></div>
         <!--Side Bar-->
         <div class="sidebar-wrapper">
@@ -242,6 +211,11 @@ input .form-control{
       <!--Side Bar End-->
       </div>
     <div class="main-panel">
+  <!--toggle button-->
+  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+     <input type="checkbox" id="switch" name="theme">
+     <label id="toggleButton" for="switch">Toggle</label>
+  </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
@@ -255,15 +229,6 @@ input .form-control{
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
@@ -306,13 +271,17 @@ input .form-control{
         <div class="container-fluid" style="background-color: #EEEEEE">
           <form>
           <div class="row"  > 
-            <div class="col-md-12" id="carrd2"  > <!--grey color-->
-              <div class="card"id="cardh" style="background-color: rgba(255, 255, 255, 0.76)" >   <!--background white color-->
-                <div class="card-header card-header-primary " >
+            <div class="col-md-12" id="mainColumn"> 
+            
+            
+            
+            
+            <div class="card"id="cardh">            
+              <div class="card-header card-header-primary " >
                   <h4 id="cardh" class="card-title">Indian Address Verfication</h4 >
                 </div>
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row" style="margin-top:1%">                    
                       <div class="col-md-1">
                         <div class="form-group">
                           <label class="bmd-label-floating">DOB</label>
@@ -338,7 +307,7 @@ input .form-control{
                     </div>
 
 
-                    <div class="row">
+                    <div class="row" style="margin-top:1%">
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Stay Duration From</label>
@@ -360,7 +329,7 @@ input .form-control{
                     </div>
 
 
-                    <div class="row">
+                    <div class="row"style="margin-top:1%">
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">State</label>
@@ -382,7 +351,7 @@ input .form-control{
                     </div>
 
 
-                    <div class="row">
+                    <div class="row"style="margin-top:1%">
                       <div class="col-md-8">
                         <div class="form-group">
                           <label class="bmd-label-floating">Relation of respondent with the candidate</label>
@@ -404,7 +373,7 @@ input .form-control{
               </div>
             </div>
            
-      <footer class="footer">
+      <!-- <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
@@ -435,7 +404,7 @@ input .form-control{
             <a style="color: black;" href="https://www.creative-tim.com" target="_blank">Creative Team</a> for a better web.
           </div>
         </div>
-      </footer>
+      </footer> -->
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');
@@ -465,22 +434,22 @@ input .form-control{
         <li class="header-title">Images</li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../../assets/img/sidebar-1.jpg" alt="">
+            <img src="../assets/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../../assets/img/sidebar-2.jpg" alt="">
+            <img src="../assets/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../../assets/img/sidebar-3.jpg" alt="">
+            <img src="../assets/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../../assets/img/sidebar-4.jpg" alt="">
+            <img src="../assets/img/sidebar-4.jpg" alt="">
           </a>
         </li>
         <li class="button-container">
@@ -510,25 +479,65 @@ input .form-control{
       </ul>
     </div>
   </div>-->
+   <!--mode changing-->
+   <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
   </script>
      <!--   Core JS Files   -->
-     <script src="../assets/js/core/jquery.min.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+     <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="https://unpkg.com/default-passive-events"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chartist JS -->
-    <script src="../assets/js/plugins/chartist.min.js"></script>
+    <script src="assets/js/plugins/chartist.min.js"></script>
     <!--  Notifications Plugin    -->
-    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
+    <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script src="../assets/demo/demo.js"></script>
+    <script src="assets/demo/demo.js"></script>
     <script src="data.js"></script>
   <script>
     $(document).ready(function() {
@@ -549,7 +558,6 @@ input .form-control{
             if (event.stopPropagation) {
               event.stopPropagation();
             } else if (window.event) {
-              window.event.cancelBubble = true;
             }
           }
         });

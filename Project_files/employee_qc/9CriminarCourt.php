@@ -61,37 +61,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
   
  
-<style>
-
-[type="date"] {
-  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-}
-[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 100;
-}
-
-#exampleRadios1 {
-
-background:red;
-
-border:2px solid red;
-}
-input .form-control{
- margin-top: 100px;       
-}
-
-.form-control{
-  margin-top: 30px !important;
-}
-
-
-
-</style>
-
-
 </head>
 
 <body class="dark-edition">
@@ -242,6 +211,11 @@ input .form-control{
       <!--Side Bar End-->
       </div>
     <div class="main-panel">
+       <!--toggle button-->
+  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+     <input type="checkbox" id="switch" name="theme">
+     <label id="toggleButton" for="switch">Toggle</label>
+  </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
@@ -255,15 +229,7 @@ input .form-control{
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
+           
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
@@ -306,15 +272,15 @@ input .form-control{
         <div class="container-fluid" style="background-color: #EEEEEE">
           <form>
           <div class="row"  > 
-            <div class="col-md-12" id="carrd2"  > <!--grey color-->
-              <div class="card"id="cardh" style="background-color: rgba(255, 255, 255, 0.76)" >   <!--background white color-->
+            <div class="col-md-12" id="mainColumn"  > <!--grey color-->
+              <div class="card"id="cardh" >   <!--background white color-->
                 <div class="card-header card-header-primary " >
                   <h4 id="cardh" class="card-title">Criminal / Criminal Court</h4 >
                 </div>
                 <div class="card-body">
                       <!--first row-->
                      <!--first row-->
-                     <div class="row" style="margin-left:1%;margin-top:2%;">
+                     <div class="row" style="margin-left:1%;margin-top:1%;">
                       <div class="col-md-1">
                         <div class="form-group">
                           <label class="bmd-label-floating">DOB</label>
@@ -340,7 +306,7 @@ input .form-control{
                       </div>
     
                        <!--Second row-->
-                       <div class="row"style="margin-left:1%;margin-top:2%;" >
+                       <div class="row"style="margin-left:1%;margin-top:1%;" >
                         
                         <div class="col-md-4">
                           <div class="form-group">
@@ -363,7 +329,7 @@ input .form-control{
                       </div>
   
                       <!--Third row-->
-                      <div class="row"style="margin-left:1%;margin-top:2%;" >
+                      <div class="row"style="margin-left:1%;margin-top:1%;" >
                         
                         <div class="col-md-4">
                           <div class="form-group">
@@ -387,7 +353,7 @@ input .form-control{
   
   
                        <!--Fourth row-->
-                       <div class="row"style="margin-left:1%;margin-top:2%;" >
+                       <div class="row"style="margin-left:1%;margin-top:1%;" >
                         
                         <div class="col-md-4">
                           <div class="form-group">
@@ -413,7 +379,7 @@ input .form-control{
               </div>
             </div>
            
-      <footer class="footer">
+      <!-- <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
@@ -444,7 +410,7 @@ input .form-control{
             <a style="color: black;" href="https://www.creative-tim.com" target="_blank">Creative Team</a> for a better web.
           </div>
         </div>
-      </footer>
+      </footer> -->
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');
@@ -520,6 +486,45 @@ input .form-control{
     </div>
   </div>-->
    <!--   Core JS Files   -->
+   <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
    <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
