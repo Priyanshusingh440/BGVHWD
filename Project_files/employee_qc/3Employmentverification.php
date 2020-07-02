@@ -61,38 +61,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   
  
-<style>
 
-[type="date"] {
-  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-}
-[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 100;
-}
-
-#exampleRadios1 {
-
-background:red;
-
-border:2px solid red;
-}
-input .form-control{
- margin-top: 100px;       
-}
-
-.form-control{
-  margin-top: 30px !important;
-}
-
-
-
-</style>
-
-
-</head>
 
 <body class="dark-edition">
 <div class="wrapper">
@@ -242,6 +211,11 @@ input .form-control{
       <!--Side Bar End-->
       </div>
     <div class="main-panel">
+        <!--toggle button-->
+  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+     <input type="checkbox" id="switch" name="theme">
+     <label id="toggleButton" for="switch">Toggle</label>
+  </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
@@ -255,15 +229,7 @@ input .form-control{
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-default btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
+           
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
@@ -306,14 +272,14 @@ input .form-control{
         <div class="container-fluid" style="background-color: #EEEEEE">
           <form>
           <div class="row"  > 
-            <div class="col-md-12" id="carrd2"  > <!--grey color-->
-              <div class="card"id="cardh" style="background-color: rgba(255, 255, 255, 0.76)" >   <!--background white color-->
+            <div class="col-md-12" id="mainColumn" > 
+              <div class="card"id="cardh">   <!--background white color-->
                 <div class="card-header card-header-primary " >
                   <h4 id="cardh" class="card-title">Employment Verification</h4 >
                 </div>
                 <div class="card-body">
                     <!--first row-->
-                    <div class="row" style="margin-left:1%;margin-top:2%;">
+                    <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Employee Name</label>
@@ -335,7 +301,7 @@ input .form-control{
                       </div>
     
                        <!--Second row-->
-                       <div class="row" style="margin-left:1%;margin-top:2%;">
+                       <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Contact Current Employer</label>
@@ -357,7 +323,7 @@ input .form-control{
                       </div>
     
                       <!--Third row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Last Desination</label>
@@ -379,7 +345,7 @@ input .form-control{
                       </div>
     
                       <!--Fourth row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Address</label>
@@ -402,7 +368,7 @@ input .form-control{
     
     
                       <!--Fifth row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Country</label>
@@ -424,7 +390,7 @@ input .form-control{
                       </div>
     
                       <!--Sixth row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Report Manager Contact Number <Code></Code></label>
@@ -447,7 +413,7 @@ input .form-control{
   
   
                        <!--Seventh row-->
-                       <div class="row" style="margin-left:1%;margin-top:2%;">
+                       <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">HR Contact Number <Code></Code></label>
@@ -470,7 +436,7 @@ input .form-control{
   
   
                       <!--Eight row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:1%;">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Eligible For Rehire <Code></Code></label>
@@ -487,55 +453,55 @@ input .form-control{
     
                       
                       <!--ninth row-->
-                      <div style="margin-left:1%;margin-top:2%;" class="row" style="margin-bottom: 1%;"> 
+                      <div style="margin-left:1%;margin-top:4%;" class="row" style="margin-bottom: 1%;"> 
                         <div class="col-md-3">
-                          <label class="bmd-label-floating">Can We Ignore This Employer For Verification <Code></Code></label>
+                          <label id="ignoreVerification" class="bmd-label-floating">Can We Ignore This Employer For Verification <Code></Code></label>
                         </div>
     
     
     
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios" value="option1" checked>
-                          <label class="form-check-label" for="exampleRadios1">Yes</label>
+                          <input type="radio" class="form-check-input" name="ignoreVerification" value="option1" checked>
+                          <label class="form-check-label" for="ignoreVerification">Yes</label>
                         </div>
     
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios" value="option1" >
-                          <label class="form-check-label" for="exampleRadios1">No</label>
+                          <input type="radio" class="form-check-input" name="ignoreVerification" value="option1" >
+                          <label class="form-check-label" for="ignoreVerification">No</label>
                         </div>
                       </div>
     
     
     
                        <!--Tenth row-->
-                       <div style="margin-left:1%;margin-top:2%;" class="row" style="margin-bottom: 1%;">
+                       <div style="margin-left:1%;margin-top:4%;" class="row" style="margin-bottom: 2%;">
                         <div class="col-md-3">
-                          <label class="bmd-label-floating">Are You Still Working With This Employer<Code></Code></label>
+                          <label id="workingEmployee"  class="bmd-label-floating">Are You Still Working With This Employer<Code></Code></label>
                         </div>
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios1" value="option1" >
-                          <label class="form-check-label" for="exampleRadios1">Yes</label>
+                          <input type="radio" class="form-check-input" name="workingEmployee" value="option1" >
+                          <label class="form-check-label" for="workingEmployee">Yes</label>
                         </div>
     
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios2" value="option2" >
-                          <label class="form-check-label" for="exampleRadios1">No</label>
+                          <input type="radio" class="form-check-input" name="workingEmployee" value="option2" >
+                          <label class="form-check-label" for="workingEmployee">No</label>
                         </div>   
                       </div>
   
                       <!--Eight row-->
-                      <div class="row" style="margin-left:1%;margin-top:2%;">
+                      <div class="row" style="margin-left:1%;margin-top:4%;">
                         <div class="col-md-3">
-                          <label class="bmd-label-floating">Is It Contractual Employment <Code></Code></label>
+                          <label id="contractualEmployee" class="bmd-label-floating">Is It Contractual Employment <Code></Code></label>
                         </div>
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios1" value="option1" >
-                          <label class="form-check-label" for="exampleRadios1">Yes</label>
+                          <input type="radio" class="form-check-input" name="contractualEmployee" value="option1" >
+                          <label class="form-check-label" for="contractualEmployee">Yes</label>
                         </div>
     
                         <div class="col-md-2">
-                          <input type="radio" class="form-check-input" name="exampleRadios2" value="option2" >
-                          <label class="form-check-label" for="exampleRadios1">No</label>
+                          <input type="radio" class="form-check-input" name="contractualEmployee" value="option2" >
+                          <label class="form-check-label" for="contractualEmployee">No</label>
                         </div>   
                       </div>
 
@@ -564,7 +530,7 @@ input .form-control{
               </div>
             </div>
            
-      <footer class="footer">
+      <!-- <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
@@ -595,7 +561,7 @@ input .form-control{
             <a style="color: black;" href="https://www.creative-tim.com" target="_blank">Creative Team</a> for a better web.
           </div>
         </div>
-      </footer>
+      </footer> -->
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');
@@ -670,6 +636,46 @@ input .form-control{
       </ul>
     </div>
   </div>-->
+   <!--mode changing-->
+   <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
    <!--   Core JS Files   -->
    <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>

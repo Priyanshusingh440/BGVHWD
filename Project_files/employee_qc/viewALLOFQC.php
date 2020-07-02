@@ -63,6 +63,10 @@
      <!--Switching modes-->
      <link rel="stylesheet" href="assets/css/style.css">
 
+     <!--pop ups-->
+     <link rel="stylesheet" href="popup.css">
+    
+
   </head>
 
   <body class="dark-edition">
@@ -79,134 +83,18 @@
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo"> <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
+    <img src="assets/img/logo.png" width="100%" height="100%" style="margin-left: 2%;" alt="">
       </a></div>
-        <!--Side Bar-->
-        <div class="sidebar-wrapper">
+         <!--Side Bar-->
+      <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="./adminDashboard_sidebar.php">
-                <i class="material-icons">dashboard</i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#client" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">person</i>
-                <p>Client</p></a
+              <a class="nav-link" href="./addOfQc.php">
+                <p>Add Of QC</p></a
               >
-              <div class="collapse" id="client">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addClient.php"
-                      >Add Client</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./modifyClient.php"
-                    >Modify Client</a >
-                    <li class="nav-item">                     
-                        <a class="nav-link" href="./assignService.php">Assign Services</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./LOB.php">LOB</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link" href="./createPackage.php">Assign Package</a>
-                     </li> 
-                </ul>
-              </div>
-            </li>
-            <li class="navbar-item">
-              <a href="#services" class="nav-link" data-toggle="collapse" >
-                <i class="material-icons">supervisor_account</i>
-                <p>Services</p></a>
-              <div class="collapse" id="services">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./serviceType.php"
-                      >Add Service Type</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./createService.php">Add Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./service.php
-                    "
-                      >Modify Service</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./package.php"
-                      >Create/Modilfy Package </a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./#"
-                      >Auto SLA </a
-                    >
-                  </li>
-
-                </ul>
-              </div>
-            </li>
-            <!-- <i class="material-icons">bubble_chart</i> -->
-             <li class="navbar-item">
-              <a href="#master" class="nav-link" data-toggle="collapse">
-                <i class="material-icons">library_books</i>
-                <p>Master</p></a > 
-
-                <div class="collapse" id="master">
-                  <ul class="list-unstyled nav">
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./mandatoryDocuments.php"
-                        >Mandatory Documents</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./standardMacro.php"
-                        >Standard Macro</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Auto SLA</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportColor.php"
-                        >Report Color Code</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./reportConfig.php"
-                        >Report Configuration Master</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" name href="./#"
-                        >Insufficient Emial Triggers</a
-                      >
-                    </li>
-                  </ul>
-                </div>             
-            </li>
-            <li class="navbar-item">
-              <a href="#user" class="nav-link" data-toggle="collapse"
-                ><i class="material-icons">account_circle</i>
-                <p>User</p></a >
-              <div class="collapse" id="user">
-                <ul class="list-unstyled nav">
-                  <li class="nav-item">
-                    <a class="nav-link" name href="./addModifyUser.php"
-                      >Add Modify User</a
-                    >
-                  </li> 
-                </ul>
-              </div>     
+            <li class="navbar-item active">
+              <a class="nav-link" href="./viewALLOFQC.php">
+                <p>View All</p></a>
             </li>
           </ul>
         </div>
@@ -401,12 +289,9 @@
                             Bangalore
                           </td>
                           <td class="text-primary tablehead1">
-                            <button
-                              type="button"
-                              class="btn btn-primary btn-sm"
-                            >
-                              View
-                            </button>
+                            <div class="box">
+                              <a class="button btn btn-primary" href="#popup1">View</a>
+                            </div>
                         </tr>
                         <tr>
                           <td class="tablehead1">
@@ -425,12 +310,9 @@
                             Mumbai
                           </td>
                           <td class="text-primary tablehead1">
-                            <button
-                              type="button"
-                              class="btn btn-primary btn-sm "
-                            >
-                              View
-                            </button>
+                            <div class="box">
+                              <a class="button btn btn-primary" href="#popup1">View</a>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -440,7 +322,205 @@
                 </div>
               </div>
               <!-- table end -->
-                              
+
+      <!--pop Up starts-->
+      <div id="popup1" class="overlay" style="font-size: 13px;">
+       	<div class="popup">
+	       	 <a class="close" href="#">&times;</a>
+		    <div class="content">
+        <div class="row justify-content-around">
+           <div class="col-md-4">
+             <p style="padding: 0; margin: 0;">Name</p>
+          </div>
+        <div class="col-md-3">
+            <p style="padding: 0; margin: 0;">Middle Name</p>
+        </div>
+        <div class="col-md-3">
+           <p style="padding: 0; margin: 0;">SurName</p>
+         </div>
+      </div>
+
+      <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Dob</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+           
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Permanent Address</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">State</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">City</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Temparary Address</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">State</p>
+       </div>
+       <div class="col-md-3">
+          <p  style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p  style="padding: 0; margin: 0;">City</p>
+       </div>
+       <div class="col-md-3">
+          <p  style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around" style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Email</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Contact</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Alternate Contact</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Pan Number</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Adhar Name</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Bank Name</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Account Number</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Position</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+       <div class="row justify-content-around"style="margin-bottom:4%; margin-top: 2%;">
+        <div class="col-md-4">
+           <p style="padding: 0; margin: 0;">Date Of Joining</p>
+       </div>
+       <div class="col-md-3">
+          <p style="padding: 0; margin: 0;"></p>
+       </div>
+         <div class="col-md-3">
+          
+         </div>
+       </div>
+		</div>
+	</div>
+</div>       
+
+ <!--pop up ends-->                            
                   </div>         
                 </div>
                  </div>
