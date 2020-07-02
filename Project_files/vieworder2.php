@@ -308,9 +308,13 @@
                           </select>
                         </div>
 
-                        <div class="form-group" style="margin-top:9%;">
+                        <div class="form-group search-client" style="margin-top:9%;">
                           <label for="clientName">Client Name</label>
-                          <select name="clientName" id="clientName" class="form-control optColor" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
+                          <div class="search active">
+                            <input name="clientName" id="clientName" type="text" class="form-control input" autocomplete="off" >
+                            <div class="client-select"></div>
+                          </div>
+                          <select style="opacity: 0; pointer-events: none;" name="clientName" id="clientName" class="form-control optColor" style="margin-top:3%;" id="exampleFormControlSelect1" onchange="myFunction(event)">
                             <option value="NULL_OPT" selected="" class=" bg-secondary text-light">---Select Search
                               Criteria---</option>
                           </select>
@@ -325,7 +329,7 @@
                         <div id="hide">
                           <div class="form-group">
                             <label>Search Criteria</label>
-                            <input type="text" name="SearchCriteria" style="display:none;" id="SearchCriteria" class="form-control" placeholder="Enter As Per Search Criteria" onkeyup="showCustomer()">
+                            <input type="text" name="SearchCriteria" style="display:none;" id="SearchCriteria" class="form-control" placeholder="Enter As Per Search Criteria" >
                           </div>
                         </div>
 
@@ -334,7 +338,7 @@
                           <div class="form-group">
                             <label class="bmd-label-static"></label>
                             <input id="user_id" name="user_id" type="hidden" value="<?php echo $unsa; ?>">
-                            <input onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
+                            <input type="date" name="OrderCreation" id="dateofbirth" class="form-control">
                           </div>
                         </div>
 
@@ -352,7 +356,7 @@
                             <div class="form-group">
                               <label class="bmd-label-static"></label>
 
-                              <input onchange="showCustomer();" type="date" name="OrderCreation" id="dateofbirth" class="form-control">
+                              <input type="date" name="OrderCreation" id="dateofbirth" class="form-control">
                             </div>
                           </div>
 
@@ -577,7 +581,7 @@
       <script src="assets/demo/demo.js"></script>
       <script src="vieworder2.js"></script>
       <script>
-        function test() {
+        function test() { 
           var dob = document.getElementById("dateofbirth");
           console.log(dob.value + "value");
         }

@@ -171,7 +171,7 @@ const updateModifyClientData = (d) => {
   // assignToDropDown()
 }
 
-
+ 
 const sendRequest = (url) => {
   fetch(url, {
       method: 'POST',
@@ -201,14 +201,19 @@ tbody ? tbody.onclick = (e) => {
 
 
 const clientName = document.querySelector("#clientName")
+const clientSelect = document.querySelector(".search-client .client-select")
+
+let allClientNames
 
 fetch("https://www.bgvhwd.xyz/Project_files/API/viewclient.php")
   .then(res => res.json())
   .then(data => {
     console.log(data)
     data.map(v => {
-      clientName.innerHTML += `<option value="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</option>`
+      // clientName.innerHTML += `<option value="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</option>`
+      clientSelect.innerHTML += `<div id="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</div>`
     })
+    allClientNames = data
   })
   .catch(err => console.log(err))
 
@@ -217,10 +222,48 @@ const clientNameDD = (e) => {
   // updateModifyClientData(newData2)
   console.log(e.target.value)
   globalClientId = e.target.id
-  getClientData(e.target.value)
+  getClientData(e.target.id)
 }
 
-clientName.addEventListener("change", clientNameDD)
+//client name search
+
+let clientNameDDInput = document.querySelector(".search-client input")
+let clientNameDDSelect = document.querySelector(".search-client select")
+let clientNameSearch = document.querySelector(".search-client .search")
+
+clientNameDDSelect.onclick = () => {
+  // clientNameDDInput.classList.add("active")
+  // clientNameDDInput
+}
+
+clientNameSearch.onmousedown = e => {
+  console.log(e.target.tagName)
+  clientNameDDInput.value = (e.target.tagName == "INPUT" ? e.target.value : e.target.textContent)
+  e.target.tagName != "INPUT" ? clientNameDD(e) : false
+}
+clientNameDDInput.onfocus = () => {
+  clientNameSearch.classList.add("active")
+}
+clientNameDDInput.onblur = () => {
+  clientNameSearch.classList.remove("active")
+}
+clientNameDDInput.onkeyup = () => {
+  let lowerCaseClientName = clientNameDDInput.value.toLowerCase()
+  console.log(lowerCaseClientName)
+  let newData2
+  newData2 = allClientNames.filter(v => {
+    let clientNameMatch = v['Client_Name'].toLowerCase().search(lowerCaseClientName) == 0 
+    return clientNameMatch
+  })
+  clientSelect.innerHTML = ``
+  newData2.map(v => {
+    // clientName.innerHTML += `<option value="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</option>`
+    clientSelect.innerHTML += `<div id="${v.Id}" selected="" class=" bg-secondary text-light">${v.Client_Name}</div>`
+  })
+  
+}
+
+// clientName.addEventListener("change", clientNameDD)
 
 
 const assignTo = document.querySelector(".assign-to")
@@ -289,5 +332,7 @@ const assignToDropDown2 = (e) => {
 
   data = {}
 }
+
+
 
 console.log("working all")
