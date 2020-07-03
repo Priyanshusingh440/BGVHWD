@@ -77,21 +77,21 @@ const previewAppear = (e) => {
 		tbody.innerHTML += `
 			<tr>
 				<td style="color: #3C4858 !important">${x}</td>
-				<td style="color: #3C4858 !important">${dataToShow[x]}</td>
+				<td style="color: #3C4858 !important">${dataToShow[x]}</td> 
 			</tr>
 		`
 	}
 }
 
-const submit = (url) => {
-	return e => {
-		e.preventDefault()
+// const submit = (url) => {
+// 	return e => {
+// 		e.preventDefault()
 
-		sendRequest(url)
+// 		sendRequest(url)
 
-		data = {}
-	}
-}
+// 		data = {}
+// 	}
+// }
 
 
 
@@ -100,6 +100,47 @@ previewCancel.addEventListener("click", () => {
 	console.log('cancel')
 	preview.classList.remove("active")
 })
+
+console.log("working 2")
+
+
+// cxvnvmc
+const inpfile = document.getElementById('filexzc');
+let form = document.getElementById('ajax')
+let placeOrder = document.querySelector("#place-order")
+placeOrder.onclick = (e) => {
+	e.preventDefault()
+	// form.submit()
+	document.getElementById("ok").click()
+}
+form.addEventListener('submit', function (e) {
+	e.preventDefault();
+	// const formdata = new FormData(this);
+
+	// for (const file of inpfile.files) {
+	// 	formdata.append("myfiles[]", file);
+	// }	
+	getFormData()
+	console.log(data)
+	fetch('https://www.bgvhwd.xyz/Client/API/createorder.php', {
+			method: 'post',
+			body: data
+		})
+		.then(function (response) {
+			return response.text();
+		}).then(function (text) {
+			//	console.log(text);
+			if (text == "1") {
+				alert("Successfully Submitted");
+				location.reload()
+				//	window.location.href="Dashboard.php";
+			} else {
+				// console.log("laad chat liye");
+			}
+		})
+		.catch(console.error);
+
+});
 
 console.log("working all")
 
@@ -572,35 +613,3 @@ function getdocumentlist(d) {
 
 
 
-// cxvnvmc
-const inpfile = document.getElementById('filexzc');
-let form = document.getElementById('ajax')
-
-
-form.addEventListener('submit', function (e) {
-	e.preventDefault();
-	const formdata = new FormData(this);
-
-	for (const file of inpfile.files) {
-		formdata.append("myfiles[]", file);
-	}
-
-	fetch('API/createorder.php', {
-			method: 'post',
-			body: formdata
-		})
-		.then(function (response) {
-			return response.text();
-		}).then(function (text) {
-			//	console.log(text);
-			if (text == "1") {
-				alert("Successfully Submitted");
-				location.reload()
-				//	window.location.href="Dashboard.php";
-			} else {
-				console.log("laad chat liye");
-			}
-		})
-		.catch(console.error);
-
-});

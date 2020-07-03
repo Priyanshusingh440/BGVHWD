@@ -285,8 +285,6 @@
                           <div class="select custom-scroll">
 
                           </div>
-                          <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-                          <!-- <button class="btn btn-primary dd-btn" type="button">Choose Documents <i style="color: white;" class="material-icons">keyboard_arrow_down</i> </button> -->
                         </div>
 
                         <select style="margin-top:5%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>

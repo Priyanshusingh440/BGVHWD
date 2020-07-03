@@ -396,7 +396,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email ID</label>
-                          <input name="Email ID" type="email" class="form-control" />
+                          <input name="Email ID" type="email" class="form-control" autocomplete="off" />
                         </div>
                       </div>
                       <!--checkBoxes-->
@@ -502,7 +502,7 @@
                         <div class="form-group">
                           <label for="Password" class="bmd-label-floating">Password</label>
                           <div class="input-group">
-                            <input name="Password" type="password" class="form-control" />
+                            <input name="Password" type="password" class="form-control" autocomplete="off" />
                             <div class="input-group-addon eye">
                               <i class="fas fa-eye-slash"></i>
                             </div>
