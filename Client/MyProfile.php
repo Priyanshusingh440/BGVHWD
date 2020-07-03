@@ -346,11 +346,15 @@ else
                       </div> 
                     </div>
                     </div>
+                    <button class="btn btn-primary pull-right" > <label style="color:white !important" class="pull-right"> upload profile image
+                      <input type="file" id="path" class=" pull-right" style="display: none;">
                     
+                    </input></label></button>
                
                     <div class="clearfix"></div>
                   </form>
                   <input id="client_id" name="client_id" class="unique-hidden-input" type="hidden" value="<?php echo $unsa;?>">
+
 
                 </div>
               </div>
