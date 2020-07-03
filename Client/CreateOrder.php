@@ -587,8 +587,7 @@ else
           </table>
           <div class="row justify-content-center preview-btns" style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
 
-            <button type="button" id="place-order" class="btn btn-primary pull-left" style="margin-left:4%;">Place
-              Order</button>
+            <button type="button" id="place-order" class="btn btn-primary pull-left" style="margin-left:4%;">Place Order</button>
             <div class="clearfix"></div>
 
             <button type="button" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
