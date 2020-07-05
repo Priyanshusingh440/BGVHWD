@@ -423,8 +423,73 @@
                             Download Format
                           </button>
                           <button type="button" class="btn btn-primary">
-                            Upload Excel
+                            <input type="file" name="" id="input-excel">
                           </button>
+                          <table id="upload-excel-table">
+                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                              <th>
+                                Country
+                              </th>
+                              <th>
+                                Service
+                              </th>
+                              <th>
+                                Service Type
+                              </th>
+                              <th>
+                                Price
+                              </th>
+                              <th>
+                                Currency
+                              </th>
+                              <th>
+                                Add Documents
+                              </th>
+                            </thead>
+                            <tbody></tbody>
+                            <!-- <tbody>
+                              <tr>
+                                <td>
+                                  india
+                                </td>
+                                <td>
+                                  7th marksheet
+                                </td>
+                                <td>
+                                  education verification
+                                </td>
+                                <td>
+                                  300
+                                </td>
+                                <td>
+                                  INR
+                                </td>
+                                <td>
+                                  7th, 10th
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  india
+                                </td>
+                                <td>
+                                  8th marksheet
+                                </td>
+                                <td>
+                                  education verification
+                                </td>
+                                <td>
+                                  500
+                                </td>
+                                <td>
+                                  INR
+                                </td>
+                                <td>
+                                  5th, 8th
+                                </td>
+                              </tr>
+                            </tbody> -->
+                          </table>
                         </div>
                       </div>
                     </div>

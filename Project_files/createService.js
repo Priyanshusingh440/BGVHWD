@@ -1,7 +1,7 @@
-var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"Sheet JS"});
+var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"all services"});
 var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
 
-var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"Sheet JS"});
+var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"all services"});
 var format = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
 
 function s2ab(s) {
@@ -17,6 +17,46 @@ $("#download-excel").click(function(){
 $("#download-format").click(() => {
   saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
 })
+
+// extractData from table, table to json
+const extractData = () => {
+  // Loop through grabbing everything
+  var myRows = [];
+  var $headers = $("#upload-excel-table th");
+  var $rows = $("#upload-excel-table tr").each(function(index) {
+    $cells = $(this).find("td");
+    myRows[index] = {};
+    $cells.each(function(cellIndex) {
+      myRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
+    });    
+  });
+  
+  myRows.shift()
+  myRows.shift()
+  console.log(myRows)
+}
+
+
+$('#input-excel').change(function(e){
+  var reader = new FileReader();
+  reader.readAsArrayBuffer(e.target.files[0]);
+  reader.onload = function(e) {
+          var data = new Uint8Array(reader.result);
+          var wb = XLSX.read(data,{type:'array'});
+          // console.log(wb)
+          var htmlstr = XLSX.write(wb,{sheet:"all services", type:'binary',bookType:'html'});
+          var elem = document.querySelector('#upload-excel-table tbody');
+          elem.parentNode.removeChild(elem);
+          $('#upload-excel-table')[0].innerHTML += htmlstr;
+          // console.log("hello")
+          console.log(htmlstr)
+          extractData()
+
+  }
+});
+
+
+
 
 
         //var e = document.getElementById("ClientName");
