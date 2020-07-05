@@ -32,21 +32,13 @@
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 
 
 
   <!--Switching modes-->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 
 <body class="dark-edition">
@@ -197,12 +189,14 @@
       </div>
 
       <!-- Navbar -->
-      <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+      <nav style="padding: 0; margin: 0;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
+        id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper" style="height: 70px;">
             <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Create Services</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -228,7 +222,8 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -244,7 +239,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <i style="color: white;" style="color: white;" class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -283,9 +279,11 @@
                   <form id="ajax" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-start">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Service
+                        <label for="Service Type" class="bmd-label-floating"
+                          style="margin-left: 4%; font-size: 13px;">Service
                           Type</label>
-                        <select style="margin-top: 1%;" id="select_service_type" name="service_type_id" onchange="T3();"//getservice(this.value); class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="select_service_type" name="service_type_id" onchange="T3();"
+                          class="browser-default custom-select" required>
                         </select>
                       </div>
                     </div>
@@ -293,7 +291,8 @@
                       <div class="form-group col-md-4">
                         <label for="service_name" class="bmd-label-floating" style="margin-left: 4%;">Service
                           Name</label>
-                        <input id="Service Name" name="service_name" type="text" onchange="T3();" class="form-control" placeholder="" />
+                        <input id="Service Name" name="service_name" type="text" onchange="T3();" class="form-control"
+                          placeholder="" />
                       </div>
                       <button class="btn btn-primary" onclick=" TestIT2();">Add</button>
                     </div>
@@ -304,13 +303,13 @@
                       </button>
                     </div>
                     <hr />
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header card-header-primary">
                             <h4 style="color: white;" class="card-title">Service List</h4>
                           </div>
-                          <table class="table table-hover" style="margin-top: 4%;">
+                          <table id="whole-table" class="table table-hover" style="margin-top: 4%;">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
                                 Sr No.
@@ -342,27 +341,87 @@
                               </th>
                             </thead>
                             <tbody id="table">
-
+                              <tr>
+                                <td>
+                                  1
+                                </td>
+  
+                                <td>
+                                  7th marksheet
+                                </td>
+                                <td>
+                                  education verification
+                                </td>
+                                <td>
+                                  india
+                                </td>
+                                <td>
+                                  INR
+                                </td>
+                                <td>
+                                  300
+                                </td>
+                                <td>
+                                  Edit
+                                </td>
+                                <td>
+                                  Delete
+                                </td>
+                                <td>
+                                  7th, 10th
+                                </td>
+                              </tr>
                             </tbody>
+                          </table>
+                          <table class="downloadable-table sr-only">
+                            <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                              <th>
+                                Service
+                              </th>
+                              <th>
+                                Service Type
+                              </th>
+                              <th>
+                                Country
+                              </th>
+                              <th>
+                                Currency
+                              </th>
+                              <th>
+                                Price
+                              </th>
+                              <th>
+                                Add Documents
+                              </th>
+                            </thead>
+                            <table>
+
+                            </table>
                           </table>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </form>
                   <form id="ajax2" style="margin-top: 4%; display: none;">
                     <div class="row justify-content-between">
                       <div class="form-group col-md-4">
-                        <label for="Service Type" class="bmd-label-floating " style="margin-left: 4%;font-size: 13px;">Service
+                        <label for="Service Type" class="bmd-label-floating "
+                          style="margin-left: 4%;font-size: 13px;">Service
                           Type</label>
-                        <select style="margin-top: 1%;" id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="select_service_type1" onchange="T33();"
+                          name="select_service_type" class="browser-default custom-select" required>
                         </select>
                       </div>
                       <div class="form-group col-md-6">
                         <div class="row justify-content-around">
-                          <a href="docs/book1.xlsx" download>
-                            <button type="button" class="btn btn-primary">
-                              Download Excel
-                            </button></a>
+                          <!-- <a href="docs/book1.xlsx" download> -->
+                          <button id="download-excel" type="button" class="btn btn-primary">
+                            Download Excel
+                          </button>
+                          <!-- </a> -->
+                          <button id="download-format" type="button" class="btn btn-primary">
+                            Download Format
+                          </button>
                           <button type="button" class="btn btn-primary">
                             Upload Excel
                           </button>
@@ -371,9 +430,11 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Service
+                        <label for="Service Name" class="bmd-label-floating"
+                          style="margin-left: 4%;font-size: 13px;">Service
                           Name</label>
-                        <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control" required>
+                        <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control"
+                          required>
                           <option selected>Choose...</option>
                           <option>fgg</option>
                         </select>
@@ -381,9 +442,12 @@
                     </div>
                     <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="form-group col-md-4">
-                        <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Select
+                        <label for="Service Name" class="bmd-label-floating"
+                          style="margin-left: 4%;font-size: 13px;">Select
                           Country</label>
-                        <select style="margin-top: 1%;" id="locality-dropdown" name="country" onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select" required>
+                        <select style="margin-top: 1%;" id="locality-dropdown" name="country"
+                          onclick="getpackage(this.value)" onchange="T33();" class="browser-default custom-select"
+                          required>
                         </select>
                       </div>
 
@@ -398,7 +462,7 @@
                       </button>
                     </div>
                     <hr />
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header card-header-primary">
@@ -438,10 +502,148 @@
                           </table>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </form>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header card-header-primary">
+                      <h4 style="color: white;" class="card-title">Service List</h4>
+                    </div>
+                    <table id="whole-table" class="table table-hover" style="margin-top: 4%;">
+                      <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                        <th>
+                          Sr No.
+                        </th>
+                        <th>
+                          Country
+                        </th>
+                        <th>
+                          Service
+                        </th>
+                        <th>
+                          Service Type
+                        </th>
+                        <th>
+                          Price
+                        </th>
+                        <th>
+                          Currency
+                        </th>
+                        <th>
+                          Add Documents
+                        </th>
+                        <th>
+                          Edit
+                        </th>
+                        <th>
+                          Delete
+                        </th>
+                      </thead>
+                      <tbody id="table">
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            india
+                          </td>
+                          <td>
+                            7th marksheet
+                          </td>
+                          <td>
+                            education verification
+                          </td>
+                          <td>
+                            300
+                          </td>
+                          <td>
+                            INR
+                          </td>
+                          <td>
+                            7th, 10th
+                          </td>
+                          <td>
+                            Edit
+                          </td>
+                          <td>
+                            Delete
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="downloadable-table" class="sr-only">
+                      <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                        <th>
+                          Country
+                        </th>
+                        <th>
+                          Service
+                        </th>
+                        <th>
+                          Service Type
+                        </th>
+                        <th>
+                          Price
+                        </th>
+                        <th>
+                          Currency
+                        </th>
+                        <th>
+                          Add Documents
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            india
+                          </td>
+                          <td>
+                            7th marksheet
+                          </td>
+                          <td>
+                            education verification
+                          </td>
+                          <td>
+                            300
+                          </td>
+                          <td>
+                            INR
+                          </td>
+                          <td>
+                            7th, 10th
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table id="format-table" class="sr-only">
+                      <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                        <th>
+                          Country
+                        </th>
+                        <th>
+                          Service
+                        </th>
+                        <th>
+                          Service Type
+                        </th>
+                        <th>
+                          Price
+                        </th>
+                        <th>
+                          Currency
+                        </th>
+                        <th>
+                          Add Documents
+                        </th>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -502,21 +704,19 @@
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
+  <!-- <script src="https://unpkg.com/default-passive-events"></script> -->
+  <script src="assets/js/plugins/xlsx.full.min.js"></script>
+  <script src="assets/js/plugins/FileSaver.min.js"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="assets/demo/demo.js"></script>
-  <script src="updateservice.js"></script>
+  <!-- <script src="updateservice.js"></script> -->
   <script src="createService.js"></script>
   <script>
     function formReset() {
@@ -525,7 +725,7 @@
 
     var button1 = document.getElementById("createNew");
     var button2 = document.getElementById("updateService");
-    button1.onclick = function() {
+    button1.onclick = function () {
       var div1 = document.getElementById("ajax");
       var div2 = document.getElementById("ajax2");
       if (div1.style.display !== "none") {
@@ -552,7 +752,7 @@
 
         fetch(service)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -561,7 +761,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -573,7 +773,7 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         if (button2.classList.contains("btn-success")) {
@@ -582,7 +782,7 @@
         }
       }
     };
-    button2.onclick = function() {
+    button2.onclick = function () {
       var div1 = document.getElementById("ajax");
       var div2 = document.getElementById("ajax2");
       if (div2.style.display !== "none") {
@@ -617,7 +817,7 @@
 
         fetch(service)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -626,7 +826,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -638,12 +838,12 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         fetch(locality)
           .then(
-            function(response) {
+            function (response) {
               console.log("hi");
               if (response.status !== 200) {
                 console.warn('Looks like there was a problem. Status Code: ' +
@@ -652,7 +852,7 @@
               }
 
               // Examine the text in the response
-              response.json().then(function(data) {
+              response.json().then(function (data) {
                 let option;
 
                 for (let i = 0; i < data.length; i++) {
@@ -664,7 +864,7 @@
               });
             }
           )
-          .catch(function(err) {
+          .catch(function (err) {
             console.error('Fetch Error -', err);
           });
         if (button1.classList.contains("btn-success")) {
@@ -674,8 +874,8 @@
       }
     };
 
-    $(document).ready(function() {
-      $().ready(function() {
+    $(document).ready(function () {
+      $().ready(function () {
         $sidebar = $(".sidebar");
 
         $sidebar_img_container = $sidebar.find(".sidebar-background");
@@ -686,7 +886,7 @@
 
         window_width = $(window).width();
 
-        $(".fixed-plugin a").click(function(event) {
+        $(".fixed-plugin a").click(function (event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
           if ($(this).hasClass("switch-trigger")) {
             if (event.stopPropagation) {
@@ -697,7 +897,7 @@
           }
         });
 
-        $(".fixed-plugin .active-color span").click(function() {
+        $(".fixed-plugin .active-color span").click(function () {
           $full_page_background = $(".full-page-background");
 
           $(this).siblings().removeClass("active");
@@ -718,7 +918,7 @@
           }
         });
 
-        $(".fixed-plugin .background-color .badge").click(function() {
+        $(".fixed-plugin .background-color .badge").click(function () {
           $(this).siblings().removeClass("active");
           $(this).addClass("active");
 
@@ -729,7 +929,7 @@
           }
         });
 
-        $(".fixed-plugin .img-holder").click(function() {
+        $(".fixed-plugin .img-holder").click(function () {
           $full_page_background = $(".full-page-background");
 
           $(this).parent("li").siblings().removeClass("active");
@@ -741,7 +941,7 @@
             $sidebar_img_container.length != 0 &&
             $(".switch-sidebar-image input:checked").length != 0
           ) {
-            $sidebar_img_container.fadeOut("fast", function() {
+            $sidebar_img_container.fadeOut("fast", function () {
               $sidebar_img_container.css(
                 "background-image",
                 'url("' + new_image + '")'
@@ -758,7 +958,7 @@
               .find("img")
               .data("src");
 
-            $full_page_background.fadeOut("fast", function() {
+            $full_page_background.fadeOut("fast", function () {
               $full_page_background.css(
                 "background-image",
                 'url("' + new_image_full_page + '")'
@@ -793,7 +993,7 @@
           }
         });
 
-        $(".switch-sidebar-image input").change(function() {
+        $(".switch-sidebar-image input").change(function () {
           $full_page_background = $(".full-page-background");
 
           $input = $(this);
@@ -825,7 +1025,7 @@
           }
         });
 
-        $(".switch-sidebar-mini input").change(function() {
+        $(".switch-sidebar-mini input").change(function () {
           $body = $("body");
 
           $input = $(this);
@@ -840,7 +1040,7 @@
               "destroy"
             );
 
-            setTimeout(function() {
+            setTimeout(function () {
               $("body").addClass("sidebar-mini");
 
               md.misc.sidebar_mini_active = true;
@@ -848,12 +1048,12 @@
           }
 
           // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
+          var simulateWindowResize = setInterval(function () {
             window.dispatchEvent(new Event("resize"));
           }, 180);
 
           // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
+          setTimeout(function () {
             clearInterval(simulateWindowResize);
           }, 1000);
         });
@@ -861,11 +1061,11 @@
     });
 
     let form = document.getElementById("ajax");
-    $(form).submit(function(event) {
+    $(form).submit(function (event) {
       var formdata = $("form").serializeArray();
       //console.log(formdata);
       var data = {};
-      $(formdata).each(function(index, obj) {
+      $(formdata).each(function (index, obj) {
         if (obj.name !== "Service Name") {
           data[obj.name] = obj.value;
         }
@@ -876,7 +1076,7 @@
       fetch('./API/createService.php', {
         method: 'post',
         body: JSON.stringify(data)
-      }).then(function(res) {
+      }).then(function (res) {
         console.log(res.text());
         formReset();
       }).catch(err => {
@@ -887,11 +1087,11 @@
     });
     $.ajax;
     let form2 = document.getElementById("ajax2");
-    $(form2).submit(function(event) {
+    $(form2).submit(function (event) {
       var formdata = $("form").serializeArray();
       //console.log(formdata);
       var data = {};
-      $(formdata).each(function(index, obj) {
+      $(formdata).each(function (index, obj) {
         data[obj.name] = obj.value;
 
       });
@@ -900,7 +1100,7 @@
       fetch('./API/createService.php', {
         method: 'post',
         body: JSON.stringify(data)
-      }).then(function(res) {
+      }).then(function (res) {
         console.log(res.text());
         formReset();
       }).catch(err => {
@@ -911,7 +1111,7 @@
     });
     $.ajax2;
   </script>
-  <script src="js/createorder12.js"></script>
+  <!-- <script src="js/createorder12.js"></script> -->
 </body>
 
 </html>

@@ -1,3 +1,23 @@
+var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"Sheet JS"});
+var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"Sheet JS"});
+var format = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+function s2ab(s) {
+  var buf = new ArrayBuffer(s.length);
+  var view = new Uint8Array(buf);
+  for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+  return buf;
+}
+$("#download-excel").click(function(){
+  saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'all-services.xlsx');
+});
+
+$("#download-format").click(() => {
+  saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
+})
+
 
         //var e = document.getElementById("ClientName");
         //var strUser = e.options[e.selectedIndex].value;
@@ -14,7 +34,7 @@
  //Add        
 
 function TestIT2(){
-    ser = e2.options[e2.selectedIndex].value;
+    ser = e2.options[e2.selectedIndex].value; 
     dob = dob2.value;
         console.log("test it function 1");
         $.post("./API/createService.php",
