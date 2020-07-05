@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/my-login.css" />
     <style>
       body{
-        background: url("login.jpg");
+        background: url("./assets/img/blue2.jpg");
         background-size: cover;
         background-position: center;
       

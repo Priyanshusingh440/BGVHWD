@@ -49,9 +49,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <link rel="shortcut icon" href="../favicon.ico"> 
-    <link rel="stylesheet" type="text/css" href="assets/css/Demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/IndexDemo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/indexStyle.css" />
-   <script type="text/javascript" src="assets/js/SlideEffects.js"></script>
+   <script type="text/javascript" src="assets/js/IndexSlideEffects.js"></script>
    <style>
       
  #LogoAnimation{

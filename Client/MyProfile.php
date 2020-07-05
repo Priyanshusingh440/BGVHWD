@@ -75,7 +75,7 @@ else
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item  ">
             <a class="nav-link" href="ClientViewOrder.php">
               <i class="material-icons">content_paste</i>
               <p>View Orders</p>
@@ -99,7 +99,7 @@ else
               <p>Reports</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="MyProfile.php">
               <i class="material-icons">person</i>
               <p>My Profile</p>
@@ -346,14 +346,15 @@ else
                       </div> 
                     </div>
                     </div>
-                    <button class="btn btn-primary pull-right"> <label class="pull-right"> upload profile image
+                    <button class="btn btn-primary pull-right" > <label style="color:white !important" class="pull-right"> upload profile image
                       <input type="file" id="path" class=" pull-right" style="display: none;">
-                      
+                    
                     </input></label></button>
                
                     <div class="clearfix"></div>
                   </form>
                   <input id="client_id" name="client_id" class="unique-hidden-input" type="hidden" value="<?php echo $unsa;?>">
+
 
                 </div>
               </div>
@@ -387,14 +388,7 @@ else
                     </a>
                   </div>
                   <div class="card-body">
-                    <h6 class="card-category">CEO / Co-Founder</h6>
-                    <h4 class="card-title">Alec Thompson</h4>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart
-                      the human foundation in truth And I love you like Kanye
-                      loves Kanye I love Rick Owens’ bed design but the back
-                      is...
-                    </p>
+                    <h6 class="card-category">Dell</h6>
                     <a href="#pablo" class="btn btn-primary btn-round"
                       >Follow</a
                     >
@@ -772,4 +766,3 @@ var val = val2.value;
   imag();
   </script>
 </body>
-

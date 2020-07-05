@@ -37,6 +37,74 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+.dropbtn{
+  text-align: left;
+  font-size: 14px;
+  background-color: white !important;
+  color:  rgba(0, 0, 0, 0.705) !important;
+  border: 1px solid rgba(128, 128, 128, 0.473) !important;
+  text-transform: inherit;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  z-index:100;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+ 
+.list i{
+   padding: 5px 10px 5px 10px;
+   cursor: pointer;
+}
+
+.list button{
+  border: 1px solid rgba(128, 128, 128, 0.527);
+  margin: 5px 10px 5px 10px;
+  border-radius: 2px;
+  font-size: 13px;
+
+
+}
+ </style>
 
 </head>
 
@@ -259,26 +327,78 @@
                   <form id="ajax">
                     <div class="row justify-content-around">
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
+                        <select style="margin-top: 1.5%; margin-top: 8%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
                           <option value="Select Services">Select Services</option>
                           <option value="India Address Verification">India Address Verification</option>
                         </select>
                       </div>
                       <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 2%;" class="browser-default custom-select" type="select" id="" name="second" style="color:#202940;" required>
-                          <option value="Birth Certificate">Birth Certificate</option>
-                          <option value="Adhar Card">Adhar Card</option>
-                          <option value="Last Name">Last Name</option>
-                          <option value="12th Marks Sheet">12th Marks Sheet</option>
-                          <option value="10th Marks Sheet">10th Marks Sheet</option>
-                          <option value="Pan Card">Pan Card</option>
-                        </select>
+                       
+                    <div class="dropdown">
+                   <label for="">Package Name</label>
+                    <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">Package Name</button>
+                      <div id="myDropdown" class="dropdown-content" style="height: 200px;">
+                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                       <ul style="list-style: none;">
+                         <li> <div class="form-check">
+                          <label class="form-check-label" style="margin-bottom:14px !important;">Address Package
+                            <input class="form-check-input Checking" name=""  type="checkbox" value="Address Package" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                       <li> <div class="form-check">
+                        <label class="form-check-label" style="margin-bottom:14px !important;">Criminal package
+                          <input class="form-check-input Checking" name="DOB" type="checkbox" value="Criminal package" >
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </li>
+                         <li> <div class="form-check">
+                          <label class="form-check-label" style="margin-bottom:14px !important;">Education
+                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="Education" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                         <li> <div class="form-check">
+                          <label class="form-check-label" style="margin-bottom:14px !important;">SSN
+                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="SSN" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                         <li> <div class="form-check">
+                          <label class="form-check-label" style="margin-bottom:14px !important;">Combo Package
+                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="Combo Package" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      </ul>  
+                   </div>
+                </div>
                       </div>
                     </div>
                     <div class="form-group shadow-textarea" style="margin-top:6% !important; margin-bottom: 2%;width: 90%; margin: auto;">
                       <label for="Email">Preview</label><br>
                       <div id="previewDiv" style="width: 100%; height: 140px; border: 1px solid rgba(128, 128, 128, 0.671); border-radius: 5px; ">
+                      <div class="list" style="padding: 10px;">
+                        <button class="btnClose">Adhar Card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
+                        <button class="btnClose">Pan Card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
+                        <button class="btnClose">10th marks card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
                       </div>
+                    </div>
                     </div>
 
                     <div class="row justify-content-end" style="margin-right: 5%;margin-top: 1%;">
@@ -362,8 +482,86 @@
       </script>
     </div>
   </div>
+  <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.getElementsByTagName("li");
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+
+      
+    // var items=document.getElementsByClassName("Checking")
+    // var selectedlist=[];
+    //  for(var i=0; i<items.length; i++)       
+    // {
+    //     if(items[i].checked==true) {
+    //        selectedlist.push(items[i].value)
+    //     }                
+    //  }
+
+
+    // for(var j=0; j<selectedlist.length; j++){
+
+  
+
+    //  let btn=document.createElement("button")
+    //  let text=document.createTextNode(selectedlist[j]); 
+    //  btn.appendChild(text)
+    //  btn.className="btnClose"
+
+
+    //  let icon=document.createElement("i")
+    //  icon.className="fa fa-times"
+    //  icon.setAttribute("aria-hidden",true)
+    
+    // $(".list").append(btn)
+    
+
+    //  btn.appendChild(icon)
+
+
+    //  console.log(btn)
+    // }
+
+
+
+
+
+
+
+
+
+
+   </script>
+
+
+
+
+
   <!--mode changing-->
   <script>
+    $(".btnClose").click(function(e){
+     $(this).hide();
+     
+    })
+
+
     $(".hidediv").hide()
     $(function() {
       $(".togglebtn").click(function() {
