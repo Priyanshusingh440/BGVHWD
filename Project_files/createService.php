@@ -357,7 +357,7 @@
                         <select style="margin-top: 1%;" id="select_service_type1" onchange="T33();" name="select_service_type" class="browser-default custom-select" required>
                         </select>
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-6" style="margin-top:4%">
                         <div class="row justify-content-around">
                           <a href="docs/book1.xlsx" download>
                             <button type="button" class="btn btn-primary">
@@ -366,15 +366,19 @@
                           <button type="button" class="btn btn-primary">
                             Upload Excel
                           </button>
+                          <button type="button" class="btn btn-primary">
+                            Download Formate
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div class="row justify-content-start" style="margin-top: 1%;">
+                    <hr style="margin-top:2%">
+                    <div class="row justify-content-start" style="margin-top: 3%;">
                       <div class="form-group col-md-4">
                         <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%;font-size: 13px;">Service
                           Name</label>
                         <select id="select_service_name" name="Service Name" onchange="T33();" class="form-control" required>
-                          <option selected>Choose...</option>
+                          <option class="optColor" selected >Choose...</option>
                           <option>fgg</option>
                         </select>
                       </div>

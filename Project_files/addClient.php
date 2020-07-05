@@ -68,7 +68,7 @@
             </a>
             <div class="collapse" id="client">
               <ul class="list-unstyled nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./addClient.php">Add Client</a>
                 </li>
                 <li class="nav-item">

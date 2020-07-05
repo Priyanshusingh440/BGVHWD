@@ -277,7 +277,7 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-between">
                       <div class="form-group col-md-4">
                         <label for="Country" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Country</label>
                         <select style="margin-top: 1%;" class="browser-default custom-select" type="select" id="locality-dropdown" name="country_id" style="color:#202940;" required>
@@ -290,7 +290,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-between">
                       <!-- <label for="Package Nmae" style="margin-left: 4%;"
                             >Package Name</label
                           >
@@ -309,18 +309,6 @@
                         <input name="Price" type="number" class="form-control" placeholder="" min="0" />
                       </div>
                     </div>
-
-
-
-                    <div class="row justify-content-around">
-
-                    </div>
-
-
-
-
-
-
                     <!-- <div class="form-group col-md-4 service-name-DD-wrapper">
                         <label for="Service Name" class="bmd-label-floating" style="margin-left: 4%; font-size: 13px;">Service
                           Name</label>
@@ -349,6 +337,49 @@
                     </div>
                   </form>
                 </div>
+                <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Package List</h4>
+                </div>
+                <div class="card-body">
+                <table class="table table-hover" style="margin-top: 4%;" >
+                   <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
+                        <th>
+                          Package Name
+                        </th>
+                        <th> 
+                          Country
+                        </th>
+                        <th>
+                          Service
+                        </th>
+                        <th>
+                         Currency
+                        </th>
+                        <th>
+                          Total Price
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tablehead1">Address</td>
+                          <td class="tablehead1">India</td>
+                          <td class="tablehead1">Address Services</td>
+                          <td class="tablehead1">Rupees</td>
+                          <td class="tablehead1">5000</td>
+                        </tr>            
+                        <tr>
+                          <td class="tablehead1">Education</td>
+                          <td class="tablehead1">India</td>
+                          <td class="tablehead1">Education Services</td>
+                          <td class="tablehead1">Rupees</td>
+                          <td class="tablehead1">7000</td>
+                        </tr>
+                      </tbody>
+                    </table>                  
+                 </div> 
+               </div>
+              <!--Table closed-->
               </div>
             </div>
           </div>

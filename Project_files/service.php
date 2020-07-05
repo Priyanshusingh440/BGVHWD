@@ -40,6 +40,61 @@
 
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .dropbtn{
+      text-align: left;
+      font-size: 14px;
+      background-color: white !important;
+      color:  rgba(0, 0, 0, 0.705) !important;
+      border: 1px solid rgba(128, 128, 128, 0.473) !important;
+      text-transform: inherit;
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #3e8e41;
+    }
+    
+    #myInput {
+      box-sizing: border-box;
+      background-image: url('searchicon.png');
+      background-position: 14px 12px;
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 14px 20px 12px 45px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #myInput:focus {outline: 3px solid #ddd;}
+    
+    .dropdown {
+      z-index: 100;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f6f6f6;
+      min-width: 230px;
+      overflow: auto;
+      border: 1px solid #ddd;
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+     
+     </style>
 </head>
 
 <body class="dark-edition">
@@ -280,19 +335,74 @@
                         <input type="text" class="form-control" name="service_name" placeholder="" required />
                       </div>
                     </div>
-
-
-                    <div class="row justify-content-start" style="margin-top: 1%; margin-left:0%;padding-top:30">
+                    <div class="row justify-content-start" style=" margin-left:0%;padding-top:30">
                       <div class="form-check col-md-4">
-                        <label class="form-check-label">
+                        <!-- <label class="form-check-label">
                           <input class="form-check-input" type="checkbox" name="isWeb" id="isWeb" value=1 />
                           Is Web Service
                           <span class="form-check-sign">
                             <span class="check"></span>
                           </span>
-                        </label>
+                        </label> -->
+                        <div class="dropdown" style="margin-top: 2%;">
+                          <label for="">Documents List</label>
+                           <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">Documents List </button>
+                             <div id="myDropdown" class="dropdown-content" style="height: 200px;">
+                               <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                              <ul style="list-style: none;">
+                                <li> <div class="form-check">
+                                 <label class="form-check-label" style="margin-bottom:14px !important;">Adhar Card
+                                   <input class="form-check-input Checking" name=""  type="checkbox" value="Adhar Card" checked>
+                                   <span class="form-check-sign">
+                                     <span class="check"></span>
+                                   </span>
+                                 </label>
+                               </div>
+                             </li>
+                              <li> <div class="form-check">
+                               <label class="form-check-label" style="margin-bottom:14px !important;">Pan Card
+                                 <input class="form-check-input Checking" name="DOB" type="checkbox" value="Pan Card" checked>
+                                 <span class="form-check-sign">
+                                   <span class="check"></span>
+                                 </span>
+                               </label>
+                             </div>
+                           </li>
+                                <li> <div class="form-check">
+                                 <label class="form-check-label" style="margin-bottom:14px !important;">10th Marks Card
+                                   <input class="form-check-input Checking" name="DOB" type="checkbox" value="10th Marks Card" checked>
+                                   <span class="form-check-sign">
+                                     <span class="check"></span>
+                                   </span>
+                                 </label>
+                               </div>
+                             </li>
+                                <li> <div class="form-check">
+                                 <label class="form-check-label" style="margin-bottom:14px !important;">PUC Marks Card
+                                   <input class="form-check-input Checking" name="DOB" type="checkbox" value="PUC Marks Card" checked>
+                                   <span class="form-check-sign">
+                                     <span class="check"></span>
+                                   </span>
+                                 </label>
+                               </div>
+                             </li>
+                                <li> <div class="form-check">
+                                 <label class="form-check-label" style="margin-bottom:14px !important;">Degree Marks Card
+                                   <input class="form-check-input Checking" name="DOB" type="checkbox" value="Degree Marks Card" checked>
+                                   <span class="form-check-sign">
+                                     <span class="check"></span>
+                                   </span>
+                                 </label>
+                               </div>
+                             </li>
+                             </ul>  
+                          </div>
+                       </div>
                       </div>
                     </div>
+                   
+                   
+                   
                     <div class="row justify-content-end">
                       <button type="submit" class="btn btn-primary mx-2" style="margin-right: 3%;">
                         Save
@@ -366,6 +476,42 @@
           </div>
         </div>
       </div>
+
+      <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.getElementsByTagName("li");
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+
+      
+    var items=document.getElementsByClassName("Checking")
+    var selectedlist=[];
+     for(var i=0; i<items.length; i++)       
+    {
+        if(items[i].type=='checkbox' && items[i].checked==true) {
+           selectedlist.push(items[i].value)
+        }                
+     }
+       alert(selectedlist);
+   </script>
+
 
       <script>
         const x = new Date().getFullYear();
