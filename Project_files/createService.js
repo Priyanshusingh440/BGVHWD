@@ -128,31 +128,23 @@ tableData.map((v, i) => {
   // uploadCompare[i].v = 
 })
 
-// console.log(uploadCompare)
 
 let notify
 
 let newServices = []
 const compareWithExistingData = () => {
-  console.log(newRows)
-  console.log(uploadCompare)
   newRows.map(v => {
     for (let i = 0; i < uploadCompare.length; i++) {
-      console.log("compare", "\n", JSON.stringify(v).toLocaleLowerCase(), "\n", JSON.stringify(uploadCompare[i]).toLocaleLowerCase())
-      console.log(JSON.stringify(v))
       if (JSON.stringify(v).toLocaleLowerCase() == JSON.stringify(uploadCompare[i]).toLocaleLowerCase()) {
-        console.log("not new")
         return
         console.log("running ", i)
       } else if (i == uploadCompare.length - 1) {
-        console.log("new ", v)
         newServices.push(v)
       }
 
     }
     // console.log("running2 ", v)
   })
-  console.log(newServices)
   newServices = []
 }
 
@@ -169,8 +161,6 @@ const extractData = () => {
       try {
         newRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
       } catch(err) {
-        // console.log(err.message)
-        console.log(err.name)
         if (err.name == "TypeError") {
           $.notify({
             // options
@@ -206,7 +196,6 @@ const extractData = () => {
   })
 
   newRows = allOrdered
-
 
   newRows.forEach(v => {
     v.add_documents = v.add_documents.split(",").map(v2 => v2.trim()).sort()
@@ -255,6 +244,78 @@ $('#input-excel').change(function(e){
   }
 });
 
+// document search
+let documentNames
+const documentNameDD = document.querySelector("#document-name")
+const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
+const searchField = document.querySelector(".search-field")
+
+var selected = [];
+
+const setDocumentNames = () => {
+  let options = ""
+  multipleSelectDD.innerHTML = ""
+  let lowercaseDocumentName = searchField.value.toLowerCase()
+
+  documentNames.map((v, i) => {
+    let docSearchMatch = v.document_name.toLowerCase().search(lowercaseDocumentName) == 0
+    docSearchMatch ? options += `<div id="${v.id}" data-index="${i}" class="bg-secondary text-light" ><span>${v.document_name}</span><i data-index="${i}" style="color: white;" class="material-icons remove">${v.active ? "check_box" : "check_box_outline_blank"}</i></div>` : false
+  })
+  multipleSelectDD.innerHTML += options
+}
+
+searchField.onkeyup = () => {
+  setDocumentNames()
+}
+
+fetch("https://www.bgvhwd.xyz/Project_files/API/assigndocuments.php")
+  .then(response => response.json())
+  .then(data => {
+    documentNames = data
+    documentNames.map(function (v) {
+      v.active = false;
+    });
+    console.log('document names', documentNames)
+    setDocumentNames()
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+let selectedDocuments = document.querySelector(".multiple-select-dd .selected")
+
+selectedDocuments.onmousedown = e => {
+  if (e.target.classList.contains("remove")) {
+    documentNames[e.target.getAttribute("data-index")].active = false
+  }
+  selectedFields()
+  setDocumentNames()
+}
+
+const selectedFields = () => {
+  selectedDocuments.innerHTML = ""
+
+  selected = []
+  documentNames.map((v, i) => {
+    v.active ? selected.push(v.id) : false
+    v.active ? selectedDocuments.innerHTML += `
+      <div class="doc"><span class="doc-name">${v.document_name}</span><i data-index="${i}" class="material-icons remove">cancel</i></div>
+    ` : false
+  })
+
+  if (selectedDocuments.innerHTML === "") {
+    return selectedDocuments.innerHTML = "Choose Documents"
+  }
+}
+
+multipleSelectDD.onmousedown = e => {
+  let target = e.target.getAttribute("data-index") || e.target.parentElement.getAttribute("data-index")
+  documentNames[target].active = !documentNames[target].active
+  selectedFields()
+  setDocumentNames()
+}
+
+
 let countrySelect = document.querySelector("#locality-dropdown")
 
 fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
@@ -266,6 +327,73 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
       countrySelect.innerHTML += `<option value="${v.id}">${v.country_name}</option>`
     })
   })
+
+
+// let data = {}
+
+const createSubmit = document.querySelector('#ajax'),
+  inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
+  inputFieldsArray = [...inputFields],
+  inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
+  inputRadiosArray = [...inputRadios],
+  inputCheckbox = document.querySelectorAll('#ajax input[type="checkbox"]'),
+  inputCheckboxArray = [...inputCheckbox],
+  select = document.querySelectorAll('#ajax select'),
+  selectArray = [...select],
+  inputCurrency = document.querySelector('#ajax select[name="currency"]')
+
+let jsonData = {}
+
+const sendRequest = (url) => {
+  fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(jsonData),
+    })
+    .then(response => response.text())
+    .then(data => {
+      if (data.trim() == "Service Assigned Successfully") {
+        alert(data)
+        getAllAssignService(`https://www.bgvhwd.xyz/Project_files/API/viewassignedservice.php`)
+      } else {
+        alert(data)
+      }
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+const submit = (url) => {
+  return e => {
+    console.log(e.keyCode)
+    if (e.keyCode !== 13) {
+      e.preventDefault()
+      let run = true
+      inputFieldsArray ? inputFieldsArray.map((value) => {
+        jsonData[value.name] = value.value
+      }) : false
+
+      // for (var option of document.getElementById('document-name').options) {
+      //   if (option.selected) {
+      //     selected.push(option.value);
+      //   } 
+      // }
+      console.log(selected)
+      jsonData["document_names"] = selected
+
+      selectArray ? selectArray.map(value => {
+        jsonData[value.name] = value.value
+      }) : false
+      if (run === true) {
+        sendRequest(url)
+      }
+      jsonData = {}
+    }
+  }
+}
+
+createSubmit.addEventListener("submit", submit("./API/createservice.php"))
 
 
 

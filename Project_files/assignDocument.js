@@ -72,18 +72,6 @@ const documentNameDD = document.querySelector("#document-name")
 const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
 const searchField = document.querySelector(".search-field")
 
-const documentSearch = () => {
-  let lowercaseDocumentName = searchField.value.toLowerCase()
-  let newData
-  newData = modifyClientData.filter(v => {
-    let clientCodeMatch = v.document_name.toLowerCase().search(lowercaseDocumentName) == 0
-    return clientCodeMatch 
-  })
-
-  setDocumentNames(newData)
-
-}
-
 var selected = [];
 
 const setDocumentNames = () => {
