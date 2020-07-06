@@ -1,28 +1,3 @@
-var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"all services"});
-var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
-
-var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"all services"});
-var format = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
-
-function s2ab(s) {
-  var buf = new ArrayBuffer(s.length);
-  var view = new Uint8Array(buf);
-  for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
-  return buf;
-}
-$("#download-excel").click(function(){
-  saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'all-services.xlsx');
-});
-
-$("#download-format").click(() => {
-  saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
-})
-
-const inputExcel = document.querySelector("#input-excel")
-$("#upload-btn").mousedown(() => {
-  inputExcel.click()
-})
-
 let tableData = [
   {
     id: 1,
@@ -46,27 +21,12 @@ let tableData = [
   }
 ]
 
-let uploadCompare = []
+let tbody = document.querySelector("#table")  
+let tbodyDownload = document.querySelector("#downloadable-table tbody")
 
-tableData.map((v, i) => {
-  uploadCompare[i] = {
-    add_documents: v.add_documents.sort(),
-    country_name: v.country_name,
-    currency: v.currency,
-    price: v.price,
-    service: v.service,
-    service_type: v.service_type
-  }
-  // uploadCompare[i].v = 
-})
-
-// console.log(uploadCompare)
-
-
-
-let tbody = document.querySelector("#table")
 const popuTable = () => {
   tbody.innerHTML = ""
+  tbodyDownload.innerHTML = ``
   tableData.map((v, i) => {
     tbody.innerHTML += `
       <tr>
@@ -99,16 +59,83 @@ const popuTable = () => {
         </td>
       </tr>
     `
+
+    tbodyDownload.innerHTML += `
+      <tr>
+        <td>
+          ${v.country_name}
+        </td>
+        <td>
+          ${v.service}
+        </td>
+        <td>
+          ${v.service_type}
+        </td>
+        <td>
+          ${v.price}
+        </td>
+        <td>
+          ${v.currency}
+        </td>
+        <td>
+          ${v.add_documents.join(", ")}
+        </td>
+      </tr>
+    `
+
   })
+
 }
 
 popuTable()
 
+var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"all services"});
+var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"all services"});
+var format = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+function s2ab(s) {
+  var buf = new ArrayBuffer(s.length);
+  var view = new Uint8Array(buf);
+  for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+  return buf;
+}
+$("#download-excel").click(function(){
+  saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'all-services.xlsx');
+});
+
+$("#download-format").click(() => {
+  saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
+})
+
+const inputExcel = document.querySelector("#input-excel")
+$("#upload-btn").mousedown(() => {
+  inputExcel.click()
+})
+
+let uploadCompare = []
+
+tableData.map((v, i) => {
+  uploadCompare[i] = {
+    add_documents: v.add_documents.sort(),
+    country_name: v.country_name,
+    currency: v.currency,
+    price: v.price,
+    service: v.service,
+    service_type: v.service_type
+  }
+  // uploadCompare[i].v = 
+})
+
+// console.log(uploadCompare)
+
+let notify
+
 let newServices = []
 const compareWithExistingData = () => {
-  console.log("newRows", newRows)
-  console.log("uploadCompare", uploadCompare)
-
+  console.log(newRows)
+  console.log(uploadCompare)
   newRows.map(v => {
     for (let i = 0; i < uploadCompare.length; i++) {
       console.log("compare", "\n", JSON.stringify(v).toLocaleLowerCase(), "\n", JSON.stringify(uploadCompare[i]).toLocaleLowerCase())
@@ -126,34 +153,46 @@ const compareWithExistingData = () => {
     // console.log("running2 ", v)
   })
   console.log(newServices)
+  newServices = []
 }
 
 // extractData from table, table to json
 var newRows = [];
 const extractData = () => {
+  // notify.update('title', "extracting data")
   // Loop through grabbing everything
   var $headers = $("#upload-excel-table th");
   var $rows = $("#upload-excel-table tr").each(function(index) {
     $cells = $(this).find("td");
     newRows[index] = {};
     $cells.each(function(cellIndex) {
-      newRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
+      try {
+        newRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
+      } catch(err) {
+        // console.log(err.message)
+        console.log(err.name)
+        if (err.name == "TypeError") {
+          $.notify({
+            // options
+            icon: 'error',
+            message: "Wrong format! Extra columns are not allowed!"
+          },{
+            // settings
+            type: 'danger'
+          })
+          console.log("Wrong format! Extra columns are not allowed!")
+          console.log(err)
+        } else {
+          console.log("Unexpected error")
+          console.log(err)
+        }
+        throw err
+      }
     });    
   });
   
   newRows.shift()
   newRows.shift()
-  // Object.keys(newRows).sort().forEach(function(key) {
-  //   console.log(newRows[key])
-  //   newRows[key] = newRows[key];
-  // });
-  // newRows.map(v => {
-  //   console.log(v.add_documents)
-  //   // v.add_documents.map(v2 => {
-  //   //   console.log(v2)
-  //   // })
-  // })
-
 
   let ordered = {}
   let allOrdered = []
@@ -177,6 +216,29 @@ const extractData = () => {
 
 
 $('#input-excel').change(function(e){
+
+  let file = document.querySelector("#input-excel").value.split(".")
+  if (file[file.length - 1].toLowerCase() != "xlsx") {
+    $.notify({
+      // options
+      icon: 'error',
+      message: `Only 'xlsx' is accepted. You uploaded ${file[file.length - 1]}`
+    },{
+      // settings
+      type: 'danger'
+    })
+    return
+  }
+  // notify = $.notify({
+  //   // options
+  //   icon: 'error',
+  //   message: ``
+  // },{
+  //   // settings
+  //   type: 'info'
+  // });
+  // notify.update('title', "uploading xlsx")
+  // notify.update('message', '...');
   var reader = new FileReader();
   reader.readAsArrayBuffer(e.target.files[0]);
   reader.onload = function(e) {

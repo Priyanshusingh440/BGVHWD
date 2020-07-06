@@ -29,6 +29,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/3aaaecc22c.js" crossorigin="anonymous"></script>
@@ -747,28 +748,7 @@
                       Add Documents
                     </th>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        india
-                      </td>
-                      <td>
-                        7th marksheet
-                      </td>
-                      <td>
-                        education verification
-                      </td>
-                      <td>
-                        300
-                      </td>
-                      <td>
-                        INR
-                      </td>
-                      <td>
-                        7th, 10th
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
               </div>
             </div>
