@@ -18,22 +18,161 @@ $("#download-format").click(() => {
   saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
 })
 
+const inputExcel = document.querySelector("#input-excel")
+$("#upload-btn").mousedown(() => {
+  inputExcel.click()
+})
+
+let tableData = [
+  {
+    id: 1,
+    random_data: "random data",
+    country_name: "India",
+    add_documents: ["7th", "8th", "-50"],
+    currency: "INR",
+    price: "500",
+    service: "7th marksheet",
+    service_type: "education verification"
+  },
+  {
+    id: 2,
+    random_data: "random data",
+    country_name: "USA",
+    add_documents: ["High school"],
+    currency: "USD",
+    price: "20",
+    service: "High school degree",
+    service_type: "education verification"
+  }
+]
+
+let uploadCompare = []
+
+tableData.map((v, i) => {
+  uploadCompare[i] = {
+    add_documents: v.add_documents.sort(),
+    country_name: v.country_name,
+    currency: v.currency,
+    price: v.price,
+    service: v.service,
+    service_type: v.service_type
+  }
+  // uploadCompare[i].v = 
+})
+
+// console.log(uploadCompare)
+
+
+
+let tbody = document.querySelector("#table")
+const popuTable = () => {
+  tbody.innerHTML = ""
+  tableData.map((v, i) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>
+          ${i + 1}
+        </td>
+        <td>
+          ${v.country_name}
+        </td>
+        <td>
+          ${v.service}
+        </td>
+        <td>
+          ${v.service_type}
+        </td>
+        <td>
+          ${v.price}
+        </td>
+        <td>
+          ${v.currency}
+        </td>
+        <td>
+          ${v.add_documents.join(", ")}
+        </td>
+        <td>
+          Edit
+        </td>
+        <td>
+          Delete
+        </td>
+      </tr>
+    `
+  })
+}
+
+popuTable()
+
+let newServices = []
+const compareWithExistingData = () => {
+  console.log("newRows", newRows)
+  console.log("uploadCompare", uploadCompare)
+
+  newRows.map(v => {
+    for (let i = 0; i < uploadCompare.length; i++) {
+      console.log("compare", "\n", JSON.stringify(v).toLocaleLowerCase(), "\n", JSON.stringify(uploadCompare[i]).toLocaleLowerCase())
+      console.log(JSON.stringify(v))
+      if (JSON.stringify(v).toLocaleLowerCase() == JSON.stringify(uploadCompare[i]).toLocaleLowerCase()) {
+        console.log("not new")
+        return
+        console.log("running ", i)
+      } else if (i == uploadCompare.length - 1) {
+        console.log("new ", v)
+        newServices.push(v)
+      }
+
+    }
+    // console.log("running2 ", v)
+  })
+  console.log(newServices)
+}
+
 // extractData from table, table to json
+var newRows = [];
 const extractData = () => {
   // Loop through grabbing everything
-  var myRows = [];
   var $headers = $("#upload-excel-table th");
   var $rows = $("#upload-excel-table tr").each(function(index) {
     $cells = $(this).find("td");
-    myRows[index] = {};
+    newRows[index] = {};
     $cells.each(function(cellIndex) {
-      myRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
+      newRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
     });    
   });
   
-  myRows.shift()
-  myRows.shift()
-  console.log(myRows)
+  newRows.shift()
+  newRows.shift()
+  // Object.keys(newRows).sort().forEach(function(key) {
+  //   console.log(newRows[key])
+  //   newRows[key] = newRows[key];
+  // });
+  // newRows.map(v => {
+  //   console.log(v.add_documents)
+  //   // v.add_documents.map(v2 => {
+  //   //   console.log(v2)
+  //   // })
+  // })
+
+
+  let ordered = {}
+  let allOrdered = []
+  newRows.forEach((v, i) => {
+    ordered = {}
+    Object.keys(newRows[i]).sort().forEach(function(key) {
+      // console.log(key)
+      ordered[key] = newRows[i][key];
+    });
+    allOrdered.push(ordered)
+  })
+
+  newRows = allOrdered
+
+
+  newRows.forEach(v => {
+    v.add_documents = v.add_documents.split(",").map(v2 => v2.trim()).sort()
+  })
+  compareWithExistingData()
 }
 
 
@@ -48,14 +187,23 @@ $('#input-excel').change(function(e){
           var elem = document.querySelector('#upload-excel-table tbody');
           elem.parentNode.removeChild(elem);
           $('#upload-excel-table')[0].innerHTML += htmlstr;
-          // console.log("hello")
-          console.log(htmlstr)
+
           extractData()
 
   }
 });
 
+let countrySelect = document.querySelector("#locality-dropdown")
 
+fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
+  .then(res => res.json())
+  .then(data => {
+    // console.log(data)
+    data.map(v => {
+
+      countrySelect.innerHTML += `<option value="${v.id}">${v.country_name}</option>`
+    })
+  })
 
 
 
