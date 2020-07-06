@@ -1,4 +1,4 @@
-console.log('working') 
+console.log('working')
 
 let data = {}
 
@@ -53,7 +53,7 @@ const setServiceType = () => {
   serviceType.map(v => {
     serviceTypeSelect.innerHTML += `<option value="${v.id}" class="bg-secondary text-light" >${v.service_type}</option>`
   })
-} 
+}
 
 const setServiceName = () => {
   serviceNameSelect.innerHTML = `<option selected="" class="bg-secondary text-light">Choose...</option>`
@@ -70,6 +70,19 @@ serviceTypeSelect.onchange = (e) => fetchServiceName(e)
 let documentNames
 const documentNameDD = document.querySelector("#document-name")
 const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
+const searchField = document.querySelector(".search-field")
+
+const documentSearch = () => {
+  let lowercaseDocumentName = searchField.value.toLowerCase()
+  let newData
+  newData = modifyClientData.filter(v => {
+    let clientCodeMatch = v.document_name.toLowerCase().search(lowercaseDocumentName) == 0
+    return clientCodeMatch 
+  })
+
+  setDocumentNames(newData)
+
+}
 
 var selected = [];
 
@@ -77,11 +90,18 @@ const setDocumentNames = () => {
   let options = ""
   multipleSelectDD.innerHTML = ""
   console.log(documentNames)
+  let lowercaseDocumentName = searchField.value.toLowerCase()
+
   documentNames.map((v, i) => {
-    console.log(v.active)
-    options += `<div id="${v.id}" data-index="${i}" class="bg-secondary text-light" ><span>${v.document_name}</span><i data-index="${i}" style="color: white;" class="material-icons remove">${v.active ? "check_box" : "check_box_outline_blank"}</i></div>`
+    let docSearchMatch = v.document_name.toLowerCase().search(lowercaseDocumentName) == 0
+    console.log(docSearchMatch)
+    docSearchMatch ? options += `<div id="${v.id}" data-index="${i}" class="bg-secondary text-light" ><span>${v.document_name}</span><i data-index="${i}" style="color: white;" class="material-icons remove">${v.active ? "check_box" : "check_box_outline_blank"}</i></div>` : false
   })
   multipleSelectDD.innerHTML += options
+}
+
+searchField.onkeyup = () => {
+  setDocumentNames()
 }
 
 fetch("https://www.bgvhwd.xyz/Project_files/API/assigndocuments.php")
@@ -91,7 +111,7 @@ fetch("https://www.bgvhwd.xyz/Project_files/API/assigndocuments.php")
     documentNames.map(function (v) {
       v.active = false;
     });
-    console.log('document names', documentNames) 
+    console.log('document names', documentNames)
     setDocumentNames()
   })
   .catch((error) => {
@@ -106,13 +126,13 @@ selectedDocuments.onmousedown = e => {
     documentNames[e.target.getAttribute("data-index")].active = false
   }
   selectedFields()
-  setDocumentNames() 
+  setDocumentNames()
 }
 
 const selectedFields = () => {
   // console.log(selectedDocuments)
   selectedDocuments.innerHTML = ""
-  
+
   selected = []
   documentNames.map((v, i) => {
     v.active ? selected.push(v.id) : false
@@ -172,22 +192,22 @@ const sendRequest = (url) => {
 const submit = (url) => {
   return e => {
     console.log(e.keyCode)
-    if(e.keyCode !== 13) {
+    if (e.keyCode !== 13) {
       e.preventDefault()
       console.log(e.target)
       console.log('submit')
       let run = true
-      inputFieldsArray ? inputFieldsArray.map((value) => { 
-          jsonData[value.name] = value.value
+      inputFieldsArray ? inputFieldsArray.map((value) => {
+        jsonData[value.name] = value.value
       }) : false
 
-        // for (var option of document.getElementById('document-name').options) {
-        //   if (option.selected) {
-        //     selected.push(option.value);
-        //   } 
-        // }
-        jsonData["document_names"] = selected
-        console.log(selected);
+      // for (var option of document.getElementById('document-name').options) {
+      //   if (option.selected) {
+      //     selected.push(option.value);
+      //   } 
+      // }
+      jsonData["document_names"] = selected
+      console.log(selected);
 
       selectArray ? selectArray.map(value => {
         jsonData[value.name] = value.value
