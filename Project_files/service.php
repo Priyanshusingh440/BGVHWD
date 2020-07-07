@@ -334,6 +334,31 @@
                         <label for="Service" style="margin-left: 4%;">Service</label>
                         <input type="text" class="form-control" name="service_name" placeholder="" required />
                       </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="Service Type" style="margin-left: 4%;">Document name</label>
+
+                        <div class="multiple-select-dd">
+                          <input type="text" placeholder="Search Documents..." class="search-field">
+                          <div class="selected">
+                            Choose Documents
+                          </div>
+                          <div class="select custom-scroll" >
+
+                          </div>
+                        </div>
+
+                        <select style="margin-top:5%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
+                          <option class='bg-secondary text-light' default not selected>Choose...</option>
+                        </select>
+                        <!-- <input type="text" list="cars" multiple/>
+                        <datalist id="cars" >
+                          <option>Volvo</option>
+                          <option>Saab</option>
+                          <option>Mercedes</option>
+                          <option>Audi</option>
+                        </datalist> -->
+                      </div>
                     </div>
                     <div class="row justify-content-start" style=" margin-left:0%;padding-top:30">
                       <div class="form-check col-md-4">
@@ -344,7 +369,7 @@
                             <span class="check"></span>
                           </span>
                         </label> -->
-                        <div class="dropdown" style="margin-top: 2%;">
+                        <!-- <div class="dropdown" style="margin-top: 2%;">
                           <label for="">Documents List</label>
                            <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">Documents List </button>
                              <div id="myDropdown" class="dropdown-content" style="height: 200px;">
@@ -397,7 +422,11 @@
                              </li>
                              </ul>  
                           </div>
-                       </div>
+                       </div> -->
+
+
+
+
                       </div>
                     </div>
                    
@@ -430,6 +459,9 @@
                               </th>
                               <th>
                                 Service Type
+                              </th>
+                              <th>
+                                Document List
                               </th>
                               <th>
                                 Edit
@@ -477,7 +509,7 @@
         </div>
       </div>
 
-      <script>
+      <!-- <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
         function myFunction() {
@@ -510,7 +542,7 @@
         }                
      }
        alert(selectedlist);
-   </script>
+   </script> -->
 
 
       <script>
@@ -565,20 +597,14 @@
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="assets/js/plugins/chartist.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="assets/demo/demo.js"></script>
+  <script src="service.js"></script>
   <script>
     function formReset() {
       document.getElementById("ajax").reset();
@@ -802,39 +828,39 @@
       });
     });
 
-    let form = document.getElementById("ajax");
-    $(form).submit(function(event) {
-      var formdata = $("form").serializeArray();
-      if (formdata.length == 2) {
-        formdata.push({
-          name: "isWeb",
-          value: "0"
-        })
-      }
-      //console.log(formdata);
-      var data = {};
-      $(formdata).each(function(index, obj) {
+    // let form = document.getElementById("ajax");
+    // $(form).submit(function(event) {
+    //   var formdata = $("form").serializeArray();
+    //   if (formdata.length == 2) {
+    //     formdata.push({
+    //       name: "isWeb",
+    //       value: "0"
+    //     })
+    //   }
+    //   //console.log(formdata);
+    //   var data = {};
+    //   $(formdata).each(function(index, obj) {
 
 
-        data[obj.name] = obj.value;
-      });
+    //     data[obj.name] = obj.value;
+    //   });
 
-      console.log(data);
-      fetch('./API/addService.php', {
-        method: 'post',
-        body: JSON.stringify(data)
-      }).then(function(res) {
-        //console.log(res);
-        alert('data saved success');
-        popuTable();
-        formReset();
-      }).catch(err => {
-        //console.log(err);
-        return err;
-      })
-      event.preventDefault();
-    });
-    $.ajax;
+    //   console.log(data);
+    //   fetch('./API/addService.php', {
+    //     method: 'post',
+    //     body: JSON.stringify(data)
+    //   }).then(function(res) {
+    //     //console.log(res);
+    //     alert('data saved success');
+    //     popuTable();
+    //     formReset();
+    //   }).catch(err => {
+    //     //console.log(err);
+    //     return err;
+    //   })
+    //   event.preventDefault();
+    // });
+    // $.ajax;
   </script>
 </body>
 

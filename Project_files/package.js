@@ -52,7 +52,7 @@ dropdown.selectedIndex = 0;
 const country = 'https://www.bgvhwd.xyz/Project_files/API/country.php';
 
 fetch(country)
-  .then(
+  .then( 
     function (response) {
       //  console.log("hi");
       if (response.status !== 200) {
