@@ -579,12 +579,15 @@ let form = document.getElementById('ajax')
 
 form.addEventListener('submit', function (e) {
 	e.preventDefault();
-	const formdata = new FormData(this);
+	var formdata = $("form").serializeArray();
+	//console.log(formdata);
+	var data = {};
+	$(formdata).each(function(index, obj) {
+	  if (obj.name !== "Service Name") {
+		data[obj.name] = obj.value;
+	  }
 
-	for (const file of inpfile.files) {
-		formdata.append("myfiles[]", file);
-	}
-
+	});
 	fetch('API/createorder.php', {
 			method: 'post',
 			body: formdata
@@ -602,5 +605,5 @@ form.addEventListener('submit', function (e) {
 			}
 		})
 		.catch(console.error);
-
+e.preventDefault();
 });
