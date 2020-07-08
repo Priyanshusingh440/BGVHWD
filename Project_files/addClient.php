@@ -68,7 +68,7 @@
             </a>
             <div class="collapse" id="client">
               <ul class="list-unstyled nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./addClient.php">Add Client</a>
                 </li>
                 <li class="nav-item">
@@ -396,7 +396,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email ID</label>
-                          <input name="Email ID" type="email" class="form-control" />
+                          <input name="Email ID" type="email" class="form-control" autocomplete="off" />
                         </div>
                       </div>
                       <!--checkBoxes-->
@@ -502,7 +502,7 @@
                         <div class="form-group">
                           <label for="Password" class="bmd-label-floating">Password</label>
                           <div class="input-group">
-                            <input name="Password" type="password" class="form-control" />
+                            <input name="Password" type="password" class="form-control" autocomplete="off" />
                             <div class="input-group-addon eye">
                               <i class="fas fa-eye-slash"></i>
                             </div>
@@ -818,35 +818,4 @@
     $.ajax;
   </script>
 </body>
-
-ive = true;
-            }, 300);
-          }
-
-          // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
-            window.dispatchEvent(new Event("resize"));
-          }, 180);
-
-          // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
-            clearInterval(simulateWindowResize);
-          }, 1000);
-        });
-      });
-    });
-
-    $("form").submit(function(event) {
-      var formdata = $("form").serializeArray();
-      var data = {};
-      $(formdata).each(function(index, obj) {
-        data[obj.name] = obj.value;
-      });
-      //console.log(data);
-      event.preventDefault();
-    });
-    $.ajax;
-  </script>
-</body>
-
 </html>

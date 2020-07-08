@@ -297,6 +297,7 @@
                           <option value="City">City</option>
                           <option value="State">State</option>
                           <option value="Pin Code">Pin Code</option>
+                          <option value="Other">Other</option>
                         </select>
                       </div>
                     </div>

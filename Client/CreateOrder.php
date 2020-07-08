@@ -449,7 +449,15 @@ else
                           <label for="exampleFormControlSelect5" style="color:white;margin-top:1%;">
                             <h5 class="selection">Document List View</h5>
                           </label>
-                          <select multiple name="document_list_view" name="Document List View" class="form-control selection"
+                          <!-- <div class="multiple-select-dd">
+                            <div class="selected">
+                              Choose Documents
+                            </div>
+                            <div class="select custom-scroll">
+  
+                            </div>
+                          </div> -->
+                          <select multiple name="document_list_view" data-name="Document List View" class="form-control selection"
                             id="exampleFormControlSelect5" style="height:30%;margin-bottom:4%; ">
                             <option style="margin-top:5%;">Document 1.xls</option>
                             <option style="margin-top:3%;">Document 2.png</option>
@@ -498,16 +506,16 @@ else
                         Employee
                         </label>
                       </div>
-
+ 
                     </div>
 
                     <div class="row justify-content-end" style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
 
-                      <button type="submit" id="preview" class="btn btn-primary pull-left"
+                      <button type="button" id="preview" class="btn btn-primary pull-left"
                         style="margin-left:4%;">Preview</button>
                       <div class="clearfix"></div>
 
-                      <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Ok</button>
+                      <button id="ok" type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Ok</button>
                       <div class="clearfix"></div>
 
                       <button type="submit" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
@@ -580,8 +588,7 @@ le table-hover" style="margin-top: 4%;">
           </table>
           <div class="row justify-content-center preview-btns" style="margin-right:2% ; margin-top:3%; margin-bottom:2%">
 
-            <button type="submit" id="preview" class="btn btn-primary pull-left" style="margin-left:4%;">Place
-              Order</button>
+            <button type="button" id="place-order" class="btn btn-primary pull-left" style="margin-left:4%;">Place Order</button>
             <div class="clearfix"></div>
 
             <button type="button" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>

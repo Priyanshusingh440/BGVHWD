@@ -22,6 +22,13 @@ body.my-login-page {
   /* Microsoft Edge */
   color: rgb(47, 243, 40);
 }
+
+#myCard{
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.74);
+}
+
+
+
 .my-login-page .brand {
   width: 90px;
   height: 90px;

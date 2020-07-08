@@ -12,13 +12,22 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/my-login.css" />
+    <style>
+      body{
+        background: url("./assets/img/blue2.jpg");
+        background-size: cover;
+        background-position: center;
+      
+       
+      }
+    </style>
   </head>
   <body class="my-login-page">
     <section class="h-100">
       <div class="container h-100">
         <div class="row justify-content-md-center align-items-center h-100">
           <div class="card-wrapper">
-            <div class="card fat">
+            <div class="card fat" id="myCard">
               <div class="card-body">
                 <h4 class="card-title">Forgot Password</h4>
                 <form method="POST" class="my-login-validation" novalidate="">

@@ -1,72 +1,3 @@
-console.log('working')
-
-let data = {}
-
-let serviceType
-
-const fetchService = (e) => {
-
-  fetch("https://www.bgvhwd.xyz/Project_files/API/servicetype.php")
-    .then(response => response.json())
-    .then(data => {
-      serviceType = data
-      setServiceType()
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-
-}
-
-let serviceName
-
-const fetchServiceName = (e) => {
-  console.log('fetch service name')
-  data['service_type_id'] = e.target.value
-  console.log(data['service_type_id'])
-
-  fetch("https://www.bgvhwd.xyz/Project_files/API/servicename.php", {
-      method: 'POST',
-      body: JSON.stringify({
-        "service_type_id": data['service_type_id']
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      serviceName = data
-      console.log('service names', serviceName)
-      setServiceName()
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-
-}
-
-const serviceTypeSelect = document.querySelector("#select_service_type"),
-  serviceNameSelect = document.querySelector("#select_service_name")
-
-const setServiceType = () => {
-  console.log('serviceType', serviceType)
-  serviceNameSelect.innerHTML = `<option selected="" class="bg-secondary text-light">Choose...</option>`
-  serviceTypeSelect.innerHTML = `<option selected="" class="bg-secondary text-light">Choose...</option>`
-  serviceType.map(v => {
-    serviceTypeSelect.innerHTML += `<option value="${v.id}" class="bg-secondary text-light" >${v.service_type}</option>`
-  })
-}
-
-const setServiceName = () => {
-  serviceNameSelect.innerHTML = `<option selected="" class="bg-secondary text-light">Choose...</option>`
-  serviceName.map(v => {
-    serviceNameSelect.innerHTML += `<option value="${v.id}"  class="bg-secondary text-light" >${v.service_name}</option>`
-  })
-}
-
-fetchService()
-
-
-serviceTypeSelect.onchange = (e) => fetchServiceName(e)
-
 let documentNames
 const documentNameDD = document.querySelector("#document-name")
 const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
@@ -210,8 +141,8 @@ const submit = (url) => {
   }
 }
 
-const assigndocumentsSubmit = document.querySelector("#ajax button[type='submit']")
+const serviceSubmit = document.querySelector("#ajax")
 
-assigndocumentsSubmit.addEventListener("click", submit("https://www.bgvhwd.xyz/Project_files/API/assignDocuments.php"))
+serviceSubmit.addEventListener("submit", submit("https://www.bgvhwd.xyz/Project_files/API/addService.php"))
 
 console.log('working all')

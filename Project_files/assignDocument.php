@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Mandatory Documents
+    Assign Documents
   </title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
   <!--     Fonts and icons     -->
@@ -279,14 +279,13 @@
                         <label for="Service Type" style="margin-left: 4%;">Document name</label>
 
                         <div class="multiple-select-dd">
+                          <input type="text" placeholder="Search Documents..." class="search-field">
                           <div class="selected">
                             Choose Documents
                           </div>
-                          <div class="select custom-scroll">
+                          <div class="select custom-scroll" >
 
                           </div>
-                          <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-                          <!-- <button class="btn btn-primary dd-btn" type="button">Choose Documents <i style="color: white;" class="material-icons">keyboard_arrow_down</i> </button> -->
                         </div>
 
                         <select style="margin-top:5%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
@@ -401,7 +400,6 @@
   <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>

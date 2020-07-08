@@ -1,3 +1,401 @@
+let tableData = [
+  {
+    id: 1,
+    random_data: "random data",
+    country_name: "India",
+    add_documents: ["7th", "8th", "-50"],
+    currency: "INR",
+    price: "500",
+    service: "7th marksheet",
+    service_type: "education verification"
+  },
+  {
+    id: 2,
+    random_data: "random data",
+    country_name: "USA",
+    add_documents: ["High school"],
+    currency: "USD",
+    price: "20",
+    service: "High school degree",
+    service_type: "education verification"
+  }
+]
+
+let tbody = document.querySelector("#table")  
+let tbodyDownload = document.querySelector("#downloadable-table tbody")
+
+const popuTable = () => {
+  tbody.innerHTML = ""
+  tbodyDownload.innerHTML = ``
+  tableData.map((v, i) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>
+          ${i + 1}
+        </td>
+        <td>
+          ${v.country_name}
+        </td>
+        <td>
+          ${v.service}
+        </td>
+        <td>
+          ${v.service_type}
+        </td>
+        <td>
+          ${v.price}
+        </td>
+        <td>
+          ${v.currency}
+        </td>
+        <td>
+          ${v.add_documents.join(", ")}
+        </td>
+        <td>
+          Edit
+        </td>
+        <td>
+          Delete
+        </td>
+      </tr>
+    `
+
+    tbodyDownload.innerHTML += `
+      <tr>
+        <td>
+          ${v.country_name}
+        </td>
+        <td>
+          ${v.service}
+        </td>
+        <td>
+          ${v.service_type}
+        </td>
+        <td>
+          ${v.price}
+        </td>
+        <td>
+          ${v.currency}
+        </td>
+        <td>
+          ${v.add_documents.join(", ")}
+        </td>
+      </tr>
+    `
+
+  })
+
+}
+
+popuTable()
+
+var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"all services"});
+var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+var wb = XLSX.utils.table_to_book(document.getElementById('format-table'), {sheet:"all services"});
+var format = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+function s2ab(s) {
+  var buf = new ArrayBuffer(s.length);
+  var view = new Uint8Array(buf);
+  for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+  return buf;
+}
+$("#download-excel").click(function(){
+  saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'all-services.xlsx');
+});
+
+$("#download-format").click(() => {
+  saveAs(new Blob([s2ab(format)],{type:"application/octet-stream"}), 'format.xlsx');
+})
+
+const inputExcel = document.querySelector("#input-excel")
+$("#upload-btn").mousedown(() => {
+  inputExcel.click()
+})
+
+let uploadCompare = []
+
+tableData.map((v, i) => {
+  uploadCompare[i] = {
+    add_documents: v.add_documents.sort(),
+    country_name: v.country_name,
+    currency: v.currency,
+    price: v.price,
+    service: v.service,
+    service_type: v.service_type
+  }
+  // uploadCompare[i].v = 
+})
+
+
+let notify
+
+let newServices = []
+const compareWithExistingData = () => {
+  newRows.map(v => {
+    for (let i = 0; i < uploadCompare.length; i++) {
+      if (JSON.stringify(v).toLocaleLowerCase() == JSON.stringify(uploadCompare[i]).toLocaleLowerCase()) {
+        return
+        console.log("running ", i)
+      } else if (i == uploadCompare.length - 1) {
+        newServices.push(v)
+      }
+
+    }
+    // console.log("running2 ", v)
+  })
+  newServices = []
+}
+
+// extractData from table, table to json
+var newRows = [];
+const extractData = () => {
+  // notify.update('title', "extracting data")
+  // Loop through grabbing everything
+  var $headers = $("#upload-excel-table th");
+  var $rows = $("#upload-excel-table tr").each(function(index) {
+    $cells = $(this).find("td");
+    newRows[index] = {};
+    $cells.each(function(cellIndex) {
+      try {
+        newRows[index][$($headers[cellIndex]).html().trim()] = $(this).html().trim();
+      } catch(err) {
+        if (err.name == "TypeError") {
+          $.notify({
+            // options
+            icon: 'error',
+            message: "Wrong format! Extra columns are not allowed!"
+          },{
+            // settings
+            type: 'danger'
+          })
+          console.log("Wrong format! Extra columns are not allowed!")
+          console.log(err)
+        } else {
+          console.log("Unexpected error")
+          console.log(err)
+        }
+        throw err
+      }
+    });    
+  });
+  
+  newRows.shift()
+  newRows.shift()
+
+  let ordered = {}
+  let allOrdered = []
+  newRows.forEach((v, i) => {
+    ordered = {}
+    Object.keys(newRows[i]).sort().forEach(function(key) {
+      // console.log(key)
+      ordered[key] = newRows[i][key];
+    });
+    allOrdered.push(ordered)
+  })
+
+  newRows = allOrdered
+
+  newRows.forEach(v => {
+    v.add_documents = v.add_documents.split(",").map(v2 => v2.trim()).sort()
+  })
+  compareWithExistingData()
+}
+
+
+$('#input-excel').change(function(e){
+
+  let file = document.querySelector("#input-excel").value.split(".")
+  if (file[file.length - 1].toLowerCase() != "xlsx") {
+    $.notify({
+      // options
+      icon: 'error',
+      message: `Only 'xlsx' is accepted. You uploaded ${file[file.length - 1]}`
+    },{
+      // settings
+      type: 'danger'
+    })
+    return
+  }
+  // notify = $.notify({
+  //   // options
+  //   icon: 'error',
+  //   message: ``
+  // },{
+  //   // settings
+  //   type: 'info'
+  // });
+  // notify.update('title', "uploading xlsx")
+  // notify.update('message', '...');
+  var reader = new FileReader();
+  reader.readAsArrayBuffer(e.target.files[0]);
+  reader.onload = function(e) {
+          var data = new Uint8Array(reader.result);
+          var wb = XLSX.read(data,{type:'array'});
+          // console.log(wb)
+          var htmlstr = XLSX.write(wb,{sheet:"all services", type:'binary',bookType:'html'});
+          var elem = document.querySelector('#upload-excel-table tbody');
+          elem.parentNode.removeChild(elem);
+          $('#upload-excel-table')[0].innerHTML += htmlstr;
+
+          extractData()
+
+  }
+});
+
+// document search
+let documentNames
+const documentNameDD = document.querySelector("#document-name")
+const multipleSelectDD = document.querySelector(".multiple-select-dd .select")
+const searchField = document.querySelector(".search-field")
+
+var selected = [];
+
+const setDocumentNames = () => {
+  let options = ""
+  multipleSelectDD.innerHTML = ""
+  let lowercaseDocumentName = searchField.value.toLowerCase()
+
+  documentNames.map((v, i) => {
+    let docSearchMatch = v.document_name.toLowerCase().search(lowercaseDocumentName) == 0
+    docSearchMatch ? options += `<div id="${v.id}" data-index="${i}" class="bg-secondary text-light" ><span>${v.document_name}</span><i data-index="${i}" style="color: white;" class="material-icons remove">${v.active ? "check_box" : "check_box_outline_blank"}</i></div>` : false
+  })
+  multipleSelectDD.innerHTML += options
+}
+
+searchField.onkeyup = () => {
+  setDocumentNames()
+}
+
+fetch("https://www.bgvhwd.xyz/Project_files/API/assigndocuments.php")
+  .then(response => response.json())
+  .then(data => {
+    documentNames = data
+    documentNames.map(function (v) {
+      v.active = false;
+    });
+    console.log('document names', documentNames)
+    setDocumentNames()
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+let selectedDocuments = document.querySelector(".multiple-select-dd .selected")
+
+selectedDocuments.onmousedown = e => {
+  if (e.target.classList.contains("remove")) {
+    documentNames[e.target.getAttribute("data-index")].active = false
+  }
+  selectedFields()
+  setDocumentNames()
+}
+
+const selectedFields = () => {
+  selectedDocuments.innerHTML = ""
+
+  selected = []
+  documentNames.map((v, i) => {
+    v.active ? selected.push(v.id) : false
+    v.active ? selectedDocuments.innerHTML += `
+      <div class="doc"><span class="doc-name">${v.document_name}</span><i data-index="${i}" class="material-icons remove">cancel</i></div>
+    ` : false
+  })
+
+  if (selectedDocuments.innerHTML === "") {
+    return selectedDocuments.innerHTML = "Choose Documents"
+  }
+}
+
+multipleSelectDD.onmousedown = e => {
+  let target = e.target.getAttribute("data-index") || e.target.parentElement.getAttribute("data-index")
+  documentNames[target].active = !documentNames[target].active
+  selectedFields()
+  setDocumentNames()
+}
+
+
+let countrySelect = document.querySelector("#locality-dropdown")
+
+fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
+  .then(res => res.json())
+  .then(data => {
+    // console.log(data)
+    data.map(v => {
+
+      countrySelect.innerHTML += `<option value="${v.id}">${v.country_name}</option>`
+    })
+  })
+
+
+// let data = {}
+
+const createSubmit = document.querySelector('#ajax'),
+  inputFields = document.querySelectorAll('#ajax input:not([type="radio"] )'),
+  inputFieldsArray = [...inputFields],
+  inputRadios = document.querySelectorAll('#ajax input[type="radio"]'),
+  inputRadiosArray = [...inputRadios],
+  inputCheckbox = document.querySelectorAll('#ajax input[type="checkbox"]'),
+  inputCheckboxArray = [...inputCheckbox],
+  select = document.querySelectorAll('#ajax select'),
+  selectArray = [...select],
+  inputCurrency = document.querySelector('#ajax select[name="currency"]')
+
+let jsonData = {}
+
+const sendRequest = (url) => {
+  fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(jsonData),
+    })
+    .then(response => response.text())
+    .then(data => {
+      if (data.trim() == "Service Assigned Successfully") {
+        alert(data)
+        getAllAssignService(`https://www.bgvhwd.xyz/Project_files/API/viewassignedservice.php`)
+      } else {
+        alert(data)
+      }
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+const submit = (url) => {
+  return e => {
+    console.log(e.keyCode)
+    if (e.keyCode !== 13) {
+      e.preventDefault()
+      let run = true
+      inputFieldsArray ? inputFieldsArray.map((value) => {
+        jsonData[value.name] = value.value
+      }) : false
+
+      // for (var option of document.getElementById('document-name').options) {
+      //   if (option.selected) {
+      //     selected.push(option.value);
+      //   } 
+      // }
+      console.log(selected)
+      jsonData["document_names"] = selected
+
+      selectArray ? selectArray.map(value => {
+        jsonData[value.name] = value.value
+      }) : false
+      if (run === true) {
+        sendRequest(url)
+      }
+      jsonData = {}
+    }
+  }
+}
+
+createSubmit.addEventListener("submit", submit("./API/createservice.php"))
+
+
 
         //var e = document.getElementById("ClientName");
         //var strUser = e.options[e.selectedIndex].value;
@@ -14,7 +412,7 @@
  //Add        
 
 function TestIT2(){
-    ser = e2.options[e2.selectedIndex].value;
+    ser = e2.options[e2.selectedIndex].value; 
     dob = dob2.value;
         console.log("test it function 1");
         $.post("./API/createService.php",
