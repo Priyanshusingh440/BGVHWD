@@ -155,7 +155,7 @@
         data[obj.name] = obj.value;
       });
       console.log(data);
-      fetch('API/login.php', {
+      fetch('./API/login.php', {
         method: 'post',
         body: JSON.stringify(data),
       }).then(function(response) {
