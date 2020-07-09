@@ -26,7 +26,7 @@ const getModifyClientData = (d) => {
 }
 
 const getAllClientData = () => {
-  fetch('https://www.bgvhwd.xyz/Project_files/API/viewclient.php')
+  fetch('./API/viewclient.php')
   .then(function (response) {
     if (response.status !== 200) {
       console.warn('Looks like there was a problem. Status Code: ' +
