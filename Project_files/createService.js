@@ -145,6 +145,7 @@ const compareWithExistingData = () => {
     }
     // console.log("running2 ", v)
   })
+  console.log(newServices)
   newServices = []
 }
 
@@ -183,7 +184,7 @@ const extractData = () => {
   
   newRows.shift()
   newRows.shift()
-
+  
   let ordered = {}
   let allOrdered = []
   newRows.forEach((v, i) => {
@@ -205,7 +206,6 @@ const extractData = () => {
 
 
 $('#input-excel').change(function(e){
-
   let file = document.querySelector("#input-excel").value.split(".")
   if (file[file.length - 1].toLowerCase() != "xlsx") {
     $.notify({
@@ -513,7 +513,7 @@ if (answer) {
       Action: "edit",
       id: dbid,
       Client: dat[0],
-      Country: dat[1],
+      Country: dat[1], 
       ServiceT: dat[2],
       ServiceN: dat[3],
       Price: dat[4]       
