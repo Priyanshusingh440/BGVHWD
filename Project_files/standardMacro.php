@@ -44,7 +44,7 @@
   <!--Switching modes-->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
+ 
 <body class="dark-edition">
   <div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
@@ -316,7 +316,7 @@
                       <button type="button" class="btn btn-primary" onclick="reset()" style="margin-left: 1%;">
                         Reset
                       </button>
-                      <button type="button" class="btn btn-primary" style="margin-left: 1%;">
+                      <button id="download-excel" type="button" class="btn btn-primary" style="margin-left: 1%;">
                         Export
                       </button>
                       <button type="button" class="btn btn-primary" style="margin-left: 1%;">
@@ -330,6 +330,26 @@
                           <div class="card-header card-header-primary">
                             <h4 style="color: white;" class="card-title">Standard Macro</h4>
                           </div>
+                          <table id="downloadable-table" style="display: none">
+                            <thead>
+                              <th>
+                                Scenario
+                              </th>
+
+                              <th>
+                                Comments
+                              </th>
+                              <th>
+                                Service Type
+                              </th>
+                              <th>
+                                Macro Type
+                              </th>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                          </table>
                           <table class="table table-hover" style="width: 97%; margin-left: 1.5%; margin-top: 2%;">
                             <thead class="text-light" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
@@ -353,6 +373,9 @@
                               </th>
                             </thead>
                             <tbody id="table">
+                              <script src="assets/js/core/jquery.min.js"></script>
+                              <script src="assets/js/plugins/xlsx.full.min.js"></script>
+                              <script src="assets/js/plugins/FileSaver.min.js"></script>
                               <script src="standardMacro.js"></script>
                               <script>
                                 popuTable();
@@ -419,24 +442,16 @@
     }
   </script>
   <!--mode change end-->
-  <script src="assets/js/core/jquery.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="https://unpkg.com/default-passive-events"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="assets/js/plugins/chartist.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="assets/demo/demo.js"></script>
-  <script>
     function reset() {
       document.getElementById("ajax").reset();
     }

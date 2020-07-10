@@ -1,3 +1,50 @@
+
+let Dtable = document.querySelector("#downloadable-table tbody")
+fetch("https://www.bgvhwd.xyz/Project_files/API/viewStandardMacro.php")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    data.map(v => {
+      console.log("hello")
+      Dtable.innerHTML += `
+      <tr>
+        <td>
+          ${v.Scenario}
+        </td>
+        <td>
+          ${v.Comment}
+        </td>
+        <td>
+          ${v.service_name}
+        </td>
+        <td>
+          ${v.macro_name}
+        </td>
+      </tr>
+    `
+    console.log(Dtable)
+    
+    })
+    
+  })
+  .then(v => xlxsInit())
+  .catch(err => console.log(err))
+
+const xlxsInit = () => {
+  var wb = XLSX.utils.table_to_book(document.getElementById('downloadable-table'), {sheet:"all services"});
+  var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+  function s2ab(s) {
+    var buf = new ArrayBuffer(s.length);
+    var view = new Uint8Array(buf);
+    for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+    return buf;
+  }
+  $("#download-excel").click(function(){
+    saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'all-services.xlsx');
+  });
+}
+
 let servicetype = document.getElementById('Service Type');
 servicetype.length = 0;
 

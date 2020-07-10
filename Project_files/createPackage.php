@@ -52,7 +52,7 @@
   color:  rgba(0, 0, 0, 0.705) !important;
   border: 1px solid rgba(128, 128, 128, 0.473) !important;
   text-transform: inherit;
-}
+} 
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #3e8e41;

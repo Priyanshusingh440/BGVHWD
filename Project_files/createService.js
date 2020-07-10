@@ -132,6 +132,46 @@ tableData.map((v, i) => {
 let notify
 
 let newServices = []
+
+let countrySelect = document.querySelector("#locality-dropdown")
+let countries
+fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
+  .then(res => res.json())
+  .then(data => {
+    // console.log(data)
+
+    countries = data
+validateNewServices()
+
+    data.map(v => {
+
+      countrySelect.innerHTML += `<option value="${v.id}">${v.country_name}</option>`
+    })
+  })
+
+const validateNewServices = () => {
+  console.log(countries)
+  newServices = [
+    {
+      country_name: "india"
+    }
+  ]
+  console.log(newServices)
+  newServices.forEach(v => {
+    countries.forEach((v2, i) => {
+      // console.log(v2.country_name.toLowerCase() == "india")
+      if(v2.country_name.toLowerCase() == v.country_name) {
+        console.log("found", v.country_name, v2.id)
+        return
+      } 
+
+      if(i == countries.length - 1) {
+        console.log("not found")
+      }
+    })
+  })
+}
+
 const compareWithExistingData = () => {
   newRows.map(v => {
     for (let i = 0; i < uploadCompare.length; i++) {
@@ -145,6 +185,8 @@ const compareWithExistingData = () => {
     }
     // console.log("running2 ", v)
   })
+  console.log(newServices)
+  // validateNewServices()
   newServices = []
 }
 
@@ -183,7 +225,7 @@ const extractData = () => {
   
   newRows.shift()
   newRows.shift()
-
+  
   let ordered = {}
   let allOrdered = []
   newRows.forEach((v, i) => {
@@ -205,7 +247,6 @@ const extractData = () => {
 
 
 $('#input-excel').change(function(e){
-
   let file = document.querySelector("#input-excel").value.split(".")
   if (file[file.length - 1].toLowerCase() != "xlsx") {
     $.notify({
@@ -315,18 +356,6 @@ multipleSelectDD.onmousedown = e => {
   setDocumentNames()
 }
 
-
-let countrySelect = document.querySelector("#locality-dropdown")
-
-fetch("https://www.bgvhwd.xyz/Project_files/API/country.php")
-  .then(res => res.json())
-  .then(data => {
-    // console.log(data)
-    data.map(v => {
-
-      countrySelect.innerHTML += `<option value="${v.id}">${v.country_name}</option>`
-    })
-  })
 
 
 // let data = {}
@@ -513,7 +542,7 @@ if (answer) {
       Action: "edit",
       id: dbid,
       Client: dat[0],
-      Country: dat[1],
+      Country: dat[1], 
       ServiceT: dat[2],
       ServiceN: dat[3],
       Price: dat[4]       
