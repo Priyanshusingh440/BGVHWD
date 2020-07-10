@@ -155,7 +155,28 @@
             <div class="collapse" id="user">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                  <a class="nav-link" name href="./AddEmployeeOffQc.php">ADD/OF/QC</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./viewAllOFQC.php">View All OF QC</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#settings" class="nav-link" data-toggle="collapse"><i class="material-icons">settings</i>
+              <p>Settings</p>
+            </a>
+            <div class="collapse" id="settings">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings1.php">Mandatory Fields Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
                 </li>
               </ul>
             </div>
@@ -279,20 +300,31 @@
                 <div class="card-body">
                   <form id="ajax">
                     <!--First row-->
-                    <div class="row">
-                      <div class="col-md-4">
+                    <div class="row" style="margin-top: 1%;">
+                      <div class="col-md-2 ">
+                        <div class="form-group">
+                          <label style="font-size: 13px;" class="bmd-label-floating">Title</label>
+                          <select style="margin-top: 2%;" name="Title" id="Title" class="browser-default custom-select" required>
+                            <option selected="selected" hidden value="null">Choose..</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Name</label>
                           <input name="Name" type="text" class="form-control" />
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Middle Name</label>
                           <input name="middleName" type="text" class="form-control" />
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Sur Name</label>
                           <input name="surName" type="text" class="form-control" />
@@ -300,7 +332,7 @@
                       </div>
                     </div>
                     <!--Second row-->
-                    <div class="row">
+                    <div class="row" style="margin-top: 1%;">
                       <div class="col-md-2">
                         <div class="form-group">
                           <label>Date of birth</label>
@@ -328,23 +360,23 @@
                       </div>
                     </div>
                     <!--Fourth row-->
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between" style="margin-top: 1%;">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Country</label>
+                          <input name="Country" type="text" class="form-control" />
+                        </div>
+                      </div>
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">State</label>
-                          <input name="state" type="text" class="form-control" />
+                          <input name="State" type="text" class="form-control" />
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">City</label>
-                          <input name="city" type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input name="country" type="text" class="form-control" />
+                          <input name="City" type="text" class="form-control" />
                         </div>
                       </div>
                       <div class="col-md-3">
@@ -355,7 +387,7 @@
                       </div>
                     </div>
                     <!--Fifth row-->
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between" style="margin-top: 1%;">
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email ID</label>
@@ -375,62 +407,89 @@
                           <input name="password" type="password" class="form-control" />
                         </div>
                       </div>
-
+                      
                       <div class="col-md-3">
                         <div class="form-group">
-                          <input type="file" class="custom-file-input" id="customFile" name="photo">
-                          <label class="custom-file-label" for="customFile">Attach Photo <span><i class="fa fa-upload png icon" aria-hidden="true"></i></span> </label>
-
+                          <label class="bmd-label-floating">Password Mail To</label>
+                          <input id="passwordMailTo" name="Password Mail To" type="email" class="form-control" required />
                         </div>
                       </div>
                     </div>
                     <!--Sisxth row-->
-                    <div class="row justify-content-start">
+                    <div class="row justify-content-start" style="margin-top: 1%;">
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Contact</label>
+                          <label class="bmd-label-floating">Contact Number</label>
                           <input name="contact" type="number" class="form-control" />
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Alternate Contact</label>
+                          <label class="bmd-label-floating">Alternate Contact Number</label>
                           <input name="alternateContact" type="number" class="form-control" />
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">pan Number</label>
-                          <input name="panNumber" type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <!--Seventh row-->
-                      <div class="row justify-content-start">
-
-                      </div>
-                      <div class="col-md-4">
+                    </div>                       
+                    <!--Seventh row-->
+                    <div class="row justify-content-start" style="margin-top: 1%;">
+                      <div class="col-md-3" style="padding-right: 0;">
                         <div class="form-group">
                           <label class="bmd-label-floating">Adhar Number</label>
                           <input name="adharNumber" type="text" class="form-control" />
                         </div>
+                      </div>  
+                      <div class="col-md-1" style="padding: 0;">
+                        <div class="form-group">
+                          <input type="file" id="customFile1" name="photo">
+                          <label style="border: 1px solid grey; margin-top: 3%; padding: 4px; cursor: pointer; letter-spacing: .5px;" for="customFile1">Browse</label>
+                        </div>
                       </div>
+
+                      <div class="col-md-3" style="padding-right: 0;">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">PanNumber</label>
+                          <input name="adharNumber" type="text" class="form-control" />
+                        </div>
+                      </div>  
+                      <div class="col-md-1" style="padding: 0;">
+                        <div class="form-group">
+                          <input type="file" id="customFile2" name="photo">
+                          <label style="border: 1px solid grey; margin-top: 3%; padding: 4px; cursor: pointer; letter-spacing: .5px;" for="customFile2">Browse</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3" style="padding-right: 0;">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Your Photo</label>
+                          <input name="adharNumber" type="text" class="form-control" />
+                        </div>
+                      </div>  
+                      <div class="col-md-1" style="padding: 0;">
+                        <div class="form-group">
+                          <input type="file" id="customFile3" name="photo">
+                          <label style="border: 1px solid grey; margin-top: 3%; padding: 4px; cursor: pointer; letter-spacing: .5px;" for="customFile3">Browse</label>
+                        </div>
+                      </div>           
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
                       <div class="col-md-4">
-                        <select name="status" class="custom-select" style="border-top: none; border-left: none; border-right: none;">
-                          <option selected>Status</option>
-                          <option value="Active">Active</option>
-                          <option value="Inactive">Inactive</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4">
-                        <select name="position" class="custom-select" style="border-top: none; border-left: none; border-right: none;">
-                          <option selected>Select Position</option>
-                          <option value="OrderFullfilment">Order Fullfilment</option>
-                          <option value="QualityControl">Quality Control</option>
-                          <option value="Vendor">Vendor</option>
-                        </select>
-                      </div>
+                        <img style="display: none;" id="myImg1" src="#" alt="Adhar Image" height=100 width=200>
+                      </div>     
                     </div>
-                </div>
+                    <div class="col-md-4">
+                      <div class="col-md-4">
+                        <img  style="display: none;" id="myImg2" src="#" alt="Pan Image" height=100 width=200>
+                      </div>     
+                    </div>
+                    <div class="col-md-4">
+                      <div class="col-md-4">
+                        <img style="display: none;" id="myImg3" src="#" alt="Image" height=100 width=200>
+                      </div>     
+                    </div>
+                  </div>
+                  
 
 
                 <!--Bank Details-->
@@ -439,7 +498,7 @@
                     <div class="col-md-12">
                       <div class="card">
                         <div class="card-header card-header-primary">
-                          <h4 class="card-title">Bank Details</h4>
+                          <h4 style="color: white !important;" class="card-title">Bank Details</h4>
                         </div>
                         <div class="card-body">
                           <form id="ajax">
@@ -447,7 +506,7 @@
                             <div class="row">
                               <div class="col-md-4">
                                 <div class="form-group">
-                                  <label class="bmd-label-floating">Bank Name</label>
+                                  <label  class="bmd-label-floating">Bank Name</label>
                                   <input name="bankName" type="text" class="form-control" />
                                 </div>
                               </div>
@@ -457,6 +516,12 @@
                                   <input name="accountNumber" type="text" class="form-control" />
                                 </div>
                               </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">IFSC Code</label>
+                                  <input name="ifsc" type="text" class="form-control" />
+                                </div>
+                              </div>
                             </div>
                           </form>
                         </div>
@@ -464,12 +529,12 @@
                     </div>
 
                     <!--Position Details-->
-                    <div class="container-fluid">
-                      <div class="row">
+                    <div class="container-fluid" >
+                      <div class="row" style="margin-top: 3%;">
                         <div class="col-md-12">
                           <div class="card">
                             <div class="card-header card-header-primary">
-                              <h4 class="card-title">Position</h4>
+                              <h4 style="color: white !important;" class="card-title">Position</h4>
                             </div>
                             <div class="card-body">
                               <form id="ajax">
@@ -477,8 +542,23 @@
                                 <div class="row">
                                   <div class="col-md-4">
                                     <div class="form-group">
-                                      <label class="bmd-label-floating">Position</label>
-                                      <input name="position" type="text" class="form-control" />
+                                      <label style="font-size: 13px;" class="bmd-label-floating">Groups</label>
+                                      <select style="margin-top: 2%;" name="Groups" class="browser-default custom-select" required>
+                                        <option selected="selected" hidden value="null">Choose..</option>
+                                        <option value=0>OF</option>
+                                        <option value=1>QC</option>
+                                        <option value=2>Vendor</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label style="font-size: 13px;" class="bmd-label-floating">Status</label>
+                                      <select style="margin-top: 2%;" name="Status" class="browser-default custom-select">
+                                        <option selected="selected" hidden value="null">Choose..</option>
+                                        <option value=1>Active</option>
+                                        <option value=0>Inactive</option>
+                                      </select>
                                     </div>
                                   </div>
                                   <div class="col-md-4">
@@ -488,7 +568,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="row justify-content-end" style="margin-top:2%; margin-right:1%">
+                                <div class="row justify-content-end" style="margin-top:5%; margin-right:1%">
 
                                   <button type="submit" class="btn btn-primary pull-left" style="margin-left:4%;">Save</button>
                                   <div class="clearfix"></div>
@@ -514,7 +594,54 @@
 
           </div>
         </div>
-        <script>
+
+
+<script>
+  window.addEventListener('load', function() {
+    let file1, file2, file3;
+    file1=document.querySelector('input[id="customFile1"]');
+    file2=document.querySelector('input[id="customFile2"]');
+    file3=document.querySelector('input[id="customFile3"]');
+  
+  
+    file1.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          let img=document.querySelector('#myImg1');  // $('img')[0]
+          img.style.display="block"
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+        }
+      });
+      file2.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          let img = document.querySelector('#myImg2');  // $('img')[0]
+          img.style.display="block"
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+        }
+      });
+      file3.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          let img = document.querySelector('#myImg3');  // $('img')[0]
+          img.style.display="block"
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+        }
+      });
+});
+
+
+function imageIsLoaded() { 
+  alert(this.src);  // blob url
+  // update width and height ...
+}
+</script>
+
+
+
+
+
+     <script>
           const x = new Date().getFullYear();
           let date = document.getElementById("date");
           date.innerHTML = "&copy; " + x + date.innerHTML;

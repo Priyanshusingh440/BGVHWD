@@ -165,7 +165,10 @@
             <div class="collapse" id="user">
               <ul class="list-unstyled nav">
                 <li class="nav-item">
-                  <a class="nav-link" name href="./addModifyUser.php">Add Modify User</a>
+                  <a class="nav-link" name href="./AddEmployeeOffQc.php">ADD/OF/QC</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" name href="./viewAllOFQC.php">View All OF QC</a>
                 </li>
               </ul>
             </div>
