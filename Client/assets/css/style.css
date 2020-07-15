@@ -82,6 +82,7 @@ tbody tr td{
 thead th{
     color: white !important;
     text-align: center !important;
+    font-size: 15px !important;
 }
 
 .optionColor{ 

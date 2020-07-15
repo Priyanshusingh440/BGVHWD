@@ -180,6 +180,18 @@
               </ul>
             </div>
           </li>
+          <li class="navbar-item">
+            <a href="#calendar" class="nav-link" data-toggle="collapse"><i class="material-icons">calendar_today</i>
+              <p>calendar</p>
+            </a>
+            <div class="collapse" id="calendar">
+              <ul class="list-unstyled nav">
+                <li class="nav-item">
+                  <a class="nav-link" name href="./ViewAttendence.php">View calendar</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <!--Side Bar End-->

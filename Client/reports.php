@@ -186,11 +186,11 @@
                                         <div class="row justify-content-around">
                                             <div class="form-group col-md-4">
                                                 <label for="type" style="margin-left: 4%;">Status</label>
-                                                <select id="Status" class="form-control optionColor2" onchange="data();" 
+                                                <select id="Status" class="form-control optionColor2 optionColor" onchange="data();" 
                                                     required>
-                                                    <option class="optionColor" value="Order Level type" >Order Level
+                                                    <option class="" style="color: black" value="Order Level type" >Order Level
                                                         type</option>
-                                                    <option class="optionColor"   value="Check Level type" >Check Level
+                                                    <option class=""  style="color: black"  value="Check Level type" >Check Level
                                                         type</option>
                                                 </select>
                                             </div>

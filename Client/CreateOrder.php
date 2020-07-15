@@ -139,11 +139,11 @@ else
       </div>
     </div>
     <div class="main-panel">
-      <!--toggle button-->
-      <div class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
-        <input name="name" type="checkbox" id="switch" name="theme">
-        <label id="toggleButton" for="switch">Toggle</label>
-      </div>
+             <!--toggle button-->
+  <div  class="toggle-container" style="margin-bottom: 10%; position: fixed;z-index: 100; top: 8.5%; right: 0;">
+     <input type="checkbox" id="switch" name="theme">
+     <label id="toggleButton" for="switch">Toggle</label>
+ </div>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
@@ -577,8 +577,7 @@ else
           </div>
         </div>
         <div class="preview-modal">
-          <table class="tab
-le table-hover" style="margin-top: 4%;">
+          <table class="table table-hover" style="margin-top: 4%;">
             <tbody id="table">
               <tr>
                 <!-- <td>name</td>
@@ -593,10 +592,49 @@ le table-hover" style="margin-top: 4%;">
 
             <button type="button" class="btn btn-primary pull-left" style="margin-left:2%;">Cancel</button>
             <div class="clearfix"></div>
-
           </div>
-
         </div>
+
+
+        <script>
+    let darkmode=localStorage.getItem("darkmode");
+    const darkmodetoggle=document.querySelector('input[name=theme]');
+
+    const enabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem("darkmode","enabled");
+    }
+
+
+  const disabledarkmode=()=>{
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem("darkmode",null);
+  }
+
+
+   if(darkmode==="enabled"){
+     enabledarkmode();
+   }
+
+
+   darkmodetoggle.addEventListener("change", ()=>{
+     darkmode=localStorage.getItem("darkmode");
+     if(darkmode !== "enabled"){
+        trans()
+       enabledarkmode();
+     }else{
+      trans()
+       disabledarkmode();
+     }
+   })
+
+   let trans = () => {
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+  document.documentElement.classList.remove('transition');
+   }, 1000)
+ }
+   </script>
         <!--<div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
@@ -664,46 +702,7 @@ le table-hover" style="margin-top: 4%;">
       </ul>
     </div>
   </div>-->
-        <!--mode changing-->
-        <script>
-          let darkmode = localStorage.getItem("darkmode");
-          const darkmodetoggle = document.querySelector('input[name=theme]');
-
-          const enabledarkmode = () => {
-            document.documentElement.setAttribute('data-theme', 'dark')
-            localStorage.setItem("darkmode", "enabled");
-          }
-
-
-          const disabledarkmode = () => {
-            document.documentElement.setAttribute('data-theme', 'light')
-            localStorage.setItem("darkmode", null);
-          }
-
-
-          if (darkmode === "enabled") {
-            enabledarkmode();
-          }
-
-
-          darkmodetoggle.addEventListener("change", () => {
-            darkmode = localStorage.getItem("darkmode");
-            if (darkmode !== "enabled") {
-              trans()
-              enabledarkmode();
-            } else {
-              trans()
-              disabledarkmode();
-            }
-          })
-
-          let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-              document.documentElement.classList.remove('transition');
-            }, 1000)
-          }
-        </script>
+       
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>
