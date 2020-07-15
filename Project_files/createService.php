@@ -286,7 +286,8 @@
                 <div class="row col-md-12">
                   <form id="ajax" style="margin-top: 3%; display: block;" class="row col-md-12">
                     <div class="row justify-content-between">
-                      <div class="form-group col-md-4">
+                      
+                    <div class="form-group col-md-4">
                         <label for="Service Name" class="bmd-label-floating"
                           style="margin-left: 4%;font-size: 13px;">Select
                           Country</label>
@@ -296,20 +297,28 @@
                           <option value="none">Select Service Type</option>
                         </select>
                       </div>
+                     
                       <div class="form-group col-md-6">
                         <div class="row justify-content-around">
                           <!-- <a href="docs/book1.xlsx" download> -->
-                          <button id="download-excel" type="button" class="btn btn-primary">
+                          <div class="row">
+                            <div class="col-md-2.1">
+                            <button id="download-excel" type="button" class="btn btn-primary" >
                             Download Excel
                           </button>
-                          <!-- </a> -->
-                          <button id="download-format" type="button" class="btn btn-primary">
+                            </div>
+                            <div class="col-md-2.1">
+                            <button id="download-format" type="button" class="btn btn-primary">
                             Download Format
                           </button>
-                          <button type="button" class="btn btn-primary" id="upload-btn">
+                              </div>
+                              <div class="col-md-2.1">
+                              <button type="button" class="btn btn-primary" id="upload-btn">
                             Upload Excel
                             <input type="file" name="" id="input-excel" style="cursor: pointer; display: none;">
                           </button>
+                              </div>
+                          </div>
                           <table id="upload-excel-table" class="sr-only">
                             <thead class="text-primary" style="background-color: rgba(15, 13, 13, 0.856) !important;">
                               <th>
@@ -671,9 +680,9 @@
                           <label for="Service Type" style="margin-left: 4%; font-size: 13px;">Document name</label>
   
                           <div class="multiple-select-dd">
-                            <input type="text" placeholder="Search Documents..." class="search-field" style="margin-top: 2%;">
+                            <input type="text" placeholder="Search Documents..." class="search-field" style="margin-top: 2%; border:1.2px solid #D2D2D2 !important">
                             <div class="selected">
-                              Choose Documents
+                              <label>Choose Documents</label>
                             </div>
                             <div class="select custom-scroll" style="max-height: 30vh; margin-bottom: 4vh;">
   

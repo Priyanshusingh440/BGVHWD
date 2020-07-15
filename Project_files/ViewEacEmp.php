@@ -209,7 +209,7 @@
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
                 <div class="container-fluid">
                     <div class="navbar-wrapper" style="height: 50px;">
-                        <a class="navbar-brand" href="javascript:void(0)" style="color: white;">Employee Status</a>
+                        <a class="navbar-brand" href="javascript:void(0)" style="color: white; font-size: 18px;">Employee Monthly Status</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -262,11 +262,67 @@
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row" style="margin-top: 2%;">
+                    <div class="row">                   
+                      
+                        <div class="col-md-3">
+                            <div class="card card-chart" style="background-color: #34A853 !important;">
+                                <div class="card-body" >
+                                    <h4 style="color: white; font-weight: bold;" class="card-title">Present Days</h4>
+                                    <p style="color: white;" class="card-category">24</p>
+                                </div>
+                                <div class="card-footer" style="border-top: 1px solid #B9B8B6;">
+                                    <div class="stats" style="color: white;">
+                                        <i class="material-icons">calendar_today</i>In the Month<span style="padding-left: 2px;" class="Month"></span>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col-md-3">
+                            <div class="card card-chart"style="background-color: #D7332F !important;">
+                                <div class="card-body">
+                                    <h4 style="color: white; font-weight: bold;" class="card-title">Absent Days</h4>
+                                    <p style="color: white;" class="card-category">3</p>
+                                </div>
+                                <div class="card-footer" style="border-top: 1px solid #B9B8B6;">
+                                    <div class="stats" style="color: white;">
+                                        <i class="material-icons">calendar_today</i>In the Month<span style="padding-left: 2px;" class="Month"></span>
+                                     </div>
+                                </div>
+                            </div>                         
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-chart"style="background-color: #FA8306 !important;">
+                                <div class="card-body">
+                                    <h4 style="color: white; font-weight: bold;" class="card-title">Sick Leaves </h4>
+                                    <p style="color: white;" class="card-category">2</p>
+                                </div>
+                                <div class="card-footer" style="border-top: 1px solid #B9B8B6;">
+                                    <div class="stats" style="color: white;">
+                                        <i class="material-icons">calendar_today</i>In the Month<span style="padding-left: 2px;" class="Month"></span>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>                       
+                        <div class="col-md-3">
+                            <div class="card card-chart"style="background-color: #4E68FF !important;">
+                                <div class="card-body">
+                                    <h4 style="color: white; font-weight: bold;" class="card-title">Casual Leaves </h4>
+                                    <p style="color: white;" class="card-category">4</p>
+                                </div>
+                                <div class="card-footer" style="border-top: 1px solid #B9B8B6;">
+                                    <div class="stats" style="color: white;">
+                                        <i class="material-icons">calendar_today</i>In the Month<span style="padding-left: 2px;" class="Month"></span>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 1%;">
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header card-header-primary">
-                                    <h4 class="card-title">July</h4>
+                                    <h4 class="Month" class="card-title"></h4>
                                     <!--<p class="card-category"></p>-->
                                 </div>
                                 <div class="card-body">
@@ -323,21 +379,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row" style="margin-top: 3%;">
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label style="font-size: 13px;" class="bmd-label-floating">Days Present/Month</label>
-                                                        <input name="City" id="City" type="number" value="21"
-                                                            class="form-control bg-transparent  text-light" readonly />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label style="font-size: 13px;" class="bmd-label-floating">Days Absent/Month</label>
-                                                        <input name="Country" id="Country" type="number" value="3"
-                                                            class="form-control bg-transparent  text-light" readonly />
-                                                    </div>
-                                                </div>
+                                            <div class="row" style="margin-top: 4%; margin-bottom: 4%;">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label style="font-size: 13px;" class="bmd-label-floating">Remaining Sick Leaves</label>
@@ -346,8 +388,6 @@
                                                             readonly />
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row" style="margin-top: 3%; margin-bottom: 4%;">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label style="font-size: 13px;" class="bmd-label-floating">Remaining Casual
@@ -372,7 +412,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4" style="margin-top: 4%;">
+                        <div class="col-md-4" style="margin-top: 2%;">
                             <div class="card card-profile">
                                 <div class="card-avatar">
                                     <a href="#pablo">
@@ -385,7 +425,7 @@
                                 </div>
                             </div>
                             <div class="row justify-content-center">
-                                <button id="viewAttendence" class="btn btn-primary">View Attendence</button>
+                                <button id="viewAttendence" class="btn btn-primary"><i class="fa fa-calendar" aria-hidden="true"></i><a style="margin-left: 5%;">View Attendence</a></button>
                             </div>
                         </div>
                     </div>
@@ -405,7 +445,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-
                         <div class="col-md-9">
                             <div class="Calender">
                                 <div id="DateContent" class="row justify-content-between" style="text-align: center;">
@@ -522,6 +561,16 @@
             modealBg.classList.remove("bg-active")
         })
 
+     let Month=document.getElementsByClassName("Month");
+     let arr=["January","February","March","April","May","June","July","August","September","October","November","December",]
+     let newMonth= Array.from(Month);
+      newMonth.forEach((ele)=>{
+        currentDate=new Date().getMonth();
+        ele.innerText=arr[currentDate];
+     })
+    
+     
+    
     </script>
     <!--<div class="fixed-plugin">
     <div class="dropdown show-dropdown">

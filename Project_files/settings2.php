@@ -361,24 +361,6 @@
                               View
                             </button>
                         </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td class="text-primary">
-                            <button type="button" style="margin-left: 10%;" id="btn3" class="btn btn-primary btn-sm togglebtn">
-                              View
-                            </button>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td class="text-primary">
-                            <button type="button" style="margin-left: 10%;" id="btn4" class="btn btn-primary btn-sm togglebtn">
-                              View
-                            </button>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -388,13 +370,13 @@
                 <div class="hidediv">
                   <div class="row innerdivs">
                     <div class="col-md-1.2" style="padding-right:0">
-                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Save</button>
+                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1">Edit</button>
                     </div>
                     <div class="col-md-1.2">
-                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1"> Okay</button>
+                      <button style="margin-right:10px;" type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1">Save</button>
                     </div>
                     <div class="col-md-1.2">
-                      <button type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1 cancelbtn"> Cancel</button>
+                      <button type="button" id="inbtn1" class="btn btn-primary btn-sm inbtn1 cancelbtn">Cancel</button>
                     </div>
                   </div>
                 </div>

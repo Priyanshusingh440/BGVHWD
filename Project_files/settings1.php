@@ -276,9 +276,33 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-
-
-
+                  <div class="row" style="margin-left:0%;margin-top:0%;margin-bottom:3%">
+                      <div class="col-md-11">
+                        <div class="form-group" style="padding-bottom: 0%;">
+                          <!-- <label class="bmd-label-floating" style="font-size: 14px;">Selected Service</label> -->
+                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="dropdownMenu" name="locality-dropdown" onchange="getpackage(this.value)" style="color:#202940;" required>
+                            <option value="op1">India Address Verification</option>
+                            <option value="op2">Educational Verification</option>
+                            <option value="op3">Emploment Verification</option>
+                            <option value="op4">Global Database Check</option>
+                            <option value="op5">Indian ID Check</option>
+                            <option value="op6">Indian MRV Check</option>
+                            <option value="op7">Indian Credit Check</option>
+                            <option value="op8">Civil Litigation</option>
+                            <option value="op9">Criminal/Criminal Court</option>
+                            <option value="op10">Directorship</option>
+                            <option value="op11">Drug Test</option>
+                            <option value="op12">Financial Service Authority</option>
+                            <option value="op13">Indian Gap Analysis</option>
+                            <option value="op14">National Crime Record Locator</option>
+                            <option value="op15">Open Media</option>
+                            <option value="op16">Professional License</option>
+                            <option value="op17">Reference Check</option>
+                            <option value="op18">SSN</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                     <!--indian Address Verification-->
                     <div class="container-fluid hidediv" id="div1" style="margin-top: 2%;">
                       <div class="row" style="margin-top: 0%;  margin-bottom: 2%;">
@@ -3713,54 +3737,7 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="row ">
-                        <div class="col-md-6">
-                          <div class="row ">
-                            <div class="col-md-5">
-                              <p style="color: black;">Email ID</p>
-                            </div>
-                            <div class="col-md-1">
-                              <div class="form-check">
-                                <label class="form-check-label" style="margin-bottom:14px !important;">
-                                  <input class="form-check-input" type="checkbox" value="" checked>
-                                  <span class="form-check-sign">
-                                    <span class="check"></span>
-                                  </span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row" style="margin-left:0%;margin-top:2%;">
-                      <div class="col-md-10">
-                        <div class="form-group" style="padding-bottom: 0%;">
-                          <!-- <label class="bmd-label-floating" style="font-size: 14px;">Selected Service</label> -->
-                          <select style="margin-top: 2%;" class="browser-default custom-select" type="select" id="dropdownMenu" name="locality-dropdown" onchange="getpackage(this.value)" style="color:#202940;" required>
-                            <option value="op1">India Address Verification</option>
-                            <option value="op2">Educational Verification</option>
-                            <option value="op3">Emploment Verification</option>
-                            <option value="op4">Global Database Check</option>
-                            <option value="op5">Indian ID Check</option>
-                            <option value="op6">Indian MRV Check</option>
-                            <option value="op7">Indian Credit Check</option>
-                            <option value="op8">Civil Litigation</option>
-                            <option value="op9">Criminal/Criminal Court</option>
-                            <option value="op10">Directorship</option>
-                            <option value="op11">Drug Test</option>
-                            <option value="op12">Financial Service Authority</option>
-                            <option value="op13">Indian Gap Analysis</option>
-                            <option value="op14">National Crime Record Locator</option>
-                            <option value="op15">Open Media</option>
-                            <option value="op16">Professional License</option>
-                            <option value="op17">Reference Check</option>
-                            <option value="op18">SSN</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
+            
                   </form>
                 </div>
               </div>

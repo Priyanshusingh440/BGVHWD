@@ -292,7 +292,7 @@
                 </div>
                 <div class="card-body">
                   <form id="ajax">
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between" style="margin-top:1%">
                       <div class="form-group col-md-4">
                         <label class="bmd-label-floating" style="margin-left:0%;">Package Name</label>
                         <input name="Package_Name" type="text" class="form-control" />
@@ -311,16 +311,16 @@
                         <label for="Service Type" style="margin-left: 4%;">Service name</label>
 
                         <div class="multiple-select-dd">
-                          <input type="text" placeholder="Search Services..." class="search-field">
+                          <input style="border:2px solid #E0E1E0" type="text" placeholder="Search Services..." class="search-field">
                           <div class="selected">
-                            Choose Services
+                            <label>Choose Services</label>
                           </div>
                           <div class="select custom-scroll" >
 
                           </div>
                         </div>
 
-                        <select style="margin-top:5%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
+                        <select style="margin-top:0%; opacity: 0; pointer-events: none;" id="document-name" class="browser-default custom-select" name="document-name" class="form-control" required multiple>
                           <option class='bg-secondary text-light' default not selected>Choose...</option>
                         </select>
                       </div>

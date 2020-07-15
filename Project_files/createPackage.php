@@ -366,7 +366,7 @@
                         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                        <ul style="list-style: none;">
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Address Package
+                          <label class="form-check-label" style="margin-bottom:14px !important;color:black !important;">Address Package
                             <input class="form-check-input Checking" name=""  type="checkbox" value="Address Package" checked>
                             <span class="form-check-sign">
                               <span class="check"></span>
@@ -375,7 +375,7 @@
                         </div>
                       </li>
                        <li> <div class="form-check">
-                        <label class="form-check-label" style="margin-bottom:14px !important;">Criminal package
+                        <label class="form-check-label" style="margin-bottom:14px !important;color:black !important;">Criminal package
                           <input class="form-check-input Checking" name="DOB" type="checkbox" value="Criminal package" checked>
                           <span class="form-check-sign">
                             <span class="check"></span>
@@ -384,7 +384,7 @@
                       </div>
                     </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Education
+                          <label class="form-check-label" style="margin-bottom:14px !important;color:black !important;">Education
                             <input class="form-check-input Checking" name="DOB" type="checkbox" value="Education" checked>
                             <span class="form-check-sign">
                               <span class="check"></span>
@@ -393,7 +393,7 @@
                         </div>
                       </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">SSN
+                          <label class="form-check-label" style="margin-bottom:14px !important;color:black !important;">SSN
                             <input class="form-check-input Checking" name="DOB" type="checkbox" value="SSN" checked>
                             <span class="form-check-sign">
                               <span class="check"></span>
@@ -402,7 +402,7 @@
                         </div>
                       </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Combo Package
+                          <label class="form-check-label" style="margin-bottom:14px !important;color:black !important;">Combo Package
                             <input class="form-check-input Checking" name="DOB" type="checkbox" value="Combo Package" checked>
                             <span class="form-check-sign">
                               <span class="check"></span>

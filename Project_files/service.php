@@ -338,14 +338,14 @@
                 <div class="card-body">
                   <form id="ajax">
                     <div class="row justify-content-between">
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-4"style="margin-top:3%">
                         <label for="Service Type" class="bmd-label-floating" style="margin-left: 4%;">Service
                           Type</label>
                         <select style=" margin-top: 1%;" id="select_service_type" name="service_type_id" class="browser-default custom-select" required>
                         </select>
                       </div>
 
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-4" style="margin-top:3.4%">
                         <label for="Service" style="margin-left: 4%;">Service</label>
                         <input type="text" class="form-control" name="service_name" placeholder="" required />
                       </div>
@@ -354,9 +354,9 @@
                         <label for="Service Type" style="margin-left: 4%;">Document name</label>
 
                         <div class="multiple-select-dd">
-                          <input type="text" placeholder="Search Documents..." class="search-field">
+                          <input style="border:1.2px solid #DEDEDE" type="text" placeholder="Search Documents..." class="search-field">
                           <div class="selected">
-                            Choose Documents
+                            <label>Choose Documents</label>
                           </div>
                           <div class="select custom-scroll" >
 

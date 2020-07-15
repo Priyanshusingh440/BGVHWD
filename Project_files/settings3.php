@@ -109,7 +109,7 @@
 
 </head>
 
-<body class="dark-edition">
+<body class="dark-edition"  onload="myBodyFunction()">
   <div class="wrapper">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
       <!--
@@ -348,8 +348,9 @@
                 <div class="card-body">
                   <form id="ajax">
                     <div class="row justify-content-around">
-                      <div class="form-group col-md-5">
-                        <select style="margin-top: 1.5%; margin-top: 8%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
+                      <div class="form-group col-md-4" style="margin-top:3%">
+                      <label>Select Services</label>
+                        <select style="margin-top: 5%;" class="browser-default custom-select" type="select" id="" name="first" style="color:#202940;" required>
                           <option value="Select Services">Select Services</option>
                           <option value="India Address Verification">India Address Verification</option>
                         </select>
@@ -358,7 +359,7 @@
                        
                     <div class="dropdown">
                    <label for="">Documents List</label>
-                    <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">List Of Documents To Select</button>
+                    <button style="width: 100%; background-color:#601A75 !important; color:white !important" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">List Of Documents To Select</button>
                       <div id="myDropdown" class="dropdown-content" style="height: 200px;">
                         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                        <ul style="list-style: none;">
@@ -500,14 +501,15 @@
         </div>
       </div>
 
-      <script>
+      <!-- <script>
         const x = new Date().getFullYear();
         let date = document.getElementById("date");
         date.innerHTML = "&copy; " + x + date.innerHTML;
-      </script>
+      </script> -->
     </div>
   </div>
   <script>
+    
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
         function myFunction() {
@@ -530,6 +532,7 @@
           }
         }
 
+       
 
       function myCheckBox(id,SelecteValue,btnID){   
         let check1=document.getElementById(id);
@@ -565,8 +568,13 @@
      })
 
    }
-
-
+  
+    function myBodyFunction(){
+      document.querySelectorAll(".Checking").forEach((ele)=>{
+        ele.checked = false;
+      })
+    }
+  
    </script>
 
 
