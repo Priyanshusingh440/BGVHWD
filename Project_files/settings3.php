@@ -101,9 +101,10 @@
   margin: 5px 10px 5px 10px;
   border-radius: 2px;
   font-size: 13px;
-
-
 }
+.SelectedItem{
+   display: none !important;
+  }
  </style>
 
 </head>
@@ -139,6 +140,10 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./modifyClient.php">Modify Client</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./assignService.php">Assign Services</a>
                 </li>
@@ -174,7 +179,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./#">Auto SLA </a>
                 </li>
-
+                <li class="nav-item">
+                  <a class="nav-link" href="./vieworder2.php">View Order</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -190,7 +197,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./mandatoryDocuments.php">Mandatory Documents</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" name href="./standardMacro.php">Standard Macro</a>
                 </li>
                 <li class="nav-item">
@@ -235,7 +242,7 @@
                 <li class="nav-item">
                   <a class="nav-link" name href="./settings2.php">Email Trigger Settings</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" name href="./settings3.php">Servicewise Document</a>
                 </li>
               </ul>
@@ -350,14 +357,14 @@
                       <div class="form-group col-md-5">
                        
                     <div class="dropdown">
-                   <label for="">Package Name</label>
-                    <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">Package Name</button>
+                   <label for="">Documents List</label>
+                    <button style="width: 120%;" type="button" onclick="myFunction()" class="btn btn-primary dropbtn">List Of Documents To Select</button>
                       <div id="myDropdown" class="dropdown-content" style="height: 200px;">
                         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                        <ul style="list-style: none;">
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Address Package
-                            <input class="form-check-input Checking" name=""  type="checkbox" value="Address Package" >
+                          <label class="form-check-label" style="margin-bottom:14px !important; color: black !important;">Adhar Card
+                            <input class="form-check-input Checking" id="checking1" onclick="myCheckBox('checking1','Adhar Card', 'ch1')" name=""  type="checkbox" value="Address Package" >
                             <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
@@ -365,8 +372,8 @@
                         </div>
                       </li>
                        <li> <div class="form-check">
-                        <label class="form-check-label" style="margin-bottom:14px !important;">Criminal package
-                          <input class="form-check-input Checking" name="DOB" type="checkbox" value="Criminal package" >
+                        <label class="form-check-label " style="margin-bottom:14px !important;color: black !important;">PanCard
+                          <input class="form-check-input Checking" id="checking2" onclick="myCheckBox('checking2','PanCard','ch2')" name="DOB" type="checkbox" value="Criminal package" >
                           <span class="form-check-sign">
                             <span class="check"></span>
                           </span>
@@ -374,8 +381,8 @@
                       </div>
                     </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Education
-                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="Education" >
+                          <label class="form-check-label " style="margin-bottom:14px !important;color: black !important;">Electricity Bill
+                            <input class="form-check-input Checking" id="checking3" onclick="myCheckBox('checking3','Electricity Bill','ch3')" name="DOB" type="checkbox" value="Education" >
                             <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
@@ -383,8 +390,8 @@
                         </div>
                       </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">SSN
-                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="SSN" >
+                          <label class="form-check-label " style="margin-bottom:14px !important;color: black !important;">10th Marks Card
+                            <input class="form-check-input Checking"  id="checking4" onclick="myCheckBox('checking4','10th Marks Card','ch4')" name="DOB" type="checkbox" value="SSN" >
                             <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
@@ -392,8 +399,8 @@
                         </div>
                       </li>
                          <li> <div class="form-check">
-                          <label class="form-check-label" style="margin-bottom:14px !important;">Combo Package
-                            <input class="form-check-input Checking" name="DOB" type="checkbox" value="Combo Package" >
+                          <label class="form-check-label optColor" style="margin-bottom:14px !important;color: black !important;">Degree Marks Card
+                            <input class="form-check-input Checking"  id="checking5" onclick="myCheckBox('checking5','Degree Marks Card','ch5')" name="DOB" type="checkbox" value="Combo Package" >
                             <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
@@ -402,6 +409,9 @@
                       </li>
                       </ul>  
                    </div>
+                   <!-- <div class="col-md-2">
+                    <button id="Clicked">Click</button>
+                   </div> -->
                 </div>
                       </div>
                     </div>
@@ -409,9 +419,9 @@
                       <label for="Email">Preview</label><br>
                       <div id="previewDiv" style="width: 100%; height: 140px; border: 1px solid rgba(128, 128, 128, 0.671); border-radius: 5px; ">
                       <div class="list" style="padding: 10px;">
-                        <button class="btnClose">Adhar Card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
+                        <!-- <button class="btnClose">Adhar Card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
                         <button class="btnClose">Pan Card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
-                        <button class="btnClose">10th marks card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button>
+                        <button class="btnClose">10th marks card<i class="fa fa-times" aria-hidden="true"></i>                        </i>                        </button> -->
                       </div>
                     </div>
                     </div>
@@ -520,47 +530,41 @@
           }
         }
 
-      
-    // var items=document.getElementsByClassName("Checking")
-    // var selectedlist=[];
-    //  for(var i=0; i<items.length; i++)       
-    // {
-    //     if(items[i].checked==true) {
-    //        selectedlist.push(items[i].value)
-    //     }                
-    //  }
+
+      function myCheckBox(id,SelecteValue,btnID){   
+        let check1=document.getElementById(id);
+        let btn, text ,icon
+        if(check1.checked == true){
+          btn=document.createElement("button");
+          text=document.createTextNode(SelecteValue); 
+          btn.setAttribute('id',btnID)
+          btn.className="btnClose ClosedBtn"
+          btn.appendChild(text)
+          console.log(btn)
+
+          icon=document.createElement("i");
+          icon.className="fa fa-times";
+          icon.setAttribute("aria-hidden",true)
+
+          btn.appendChild(icon)
+
+          $(".list").append(btn)
+
+        }else{
+           let eleBtn=document.getElementById(btnID);
+           eleBtn.remove();
+        }
 
 
-    // for(var j=0; j<selectedlist.length; j++){
+         document.querySelectorAll(" button.ClosedBtn").forEach((cliCkBtn)=>{
+         cliCkBtn.addEventListener('click', function(event){
+         console.log(event.currentTarget)
+         event.currentTarget.className="SelectedItem";
+       })
 
-  
+     })
 
-    //  let btn=document.createElement("button")
-    //  let text=document.createTextNode(selectedlist[j]); 
-    //  btn.appendChild(text)
-    //  btn.className="btnClose"
-
-
-    //  let icon=document.createElement("i")
-    //  icon.className="fa fa-times"
-    //  icon.setAttribute("aria-hidden",true)
-    
-    // $(".list").append(btn)
-    
-
-    //  btn.appendChild(icon)
-
-
-    //  console.log(btn)
-    // }
-
-
-
-
-
-
-
-
+   }
 
 
    </script>
@@ -571,21 +575,6 @@
 
   <!--mode changing-->
   <script>
-    $(".btnClose").click(function(e){
-     $(this).hide();
-     
-    })
-
-
-    $(".hidediv").hide()
-    $(function() {
-      $(".togglebtn").click(function() {
-        $(".hidediv").fadeToggle("slow");
-      })
-    })
-
-
-
     let darkmode = localStorage.getItem("darkmode");
     const darkmodetoggle = document.querySelector('input[name=theme]');
 
@@ -859,4 +848,4 @@
   </script>
 </body>
 
-</html>
+</html> 
